@@ -1,0 +1,82 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+body, html { 
+  font-size: 100%; padding: 0; margin: 0; height: 100%;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #888;
+  font-family: lato;
+  color: #ccc;
+  font-size: 0.9em;
+  font-weight: 300;
+}
+
+a {
+  color: #999;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 0 5px;
+  text-transform: uppercase;
+  font-size: 80%;
+}
+a:hover {
+  color: #fff;
+}
+
+#sidebar li {
+    list-style: none;
+}
+#sidebar {
+  float: left;
+  position: fixed;
+  height: 100%;
+  width: 160px;
+  color: #999;
+  background: #e8e8e8;
+  border-right: #aaa solid 4px;
+}
+#sidebar li {
+  margin-top: 20px;
+}
+
+
+/*-,._.,-*~'`^`'~*-,._.,-*~'`^`'~*-,._.,-*~'`^`'~*-,._.,-*
+
+  Panels from burse
+
+~*-,._.,-*~'`^`'~*-,._.,-*~'`^`'~*-,._.,-*~'`^`'~*-,._.,-*/
+
+.panel{
+  float: right;
+  margin-right: 10px;
+  margin-left: 180px;
+  margin-top: 20px;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  z-index:500;
+  -webkit-transition: .6s ease-in-out;
+  -moz-transition: .6s ease-in-out;
+  -o-transition: opacity .6s ease-in-out;
+  -ms-transition: opacity .6s ease-in-out;
+  transition: .6s ease-in-out;
+}
+.panel:target{
+  z-index: 1000;
+  opacity: 1;
+}
+#content {
+  display: block;
+  position: absolute;
+  padding-bottom: 100px;
+}
