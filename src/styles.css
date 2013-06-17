@@ -8,15 +8,23 @@
 
 
 body, html { 
-  font-size: 100%; padding: 0; margin: 0; height: 100%;
+  margin: 0;
+  height: 100%;
 }
-
 body {
-  background: #888;
+  background:#7f928a;
+  background:-moz-radial-gradient(center, #7f928a, #45504b);
+  background:-webkit-gradient(radial, center center, 120, center center, 800, from(#7f928a), to(#45504b));
   font-family: lato;
   color: #e8e8e8;
   font-size: 0.9em;
   font-weight: 300;
+}
+
+h2 {
+  font-size: 40px;
+  position: relative;
+  top: -40px;
 }
 
 a {
@@ -33,7 +41,10 @@ a:hover {
 }
 p {
   font-size: 20px;
+  line-height: 40px;
   font-weight: 100;
+  width: 50%;
+  margin: 100px 20%;
 }
 
 /*flickr images*/
