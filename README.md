@@ -1,6 +1,3 @@
 brandorn.github.com
-===================
+c. 2014
 
-websitez
-
-edited by burs
