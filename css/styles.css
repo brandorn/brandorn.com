@@ -48,13 +48,13 @@ body {
 
 h1 {
   font-size: 25pt;
-	line-height: 100%;
-	margin: 10px 0;
+  line-height: 100%;
+  margin: 10px 0;
 }
 
 h2 {
   font-size: 14pt;
-	font-weight: bold;
+  font-weight: bold;
 }
 
 h3 {
@@ -77,20 +77,20 @@ p {
   margin: 20px 0;
   text-shadow: none;
   font-size: 14pt;
-	line-height: 160%;
+  line-height: 160%;
   color: #3f3f3f;
 }
 
-	p a:link {
-		border-bottom: 1px solid firebrick;
-	}
+  p a:link {
+    border-bottom: 1px solid firebrick;
+  }
 
 sup {
-	top: -5px;
-	padding: 2px;
-	vertical-align: top;
-	position: relative;
-	font-size: 9pt;
+  top: -5px;
+  padding: 2px;
+  vertical-align: top;
+  position: relative;
+  font-size: 9pt;
 }
 
 	sup a:link,
@@ -140,10 +140,11 @@ hr {
 
 blockquote {
 	font-style: italic;
+  color: #777;
 	line-height: 1.5;
 	max-width: 400px;
 	margin: 30px auto;
-	border-left: 2px solid #777;
+	border-left: 2px solid #ccc;
 	padding: 4px 16px;
 }
 
@@ -273,7 +274,9 @@ nav {
 				}
 			
 				nav li a:hover,
-				nav li a:active{
+				nav li a:active,
+        nav li a:focus {
+          outline: none;
 					color: firebrick;
 				}
 				
@@ -546,6 +549,11 @@ footer {
 			padding: 6px;
 			border-radius: 2px;
 		}
+      
+      #tabs > ul li:focus {
+        outline: none;
+        color: firebrick;
+      }
 	
 			#tabs > ul li a {
 				font-size: 11pt;
@@ -633,7 +641,7 @@ footer {
 			
 		nav ul {
 			margin: 0 auto;
-			width: 268px;
+			width: 258px;
 			float: none;
 		}
 		
