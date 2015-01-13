@@ -43,7 +43,7 @@ body {
   color: #3f3f3f;
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-  overflow: scroll;
+  overflow: scroll;
 }
 
 h1 {
