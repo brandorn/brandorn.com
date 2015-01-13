@@ -205,7 +205,7 @@ header {
 			content: counter(nodecimal) " ";
 			float: left;
 			width: 20px;
-			margin-top: 4px;
+			margin-top: 2px;
 		}
 		
 		.footnotes:first-child {
@@ -213,9 +213,11 @@ header {
 		}
 	
 	.footnotes p {
-		font-size: 12pt;
+		font-size: 11pt;
 		margin: 4px 0;
 		color: #777;
+  padding-left: 20px;
+  margin-bottom: 10px;
 	}
 
 /* NAV */
