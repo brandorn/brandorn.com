@@ -82,7 +82,8 @@ p {
   color: #3f3f3f;
 }
 
-  p a:link {
+  p a:link,
+  p a:visited {
     border-bottom: 1px solid firebrick;
   }
 
@@ -133,8 +134,11 @@ a {
 
 .footnotes:before,
 hr {
-  background: url(img/hr.svg) no-repeat;
-  height: 8px;
+  background: url(../img/hr.svg) no-repeat;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  margin: 50px auto 30px auto;
 }
 
 blockquote {
@@ -223,7 +227,7 @@ header {
 
 nav {
   margin: 12px auto 30px auto;
-  padding-bottom: 10px;
+  padding-bottom: 9px;
   cursor: default;
   border-bottom: 1px solid #eee;
 }
@@ -232,27 +236,24 @@ nav {
 				display: inline-block;
 				margin: 0;
 				padding-top: 3px;
-				color: #888;
-				font-size: 0.8em;
+				color: #3f3f3f;
+				font-size: 10pt;
+    font-weight: bold;
 		}
 		
-		.logo > div {
-				height: 24px;
-				width: 24px;
-				margin-right: 10px;
-				float: left;
-				background: url('../img/icon_logo.svg') no-repeat 0;
-				background-size: 100% 100%;
-		}
-		
-		.logo p span.red::after {
-				content:" \00b7";
-				color: #888;
-		}
+    .logo p span {
+      color: #888;
+      font-weight: normal;
+    }
+    
+      .logo p span::before {
+        content:"\00b7";
+      }
 		
   nav ul {
     margin: 6px 0 0 0;
     float: right;
+    display: inline-block;
     font-size: 0.8em;
   }
 		
@@ -591,15 +592,17 @@ article.about > ul {
 		
     .logo p {
       padding-top: 5px;
+      text-align: center;
+      font-size: 14pt;
     }
 		
-		.logo p span.red {
-				clear: right;
+		.logo p span {
 				display: block;
-				margin: -9px 0 -6px 0;
+    margin-top: -4px;
+    font-size: 10pt;
 		}
 		
-		.logo p span.red::after {
+		.logo p span::before {
 				content:" ";
 		}
 			
@@ -607,6 +610,7 @@ article.about > ul {
     margin: 0 auto;
     width: 258px;
     float: none;
+    display: block;
 		}
 		
 		.notes,
