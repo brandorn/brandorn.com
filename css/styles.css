@@ -83,11 +83,6 @@ p {
   color: #3f3f3f;
 }
 
-  p a:link,
-  p a:visited {
-    border-bottom: 1px solid firebrick;
-  }
-
 sup {
   top: -5px;
   padding: 2px;
@@ -123,13 +118,13 @@ a {
 
   a:link,
   a:visited {
-    color: #3f3f3f;
+    color: firebrick;
     text-decoration: none;
   }
 	
   a:hover,
   a:active {
-    color: firebrick;
+    border-bottom: 1px solid firebrick;
   }
 
 
@@ -287,18 +282,12 @@ nav {
       color: firebrick;
       border-bottom: 1px solid firebrick;
     }
-
-.logo a:link,
-.logo a:visited,
-.logo a:active,
-.logo a:focus {
-  background: none;
-}
 	
-  .logo a:focus,
-  .logo a:hover
-  .logo a:active {
+  .logo:focus,
+  .logo:hover,
+  .logo:active {
     cursor: pointer;
+    border-bottom: none;
   }
 
 
@@ -411,6 +400,10 @@ footer {
   width: 100%;
 }
 
+  #process h3 {
+    margin-top: 80px;
+  }
+  
   #process ol {
     list-style: decimal;
     margin-left: 40px;
@@ -427,23 +420,43 @@ footer {
     color: #3f3f3f;
   }
   
-  .processSteps {
+  #process .steps {
     margin: 60px auto;
   }
   
-    .processSteps li {
+    #process .steps li {
       display: inline-block;
       margin: 0 30px;
       text-align: center;
     }
     
-      .processSteps li p {
+      #process .steps li p {
         color: #777;
         font-family: 'Raleway', Helvetica, Arial, sans-serif;
         font-size: 10pt;
         font-weight: bold;
         text-transform: uppercase;
       }
+      
+  #process .methods {
+    background: #f4f4f4;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 30px 0 0 30px;
+    padding: 20px;
+  }
+    
+    #process .methods li {
+      margin-bottom: 10px;
+    }
+  
+    #process .methods li:nth-child(1) {
+      color: #ccc;
+      font-weight: bold;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
 	
 article.about > ul {
   clear: both;
@@ -488,7 +501,8 @@ article.about > ul {
         
         .about #tabs > ul li a:hover,
         .about #tabs > ul li a:active {
-          color: firebrick;	
+          color: firebrick;
+          border-bottom: none;
         }
        
         .about #tabs > ul li a:focus {
