@@ -33,6 +33,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 
 html {
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -43,7 +44,7 @@ body {
   color: #3f3f3f;
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-  overflow: scroll;
+  overflow: scroll;
 }
 
 h1 {
@@ -111,7 +112,7 @@ sup {
   }
 
 ul {
-		list-style-type: none;
+  list-style-type: none;
 }
 
 li {
@@ -120,11 +121,11 @@ li {
 a {
 }
 
-	a:link,
-	a:visited {
+  a:link,
+  a:visited {
     color: #3f3f3f;
     text-decoration: none;
-	}
+  }
 	
   a:hover,
   a:active {
@@ -151,14 +152,14 @@ blockquote {
   padding: 4px 16px;
 }
 
-	blockquote p {
-  margin: 4px 0;
-  color: #888;
-	}
+  blockquote p {
+    margin: 4px 0;
+    color: #888;
+  }
 
-		blockquote .author {
+  blockquote .author {
     text-align: right;
-		}
+  }
 
 
 /*--- LAYOUT ---*/
@@ -204,16 +205,16 @@ header {
     display: block;
   }
 	
-		.footnotes > li:before {
+  .footnotes > li:before {
     content: counter(nodecimal) " ";
     float: left;
     width: 20px;
     margin-top: 2px;
-		}
+  }
 		
-		.footnotes:first-child {
+  .footnotes:first-child {
     counter-reset: nodecimal;
-		}
+  }
 	
   .footnotes p {
     font-size: 11pt;
@@ -232,14 +233,14 @@ nav {
   border-bottom: 1px solid #eee;
 }
 
-		.logo p {
-				display: inline-block;
-				margin: 0;
-				padding-top: 3px;
-				color: #3f3f3f;
-				font-size: 10pt;
+  .logo p {
+    display: inline-block;
+    margin: 0;
+    padding-top: 3px;
+    color: #3f3f3f;
+    font-size: 10pt;
     font-weight: bold;
-		}
+  }
 		
     .logo p span {
       color: #888;
@@ -257,10 +258,10 @@ nav {
     font-size: 0.8em;
   }
 		
-		nav li {
+  nav li {
     float: left;
     margin-left: 10px;
-		}
+  }
 			
 		nav li:nth-child(1){
 				margin-left: 0;
@@ -270,29 +271,29 @@ nav {
 				padding: 17px 4px 13px 4px;
 		}
 				
-				nav li a:link,
-				nav li a:visited {
+    nav li a:link,
+    nav li a:visited {
       color: #777;
-				}
+    }
 			
-				nav li a:hover,
-				nav li a:active,
+    nav li a:hover,
+    nav li a:active,
     nav li a:focus {
       outline: none;
       color: firebrick;
-				}
+    }
 				
-				nav li a.selected {
+    nav li a.selected {
       color: firebrick;
       border-bottom: 1px solid firebrick;
-				}
+    }
 
-  .logo a:link,
-  .logo a:visited,
-  .logo a:active,
-  .logo a:focus {
-    background: none;
-  }
+.logo a:link,
+.logo a:visited,
+.logo a:active,
+.logo a:focus {
+  background: none;
+}
 	
   .logo a:focus,
   .logo a:hover
@@ -311,8 +312,8 @@ footer {
 /* CONTENT */
 
 .content {
-		max-width: 620px;
-		margin: 0 auto;
+  max-width: 620px;
+  margin: 0 auto;
 }
 
 
@@ -321,132 +322,77 @@ footer {
 /* HOME */
 
 .intro {
-		margin: 20px auto;
-		text-align: center;
-		padding: 20px 0;
-		cursor: default;
+  margin: 20px auto;
+  text-align: center;
+  padding: 20px 0;
+  cursor: default;
 }
 		
-		.intro h1 {
-				color: firebrick;
-				text-transform: uppercase;
-				letter-spacing: 5px;
-				font-size: 1.4em;
-		}
+  .intro h1 {
+    color: firebrick;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.4em;
+  }
 		
-		.introImage {
-				background: url('../img/creation-of-adam.png') no-repeat center;
-				width: 120px;
-				height: 120px;
-				margin: 26px auto;
-				border-radius: 50%;
-				transition: all 400ms ease-in-out;
-		}
+  .introImage {
+    background: url('../img/creation-of-adam.png') no-repeat center;
+    width: 120px;
+    height: 120px;
+    margin: 26px auto;
+    border-radius: 50%;
+    transition: all 400ms ease-in-out;
+  }
 		
-				.introImage:hover{
-						box-shadow: 0 0 20px 5px #c0d6ef;
-				}
+    .introImage:hover{
+      box-shadow: 0 0 20px 5px #c0d6ef;
+    }
 		
-		.intro p {
-				color: #777;
-				font-size: 1em;
-				margin: 0.5em 0;
-		}
+  .intro p {
+    color: #777;
+    font-size: 1em;
+    margin: 0.5em 0;
+  }
 		
-		.intro p + p {
-    margin-top: -4px;
-    color: #888;
-    font-size: 0.8em;
-		}
-
-.listButtons {
-		margin: 10px auto;
-		text-align: right;
-}
-
-		.listButtons button {
-				border: none;
-				border-radius: 0;
-				background: none;
-		}
-		
-				.listButtons button div {
-						width: 19px;
-						height: 19px;
-						border-radius: 0;
-				}
-		
-				.listButtons .blockView {
-						background: url('../img/icon_block_and_list.svg') no-repeat left top;
-				}
-				
-						.listButtons .blockView:hover,
-						.listButtons .selected .blockView {
-								background: url('../img/icon_block_and_list.svg') no-repeat left bottom;
-						}
-						
-				.listButtons .listView {
-						background: url('../img/icon_block_and_list.svg') no-repeat right top;
-				}
-				
-						.listButtons .listView:hover,
-						.listButtons .selected .listView {
-								background: url('../img/icon_block_and_list.svg') no-repeat right bottom;
-						}
-				
-				.listButtons button:focus {
-						outline: none;
-				}
-
+    .intro p + p {
+      margin-top: -4px;
+      color: #888;
+      font-size: 0.8em;
+    }
 
 .notes {
   margin-bottom: 100px;
 }
 
-		/*.notes.listView {
-		}
-		
-		.notes.listView > li {
-				margin: 6px auto;
-				padding: 10px 0 36px 0;
-				border: 1px solid #fff;
-				border-bottom: 1px solid #eee;
-		}
-		
-				.listView > li img,
-				.listView > li p {
-						display: none;
-				}*/
-
-		.notes > li {
+  .notes > li {
+    cursor: default;
     display: block;
     margin-bottom: 14px;
-    cursor: default;
-		}
+  }
 			
-			.notes > li a {
-    display: block;
-    padding: 16px;
-    border: 1px solid #eee;
-    border-radius: 2px;
-			}
+    .notes > li a {
+      display: block;
+      padding: 16px;
+      border: 1px solid #eee;
+      border-radius: 2px;
+    }
 			
-				.notes > li a:hover{
-      border: 1px solid #ccc;
-				}
+      .notes > li a:hover{
+        border: 1px solid #ccc;
+      }
 		
-  .notes > li img {
-    width: 80%;
-    height: 60px;
-    background: #eee;
-    margin: 10px auto;
-  }
-
-  .notes > li p {
-    color: #777;
-    margin: 6px 0;
-    font-size: 10pt;
-  }
+    .notes > li img {
+      width: 80%;
+      height: 60px;
+      background: #eee;
+      margin: 10px auto;
+    }
+  
+    .notes > li p {
+      color: #777;
+      margin: 6px 0;
+      font-size: 10pt;
+    }
 
   .notes .date {
     margin: 4px 0 0 0;
@@ -458,35 +404,49 @@ footer {
 /* ABOUT */
 
 .aboutPic {
-		background: url('../img/bd-pic.png') no-repeat center;
-		width: 100%;
-		height: 382px;
-		margin: 20px auto 50px auto;
-		cursor: default;
+  background: url('../img/bd-pic.png') no-repeat center;
+  cursor: default;
+  height: 382px;
+  margin: 20px auto 50px auto;  
+  width: 100%;
 }
 
   #process ol {
-    margin-left: 40px;
     list-style: decimal;
+    margin-left: 40px;
   }
      
     #process ol p{
+      color: #777;
       font-family: 'Raleway', Helvetica, Arial, sans-serif;
       font-size: 12pt;
       line-height: 140%;
-      color: #777;
     }
-    
-  #process img {
-    margin: 30px auto 50px auto;
-  }
   
   #process b {
     color: #3f3f3f;
   }
+  
+  .processSteps {
+    margin: 60px auto;
+  }
+  
+    .processSteps li {
+      display: inline-block;
+      margin: 0 30px;
+      text-align: center;
+    }
+    
+      .processSteps li p {
+        color: #777;
+        font-family: 'Raleway', Helvetica, Arial, sans-serif;
+        font-size: 10pt;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
 	
 article.about > ul {
-		clear: both;
+  clear: both;
 }
 
 
@@ -504,12 +464,12 @@ article.about > ul {
     margin-top: -4px;
   }
 	
-		.about #tabs > ul li {
+  .about #tabs > ul li {
     width: 64px;
     margin: 4px 0;
     padding: 6px;
     border-radius: 2px;
-		}
+  }
 
     .about #tabs > ul li:focus {
       outline: none;
@@ -580,15 +540,15 @@ article.about > ul {
 
 @media screen and (max-width: 600px){
 		
-		nav {
+  nav {
     padding-bottom: 27px;	
-		}
+  }
 		
-		.logo {
+  .logo {
     width: 130px;
     display: block;
     margin: 26px auto;
-		}
+  }
 		
     .logo p {
       padding-top: 5px;
@@ -596,67 +556,71 @@ article.about > ul {
       font-size: 14pt;
     }
 		
-		.logo p span {
-				display: block;
+  .logo p span {
+    display: block;
     margin-top: -4px;
     font-size: 10pt;
-		}
+  }
 		
-		.logo p span::before {
-				content:" ";
-		}
-			
-		nav ul {
+  .logo p span::before {
+    content:" ";
+  }
+  
+  nav ul {
     margin: 0 auto;
     width: 258px;
     float: none;
     display: block;
-		}
+  }
 		
-		.notes,
-		.listButtons {
-				width: auto;
-		}
-		
-		.listView h2 {
+  .listView h2 {
     margin-bottom: 6px;
-		}
-		
+  }
+  
   .about h1 {
     margin: 20px auto 0 auto;
   }
   
-		.about #tabs {
+  .about #tabs {
     margin-left: 0;
-		}
+  }
 		
     .about #tabs > ul {
-      width: 200px;
-      margin: 24px auto 30px auto;
       float: none;
+      margin: 24px auto 30px auto;
+      text-align: center;
+      width: auto;
     }
 			
-      .about #tabs > ul li {
-        display: inline-block;
-        text-align: center;
-        width: auto;
-        padding-bottom: 4px;
-        margin: 0 6px 0 0;
-      }
+    .about #tabs > ul li {
+      display: inline-block;
+      text-align: center;
+      width: auto;
+      padding-bottom: 4px;
+      margin: 0 6px 0 0;
+    }
 				
-				.about #tabs > ul li.ui-state-active {
-						border-bottom: 3px solid firebrick;
-						border-right: none;
-				}
+      .about #tabs > ul li.ui-state-active {
+        border-bottom: 3px solid firebrick;
+        border-right: none;
+      }
 					
       .about #tabs > ul li a {
         padding: 8px 4px;
       }
 			
-		.about #tabs > div {
-				margin-left: 0;
-		}
+    .about #tabs > div {
+      margin-left: 0;
+    }
   
+  .processSteps li {
+    display: block;
+    margin-bottom: 30px;
+  }
+  
+    .processSteps li p {
+      margin: 4px;
+    }
 }
 
 
