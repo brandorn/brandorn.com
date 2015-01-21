@@ -361,7 +361,7 @@ footer {
     margin-bottom: 14px;
   }
 			
-    .notes > li a {
+    .notes > li a{
       display: block;
       padding: 16px;
       border: 1px solid #eee;
@@ -393,13 +393,90 @@ footer {
 
 /* ABOUT */
 
-.aboutPic {
-  background: url('../img/bd-pic.png') no-repeat center;
-  cursor: default;
-  height: 382px;
-  margin: 20px auto 50px auto;  
+article.about > ul {
+  clear: both;
+}
+
+	
+.about #tabs {
+}
+
+  .about #tabs > ul {
+    float: none;
+    margin: 40px auto;
+    text-align: center;
+  }
+	
+  .about #tabs > ul li {
+    display: inline-block;
+    padding: 6px;
+    border-radius: 2px;
+    text-align: center;
+  }
+
+    .about #tabs > ul li:focus {
+      outline: none;
+      color: firebrick;
+    }
+	
+      .about #tabs > ul li a {
+        font-size: 11pt;
+        padding: 12px 0;
+      }
+       
+        .about #tabs > ul li a:link,
+        .about #tabs > ul li a:visited {
+          color: #777;
+        }
+        
+        .about #tabs > ul li a:hover,
+        .about #tabs > ul li a:active {
+          color: firebrick;
+          border-bottom: none;
+        }
+       
+        .about #tabs > ul li a:focus {
+          background: none;
+          outline: none;
+        }
+       
+      .about #tabs > ul li.ui-state-active {
+        background: firebrick;
+      }
+       
+        .about #tabs > ul li.ui-state-active a {
+          color: #fff;
+          font-weight: bold;
+        }
+  
+  .about button {
+    border: 1px solid #eee;
+    border-radius: 2px;
+    color: #3f3f3f;
+    cursor: pointer;
+    font-size: 9pt;
+    padding: 6px 10px;
+    margin-top: 10px;
+    background: none;
+  }
+  
+    .about button:hover,
+    .about button:active,
+    .about button:focus {
+      border: 1px solid #ccc;
+      color: firebrick;
+    }
+
+.about-pic {
+  display: block;
+  margin: 0 auto;
+  max-width: 400px;
   width: 100%;
 }
+
+  #process h2 {
+    text-align: center;
+  }
 
   #process .steps {
     border-bottom: 1px solid #eee;
@@ -453,70 +530,8 @@ footer {
       text-transform: uppercase;
     }
 	
-article.about > ul {
-  clear: both;
-}
 
 
-	
-.about #tabs {
-  margin-top: 26px;
-  margin-left: -48px;
-  max-width: 620px;
-}
-
-  .about #tabs > ul {
-    vertical-align: top;
-    width: 80px;
-    float: left;
-    margin-top: -4px;
-  }
-	
-  .about #tabs > ul li {
-    width: 64px;
-    margin: 4px 0;
-    padding: 6px;
-    border-radius: 2px;
-  }
-
-    .about #tabs > ul li:focus {
-      outline: none;
-      color: firebrick;
-    }
-	
-      .about #tabs > ul li a {
-        font-size: 11pt;
-        padding: 12px 0;
-      }
-       
-        .about #tabs > ul li a:link,
-        .about #tabs > ul li a:visited {
-          color: #777;
-        }
-        
-        .about #tabs > ul li a:hover,
-        .about #tabs > ul li a:active {
-          color: firebrick;
-          border-bottom: none;
-        }
-       
-        .about #tabs > ul li a:focus {
-          background: none;
-          outline: none;
-        }
-       
-      .about #tabs > ul li.ui-state-active {
-        background: firebrick;
-      }
-       
-        .about #tabs > ul li.ui-state-active a {
-          color: #fff;
-          font-weight: bold;
-        }
-	
-  .about #tabs > div {
-    margin-left: 130px;
-  }
 
 
 
@@ -537,15 +552,6 @@ article.about > ul {
 
 /*--- RESIZING ---*/
 
-@media screen and (max-width: 780px){
-  .about #tabs {
-    margin-left: auto;
-  }
-  
-  .about h1 {
-    margin: 20px auto 0 17%;
-  }
-}
 
 @media screen and (max-width: 600px){
 		
@@ -585,42 +591,6 @@ article.about > ul {
   .listView h2 {
     margin-bottom: 6px;
   }
-  
-  .about h1 {
-    margin: 20px auto 0 auto;
-  }
-  
-  .about #tabs {
-    margin-left: 0;
-  }
-		
-    .about #tabs > ul {
-      float: none;
-      margin: 24px auto 30px auto;
-      text-align: center;
-      width: auto;
-    }
-			
-    .about #tabs > ul li {
-      display: inline-block;
-      text-align: center;
-      width: auto;
-      padding-bottom: 4px;
-      margin: 0 6px 0 0;
-    }
-				
-      .about #tabs > ul li.ui-state-active {
-        border-bottom: 3px solid firebrick;
-        border-right: none;
-      }
-					
-      .about #tabs > ul li a {
-        padding: 8px 4px;
-      }
-			
-    .about #tabs > div {
-      margin-left: 0;
-    }
   
   .processSteps li {
     display: block;
