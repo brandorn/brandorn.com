@@ -37,14 +37,15 @@ html {
 }
 
 body {
+  color: #3f3f3f;
   font-family: 'Raleway', Helvetica, Arial, sans-serif;
-  max-width: 900px;
   padding: 0 20px;
   margin: 0 auto 140px auto;
-  color: #3f3f3f;
+  max-width: 900px;
+  overflow: scroll;
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
-  overflow: scroll;
+  transition: all 150ms;
 }
 
 h1 {
@@ -76,19 +77,21 @@ h6 {
 }
 
 p {
+  color: #3f3f3f;
+  font-size: 14pt;
+  letter-spacing: -0.2pt;
+  line-height: 160%;
   margin: 20px 0;
   text-shadow: none;
-  font-size: 14pt;
-  line-height: 160%;
-  color: #3f3f3f;
 }
 
 sup {
-  top: -5px;
-  padding: 2px;
-  vertical-align: top;
-  position: relative;
   font-size: 9pt;
+  font-weight: bold;
+  padding: 2px;
+  position: relative;
+  top: -5px;
+  vertical-align: top;
 }
 
   sup a:link,
@@ -100,8 +103,6 @@ sup {
     border-bottom: none;
   }
 	
-  sup a:hover,
-  sup a:active,
   .footnotes .returnUp:hover {
     text-decoration: underline;
   }
@@ -114,17 +115,20 @@ li {
 }
 
 a {
+  transition: all 150ms;
 }
 
   a:link,
   a:visited {
     color: firebrick;
+    border-bottom: 1px solid transparent;
     text-decoration: none;
   }
 	
   a:hover,
   a:active {
     border-bottom: 1px solid firebrick;
+    transition: all 150ms;
   }
 
 hr {
@@ -267,6 +271,7 @@ nav {
     nav li a:link,
     nav li a:visited {
       color: #777;
+      border-bottom: none;
     }
 			
     nav li a:hover,
@@ -332,7 +337,7 @@ footer {
     height: 120px;
     margin: 26px auto;
     border-radius: 50%;
-    transition: all 400ms ease-in-out;
+    transition: all 200ms ease-in-out;
   }
 		
     .introImage:hover{
@@ -403,13 +408,13 @@ article.about > ul {
 
   .about #tabs > ul {
     float: none;
-    margin: 40px auto;
+    margin: 50px auto;
     text-align: center;
   }
 	
   .about #tabs > ul li {
     display: inline-block;
-    padding: 6px;
+    padding: 8px 10px 6px 10px;
     border-radius: 2px;
     text-align: center;
   }
@@ -420,8 +425,8 @@ article.about > ul {
     }
 	
       .about #tabs > ul li a {
-        font-size: 11pt;
-        padding: 12px 0;
+        font-size: 12pt;
+        padding: 6px 10px;
       }
        
         .about #tabs > ul li a:link,
@@ -432,7 +437,7 @@ article.about > ul {
         .about #tabs > ul li a:hover,
         .about #tabs > ul li a:active {
           color: firebrick;
-          border-bottom: none;
+          border-bottom: 1px solid #fff;
         }
        
         .about #tabs > ul li a:focus {
@@ -442,6 +447,7 @@ article.about > ul {
        
       .about #tabs > ul li.ui-state-active {
         background: firebrick;
+        transition: 300ms;
       }
        
         .about #tabs > ul li.ui-state-active a {
@@ -450,14 +456,15 @@ article.about > ul {
         }
   
   .about button {
+    background: none;
     border: 1px solid #eee;
     border-radius: 2px;
     color: #3f3f3f;
     cursor: pointer;
     font-size: 9pt;
-    padding: 6px 10px;
     margin-top: 10px;
-    background: none;
+    padding: 6px 10px;
+    transition: all 200ms;
   }
   
     .about button:hover,
@@ -474,14 +481,10 @@ article.about > ul {
   width: 100%;
 }
 
-  #process h2 {
-    text-align: center;
-  }
-
   #process .steps {
     border-bottom: 1px solid #eee;
     margin-top: 80px;
-    padding-bottom: 60px;
+    padding-bottom: 20px;
     text-align: center;
   }
   
@@ -503,6 +506,7 @@ article.about > ul {
       color: #777;
       font-family: 'Raleway', Helvetica, Arial, sans-serif;
       font-size: 12pt;
+      letter-spacing: 0pt;
       line-height: 140%;
     }
   
@@ -511,23 +515,34 @@ article.about > ul {
   }
   
   #process .methods {
-    background: #f4f4f4;
     border: 1px solid #eee;
     border-radius: 2px;
-    display: inline-block;
-    margin: 30px 0 0 30px;
-    padding: 20px;
+    font-size: 11pt;
+    margin: 50px auto;
+    text-align: left;
   }
+  
+    #process .methods th {
+      background: #f6f6f6;
+      color: #aaa;
+      font-weight: bold;
+      margin-bottom: 14px;
+      padding: 10px 0;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    
+    #process .methods tr {
+      border-top: 1px solid #eee;
+    }
+    
+    #process .methods td {
+      padding: 12px;
+      border-right: 1px solid #eee;
+    }
     
     #process .methods li {
       margin-bottom: 10px;
-    }
-  
-    #process .methods li:nth-child(1) {
-      color: #ccc;
-      font-weight: bold;
-      margin-bottom: 14px;
-      text-transform: uppercase;
     }
 	
 
