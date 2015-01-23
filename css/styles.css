@@ -121,13 +121,13 @@ a {
   a:link,
   a:visited {
     color: firebrick;
-    border-bottom: 1px solid transparent;
+    border-bottom: 2px solid #eee;
     text-decoration: none;
   }
 	
   a:hover,
   a:active {
-    border-bottom: 1px solid firebrick;
+    border-bottom: 2px solid firebrick;
     transition: all 150ms;
   }
 
@@ -140,22 +140,27 @@ hr {
 }
 
 blockquote {
-  font-style: italic;
-  color: #777;
-  line-height: 1.5;
+  border-left: 2px solid #eee;
   max-width: 400px;
   margin: 30px auto;
-  border-left: 2px solid #ccc;
   padding: 4px 16px;
 }
 
   blockquote p {
+    color: #777;
+    font-size: 13pt;
+    font-style: italic;
+    line-height: 1.5;
     margin: 4px 0;
-    color: #888;
   }
 
   blockquote .author {
+    font-style: normal;
     text-align: right;
+  }
+  
+  blockquote sup {
+    font-style: normal;
   }
 
 
@@ -230,23 +235,27 @@ nav {
   border-bottom: 1px solid #eee;
 }
 
-  .logo p {
-    display: inline-block;
-    margin: 0;
-    padding-top: 3px;
-    color: #3f3f3f;
-    font-size: 10pt;
-    font-weight: bold;
+  nav .logo {
+    border-bottom: none;
   }
-		
-    .logo p span {
-      color: #888;
-      font-weight: normal;
+
+    .logo p {
+      display: inline-block;
+      margin: 0;
+      padding-top: 3px;
+      color: #3f3f3f;
+      font-size: 10pt;
+      font-weight: bold;
     }
     
-      .logo p span::before {
-        content:"\00b7";
+      .logo p span {
+        color: #888;
+        font-weight: normal;
       }
+      
+        .logo p span::before {
+          content:"\00b7";
+        }
 		
   nav ul {
     margin: 6px 0 0 0;
@@ -337,11 +346,12 @@ footer {
     height: 120px;
     margin: 26px auto;
     border-radius: 50%;
-    transition: all 200ms ease-in-out;
+    transition: all 100ms ease-in-out;
   }
 		
     .introImage:hover{
-      box-shadow: 0 0 20px 5px #c0d6ef;
+      box-shadow: 0 0 0 6px #eee;
+      cursor: none;
     }
 		
   .intro p {
@@ -357,13 +367,13 @@ footer {
     }
 
 .notes {
-  margin-bottom: 100px;
 }
 
   .notes > li {
     cursor: default;
     display: block;
     margin-bottom: 14px;
+    position: relative;
   }
 			
     .notes > li a{
@@ -374,7 +384,7 @@ footer {
       color: #3f3f3f;
     }
 			
-      .notes > li a:hover{
+      .notes > li a:hover {
         border: 1px solid #ccc;
         color: firebrick;
       }
@@ -393,6 +403,19 @@ footer {
     margin: 4px 0 0 0;
     color: #888;
     font-size: 9pt;
+  }
+  
+  .notes .tag {
+    background: #f4f4f4;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    color: #888;
+    font-size: 9pt;
+    padding: 4px 8px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
   }
 
 
@@ -427,6 +450,7 @@ article.about > ul {
       .about #tabs > ul li a {
         font-size: 12pt;
         padding: 6px 10px;
+        border-bottom: 2px solid #fff;
       }
        
         .about #tabs > ul li a:link,
@@ -437,7 +461,7 @@ article.about > ul {
         .about #tabs > ul li a:hover,
         .about #tabs > ul li a:active {
           color: firebrick;
-          border-bottom: 1px solid #fff;
+          border-bottom: 2px solid #fff;
         }
        
         .about #tabs > ul li a:focus {
@@ -518,6 +542,7 @@ article.about > ul {
     border: 1px solid #eee;
     border-radius: 2px;
     font-size: 11pt;
+    line-height: 1.2;
     margin: 50px auto;
     text-align: left;
   }
@@ -537,8 +562,8 @@ article.about > ul {
     }
     
     #process .methods td {
-      padding: 12px;
       border-right: 1px solid #eee;
+      padding: 12px;
     }
     
     #process .methods li {
