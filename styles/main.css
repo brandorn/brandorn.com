@@ -184,12 +184,13 @@ nav {
     background: url("../img/logo.svg") no-repeat center;
     border-bottom: none; }
   nav.big .logo {
-    background-size: 50px;
-    height: 50px;
-    width: 50px; }
+    background-size: 60px;
+    height: 56px;
+    width: 40px; }
   nav.big .logo-text {
     display: inline-block;
-    margin-left: 8px; }
+    margin: 6px 10px;
+    vertical-align: top; }
     nav.big .logo-text li > p {
       margin: 0;
       line-height: 100%; }
@@ -197,7 +198,7 @@ nav {
       color: #ff4c52;
       font-size: 2em;
       font-weight: 600;
-      padding-bottom: 2px;
+      padding-bottom: 4px;
       text-transform: lowercase; }
     nav.big .logo-text li:nth-child(2) p {
       color: #666666;
