@@ -9,6 +9,7 @@
  * Global
  * Layout
  * Page-specific
+ * Utility
  * Resizing
  ========================================================================== */
 
@@ -20,9 +21,9 @@
 /* Color variables
    ========================================================================== */
 
-$primary-color: #ff4c52;
+$primary-color: #E45555;
 
-$faint-grey: hsla(0, 0%, 80%, 1);
+$faint-grey: hsla(0, 0%, 90%, 1);
 $light-grey: hsla(0, 0%, 60%, 1);
 $grey: hsla(0, 0%, 40%, 1);
 $dark-grey: hsla(0, 0%, 10%, 1);
@@ -119,7 +120,7 @@ body {
   color: #3f3f3f;
   font-family: $sans-serif;
   padding: 0 20px;
-  margin: 0 auto 140px auto;
+  margin: 0 auto 40px auto;
   max-width: 900px;
   overflow: scroll;
   -webkit-font-smoothing: antialiased;
@@ -136,6 +137,7 @@ h1 {
 h2 {
   font-size: 16pt;
   font-weight: bold;
+  margin: 10px 0;
 }
 
 h3 {
@@ -156,22 +158,23 @@ p {
   line-height: 160%;
   margin: 20px 0;
   text-shadow: none;
+}
 
-  a {
-    transition: all 150ms;
+a {
+  transition: all 100ms;
 
-    &:link,
-    &:visited {
-      color: $primary-color;
-      border-bottom: 2px solid $faint-grey;
-      text-decoration: none;
-    }
-    
-    &:hover,
-    &:active {
-      border-bottom: 2px solid $primary-color;
-      transition: all 150ms;
-    }
+  &:link,
+  &:visited {
+    color: $primary-color;
+    //border-bottom: 2px solid $faint-grey;
+    text-decoration: none;
+  }
+  
+  &:hover,
+  &:active {
+    color: darken($primary-color, 10%);
+    //border-bottom: 2px solid $primary-color;
+    transition: all 100ms;
   }
 }
 
@@ -256,9 +259,9 @@ blockquote {
    ========================================================================== */
 
 nav {
-  padding: 20px 0;
+  padding: 32px 0;
   cursor: default;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid $faint-grey;
 
   .logo {
     display: inline-block;
@@ -276,7 +279,7 @@ nav {
 
     .logo-text {
       display: inline-block;
-      margin: 6px 10px;
+      margin: 1px 10px;
       vertical-align: top;
 
       li > p {
@@ -286,7 +289,7 @@ nav {
 
       li:nth-child(1) p {
         color: $primary-color;
-        font-size: 2em;
+        font-size: 2.4em;
         font-weight: $sans-serif-bold;
         padding-bottom: 4px;
         text-transform: lowercase;
@@ -323,12 +326,6 @@ nav {
       display: inline-block;
       vertical-align: top;
       padding-top: 6px;
-
-      // &::before{
-      //   content: url('../img/forward-slash.svg');
-      //   cursor: default;
-      //   padding-right: 10px;
-      // }
     }
 
     p {
@@ -349,7 +346,6 @@ nav {
    ========================================================================== */
 
 .content {
-  max-width: 620px;
   margin: 0 auto;
 }
 
@@ -405,6 +401,10 @@ header {
    ========================================================================== */
 
 footer {
+  p {
+    color: #888;
+    font-size: .8rem;
+  }
 }
 
 
@@ -415,100 +415,80 @@ footer {
 /* Home
    ========================================================================== */
 
-.intro {
-  margin: 20px auto;
-  text-align: center;
-  padding: 20px 0;
-  cursor: default;
-}
-    
-  .intro h1 {
-    color: firebrick;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 1.4em;
+.home-block {
+  padding: 20px 0 40px 0;
+  border-bottom: 1px solid $faint-grey;
+
+  h2 {
+    margin: 4px 0;
   }
-    
-  .introImage {
-    background: url('../img/creation-of-adam.png') no-repeat center;
-    width: 120px;
-    height: 120px;
-    margin: 26px auto;
+
+  p {
+    font-size: .9rem;
+    line-height: 130%;
+    margin:0;
+  }
+
+  .grid {
+    margin-top: 20px;
+  }
+}
+
+.bio {
+
+  img {
+    background: #eee;
     border-radius: 50%;
-    transition: all 100ms ease-in-out;
+    display: inline-block;
+    height: 86px;
+    margin-top: 16px;
+    position: absolute;
+    vertical-align: top;
+    width: 86px;
   }
-    
-    .introImage:hover{
-      box-shadow: 0 0 0 6px #eee;
-      cursor: none;
-    }
-    
-  .intro p {
-    color: #777;
-    font-size: 1em;
-    margin: 0.5em 0;
-  }
-    
-    .intro p + p {
-      margin-top: -4px;
-      color: #888;
-      font-size: 0.8em;
+
+  div {
+    margin-left: 114px;
+
+    p {
+      margin: 20px 0;
     }
 
-.notes {
-}
-
-  .notes > li {
-    cursor: default;
-    display: block;
-    margin-bottom: 14px;
-    position: relative;
-  }
-      
-    .notes > li a{
-      display: block;
-      padding: 16px;
-      border: 1px solid #eee;
-      border-radius: 2px;
-      color: #3f3f3f;
+    p:nth-child(1) {
+      font-size: 1rem;
     }
-      
-      .notes > li a:hover {
-        border: 1px solid #ccc;
-        color: firebrick;
+
+    li {
+      display: inline-block;
+      font-size: .94rem;
+      font-weight: bold;
+
+      a {
+        border-bottom: none;
+        margin: 0 4px;
       }
     
-  .notes h2 {
-    font-size: 14pt;
-  }
+      &:after {
+        content: " ·";
+      }
 
-  .notes p {
-    color: #777;
-    margin: 6px 0;
-    font-size: 10pt;
-  }
+      &:nth-child(1) a{
+          margin-left: 0;
+        }
 
-  .notes .date {
-    margin: 4px 0 0 0;
-    color: #888;
-    font-size: 9pt;
+      &:nth-last-child(1):after {
+        content: "";
+      }
+    }
   }
-  
-  .notes .tag {
-    background: #f4f4f4;
-    border: 1px solid #eee;
-    border-radius: 2px;
-    color: #888;
-    font-size: 9pt;
-    padding: 4px 8px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-  }
+}
 
 
-/* ABOUT */
+
+
+
+/* About
+   ========================================================================== */
 
 article.about > ul {
   clear: both;
@@ -663,12 +643,12 @@ article.about > ul {
 
 
 
+/* ==========================================================================
+   Utility
+   ========================================================================== */
 
-
-/*--- MISCELLANEOUS ---*/
-
-.red {
-  color: firebrick;
+.primary {
+  color: $primary-color;
 }
 
 .left {
@@ -679,65 +659,21 @@ article.about > ul {
   float: right;
 }
 
-/*--- RESIZING ---*/
 
+/* ==========================================================================
+   Resizing
+   ========================================================================== */
 
 @media screen and (max-width: 600px){
     
   nav {
-    padding-bottom: 27px; 
   }
     
   .logo {
-    width: 130px;
-    display: block;
-    margin: 26px auto;
   }
-    
-    .logo p {
-      padding-top: 5px;
-      text-align: center;
-      font-size: 14pt;
-    }
-    
-  .logo p span {
-    display: block;
-    margin-top: -4px;
-    font-size: 10pt;
-  }
-    
-  .logo p span::before {
-    content:" ";
-  }
-  
-  nav ul {
-    margin: 0 auto;
-    width: 258px;
-    float: none;
-    display: block;
-  }
-    
-  .listView h2 {
-    margin-bottom: 6px;
-  }
-  
-  .processSteps li {
-    display: block;
-    margin-bottom: 30px;
-  }
-  
-    .processSteps li p {
-      margin: 4px;
-    }
+
 }
 
-
-/*@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-  .introImage {
-    background: url('../img/creation-of-adam_@2x.png')
-    background-size: 120px;
-  }
-}*/
 
 
 
