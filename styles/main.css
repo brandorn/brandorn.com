@@ -332,6 +332,12 @@ footer p {
       margin: 20px 0; }
     .bio div p:nth-child(1) {
       font-size: 1.3em; }
+      @media screen and (max-width: 700px) {
+        .bio div p:nth-child(1) {
+          text-align: center; } }
+    @media screen and (max-width: 700px) {
+      .bio div ul {
+        text-align: center; } }
     .bio div li {
       display: inline-block;
       font-weight: bold; }
@@ -348,8 +354,7 @@ footer p {
         content: ""; }
     @media screen and (max-width: 700px) {
       .bio div {
-        margin-left: 0;
-        text-align: center; } }
+        margin-left: 0; } }
 
 /* Content list pages
    ========================================================================== */

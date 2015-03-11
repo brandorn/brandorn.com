@@ -483,6 +483,16 @@ footer {
 
     p:nth-child(1) {
       font-size: 1.3em;
+
+      @media screen and (max-width: $break-medium) {
+        text-align: center;
+      }
+    }
+
+    ul {
+      @media screen and (max-width: $break-medium) {
+        text-align: center;
+      }
     }
 
     li {
@@ -508,10 +518,8 @@ footer {
         content: "";
       }
     }
-
     @media screen and (max-width: $break-medium) {
       margin-left: 0;
-      text-align: center;
     }
   }
 }
