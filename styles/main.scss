@@ -25,8 +25,8 @@ $primary-color: #E45555;
 
 $faint-grey: hsla(0, 0%, 90%, 1);
 $light-grey: hsla(0, 0%, 60%, 1);
-$grey: hsla(0, 0%, 40%, 1);
-$dark-grey: hsla(0, 0%, 16%, 1);
+$grey: hsla(0, 0%, 45%, 1);
+$dark-grey: hsla(0, 0%, 20%, 1);
 
 
 /* Responsive sizing variables
@@ -131,13 +131,10 @@ body {
   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
   transition: all 150ms;
   -webkit-font-smoothing: antialiased;
-
-  @media screen and (max-width: $break-medium) {
-    font-size: 10pt;
-  }
 }
 
 h1 {
+  color: $dark-grey;
   font-size: 25pt;
   line-height: 120%;
   margin: 10px 0;
@@ -165,8 +162,8 @@ p {
   color: $dark-grey;
   font-family: $sans-serif;
   letter-spacing: -0.15pt;
-  line-height: 120%;
-  margin: 20px 0;
+  line-height: 140%;
+  margin: 10px 0;
   text-shadow: none;
 }
 
@@ -201,12 +198,7 @@ sup {
   .footnotes .returnUp:link,
   .footnotes .returnUp:visited {
     text-decoration: none;
-    color: firebrick;
     border-bottom: none;
-  }
-  
-  .footnotes .returnUp:hover {
-    text-decoration: underline;
   }
 
 ul {
@@ -238,24 +230,45 @@ blockquote {
     line-height: 1.5;
     margin: 4px 0;
   }
-}
 
-  blockquote .author {
+  .author {
     font-style: normal;
     text-align: right;
   }
+}
+
+article {
+  margin: 0 auto;
+  max-width: $break-medium;
+
+  h1 {
+    font-family: $serif;
+  }
+
+  p {
+    font-family: $serif;
+    font-size: 1.1em;
+    line-height: 170%;
+    margin: 30px 0;
+    text-shadow: 0px 0px 2px #D3D3D3;
+  }
+}
+
+header {
+  text-align: center;
+  margin: 40px 0;
+
+  p {
+    color: $grey;
+    font-family: $sans-serif;
+    line-height: inherit;
+    margin: 0;
+  }
   
-  blockquote sup {
-    font-style: normal;
+  .description {
+    margin: 40px 0 8px 0;;
   }
-
-  article {
-    margin: 0 auto;
-
-    p {
-      font-family: $serif;
-    }
-  }
+}
   
 
 
@@ -297,12 +310,12 @@ nav {
       margin: 4px 10px;
       vertical-align: top;
 
-      li > p {
+      p {
         margin: 0;
         line-height: 100%;
       }
 
-      li:nth-child(1) p {
+      p:nth-child(1) {
         color: $primary-color;
         font-family: $sans-serif;
         font-size: 2.4em;
@@ -310,8 +323,12 @@ nav {
         text-transform: lowercase;
       }
 
-      li:nth-child(2) p {
+      p:nth-child(2) {
         color: $grey;
+      }
+
+      @media screen and (max-width: $break-medium) {
+        font-size: .9em;
       }
     }
   }
@@ -340,7 +357,7 @@ nav {
     div {
       display: inline-block;
       vertical-align: top;
-      padding-top: 9px;
+      padding-top: 7px;
     }
 
     p {
@@ -363,24 +380,6 @@ nav {
 
 .content {
   margin: 0 auto;
-}
-
-header {
-  text-align: center;
-  margin: 60px 0;
-
-  p {
-    font-family: 'Raleway', Helvetica, Arial, sans-serif;
-    color: #888;
-    font-size: 11pt;
-    margin: 0;
-  }
-  
-  .description {
-    font-size: 12pt;
-    line-height: 130%;
-    margin: 50px 0 8px 0;;
-  }
 }
 
 .footnotes {
@@ -440,7 +439,6 @@ footer {
   }
 
   p {
-    line-height: 130%;
     margin:0;
   }
 
@@ -525,6 +523,9 @@ footer {
 
 
 .content-filter {
+
+  margin-top: 20px;
+
   li {
     display: inline-block;
     margin: 8px 2px;
@@ -560,7 +561,7 @@ footer {
 
 .content-list {
   li {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 
     h2 {
       margin: 4px 0;
@@ -639,32 +640,6 @@ article.about > ul {
           color: #fff;
           font-weight: bold;
         }
-  
-  .about button {
-    background: none;
-    border: 1px solid #eee;
-    border-radius: 2px;
-    color: #3f3f3f;
-    cursor: pointer;
-    font-size: 9pt;
-    margin-top: 10px;
-    padding: 6px 10px;
-    transition: all 200ms;
-  }
-  
-    .about button:hover,
-    .about button:active,
-    .about button:focus {
-      border: 1px solid #ccc;
-      color: firebrick;
-    }
-
-.about-pic {
-  display: block;
-  margin: 0 auto;
-  max-width: 400px;
-  width: 100%;
-}
 
   #process .steps {
     border-bottom: 1px solid #eee;
