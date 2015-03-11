@@ -72,7 +72,6 @@
 /* HTML elements
    ========================================================================== */
 html {
-  background: #f8f8f8;
   -webkit-text-size-adjust: 100%; }
 
 body {
@@ -110,15 +109,12 @@ h4 {
   margin: 2px 0 16px 0; }
 
 p {
-  color: #1a1a1a;
-  font-size: 11pt;
-  letter-spacing: -0.2pt;
-  line-height: 130%;
+  color: #292929;
+  font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
+  letter-spacing: -0.15pt;
+  line-height: 120%;
   margin: 20px 0;
   text-shadow: none; }
-  @media screen and (max-width: 700px) {
-    p {
-      font-size: 10pt; } }
 
 a {
   transition: all 100ms; }
@@ -127,7 +123,8 @@ a {
     text-decoration: none; }
   a:hover, a:active {
     color: #dd2929;
-    transition: all 100ms; }
+    transition: all 100ms;
+    -webkit-tap-highlight-color: transparent; }
 
 sup {
   font-size: 9pt;
@@ -181,7 +178,7 @@ blockquote sup {
 article {
   margin: 0 auto; }
   article p {
-    font-family: "Source Serif Pro", Georgia, serif; }
+    font-family: "Merriweather", Georgia, serif; }
 
 /* ==========================================================================
    Layout
@@ -214,6 +211,7 @@ nav {
       line-height: 100%; }
     nav.big .logo-text li:nth-child(1) p {
       color: #E45555;
+      font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
       font-size: 2.4em;
       font-weight: 600;
       text-transform: lowercase; }
@@ -331,6 +329,7 @@ footer p {
     .bio div p {
       margin: 20px 0; }
     .bio div p:nth-child(1) {
+      font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
       font-size: 1.3em; }
       @media screen and (max-width: 700px) {
         .bio div p:nth-child(1) {

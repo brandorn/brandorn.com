@@ -26,14 +26,13 @@ $primary-color: #E45555;
 $faint-grey: hsla(0, 0%, 90%, 1);
 $light-grey: hsla(0, 0%, 60%, 1);
 $grey: hsla(0, 0%, 40%, 1);
-$dark-grey: hsla(0, 0%, 10%, 1);
+$dark-grey: hsla(0, 0%, 16%, 1);
 
 
 /* Responsive sizing variables
    ========================================================================== */
 
 $break-medium: 700px;
-
 
 /* Font variables and declarations
    ========================================================================== */
@@ -42,7 +41,7 @@ $break-medium: 700px;
  * Merriweather (serif)
  */
 
-$serif: 'Source Serif Pro', Georgia, serif;
+$serif: 'Merriweather', Georgia, serif;
 
 @font-face {
   font-family: Merriweather;
@@ -119,7 +118,6 @@ $sans-serif-bold: 600;
 
 
 html {
-  background: #f8f8f8;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -165,15 +163,11 @@ h4 {
 
 p {
   color: $dark-grey;
-  font-size: 11pt;
-  letter-spacing: -0.2pt;
-  line-height: 130%;
+  font-family: $sans-serif;
+  letter-spacing: -0.15pt;
+  line-height: 120%;
   margin: 20px 0;
   text-shadow: none;
-
-  @media screen and (max-width: $break-medium) {
-    font-size: 10pt;
-  }
 }
 
 a {
@@ -182,15 +176,14 @@ a {
   &:link,
   &:visited {
     color: $primary-color;
-    //border-bottom: 2px solid $faint-grey;
     text-decoration: none;
   }
   
   &:hover,
   &:active {
     color: darken($primary-color, 10%);
-    //border-bottom: 2px solid $primary-color;
     transition: all 100ms;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
   }
 }
 
@@ -311,6 +304,7 @@ nav {
 
       li:nth-child(1) p {
         color: $primary-color;
+        font-family: $sans-serif;
         font-size: 2.4em;
         font-weight: $sans-serif-bold;
         text-transform: lowercase;
@@ -482,6 +476,7 @@ footer {
     }
 
     p:nth-child(1) {
+      font-family: $sans-serif;
       font-size: 1.3em;
 
       @media screen and (max-width: $break-medium) {
