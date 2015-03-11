@@ -60,7 +60,7 @@ $serif: 'Merriweather', Georgia, serif;
 @font-face {
   font-family: Merriweather;
   src: url("fonts/Merriweather-Italic.otf") format("opentype");
-  font-weight: italic;
+  font-weight: normal;
   font-style: italic;
 }
 
@@ -86,28 +86,28 @@ $sans-serif-bold: 600;
 
 @font-face {
   font-family: Raleway;
-  src: url("./fonts/Raleway-Regular.ttf") format("truetype");
+  src: url("fonts/Raleway-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: Raleway;
-  src: url("./fonts/Raleway-SemiBold.ttf") format("truetype");
+  src: url("fonts/Raleway-SemiBold.ttf") format("truetype");
   font-weight: bold;
   font-style: bold;
 }
 
 @font-face {
   font-family: Raleway;
-  src: url("./fonts/Raleway-Italic.otf") format("truetype");
+  src: url("fonts/Raleway-Italic.otf") format("truetype");
   font-weight: italic;
   font-style: italic;
 }
 
 @font-face {
   font-family: Raleway;
-  src: url("./fonts/Raleway-SemiBoldItalic.otf") format("truetype");
+  src: url("fonts/Raleway-SemiBoldItalic.otf") format("truetype");
   font-weight: bold;
   font-style: italic;
 }
