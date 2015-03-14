@@ -1,6 +1,8 @@
-/* 
-* For removing the HTML extensions from pages with the same name as a directory. See http://stackoverflow.com/questions/2017748/htaccess-proper-rewriting-of-directory-and-file-with-same-name
-*/
+# ----------------------------------------------------------------------
+# .htaccess
+#
+# For removing the HTML extensions from pages with the same name as a directory. See http://stackoverflow.com/questions/2017748/htaccess-proper-rewriting-of-directory-and-file-with-same-name
+# ----------------------------------------------------------------------
 
 
 # Disable Automatic Directory detection
