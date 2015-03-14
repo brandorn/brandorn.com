@@ -28,6 +28,8 @@ $light-grey: hsla(0, 0%, 60%, 1);
 $grey: hsla(0, 0%, 35%, 1);
 $dark-grey: hsla(0, 0%, 20%, 1);
 
+$green: #23AD63;
+
 
 /* Responsive sizing variables
    ========================================================================== */
@@ -38,35 +40,35 @@ $break-medium: 700px;
    ========================================================================== */
 
 /*
- * Merriweather (serif)
+ * PT Serif (serif)
  */
 
-$serif: 'Merriweather', Georgia, serif;
+$serif: 'PT Serif', Georgia, serif;
 
 @font-face {
-  font-family: Merriweather;
-  src: url("fonts/Merriweather-Regular.ttf") format("truetype");
+  font-family: PT Serif;
+  src: url("fonts/pt-serif-normal.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: Merriweather;
-  src: url("fonts/Merriweather-Bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: bold;
-}
-
-@font-face {
-  font-family: Merriweather;
-  src: url("fonts/Merriweather-Italic.otf") format("opentype");
+  font-family: PT Serif;
+  src: url("fonts/pt-serif-normal-italic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
-  font-family: Merriweather;
-  src: url("fonts/Merriweather-BoldItalic.otf") format("opentype");
+  font-family: PT Serif;
+  src: url("fonts/pt-serif-bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: PT Serif;
+  src: url("fonts/pt-serif-bold-italic.ttf") format("truetype");
   font-weight: bold;
   font-style: italic;
 }
@@ -86,28 +88,28 @@ $sans-serif-bold: 600;
 
 @font-face {
   font-family: Raleway;
-  src: url("fonts/Raleway-Regular.ttf") format("truetype");
+  src: url("fonts/raleway-normal.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: Raleway;
-  src: url("fonts/Raleway-SemiBold.ttf") format("truetype");
+  src: url("fonts/raleway-normal-italic.otf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url("fonts/raleway-semi-bold.ttf") format("truetype");
   font-weight: bold;
   font-style: bold;
 }
 
 @font-face {
   font-family: Raleway;
-  src: url("fonts/Raleway-Italic.otf") format("truetype");
-  font-weight: italic;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: Raleway;
-  src: url("fonts/Raleway-SemiBoldItalic.otf") format("truetype");
+  src: url("fonts/raleway-semi-bold-italic.otf") format("truetype");
   font-weight: bold;
   font-style: italic;
 }
@@ -160,8 +162,7 @@ h4 {
 
 p {
   color: $dark-grey;
-  font-family: $sans-serif;
-  letter-spacing: -0.15pt;
+  font-family: $serif;
   line-height: 140%;
   margin: 10px 0;
 }
@@ -252,14 +253,19 @@ article {
   li {
     font-family: $serif;
     font-size: 1.1em;
-    line-height: 170%;
+    line-height: 160%;
     margin-bottom: 20px;
     text-shadow: 0px 0px 1px #ddd;
+  }
+
+  p {
+    text-indent: 1.5em;
   }
 
   .summary p {
     font-size: 1em;
     line-height: 150%;
+    text-indent: 0;
   }
 }
 
@@ -272,6 +278,7 @@ header {
     font-family: $sans-serif;
     line-height: inherit;
     margin: 0;
+    text-indent: 0;
   }
   
   .description {
@@ -328,6 +335,10 @@ nav {
     border-bottom: none;
   }
 
+  p {
+    font-family: $sans-serif;
+  }
+
   &.big{
 
     .logo {
@@ -354,7 +365,6 @@ nav {
 
       p:nth-child(1) {
         color: $primary-color;
-        font-family: $sans-serif;
         font-size: 2.4em;
         font-weight: $sans-serif-bold;
         text-transform: lowercase;
@@ -455,6 +465,7 @@ nav {
 footer {
   p {
     color: #888;
+    font-family: $sans-serif;
     font-size: .8rem;
   }
 }
@@ -512,7 +523,7 @@ footer {
 
     p:nth-child(1) {
       font-family: $sans-serif;
-      font-size: 1.3em;
+      font-size: 1.4em;
 
       @media screen and (max-width: $break-medium) {
         text-align: center;
@@ -559,6 +570,17 @@ footer {
    ========================================================================== */
 
 
+.content-description {
+  margin-top: 14px;
+
+  @media screen and (max-width: $break-medium) {
+    border-bottom: 1px solid $faint-grey;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    text-align: center;
+  }
+}
+
 .content-filter {
 
   margin-top: 20px;
@@ -588,15 +610,15 @@ footer {
     color: #fff;
   }
 
-  @media screen and (max-width: $break-medium) {
-    border-bottom: 1px solid #EEE;
-    margin-bottom: 40px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
 }
 
 .content-list {
+  padding-left: 20px;
+
+  @media screen and (max-width: $break-medium) {
+    padding-left: 0;
+  }
+
   li {
     margin-bottom: 24px;
 
@@ -755,12 +777,20 @@ article.about > ul {
   color: $primary-color;
 }
 
+.green {
+  color: $green;
+}
+
 .left {
   float: left;
 }
 
 .right {
   float: right;
+}
+
+.small-caps {
+  font-variant: small-caps;
 }
 
 

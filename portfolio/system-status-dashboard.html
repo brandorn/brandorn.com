@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Brandon Dorn &middot; System Status Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="description" content= "Description...">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../styles/normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/toast.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/main.css"/>
+</head>
+
+<body>
+  <nav class="small">
+    <a href="http://brandorn.com" title="Home" class="logo"></a>
+    <div class="forward-slash"></div>
+  	<div>
+      <p><a href="../portfolio.html">Portfolio</a></p>
+    </div>
+  </nav>
+  
+
+  <section class="content">
+    <article>
+      <header>
+        <h1>System Status Dashboard</h1>
+        <p class="description">A dashboard that provides at-a-glance status information about business-critical applications.</p>
+
+        <ul>
+          <li>User interviews</li>
+          <li>Wireframes</li>
+          <li>Browser prototyping</li>
+          <li>Icon design</li>
+          <li>Stylesheet writing</li>
+        </ul>
+      </header>
+      
+      <div class="grid summary">
+        <div class="grid__col grid__col--1-of-2">
+          <h2>Objective</h2>
+          <p>Help Systems leadership understand application runtime health and performance over a period of time.</p>
+        </div>
+
+        <div class="grid__col grid__col--1-of-2">
+          <h2>Research</h2>
+          <p>Conversations with leadership across areas in the Systems department revealed that various sources of data and reporting processes led to inconsistent judgments about business application health.</p>
+        </div>
+      </div>
+
+      <div class="grid summary">
+        <div class="grid__col grid__col--1-of-2">
+          <h2 class="green">Solution</h2>
+          <p>A straightforward, mobile-friendly interface that displays application status information based on agreed-upon standards.</p>
+        </div>
+        <div class="grid__col grid__col--1-of-2">
+          <h2>Impact</h2>
+          <p>General audiences have a consolidated, scalable, and reliable means for understanding current and past application performance, enabling them to make better-informed decisions for their applications.</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <p>In large corporations, the people making decisions are often far removed from the people doing the work. The generals are distanced from the from line. However, open channels of communication are required if development teams and their leadership are to understand if their application is running as expected. In this instance, the disconnect between teams and department leaders was causing conflicting, ad-hoc reports through the grapevine about the runtime performance of business applications.</p>
+
+      <p>For this project, I was asked to work with a team of database and Java developers to create a consolidated view of business-critical application health. The audience for the dashboard was people involved in coordinating and making sense of the various areas and applications across the Systems department. Previous attempts had been made to consolidate this type of information, yet often resulted in illegible visualizations that didn’t provide management or teams with useful data. Clarity and consistency were our guiding principles from the start.</p>
+
+      <p>Because the metrics being reported and the standards used were relatively straightforward, the main challenge of the project was to find ways to indicate disruptions of varying levels of significance, and to show trends over time. Visualizing quantitative information is an interest of mine, so I looked forward to trying various options for representing the data.</p>
+
+      <p>After rounds of user interviews, I drew paper sketches to share concepts with my team and product owner, which evolved into wireframes which we discussed with various leaders. These conversations were particularly helpful for exposing assumptions that I hadn’t considered – that people would like to know the various moving parts within an application, for example. Helpful suggestions were provided too, mostly about useful metadata to include.</p>
+
+      <p>Because the application is a dashboard, the layout needed to remain constant while allowing the data to change. This principle informed the design of the home page, while a secondary view displayed more detailed historical data. The application also makes use of modal dialogs to reveal secondary data (comments, details, and other metadata) about impacts.</p>
+
+      <p>To ensure consistent status interpretations across differing applications, I designed recognizable, accessible icons that, I feel, strike a balance between being informative and subtle. Users’ attention is carefully marshaled. </p>
+
+      <hr>
+
+      <p>Apart from user research and visual design, I created an HTML prototype using Bootstrap and custom stylesheets. We were able to use the prototype to receive feedback from user groups before implementing the backend services, and it made for a cleaner handoff between myself and the developers on the team. We tested the application on tablet, knowing that it would likely be the device-of-choice for people viewing the data. It’s page load performance and visual design were designed with responsiveness in mind.</p>
+
+    </article>
+  </section>
+		
+</body>
+</html>
