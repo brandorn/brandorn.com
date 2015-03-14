@@ -6,7 +6,11 @@
 
 
 # Disable Automatic Directory detection
-DirectorySlash Off
+# DirectorySlash Off
+
+# Manually re-route portfolio/ requests to portfolio
+RewriteCond %{REQUEST_FILENAME} portfolio/$
+RewriteRule ^(.*)/$ $1 
 
 # Hide extension
 RewriteCond %{REQUEST_FILENAME}\.html -f
