@@ -5,10 +5,10 @@
 # ----------------------------------------------------------------------
 
 
-# Disable Automatic Directory detection
+# Disable Automatic Directory detection - didn't work on first try
 # DirectorySlash Off
 
-# Manually re-route portfolio/ requests to portfolio
+# Manually re-route portfolio/ requests to portfolio - didn't seem to work, either...
 RewriteCond %{REQUEST_FILENAME} portfolio/$
 RewriteRule ^(.*)/$ $1 
 

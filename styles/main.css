@@ -9,7 +9,6 @@
  * Layout
  * Page-specific
  * Utility
- * Resizing
  ========================================================================== */
 /* ==========================================================================
    Global
@@ -69,6 +68,9 @@
   src: url("fonts/raleway-semi-bold-italic.otf") format("truetype");
   font-weight: bold;
   font-style: italic; }
+/*
+ * Font sizes
+ */
 /* HTML elements
    ========================================================================== */
 html {
@@ -108,9 +110,11 @@ h4 {
 
 p {
   color: #333333;
-  font-family: "PT Serif", Georgia, serif;
+  font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
+  letter-spacing: -0.15pt;
   line-height: 140%;
-  margin: 10px 0; }
+  margin: 10px 0;
+  text-shadow: 0 0 1px #ddd; }
 
 a {
   transition: all 100ms; }
@@ -169,6 +173,7 @@ article {
   article h1 {
     font-family: "PT Serif", Georgia, serif; }
   article h2 {
+    margin-top: 36px;
     text-align: center; }
   article p,
   article li {
@@ -177,9 +182,8 @@ article {
     line-height: 160%;
     margin-bottom: 20px;
     text-shadow: 0px 0px 1px #ddd; }
-  article p {
-    text-indent: 1.5em; }
   article .summary p {
+    font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
     font-size: 1em;
     line-height: 150%;
     text-indent: 0; }
@@ -204,7 +208,7 @@ header {
     width: 80%; }
   header li {
     display: inline-block;
-    font-size: .92em; }
+    font-size: 0.92em; }
     header li:after {
       content: " ·";
       color: #999999; }
@@ -253,7 +257,7 @@ nav {
       color: #595959; }
     @media screen and (max-width: 700px) {
       nav.big .logo-text {
-        font-size: .9em; } }
+        font-size: 0.92em; } }
   nav.small {
     border-bottom: none;
     padding-bottom: 10px; }
@@ -353,7 +357,6 @@ footer p {
     .bio div p {
       margin: 20px 0; }
     .bio div p:nth-child(1) {
-      font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
       font-size: 1.4em; }
       @media screen and (max-width: 700px) {
         .bio div p:nth-child(1) {
@@ -382,13 +385,13 @@ footer p {
 /* Content list pages
    ========================================================================== */
 .content-description {
+  font-size: 0.92em;
   margin-top: 14px; }
   @media screen and (max-width: 700px) {
     .content-description {
       border-bottom: 1px solid #e6e6e6;
       margin-bottom: 40px;
-      padding-bottom: 30px;
-      text-align: center; } }
+      padding-bottom: 30px; } }
 
 .content-filter {
   margin-top: 20px; }
@@ -403,7 +406,8 @@ footer p {
     font-weight: bold;
     padding: 4px 8px; }
   .content-filter a:hover {
-    background: #e6e6e6; }
+    background: #e6e6e6;
+    color: #E45555; }
   .content-filter a.selected {
     background: #E45555;
     color: #fff; }
@@ -424,106 +428,6 @@ footer p {
       font-size: .86em;
       margin-top: 6px; }
 
-/* About
-   ========================================================================== */
-article.about > ul {
-  clear: both; }
-
-.about #tabs > ul {
-  float: none;
-  margin: 50px auto;
-  text-align: center; }
-
-.about #tabs > ul li {
-  display: inline-block;
-  padding: 8px 10px 6px 10px;
-  border-radius: 2px;
-  text-align: center; }
-
-.about #tabs > ul li:focus {
-  outline: none;
-  color: firebrick; }
-
-.about #tabs > ul li a {
-  font-size: 12pt;
-  padding: 6px 10px;
-  border-bottom: 2px solid #fff; }
-
-.about #tabs > ul li a:link,
-.about #tabs > ul li a:visited {
-  color: #777; }
-
-.about #tabs > ul li a:hover,
-.about #tabs > ul li a:active {
-  color: firebrick;
-  border-bottom: 2px solid #fff; }
-
-.about #tabs > ul li a:focus {
-  background: none;
-  outline: none; }
-
-.about #tabs > ul li.ui-state-active {
-  background: firebrick;
-  transition: 300ms; }
-
-.about #tabs > ul li.ui-state-active a {
-  color: #fff;
-  font-weight: bold; }
-
-#process .steps {
-  border-bottom: 1px solid #eee;
-  margin-top: 80px;
-  padding-bottom: 20px;
-  text-align: center; }
-
-#process h3 {
-  font-size: 16pt;
-  margin: 10px 0 30px 0; }
-
-#process p {
-  text-align: left; }
-
-#process ol {
-  list-style: decimal;
-  margin-left: 40px; }
-
-#process ol p {
-  color: #777;
-  font-family: 'Raleway', Helvetica, Arial, sans-serif;
-  font-size: 12pt;
-  letter-spacing: 0pt;
-  line-height: 140%; }
-
-#process b {
-  color: #3f3f3f; }
-
-#process .methods {
-  border: 1px solid #eee;
-  border-radius: 2px;
-  font-size: 11pt;
-  line-height: 1.2;
-  margin: 50px auto;
-  text-align: left; }
-
-#process .methods th {
-  background: #f6f6f6;
-  color: #aaa;
-  font-weight: bold;
-  margin-bottom: 14px;
-  padding: 10px 0;
-  text-align: center;
-  text-transform: uppercase; }
-
-#process .methods tr {
-  border-top: 1px solid #eee; }
-
-#process .methods td {
-  border-right: 1px solid #eee;
-  padding: 12px; }
-
-#process .methods li {
-  margin-bottom: 10px; }
-
 /* ==========================================================================
    Utility
    ========================================================================== */
@@ -541,9 +445,5 @@ article.about > ul {
 
 .small-caps {
   font-variant: small-caps; }
-
-/* ==========================================================================
-   Resizing
-   ========================================================================== */
 
 /*# sourceMappingURL=main.css.map */
