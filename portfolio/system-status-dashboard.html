@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Brandon Dorn &middot; System Status Dashboard</title>
+  <title>System Status Dashboard &middot; Brandon Dorn</title>
   <meta charset="utf-8">
   <meta name="description" content= "Description...">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,21 +25,21 @@
     <article>
       <header>
         <h1>System Status Dashboard</h1>
-        <p class="description">A dashboard that provides at-a-glance status information about business-critical applications.</p>
+        <p class="description">A dashboard that provides at-a-glance status information to the enterprise about business-critical applications.</p>
 
         <ul>
           <li>User interviews</li>
           <li>Wireframes</li>
           <li>Browser prototyping</li>
           <li>Icon design</li>
-          <li>Stylesheet writing</li>
+          <li>Stylesheet development</li>
         </ul>
       </header>
       
       <div class="grid summary">
         <div class="grid__col grid__col--1-of-2">
           <h2>Objective</h2>
-          <p>Help Systems leadership understand application runtime health and performance over a period of time.</p>
+          <p>Help Systems leadership understand application runtime health and performance over meaningful periods of time.</p>
         </div>
 
         <div class="grid__col grid__col--1-of-2">
@@ -61,21 +61,37 @@
 
       <hr>
 
-      <p>In large corporations, the people making decisions are often far removed from the people doing the work. The generals are distanced from the from line. However, open channels of communication are required if development teams and their leadership are to understand if their application is running as expected. In this instance, the disconnect between teams and department leaders was causing conflicting, ad-hoc reports through the grapevine about the runtime performance of business applications.</p>
+      <p>In large corporations, the people making decisions are often far removed from the people doing the work. The generals are distanced from the front line. However, open channels of communication are required if development teams and their leadership are to understand if their application is running as expected. In this instance, the disconnect between teams and department leaders was causing conflicting, telephone-game-esque reports about the runtime performance of business applications.</p>
+
+      <figure>
+        <img src="" class="fake" width="300" height="240">
+        <figcaption>Description of the image.</figcaption>
+      </figure>
 
       <p>For this project, I was asked to work with a team of database and Java developers to create a consolidated view of business-critical application health. The audience for the dashboard was people involved in coordinating and making sense of the various areas and applications across the Systems department. Previous attempts had been made to consolidate this type of information, yet often resulted in illegible visualizations that didn’t provide management or teams with useful data. Clarity and consistency were our guiding principles from the start.</p>
 
-      <p>Because the metrics being reported and the standards used were relatively straightforward, the main challenge of the project was to find ways to indicate disruptions of varying levels of significance, and to show trends over time. Visualizing quantitative information is an interest of mine, so I looked forward to trying various options for representing the data.</p>
+      <p>Because the metrics being reported and the standards used were relatively straightforward, the main challenge of the project was to find ways to indicate disruptions of varying levels of significance, and to show trends over time. After rounds of user interviews, I drew paper sketches to share concepts with my team and product owner, which evolved into wireframes which we discussed with various leaders. These conversations exposed assumptions that I hadn’t considered – that people would like to know the various moving parts within an application, for example.</p>
 
-      <p>After rounds of user interviews, I drew paper sketches to share concepts with my team and product owner, which evolved into wireframes which we discussed with various leaders. These conversations were particularly helpful for exposing assumptions that I hadn’t considered – that people would like to know the various moving parts within an application, for example. Helpful suggestions were provided too, mostly about useful metadata to include.</p>
+      <figure class="to-the-left">
+        <img src="" class="fake" width="300" height="240">
+        <figcaption>Description of the image.</figcaption>
+      </figure>
 
-      <p>Because the application is a dashboard, the layout needed to remain constant while allowing the data to change. This principle informed the design of the home page, while a secondary view displayed more detailed historical data. The application also makes use of modal dialogs to reveal secondary data (comments, details, and other metadata) about impacts.</p>
-
-      <p>To ensure consistent status interpretations across differing applications, I designed recognizable, accessible icons that, I feel, strike a balance between being informative and subtle. Users’ attention is carefully marshaled. </p>
+      <p>Dashboards are quickly readable because their layout remains constant while the displayed data varies. When designing the homepage, it was important to establish clear visual conventions: meaningful icons, a consistent timeframe, and easy access to detailed information. The choice of a table wasn't difficult, yet finding a way to display detailed impact information – outage timeframes, teams' comments, and related information – took some experimentation. I ended up using modal dialogs to reveal this secondary data, and created application-specific pages for showing metrics across timeframes longer than those on the dashboard display.</p>
 
       <hr>
 
-      <p>Apart from user research and visual design, I created an HTML prototype using Bootstrap and custom stylesheets. We were able to use the prototype to receive feedback from user groups before implementing the backend services, and it made for a cleaner handoff between myself and the developers on the team. We tested the application on tablet, knowing that it would likely be the device-of-choice for people viewing the data. It’s page load performance and visual design were designed with responsiveness in mind.</p>
+      <figure class="two-up">
+        <img src="" class="fake" width="300" height="120">
+        <figcaption>Description of the image.</figcaption>
+      </figure>
+
+      <figure class="two-up">
+        <img src="" class="fake" width="300" height="120">
+        <figcaption>Description of the image. Longer description blah blah blah blah.</figcaption>
+      </figure>
+
+      <p>Apart from user research and visual design, I created an HTML prototype using Bootstrap and custom stylesheets. We were able to use the prototype to receive feedback from user groups before implementing the backend services, and it made for a cleaner handoff between myself and the developers on the team. We also tested page load and visual display on tablets, knowing that it would likely be the device-of-choice for folks viewing the data. Also, I designed recognizable, accessible icons that inform without shouting – a pitfall of many dashboards.</p>
 
     </article>
   </section>

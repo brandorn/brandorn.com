@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Insight &middot; Brandon Dorn</title>
+  <meta charset="utf-8">
+  <meta name="description" content= "Description...">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../styles/normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/toast.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/main.css"/>
+</head>
+
+<body>
+  <nav class="small">
+    <a href="http://brandorn.com" title="Home" class="logo"></a>
+    <div class="forward-slash"></div>
+  	<div>
+      <p><a href="../portfolio.html">Portfolio</a></p>
+    </div>
+  </nav>
+  
+
+  <section class="content">
+    <article>
+      <header>
+        <h1>Insight</h1>
+        <p class="description">A web application used for in-depth monitoring of application performance throughout development lifecycles.</p>
+
+        <ul>
+          <li>Technical research</li>
+          <li>User interviews</li>
+          <li>Paper and browser prototyping</li>
+          <li>Information visualization</li>
+          <li>Stylesheet development</li>
+        </ul>
+      </header>
+      
+      <div class="grid summary">
+        <div class="grid__col grid__col--1-of-2">
+          <h2>Objective</h2>
+          <p>Present relevant application metrics to help development and test teams respond to performance problems early on in the development process.</p>
+        </div>
+
+        <div class="grid__col grid__col--1-of-2">
+          <h2>Research</h2>
+          <p>Studying the way logging and diagnostic tools were used by application teams led to the realization that testers and developers didn’t have a way of getting a broad sense of application health across entire environments without running complex, cumbersome queries on each item.</p>
+        </div>
+      </div>
+
+      <div class="grid summary">
+        <div class="grid__col grid__col--1-of-2">
+          <h2 class="green">Solution</h2>
+          <p>A tool that consolidates useful application metrics, making them meaningful for people with varying levels of technical skill.</p>
+        </div>
+
+        <div class="grid__col grid__col--1-of-2">
+          <h2>Impact</h2>
+          <p>Application teams are able to quickly compare metrics with norms and standards, and run diagnostic tests based on clues gathered from correlations between various metrics.</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <p>Like a hawk released into the wild or a child sent off to college, once an application leaves the various stages of local and sandbox development, one can’t really know how it’s going to do until it’s out there. Whether the application is working or not is relatively easy to tell. But <em>how well</em> it’s doing can be a more difficult, but equally important judgment.</p>
+
+      <p>I was asked to help a Platform-as-a-Service team make a tool that gives application teams and owners across the Systems department a clear sense of the runtime health of their applications: how available their applications are in test and production environments, how they respond to various levels of throughput, how quickly they perform operations, and other metrics. Early on, we knew that the tool needed to be accessible  and useful for developers with a high degree of technical skill and also for test and other folks who would check in on applications within their purview from time to time. Insight would have to be a flexible, efficient means for people to learn about their applications out in the wild. </p>
+
+      <figure class="double-wide">
+        <img src="" class="fake" width="300" height="420">
+        <figcaption>Description of the image.</figcaption>
+      </figure>
+
+      <p>An audit of the technologies used by various teams for gathering runtime data showed us a few interesting things. One, that teams only checked on the health of their applications when told through the grapevine that something was going wrong, and two, that the complexity of the queries needed to gather health metrics meant that teams seldom ran them, and seldom ran them correctly. We realized that part of Insight's value would be to present a consolidated, standardized source of health metrics for teams across the enterprise. Its value would also be the presentation of <em>pre-diagnostic</em> information for sending teams in the right direction when discovering an issue, not unlike an oil-check indication that lights up well in advance of a choked-up engine.</p>
+
+      <figure class="two-up">
+        <img src="" class="fake" width="300" height="420">
+        <figcaption>Description of the image.</figcaption>
+      </figure>
+
+      <figure class="two-up">
+        <img src="" class="fake" width="300" height="420">
+        <figcaption>Description of the image.</figcaption>
+      </figure>
+
+      <p>Knowing that we’d need to display information for hundreds of discrete applications, Insight’s interface would need an obvious navigation structure to enable users to easily hone in on their interests. Another challenge was finding a flexible but consistent way of presenting data for individual applications. I created a few sets of sketches for the team, which we turned into browser prototypes for experimenting with tabs, filters, labels, and other types of navigation conventions. We ended up settling on a combination of tabs, filters, and search. And after trying various table and grid layouts, we used tiles to represent high-level information about applications, from which "drawers" expanded to show more detailed metrics. As the number of metrics reported grew, however, we ended up keeping the tiles but dropping the drawers, instead using full pages to display more detailed application information.</p>
+
+      <figure class="double-wide">
+        <img src="" class="fake" width="300" height="420">
+        <figcaption>Description of the image.</figcaption>
+      </figure>
+
+      <hr>
+
+      <p>My role at the outset was simply to identify questions and assumptions for the project team to consider as we designed Insight. For my part, I needed to learn what types of information our users wanted, and what was insufficient about the information and tools they had. Interviews with teams across the department gave direction to the data and overall information architecture of our tool.</p>
+
+      <p>After sketching ideas on paper and reviewing them with the team, I created basic browser prototypes using HTML, CSS, and jQuery to give us a sense of the viability of the navigation and tile display conventions. I also explored various ways of visualizing metrics to find ways of enabling quick correlations, and decided on time-series graphs for application detail pages.<p>
+
+      <p>Once we reached a consensus on the general navigation and layout, I styled the prototype according to brand standards, extending them where necessary, and handed them off to our Java developers to hook up the backend and configure the data displays.</p>
+
+      <p>During the course of Insight’s beta release, the product owner and I met with developer and leadership user groups, incorporating suggestions as they fit the purpose and scope of the tool. </p>
+
+
+    </article>
+  </section>
+		
+</body>
+</html>

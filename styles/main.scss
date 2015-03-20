@@ -34,6 +34,7 @@ $green: #23AD63;
    ========================================================================== */
 
 $break-medium: 700px;
+$break-large: 1080px;
 
 /* Font variables and declarations
    ========================================================================== */
@@ -84,7 +85,6 @@ $sans-serif: Avenir, 'Raleway', Helvetica, Arial, sans-serif;
 
 $sans-serif-bold: 600;
 
-
 @font-face {
   font-family: Raleway;
   src: url("fonts/raleway-normal.ttf") format("truetype");
@@ -126,6 +126,11 @@ $sans-serif-bold: 600;
 
 html {
   -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 body {
@@ -260,9 +265,9 @@ article {
   p, 
   li {
     font-family: $serif;
-    font-size: 1.1em;
+    font-size: 1.16em;
     line-height: 160%;
-    margin-bottom: 20px;
+    margin-bottom: 2em;
     text-shadow: 0px 0px 1px #ddd;
   }
 
@@ -316,7 +321,76 @@ header {
         content: "";
       }
   }
+}
 
+figure {
+  margin: 7% 0;
+  vertical-align: top;
+
+  &.double-wide {
+    width: 140%;
+    margin-left: -20%;
+
+    @media screen and (max-width: $break-large) {
+      float: none;
+      width: 100%;
+      margin: 5% 0;
+    }
+  }
+
+  &.to-the-left {
+    float: left;
+    width: 50%;
+    margin: 2% 5%;
+    margin-left: -20%;
+
+    @media screen and (max-width: $break-large) {
+      float: none;
+      width: 100%;
+      margin: 5% 0;
+    }
+  }
+
+  &.to-the-right {
+    float: right;
+    width: 50%;
+    margin: 2% 5%;
+    margin-right: -20%;
+
+    @media screen and (max-width: $break-large) {
+      float: none;
+      width: 100%;
+      margin: 5% 0;
+    }
+  }
+
+  &.two-up{
+    display: inline-block;
+    margin: 5% 2%;
+    width: 45%;
+
+    @media screen and (max-width: $break-large) {
+      display: block;
+      width: 100%;
+      margin: 5% 0;
+    }
+  }
+}
+
+figcaption {
+  color: $grey;
+  font-family: $sans-serif;
+  font-size: $small-type;
+  margin: .5em 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+
+  &.fake {
+    background: $faint-grey;
+  }
 }
   
 
@@ -580,6 +654,7 @@ footer {
 
   @media screen and (max-width: $break-medium) {
     border-bottom: 1px solid $faint-grey;
+    font-size: 1em;
     margin-bottom: 40px;
     padding-bottom: 30px;
   }
@@ -603,16 +678,20 @@ footer {
     border-radius: 2px;
     font-weight: bold;
     padding: 4px 8px;
-  }
-
-  a:hover {
-    background: $faint-grey;
-    color: $primary-color;
+  
+    &:hover {
+      background: $faint-grey;
+      color: $primary-color;
+    }
   }
 
   a.selected {
     background: $primary-color;
     color: #fff;
+  }
+
+  @media screen and (max-width: $break-medium) {
+    text-align: center;
   }
 
 }
