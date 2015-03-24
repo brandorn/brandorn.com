@@ -199,7 +199,7 @@ header {
    * For the methodology items in the portfolio.
    */ }
   header p, header li {
-    color: #595959;
+    color: #616161;
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
     line-height: inherit;
     margin: 0;
@@ -255,18 +255,28 @@ figure {
   figure.two-up {
     display: inline-block;
     margin: 5% 2%;
-    width: 45%; }
+    width: 68%; }
+    figure.two-up.left {
+      margin-left: -20%; }
+      @media screen and (max-width: 1080px) {
+        figure.two-up.left {
+          margin-left: 0; } }
+    figure.two-up.right {
+      margin-right: -20%; }
+      @media screen and (max-width: 1080px) {
+        figure.two-up.right {
+          margin-right: 0; } }
     @media screen and (max-width: 1080px) {
       figure.two-up {
         display: block;
         width: 100%;
-        margin: 5% 0; } }
+        margin: 2% 0; } }
 
 figcaption {
-  color: #595959;
+  color: #616161;
   font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
   font-size: 0.92em;
-  margin: .5em 0; }
+  margin: 1em 0; }
 
 img {
   display: block;
@@ -281,8 +291,7 @@ img {
    ========================================================================== */
 nav {
   padding: 32px 0;
-  cursor: default;
-  border-bottom: 1px solid #e6e6e6; }
+  cursor: default; }
   nav .logo {
     display: inline-block;
     background: url("../img/logo.svg") no-repeat center;
@@ -311,7 +320,7 @@ nav {
       font-weight: 600;
       text-transform: lowercase; }
     nav.big .logo-text p:nth-child(2) {
-      color: #595959; }
+      color: #616161; }
     @media screen and (max-width: 700px) {
       nav.big .logo-text {
         font-size: 0.92em; } }
@@ -347,7 +356,8 @@ nav {
 /* Content
    ========================================================================== */
 .content {
-  margin: 0 auto; }
+  margin: 0 auto;
+  min-height: 500px; }
 
 .footnotes {
   margin: 60px 0 120px 0;
@@ -374,10 +384,12 @@ nav {
 
 /* Footer
    ========================================================================== */
-footer p {
-  color: #888;
-  font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
-  font-size: .8rem; }
+footer {
+  border-top: 1px solid #e6e6e6; }
+  footer p {
+    color: #888;
+    font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
+    font-size: .8rem; }
 
 /* ==========================================================================
    Pages
@@ -386,7 +398,7 @@ footer p {
    ========================================================================== */
 .home-block {
   padding: 10px 0 40px 0;
-  border-bottom: 1px solid #e6e6e6; }
+  border-top: 1px solid #e6e6e6; }
   .home-block h2 {
     margin: 4px 0; }
   .home-block p {
@@ -396,47 +408,53 @@ footer p {
 
 .bio {
   padding: 40px 0; }
-  .bio img {
-    border-radius: 50%;
+  .bio .portrait {
+    background: url("../img/bd-portrait-1.jpg");
+    background-size: 140px;
+    border-radius: 4px;
     display: inline-block;
-    height: 86px;
+    height: 135px;
     margin-top: 16px;
     position: absolute;
+    transition: 200ms;
     vertical-align: top;
-    width: 86px; }
+    width: 140px; }
+    .bio .portrait:hover {
+      background: url("../img/bd-portrait-2.png");
+      background-size: 140px; }
     @media screen and (max-width: 700px) {
-      .bio img {
+      .bio .portrait {
         display: block;
         margin: 20px auto 40px auto;
         position: inherit; } }
-  .bio div {
-    margin-left: 114px; }
-    .bio div p {
+  .bio div + div {
+    margin-left: 170px; }
+    .bio div + div p {
       margin: 20px 0; }
-    .bio div p:nth-child(1) {
+    .bio div + div p:nth-child(1) {
       font-size: 1.4em; }
       @media screen and (max-width: 700px) {
-        .bio div p:nth-child(1) {
+        .bio div + div p:nth-child(1) {
           text-align: center; } }
     @media screen and (max-width: 700px) {
-      .bio div ul {
+      .bio div + div ul {
         text-align: center; } }
-    .bio div li {
+    .bio div + div li {
       display: inline-block;
       font-weight: bold; }
-      .bio div li a {
+      .bio div + div li a {
         border-bottom: none;
         font-size: 1em;
         margin: 0 4px; }
-      .bio div li:after {
-        content: " ·";
+      .bio div + div li:after {
+        content: " · ";
         color: #999999; }
-      .bio div li:nth-child(1) a {
+      .bio div + div li:nth-child(1) a {
         margin-left: 0; }
-      .bio div li:nth-last-child(1):after {
+      .bio div + div li:nth-last-child(1):after {
         content: ""; }
     @media screen and (max-width: 700px) {
-      .bio div {
+      .bio div + div {
         margin-left: 0; } }
 
 /* Content list pages
@@ -485,7 +503,7 @@ footer p {
     .content-list li p {
       margin: 0; }
     .content-list li .meta {
-      color: #595959;
+      color: #616161;
       font-size: .86em;
       margin-top: 6px; }
 
@@ -503,6 +521,9 @@ footer p {
 
 .right {
   float: right; }
+
+.clear {
+  clear: both; }
 
 .small-caps {
   font-variant: small-caps; }

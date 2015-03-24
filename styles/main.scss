@@ -24,7 +24,7 @@ $primary-color: #E45555;
 
 $faint-grey: hsla(0, 0%, 90%, 1);
 $light-grey: hsla(0, 0%, 60%, 1);
-$grey: hsla(0, 0%, 35%, 1);
+$grey: hsla(0, 0%, 38%, 1);
 $dark-grey: hsla(0, 0%, 20%, 1);
 
 $green: #23AD63;
@@ -367,12 +367,28 @@ figure {
   &.two-up{
     display: inline-block;
     margin: 5% 2%;
-    width: 45%;
+    width: 68%;
+
+    &.left{
+        margin-left: -20%;
+
+        @media screen and (max-width: $break-large) {
+          margin-left: 0;
+        }
+    }
+
+    &.right{
+        margin-right: -20%;
+
+        @media screen and (max-width: $break-large) {
+          margin-right: 0;
+        }
+    }
 
     @media screen and (max-width: $break-large) {
       display: block;
       width: 100%;
-      margin: 5% 0;
+      margin: 2% 0;
     }
   }
 }
@@ -381,7 +397,7 @@ figcaption {
   color: $grey;
   font-family: $sans-serif;
   font-size: $small-type;
-  margin: .5em 0;
+  margin: 1em 0;
 }
 
 img {
@@ -406,7 +422,6 @@ img {
 nav {
   padding: 32px 0;
   cursor: default;
-  border-bottom: 1px solid $faint-grey;
 
   .logo {
     display: inline-block;
@@ -506,6 +521,7 @@ nav {
 
 .content {
   margin: 0 auto;
+  min-height: 500px;
 }
 
 .footnotes {
@@ -542,6 +558,8 @@ nav {
    ========================================================================== */
 
 footer {
+  border-top: 1px solid $faint-grey;
+
   p {
     color: #888;
     font-family: $sans-serif;
@@ -559,7 +577,7 @@ footer {
 
 .home-block {
   padding: 10px 0 40px 0;
-  border-bottom: 1px solid $faint-grey;
+  border-top: 1px solid $faint-grey;
 
   h2 {
     margin: 4px 0;
@@ -577,14 +595,22 @@ footer {
 .bio {
   padding: 40px 0;
 
-  img {
-    border-radius: 50%;
+  .portrait {
+    background: url('../img/bd-portrait-1.jpg');
+    background-size: 140px;
+    border-radius: 4px;
     display: inline-block;
-    height: 86px;
+    height: 135px;
     margin-top: 16px;
     position: absolute;
+    transition: 200ms;
     vertical-align: top;
-    width: 86px;
+    width: 140px;
+
+    &:hover {
+      background: url('../img/bd-portrait-2.png');
+      background-size: 140px;
+    }
 
     @media screen and (max-width: $break-medium) {
       display: block;
@@ -593,8 +619,8 @@ footer {
     }
   }
 
-  div {
-    margin-left: 114px;
+  div + div {
+    margin-left: 170px;
 
     p {
       margin: 20px 0;
@@ -625,7 +651,7 @@ footer {
       }
     
       &:after {
-        content: " ·";
+        content: " · ";
         color: $light-grey;
       }
 
@@ -741,6 +767,10 @@ footer {
 
 .right {
   float: right;
+}
+
+.clear {
+  clear: both;
 }
 
 .small-caps {
