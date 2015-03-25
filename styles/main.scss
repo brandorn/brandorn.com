@@ -43,7 +43,12 @@ $break-large: 1080px;
  * PT Serif (serif)
  */
 
-$serif: 'PT Serif', Georgia, serif;
+$serif: Georgia, serif;
+
+/*
+ * Need to figure out how to avoid delay using @font-face.
+ * $serif: 'PT Serif', Georgia, serif;
+ */
 
 .serif {
   font-family: $serif;
@@ -398,6 +403,13 @@ figure {
       display: block;
       width: 100%;
       margin: 2% 0;
+    }
+  }
+
+  &.natural-width {
+    img {
+      width: auto;
+      margin: 0 auto;
     }
   }
 }
@@ -776,6 +788,10 @@ footer {
 
 .right {
   float: right;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .clear {

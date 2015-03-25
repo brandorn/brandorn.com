@@ -22,8 +22,12 @@
 /*
  * PT Serif (serif)
  */
+/*
+ * Need to figure out how to avoid delay using @font-face.
+ * $serif: 'PT Serif', Georgia, serif;
+ */
 .serif {
-  font-family: "PT Serif", Georgia, serif; }
+  font-family: Georgia, serif; }
 
 @font-face {
   font-family: PT Serif;
@@ -182,13 +186,13 @@ article {
   margin: 0 auto 50px auto;
   max-width: 700px; }
   article h1 {
-    font-family: "PT Serif", Georgia, serif; }
+    font-family: Georgia, serif; }
   article h2 {
     margin-top: 36px;
     text-align: center; }
   article p,
   article li {
-    font-family: "PT Serif", Georgia, serif;
+    font-family: Georgia, serif;
     font-size: 1.16em;
     line-height: 160%;
     margin-bottom: 2em;
@@ -278,6 +282,9 @@ figure {
         display: block;
         width: 100%;
         margin: 2% 0; } }
+  figure.natural-width img {
+    width: auto;
+    margin: 0 auto; }
 
 figcaption {
   color: #616161;
@@ -528,6 +535,9 @@ footer {
 
 .right {
   float: right; }
+
+.text-center {
+  text-align: center; }
 
 .clear {
   clear: both; }

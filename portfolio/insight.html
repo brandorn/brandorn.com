@@ -62,28 +62,30 @@
 
       <hr>
 
-      <p>Like a hawk released into the wild or a child sent off to college, once an application leaves the various stages of local and sandbox development, one can’t really know how it’s going to do until it’s out there. Whether the application is working or not is relatively easy to tell. But <em>how well</em> it’s doing can be a more difficult, but equally important judgment.</p>
+      <p>Like a hawk released into the wild or a child sent off to college, once an application leaves the various stages of local and sandbox development, one can’t really know how it’s going to do until it’s out there. Whether an application is working or not is relatively easy to tell. But <em>how well</em> it’s doing can be a more difficult, but equally important judgment.</p>
 
       <p>I was asked to help a Platform-as-a-Service team make a tool that gives application teams and owners across the Systems department a clear sense of the runtime health of their applications: how available their applications are in test and production environments, how they respond to various levels of throughput, how quickly they perform operations, and other metrics. Early on, we knew that the tool needed to be accessible  and useful for developers with a high degree of technical skill and also for test and other folks who would check in on applications within their purview from time to time. Insight would have to be a flexible, efficient means for people to learn about their applications out in the wild. </p>
 
       <figure class="double-wide">
-        <img src="" class="fake" width="300" height="420">
+        <img src="img/insight-mockup-2.png" alt="">
         <figcaption>Description of the image.</figcaption>
       </figure>
 
       <p>An audit of the technologies used by various teams for gathering runtime data showed us a few interesting things. One, that teams only checked on the health of their applications when told through the grapevine that something was going wrong, and two, that the complexity of the queries needed to gather health metrics meant that teams seldom ran them, and seldom ran them correctly. We realized that part of Insight's value would be to present a consolidated, standardized source of health metrics for teams across the enterprise. Its value would also be the presentation of <em>pre-diagnostic</em> information for sending teams in the right direction when discovering an issue, not unlike an oil-check indication that lights up well in advance of a choked-up engine.</p>
 
-      <figure class="two-up">
-        <img src="" class="fake" width="300" height="420">
+      <figure class="double-wide">
+        <img src="img/insight-mockup-1.png" alt="">
         <figcaption>Description of the image.</figcaption>
       </figure>
 
-      <figure class="two-up">
-        <img src="" class="fake" width="300" height="420">
+      <figure class="double-wide">
+        <img src="img/insight-proto-1.png" alt="">
         <figcaption>Description of the image.</figcaption>
       </figure>
 
       <p>Knowing that we’d need to display information for hundreds of discrete applications, Insight’s interface would need an obvious navigation structure to enable users to easily hone in on their interests. Another challenge was finding a flexible but consistent way of presenting data for individual applications. I created a few sets of sketches for the team, which we turned into browser prototypes for experimenting with tabs, filters, labels, and other types of navigation conventions. We ended up settling on a combination of tabs, filters, and search. And after trying various table and grid layouts, we used tiles to represent high-level information about applications, from which "drawers" expanded to show more detailed metrics. As the number of metrics reported grew, however, we ended up keeping the tiles but dropping the drawers, instead using full pages to display more detailed application information.</p>
+
+      <p>Describe visual conventions - sparklines, colors for thresholds, etc./p>
 
       <figure class="double-wide">
         <img src="" class="fake" width="300" height="420">
