@@ -22,6 +22,9 @@
 /*
  * PT Serif (serif)
  */
+.serif {
+  font-family: "PT Serif", Georgia, serif; }
+
 @font-face {
   font-family: PT Serif;
   src: url("fonts/pt-serif-normal.ttf") format("truetype");
@@ -45,6 +48,9 @@
 /*
  * Raleway (sans-serif)
  */
+.sans-serif {
+  font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif; }
+
 /*
  * For Avenir bolding
  */
@@ -527,5 +533,8 @@ footer {
 
 .small-caps {
   font-variant: small-caps; }
+
+.hidden {
+  display: none; }
 
 /*# sourceMappingURL=main.css.map */

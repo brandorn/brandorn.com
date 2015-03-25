@@ -45,6 +45,10 @@ $break-large: 1080px;
 
 $serif: 'PT Serif', Georgia, serif;
 
+.serif {
+  font-family: $serif;
+}
+
 @font-face {
   font-family: PT Serif;
   src: url("fonts/pt-serif-normal.ttf") format("truetype");
@@ -78,6 +82,10 @@ $serif: 'PT Serif', Georgia, serif;
  */
 
 $sans-serif: Avenir, 'Raleway', Helvetica, Arial, sans-serif;
+
+.sans-serif {
+  font-family: $sans-serif;
+}
 
 /*
  * For Avenir bolding
@@ -775,5 +783,9 @@ footer {
 
 .small-caps {
   font-variant: small-caps;
+}
+
+.hidden {
+  display: none;
 }
 
