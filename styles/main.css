@@ -87,6 +87,7 @@ html {
   box-sizing: inherit; }
 
 body {
+  background: #fcfcfc;
   font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
   font-size: 11pt;
   font-weight: normal;
@@ -98,13 +99,13 @@ body {
   -webkit-font-smoothing: antialiased; }
 
 h1 {
-  color: #333333;
+  color: #242424;
   font-size: 25pt;
   line-height: 120%;
   margin: 10px 0; }
 
 h2 {
-  color: #333333;
+  color: #242424;
   font-size: 1.4em;
   font-weight: bold;
   line-height: 1;
@@ -119,7 +120,7 @@ h4 {
   margin: 2px 0 16px 0; }
 
 p {
-  color: #333333;
+  color: #242424;
   font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
   letter-spacing: -0.15pt;
   line-height: 140%;
