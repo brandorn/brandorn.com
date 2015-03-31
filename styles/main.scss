@@ -20,7 +20,7 @@
 /* Color variables
    ========================================================================== */
 
-$primary-color: #E45555;
+$primary-color: #E52E13;
 
 $faint-grey: hsla(0, 0%, 90%, 1);
 $light-grey: hsla(0, 0%, 60%, 1);
@@ -191,6 +191,10 @@ p {
   line-height: 140%;
   margin: 10px 0;
   text-shadow: 0 0 1px #ddd;
+
+  a:link {
+    border-bottom: 2px solid $primary-color;
+  }
 }
 
 a {
@@ -529,7 +533,7 @@ nav {
       text-transform: lowercase;
       vertical-align: middle;
 
-      a {
+      a:link {
         border-bottom: none;
       }
     }
