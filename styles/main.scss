@@ -454,10 +454,6 @@ nav {
     border-bottom: none;
   }
 
-  p {
-    font-family: $sans-serif;
-  }
-
   &.big{
 
     .logo {
@@ -482,14 +478,14 @@ nav {
         line-height: 100%;
       }
 
-      p:nth-child(1) {
+      h1 {
         color: $primary-color;
-        font-size: 2.4em;
-        font-weight: $sans-serif-bold;
+        font-weight: normal;
+        line-height: 54%;
         text-transform: lowercase;
       }
 
-      p:nth-child(2) {
+      p {
         color: $grey;
       }
 
@@ -605,6 +601,7 @@ footer {
   border-top: 1px solid $faint-grey;
 
   h2 {
+    font-weight: normal;
     margin: 4px 0;
   }
 

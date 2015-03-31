@@ -312,8 +312,6 @@ nav {
     display: inline-block;
     background: url("../img/logo.svg") no-repeat center;
     border-bottom: none; }
-  nav p {
-    font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif; }
   nav.big .logo {
     background-size: 60px;
     height: 56px;
@@ -330,12 +328,12 @@ nav {
     nav.big .logo-text p {
       margin: 0;
       line-height: 100%; }
-    nav.big .logo-text p:nth-child(1) {
+    nav.big .logo-text h1 {
       color: #E52E13;
-      font-size: 2.4em;
-      font-weight: 600;
+      font-weight: normal;
+      line-height: 54%;
       text-transform: lowercase; }
-    nav.big .logo-text p:nth-child(2) {
+    nav.big .logo-text p {
       color: #616161; }
     @media screen and (max-width: 700px) {
       nav.big .logo-text {
@@ -416,6 +414,7 @@ footer {
   padding: 10px 0 40px 0;
   border-top: 1px solid #e6e6e6; }
   .home-block h2 {
+    font-weight: normal;
     margin: 4px 0; }
   .home-block p {
     margin: 0; }
