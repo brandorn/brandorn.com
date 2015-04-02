@@ -24,10 +24,9 @@
  */
 /*
  * Need to figure out how to avoid delay using @font-face.
- * $serif: 'PT Serif', Georgia, serif;
  */
 .serif {
-  font-family: Georgia, serif; }
+  font-family: "PT Serif", Georgia, serif; }
 
 @font-face {
   font-family: PT Serif;
@@ -110,10 +109,16 @@ h1 {
 
 h2 {
   color: #242424;
-  font-size: 1.4em;
-  font-weight: 600;
+  font-size: 1.5em;
+  font-weight: normal;
   line-height: 1;
   margin: 12px 0; }
+  h2 a:link,
+  h2 a:visited {
+    text-decoration: none; }
+  h2 a:hover,
+  h2 a:active {
+    text-decoration: underline; }
 
 h3 {
   font-size: 14pt;
@@ -130,16 +135,13 @@ p {
   line-height: 140%;
   margin: 10px 0;
   text-shadow: 0 0 1px #ddd; }
-  p a:link {
-    border-bottom: 2px solid #E52E13; }
 
 a {
   transition: all 100ms; }
   a:link, a:visited {
     color: #E52E13;
-    text-decoration: none; }
+    text-decoration: underline; }
   a:hover, a:active {
-    color: #b6250f;
     transition: all 100ms;
     -webkit-tap-highlight-color: transparent; }
 
@@ -188,13 +190,13 @@ article {
   margin: 0 auto 50px auto;
   max-width: 700px; }
   article h1 {
-    font-family: Georgia, serif; }
+    font-family: "PT Serif", Georgia, serif; }
   article h2 {
     margin-top: 36px;
     text-align: center; }
   article p,
   article li {
-    font-family: Georgia, serif;
+    font-family: "PT Serif", Georgia, serif;
     font-size: 1.16em;
     line-height: 160%;
     margin-bottom: 2em;
@@ -360,12 +362,15 @@ nav {
       padding-top: 7px; }
     nav.small p {
       font-size: 1.4em;
-      font-weight: bold;
       margin: 0;
       text-transform: lowercase;
       vertical-align: middle; }
-      nav.small p a:link {
-        border-bottom: none; }
+      nav.small p a:link,
+      nav.small p a:visited {
+        text-decoration: none; }
+      nav.small p a:hover,
+      nav.small p a:active {
+        text-decoration: underline; }
 
 /* Content
    ========================================================================== */
@@ -415,7 +420,7 @@ footer {
   border-top: 1px solid #e6e6e6; }
   .home-block h2 {
     font-weight: normal;
-    margin: 4px 0; }
+    margin: 6px 0; }
   .home-block p {
     margin: 0; }
   .home-block .grid__col {
@@ -455,11 +460,8 @@ footer {
       .bio div + div ul {
         text-align: center; } }
     .bio div + div li {
-      display: inline-block;
-      font-weight: bold; }
+      display: inline-block; }
       .bio div + div li a {
-        border-bottom: none;
-        font-size: 1em;
         margin: 0 4px; }
       .bio div + div li:after {
         content: " · ";
