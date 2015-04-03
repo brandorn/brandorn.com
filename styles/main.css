@@ -54,9 +54,6 @@
 .sans-serif {
   font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif; }
 
-/*
- * For Avenir bolding
- */
 @font-face {
   font-family: Raleway;
   src: url("fonts/raleway-normal.ttf") format("truetype");
@@ -70,12 +67,12 @@
 @font-face {
   font-family: Raleway;
   src: url("fonts/raleway-semi-bold.ttf") format("truetype");
-  font-weight: bold;
+  font-weight: 500;
   font-style: bold; }
 @font-face {
   font-family: Raleway;
   src: url("fonts/raleway-semi-bold-italic.otf") format("truetype");
-  font-weight: bold;
+  font-weight: 500;
   font-style: italic; }
 /*
  * Font sizes
@@ -84,7 +81,8 @@
    ========================================================================== */
 html {
   -webkit-text-size-adjust: 100%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-size: 11pt; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -92,7 +90,6 @@ html {
 body {
   background: #fcfcfc;
   font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
-  font-size: 11pt;
   font-weight: normal;
   margin: 0 auto;
   max-width: 900px;
@@ -103,14 +100,14 @@ body {
 
 h1 {
   color: #242424;
-  font-size: 25pt;
+  font-size: 2rem;
   line-height: 120%;
   margin: 10px 0; }
 
 h2 {
   color: #242424;
-  font-size: 1.5em;
-  font-weight: normal;
+  font-size: 1.5rem;
+  font-weight: 500;
   line-height: 1;
   margin: 12px 0; }
   h2 a:link,
@@ -121,7 +118,7 @@ h2 {
     text-decoration: underline; }
 
 h3 {
-  font-size: 14pt;
+  font-size: 1.2rem;
   font-weight: bold; }
 
 h4 {
@@ -139,14 +136,14 @@ p {
 a {
   transition: all 100ms; }
   a:link, a:visited {
-    color: #E52E13;
+    color: #DB240D;
     text-decoration: underline; }
   a:hover, a:active {
     transition: all 100ms;
     -webkit-tap-highlight-color: transparent; }
 
 sup {
-  font-size: 9pt;
+  font-size: .9rem;
   font-weight: bold;
   padding: 2px;
   position: relative;
@@ -178,7 +175,6 @@ blockquote {
   padding: 4px 16px; }
   blockquote p {
     color: #777;
-    font-size: 13pt;
     font-style: italic;
     line-height: 1.5;
     margin: 4px 0; }
@@ -197,13 +193,13 @@ article {
   article p,
   article li {
     font-family: "PT Serif", Georgia, serif;
-    font-size: 1.16em;
+    font-size: 1.16rem;
     line-height: 160%;
     margin-bottom: 2em;
     text-shadow: 0px 0px 1px #ddd; }
   article .summary p {
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
-    font-size: 1em;
+    font-size: 1rem;
     line-height: 150%;
     text-indent: 0; }
 
@@ -227,7 +223,7 @@ header {
     width: 80%; }
   header li {
     display: inline-block;
-    font-size: 0.92em; }
+    font-size: 0.92rem; }
     header li:after {
       content: " ·";
       color: #999999; }
@@ -293,7 +289,7 @@ figure {
 figcaption {
   color: #616161;
   font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
-  font-size: 0.92em;
+  font-size: 0.92rem;
   margin: 1em 0; }
 
 img {
@@ -325,21 +321,23 @@ nav {
         width: 34px; } }
   nav.big .logo-text {
     display: inline-block;
-    margin: 4px 10px;
+    margin: 3px 10px;
     vertical-align: top; }
     nav.big .logo-text p {
       margin: 0;
       line-height: 100%; }
     nav.big .logo-text h1 {
-      color: #E52E13;
+      color: #DB240D;
       font-weight: normal;
       line-height: 54%;
       text-transform: lowercase; }
-    nav.big .logo-text p {
-      color: #616161; }
     @media screen and (max-width: 700px) {
       nav.big .logo-text {
-        font-size: 0.92em; } }
+        margin: 0 10px; }
+        nav.big .logo-text h1 {
+          font-size: 1.8rem; }
+        nav.big .logo-text p {
+          font-size: 0.92rem; } }
   nav.small {
     border-bottom: none;
     padding-bottom: 10px; }
@@ -347,19 +345,19 @@ nav {
       background-size: 38px;
       height: 38px;
       width: 38px; }
+      nav.small .logo:hover {
+        transform: scale(1.2); }
     nav.small .forward-slash {
       width: 1px;
       height: 32px;
       background: #CCC;
-      -ms-transform: rotate(30deg);
-      -webkit-transform: rotate(30deg);
       transform: rotate(30deg);
       padding: 0;
-      margin: 4px 16px 0 12px; }
+      margin: 3px 16px 0 12px; }
     nav.small div {
       display: inline-block;
       vertical-align: top;
-      padding-top: 7px; }
+      padding-top: 6px; }
     nav.small p {
       font-size: 1.4em;
       margin: 0;
@@ -382,7 +380,7 @@ nav {
   margin: 60px 0 120px 0;
   color: #bbb; }
   .footnotes p {
-    font-size: 11pt;
+    font-size: 0.92rem;
     margin: 4px 0;
     color: #777;
     padding-left: 20px;
@@ -408,7 +406,7 @@ footer {
   footer p {
     color: #888;
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
-    font-size: .8rem; }
+    font-size: 0.92rem; }
 
 /* ==========================================================================
    Pages
@@ -419,7 +417,6 @@ footer {
   padding: 10px 0 40px 0;
   border-top: 1px solid #e6e6e6; }
   .home-block h2 {
-    font-weight: normal;
     margin: 6px 0; }
   .home-block p {
     margin: 0; }
@@ -431,7 +428,7 @@ footer {
   .bio .portrait {
     background: url("../img/bd-portrait-1.jpg");
     background-size: 140px;
-    border-radius: 4px;
+    border-radius: 2px;
     display: inline-block;
     height: 135px;
     margin-top: 16px;
@@ -452,7 +449,7 @@ footer {
     .bio div + div p {
       margin: 20px 0; }
     .bio div + div p:nth-child(1) {
-      font-size: 1.4em; }
+      font-size: 1.4rem; }
       @media screen and (max-width: 700px) {
         .bio div + div p:nth-child(1) {
           text-align: center; } }
@@ -477,12 +474,12 @@ footer {
 /* Content list pages
    ========================================================================== */
 .content-description {
-  font-size: 0.92em;
+  font-size: 0.92rem;
   margin-top: 14px; }
   @media screen and (max-width: 700px) {
     .content-description {
       border-bottom: 1px solid #e6e6e6;
-      font-size: 1em;
+      font-size: 1rem;
       margin-bottom: 40px;
       padding-bottom: 30px; } }
 
@@ -497,12 +494,13 @@ footer {
   .content-filter a {
     border-radius: 2px;
     font-weight: bold;
-    padding: 4px 8px; }
+    padding: 4px 8px;
+    text-decoration: none; }
     .content-filter a:hover {
       background: #e6e6e6;
-      color: #E52E13; }
+      color: #DB240D; }
   .content-filter a.selected {
-    background: #E52E13;
+    background: #DB240D;
     color: #fff; }
   @media screen and (max-width: 700px) {
     .content-filter {
@@ -521,14 +519,14 @@ footer {
       margin: 0; }
     .content-list li .meta {
       color: #616161;
-      font-size: .86em;
+      font-size: 0.92rem;
       margin-top: 6px; }
 
 /* ==========================================================================
    Utility
    ========================================================================== */
 .primary {
-  color: #E52E13; }
+  color: #DB240D; }
 
 .green {
   color: #23AD63; }
