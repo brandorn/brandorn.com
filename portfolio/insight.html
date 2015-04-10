@@ -20,114 +20,91 @@
     </div>
   </nav>
 
-  <!--
-  * Make sure describe why no wireframes, on moving from sketches to browser prototype, on using mockups to clarify styling choices 
--->
-  
-
-  <section class="content">
-    <article>
+  <section>
+    <article class="wide">
       <header>
         <h1>Insight</h1>
-        <p class="description">A web application used for in-depth monitoring of application performance throughout development lifecycles.</p>
+        <p class="description">An enterprise developer tool used for in-depth monitoring of application performance.</p>
 
-        <ul>
-          <li>Technical research</li>
-          <li>User interviews</li>
-          <li>Paper and browser prototyping</li>
-          <li>Information visualization</li>
-          <li>Stylesheet development</li>
-        </ul>
+        <p>I led the user research and design of an application that provides detailed metrics to development teams about the various moving parts of their applications.</p>
+        
+        <figure>
+          <img src="img/insight-landing.png" alt="">
+        </figure>
+
       </header>
-      
-      <div class="grid summary">
-        <div class="grid__col grid__col--1-of-2">
-          <h2>Objective</h2>
-          <p>Present relevant application metrics to help development and test teams respond to performance problems early on in the development process.</p>
+
+      <div class="grid">
+        <div class="grid__col grid__col--2-of-3">
+          <figure>
+            <img src="img/insight-detail-1.png" alt="" class="bordered">
+          </figure>
+
+          <figure>
+            <img src="img/insight-report-1.png" alt="">
+          </figure>
+
+          <figure>
+            <img src="img/insight-sm.png" alt="" class="bordered">
+          </figure>
+
+          <figure>
+            <img src="img/insight-wf.png" alt="" class="bordered">
+          </figure>
+
+          <figure>
+            <img src="img/insight-sketch-1.png" alt="" class="bordered">
+          </figure>
+
+          <figure>
+            <img src="img/insight-sketch-2.png" alt="" class="bordered">
+          </figure>
         </div>
 
-        <div class="grid__col grid__col--1-of-2">
-          <h2>Research</h2>
-          <p>Studying the way logging and diagnostic tools were used by application teams revealed that testers and developers couldn't get a broad sense of application health without running complex, cumbersome queries on each item.</p>
+        <div class="grid__col grid__col--1-of-3">
+          <h3>My role</h3>
+
+          <h4>Research</h4>
+          <ul>
+            <li>Technical research</li>
+            <li>Interviews with development teams</li>
+            <li>Audience questionnaire</li>
+          </ul>
+
+          <h4>Information architecture</h4>
+          <ul>
+            <li>Information taxonomy and visualization</li>
+            <li>Sitemap</li>
+          </ul>
+
+          <h4>Design</h4>
+          <ul>
+            <li>Paper and browser prototyping</li>
+            <li>Wireframes</li>
+            <li>Mockups</li>
+            <li>Style guide</li>
+            <li>Bootstrap and SASS</li>
+          </ul>
+
+          <hr class="flat">
+
+          <h3>Overview</h3>
+          <p>Whether an application is running or not is relatively easy to tell. But how <em>well</em> it’s running – how efficient and stable it is – can be a more difficult but equally important judgment. To that end, I helped an analytics team create Insight, a development tool that simplifies application monitoring for development teams.</p>
+
+          <p>Web applications are typically composed of numerous components which provide discrete pieces of functionality. Studying the way teams used logging and diagnostic tools showed that it was difficult for them to get a sense of application performance without running complex, cumbersome queries on these granular components. Insight’s value, then, would be to make key measurements easily accessible for the applications and components that teams were interested in.</p>
+
+          <p>After learning about application infrastructure and relevant measurements, I created an information taxonomy to catalog each piece of information Insight would display. From there, I put my Tufte hat on and tried out various ways of displaying data, testing options with users through paper sketches and browser prototypes.</p>
+
+          <p>The main challenge of making Insight was designing a clean navigation system that allowed users to find those components that they were interested in among the thousands of components. I collaborated with my development team to create a navigation that includes search, filtering, sorting, and tagging, all of which correspond to how the developers think about their components. And after trying various table and grid layouts, we used tiles to represent high-level information about components, from which “drawers” expanded to show more detailed metrics. As the number of metrics reported grew, however, we ended up keeping the tiles but dropping the drawers, as it were, instead using full-page modals to display detailed metrics.</p>
+
+          <hr class="flat">
+
+          <h3>Impact</h3>
+
+          <p>Application teams can quickly compare metrics against norms and diagnose issues by correlating trends among key metrics.</p>
+
         </div>
       </div>
-
-      <div class="grid summary">
-        <div class="grid__col grid__col--1-of-2">
-          <h2>Solution</h2>
-          <p>A tool that consolidates useful application metrics, making them meaningful for people with varying levels of technical skill.</p>
-        </div>
-
-        <div class="grid__col grid__col--1-of-2">
-          <h2>Impact</h2>
-          <p>Application teams can quickly compare metrics against norms and standards, and run diagnostic tests based on clues gathered from correlations between various metrics.</p>
-        </div>
-      </div>
-
-      <hr>
-
-      <p>Like a hawk released into the wild or a child sent off to college, once an application leaves the  stages of local and sandbox development, one can’t really know how it’s going to do until it’s out in the world. Whether an application is working or not is relatively easy to tell. But <em>how well</em> it’s doing can be a more difficult, but equally important judgment.</p>
-
-      <p>I was asked to help a Platform-as-a-Service team make a tool that gives application teams and owners across the Systems department a clear sense of the runtime health of their applications: how available their applications are in test and production environments, how they respond to various levels of throughput, how quickly they perform operations, and other measurements. Early on, we knew that the tool needed to be accessible  and useful for developers and testers with a high degree of technical skill and also for other folks who would check in from time to time on applications within their purview. Insight would have to be a flexible, efficient means for people to learn about their applications out in the wild. </p>
-
-      <figure class="double-wide">
-        <img src="img/insight-proto-1100px.png" alt="Screenshot of a final browser prototype.">
-        <figcaption>A final browser prototype of Insight's main page. Filters are used to narrow the set of applications down to those users are interested in.</figcaption>
-      </figure>
-
-      <p>An audit of the technologies used by various teams for gathering runtime data showed us a few things. One, that teams only checked on the health of their applications when told through the grapevine that something was going wrong, and two, that the complexity of the queries needed to gather health metrics meant that teams seldom ran them, and seldom ran them correctly. We realized that part of Insight's value would be to present a consolidated, standardized source of health metrics for teams across the enterprise. Its value would also be the presentation of <em>pre-diagnostic</em> information for sending teams in the right direction when discovering an issue, not unlike an oil-check indication that lights up well in advance of a choked-up engine.</p>
-
-      <p>I worked with data and development teams to catalog the types of applications to display in Insight, and the metrics that we would report for each. With a basic taxonomy and requirements established, I drew paper sketches to try different layouts. I at first considered a single-column list, displaying applications and related metrics in rows. Yet the variety of data that we eventually decided to show for each tile lent itself better to tiles.</p>
-
-      <figure class="two-up left">
-        <img src="img/insight-sketch-1.png" alt="Paper sketch of Insight.">
-        <figcaption>Rows worked at first, yet were found to be less flexible than tiles.</figcaption>
-      </figure>
-
-      <figure class="two-up right">
-        <img src="img/insight-sketch-2.png" alt="Another paper sketch.">
-        <figcaption>Tiles would come in handy, too, for allowing users to tag items of interest.</figcaption>
-      </figure>
-
-      <p>Knowing that we’d need to display information for hundreds of discrete applications, Insight’s interface needed an obvious navigation structure to enable users to easily hone in on their interests. After refining the sketches, I created a few browser prototypes for experimenting with tabs, filters, labels, and other types of navigation conventions. We ended up settling on a combination of tabs, filters, and search. And after trying various table and grid layouts, we used tiles to represent high-level information about applications, from which "drawers" expanded to show more detailed metrics. As the number of metrics reported grew, however, we ended up keeping the tiles but dropping the drawers, as it were, instead using full-page modals to display detailed application metrics.</p>
-
-      <figure class="double-wide">
-        <img src="img/insight-mockup-3.png" alt="Mockup of an application 'drawer.'">
-        <figcaption>We initially used drawers to display detailed application information, which was a good way of preserving context while revealing deeper layers of data.</figcaption>
-      </figure>
-
-      <figure class="double-wide">
-        <img src="img/insight-mockup-2.png" alt="Mockup of the detailed view of an application.">
-        <figcaption>To enable users to make correlations between different types of data, however, it made more sense to use full-page modals in the vein of Amazon's "<a href="http://www.amazon.com/Search-Inside-Book-Books/b?node=10197021">Look Inside</a>" feature.</figcaption>
-      </figure>
-
-      <p>Sparklines came in handy for giving context to point-in-time numbers and averages. These, coupled with color-coding for threshold breaches, gave users an immediate but nuanced understanding of their applications' health.</p>
-
-      <figure class="double-wide">
-        <img src="img/insight-report-1.png" alt="Screenshot of an application report.">
-        <figcaption>Example of a detailed application report. Sparklines display unique data values on hover.</figcaption>
-      </figure>
-
-      <figure class="two-up left">
-        <img src="img/insight-proto-800px.png" alt="Screenshot of Insight at 800px.">
-        <figcaption>Insight at 800px.</figcaption>
-      </figure>
-
-      <figure class="two-up right">
-        <img src="img/insight-proto-400px.png" style="width: 70%;" alt="Screenshot of Insight at 400px.">
-        <figcaption>Insight at 400px, with the navigation rearranged to still allow users to quickly search and filter their results.</figcaption>
-      </figure>
-
-      <p class="clear">To make the layout responsive, I needed to design the navigation in such a way that users could search for applications and still easily filter them. Instead of hiding and showing functionality, I tried to keep elements visible when possible, to make the switch from desktop to mobile that much more consistent.</p>
-
-      <hr>
-
-      <p>What interested about this project its hybrid nature. In a sense, it's one part dashboard and one part development tool, and has since evolved within that shared space. It's highly technical yet broadly applicable to the variety of people who use it.</p>
-
-      <p>My role at the outset was to identify questions and assumptions for the project team to consider as we designed Insight. For my part, I needed to learn what types of information our users wanted, and what was insufficient about the information and tools they had. Interviews with teams across the department gave direction to the data and overall information architecture of our tool.</p>
-
-      <p>From there, I collaborated with my team by developing browser prototypes, writing styles, and mocking up functionality as necessary. I leaned on them for knowledge about the data, which informed the kind of visualizations I chose.</p>
-
     </article>
   </section>
 		

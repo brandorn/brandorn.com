@@ -20,105 +20,80 @@
     </div>
   </nav>
 
-  <!--
-  * Consistent use of "health", "performance", etc.
-  * Stronger conclusion
-  * Stronger description of user testing toward end
--->
-
-  <section class="content">
-    <article>
+  <section>
+    <article class="wide">
       <header>
         <h1>System Status Dashboard</h1>
-        <p class="description">A dashboard that provides at-a-glance status information to the enterprise about business-critical applications.</p>
+        <p class="description">An enterprise dashboard that provides at-a-glance status information about business-critical applications.</p>
 
-        <ul>
-          <li>User interviews</li>
-          <li>Wireframes</li>
-          <li>Browser prototyping</li>
-          <li>Icon design</li>
-          <li>Stylesheet development</li>
-        </ul>
+        <p>The development teams and leaders of a Fortune 500 insurance company needed a way to quickly view and understand application health.</p>
+
+        <figure>
+          <img src="img/ssd-landing.png" alt="">
+        </figure>
+
       </header>
       
-      <div class="grid summary">
-        <div class="grid__col grid__col--1-of-2">
-          <h2>Objective</h2>
-          <p>Enable Systems leadership to quickly view and understand application runtime health and performance.</p>
+      <div class="grid">
+        <div class="grid__col grid__col--2-of-3">
+          <figure>
+            <img src="img/ssd-year.png" alt="" class="bordered">
+          </figure>
+
+          <figure>
+            <img src="img/ssd-edit-impact.png" alt="" class="bordered">
+          </figure>
+
+          <figure>
+            <img src="img/ssd-impact-detail.png" alt="">
+          </figure>
+
+          <figure>
+            <img src="img/ssd-proto-1.png" alt="">
+          </figure>
+
+          <figure>
+            <img src="img/ssd-sketch-1.png" alt="" class="bordered">
+          </figure>
         </div>
 
-        <div class="grid__col grid__col--1-of-2">
-          <h2>Research</h2>
-          <p>Conversations with leadership across areas in the Systems department revealed that various sources of data and reporting processes led to inconsistent judgments about business application health.</p>
+        <div class="grid__col grid__col--1-of-3">
+
+          <h3>My role</h3>
+          <h4>Research</h4>
+          <ul>
+            <li>User interviews</li>
+          </ul>
+
+          <h4>Information architecture</h4>
+          <ul>
+            <li>Information taxonomy</li>
+          </ul>
+          <h4>Design</h4>
+          <ul>
+            <li>Paper prototypes</li>
+            <li>Mockups</li>
+            <li>Browser prototyping</li>
+            <li>Bootstrap and SASS</li>
+          </ul>
+
+          <hr class="flat">
+
+          <h3>Overview</h3>
+          <p>I worked with an analytics team to create a straightforward dashboard that displays performance metrics for customer web applications. Various sources of enterprise reporting were leading to inconsistent judgments about these applications, so teams and leaders wanted a consolidated, authoritative, and accessible source for key metrics.</p>
+
+          <p>I began by learning about performance standards that the department had established, and how these applied to the key web applications. Interviews with development teams and executives revealed that they cared less about the granular details of an application over time, and more about whether targets were being met. Knowing that it was important to keep the targets as a reference point, I designed a table layout that displays the status of applications for the current week and allows users to pan to previous weeks. For those who want to see longer-term trends, application-specific pages show data from the past twelve months.</p>
+
+          <p>The System Status Dashboard sticks closely to the definition of a dashboard - an interface in which the layout remains constant while the data changes. Detailed information is quickly available, yet is not crowded onto the page. I enjoy working on dashboards because they demand the limitation of “non-data ink.” I strive to create interfaces that gracefully achieve this kind of intensity through logical information hierarchy, visual rhythm, nuanced alerts, and clear language.</p>
+
+          <hr class="flat">
+
+          <h3>Impact</h3>
+
+          <p>Teams across the enterprise have a consolidated, reliable means for understanding application performance, helping them understand impacts and track performance changes over time.</p>
+
         </div>
       </div>
-
-      <div class="grid summary">
-        <div class="grid__col grid__col--1-of-2">
-          <h2>Solution</h2>
-          <p>A straightforward, mobile-friendly interface that displays application status information based on clearly defined standards.</p>
-        </div>
-        <div class="grid__col grid__col--1-of-2">
-          <h2>Impact</h2>
-          <p>General audiences have a consolidated, scalable, and reliable means for understanding current and past application performance, enabling them to make better-informed decisions for their applications.</p>
-        </div>
-      </div>
-
-      <hr>
-
-      <p>In large corporations, the people making strategic decisions are often far removed from the people doing the work. The generals are distanced from the front line. However, a common reference point is necessary if development teams and their leadership are to understand if their application is running as expected. In this instance, the disconnect between teams and department leaders was causing conflicting, telephone game-esque reports about the runtime performance of business applications.</p>
-
-      <p>I was asked to work with a data team to create a consolidated view of business-critical application health. The audience was people who lead various areas and applications across the Systems department. Previous attempts had been made to display this type of information, yet often resulted in illegible visualizations that didn’t provide management or teams with useful data. Clarity and consistency were our guiding principles from the start.</p>
-
-      <figure class="double-wide">
-        <img src="img/ssd-proto-3.png" alt="Screenshot of a final prototype of the SSD.">
-        <figcaption>Final browser prototype of the System Status Dashboard, which was handed off to the development team for production implementation.</figcaption>
-      </figure>
-
-      <p>The main challenge of the project was to find ways of displaying impacts of varying levels of significance and providing quick access to detailed impact statements and trended data. When designing the home page, it was important to establish clear visual conventions: meaningful icons, a consistent timeframe, and easy access to detailed information. Sticking to the theoretical definiton of a dashboard –  an interface in which the layout remains constant while the displayed data changes – meant that I needed to keep summary health information visible and accessible, while still allowing users to dig more deeply if they were curious about an application or issue.</p>
-
-      <figure class="to-the-left">
-        <img src="img/ssd-sketch-1.png" alt="Paper sketch of the SSD.">
-        <figcaption>An initial paper sketches of the dashboard, used as a conversation piece among the team and our stakeholders.</figcaption>
-      </figure>
-
-      <p>Rounds of user interviews helped identify users' preferences for the data, which I applied when drawing paper sketches to share concepts with my team. which evolved into mockups that we discussed with various stakeholders. The choice of a table wasn't difficult, yet finding a way to display detailed impact information – outage timeframes, teams' comments, and related information – took some experimentation. I ended up using modal dialogs to reveal this secondary data, and created application-specific pages for showing metrics across timeframes longer than those on the dashboard display.</p>
-
-      <figure class="double-wide">
-        <img src="img/ssd-mock-3.png" alt="Mockup of the detailed view of an impact.">
-        <figcaption>Mockup of a modal dialog that reveals detailed information about a day in the life of an application.</figcaption>
-      </figure>
-
-      <figure class="double-wide">
-        <img src="img/ssd-mock-2.png" alt="Mockup of an application-specific page.">
-        <figcaption>Example of an application-specific page, displaying data trended over a period of time.</figcaption>
-      </figure> 
-
-      <figure class="to-the-right">
-        <img src="img/ssd-icons.png" alt="Set of icons used to indicate application status.">
-        <figcaption>After various revisions, I created a set of simple, accessible icons that support at-a-glance interpretations of data.</figcaption>
-      </figure>
-
-      <p>For this project, I chose to make mockups instead of lower-fidelity wireframes since we mainly wanted users' feedback on the clarity of information displayed in the context of the dashboard interface. In particular, I needed to make sure the icons conveyed their intended meaning. Initially I didn't want anything to display in a table cell if an application was healthy that day, following the idea that no news is good news when it comes to app health. However, we found out that users took this to mean that data didn't exist for the day. So I made icons that that avoid making the app too red-and-green Christmasy, and seem to strike a good balance between clarity and subtlety.</p>
-
-      <p>After revising the mockups some and designing requisite admin functionality, I created a series of browser prototypes to further experiment with alternative navigation structures, namely how to move between overview and detail screens. These prototypes gave users a chance to click through pages and see how the dashboard felt on a tablet (it felt pretty good).</p>
-
-
-      <figure class="two-up left">
-        <img src="img/ssd-proto-1.png" alt="Screenshot of an initial browser prototype.">
-        <figcaption>An initial browser prototype, which used an icon set that ended up feeling too cluttered.</figcaption>
-      </figure>
-
-      <figure class="two-up right">
-        <img src="img/ssd-proto-2.png" alt="Screenshot of another browser prototype. Close, but no cigar.">
-        <figcaption>A later prototype, which experimented with a filter-based navigation flow for viewing application details and history.</figcaption>
-      </figure>
-
-      <hr>
-
-      <p>My role in the project consisted of user research, visual design, and interface prototyping with HTML5, CSS3, and jQuery. Since the initial release, we've built further administrative features into the System Status Dashboard, and have expanded the breadth of applications on which it reports. The lightweight UI has scaled nicely, with minimal growing pains.</p>
-
-      <p>I enjoy working on dashboards because they demand the limitation of "<a href="http://www.infovis-wiki.net/index.php/Data-Ink_Ratio">non-data ink</a>." Each pixel either serves the data or distracts from it. I strive to create interfaces that gracefully achieve this kind of intensity through logical information hierarchy, visual rhythm, relevant alerts, and clear language. </p>
 
     </article>
   </section>

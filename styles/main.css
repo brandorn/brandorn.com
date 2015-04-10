@@ -20,34 +20,38 @@
 /* Font variables and declarations
    ========================================================================== */
 /*
- * PT Serif (serif)
+ * Mate (serif)
  */
 /*
  * Need to figure out how to avoid delay using @font-face.
  */
 .serif {
-  font-family: "PT Serif", Georgia, serif; }
+  font-family: "Mate", Georgia, serif; }
 
 @font-face {
-  font-family: PT Serif;
-  src: url("fonts/pt-serif-normal.ttf") format("truetype");
+  font-family: Mate;
+  src: url("mate-regular.ttf") format("opentype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
-  font-family: PT Serif;
-  src: url("fonts/pt-serif-normal-italic.ttf") format("truetype");
+  font-family: Mate;
+  src: url("fonts/mate-italic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic; }
+/*
 @font-face {
-  font-family: PT Serif;
+  font-family: Mate;
   src: url("fonts/pt-serif-bold.ttf") format("truetype");
   font-weight: bold;
-  font-style: normal; }
+  font-style: normal;
+}
+
 @font-face {
-  font-family: PT Serif;
+  font-family: Mate;
   src: url("fonts/pt-serif-bold-italic.ttf") format("truetype");
   font-weight: bold;
-  font-style: italic; }
+  font-style: italic;
+}*/
 /*
  * Raleway (sans-serif)
  */
@@ -82,7 +86,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  font-size: 11pt; }
+  font-size: 96%; }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -92,7 +96,6 @@ body {
   font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
   font-weight: normal;
   margin: 0 auto;
-  max-width: 900px;
   overflow: scroll;
   padding: 0 20px;
   transition: all 150ms;
@@ -100,7 +103,8 @@ body {
 
 h1 {
   color: #242424;
-  font-size: 2rem;
+  font-size: 2.4rem;
+  font-weight: normal;
   line-height: 120%;
   margin: 10px 0; }
 
@@ -127,8 +131,7 @@ h4 {
 
 p {
   color: #242424;
-  font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
-  letter-spacing: -0.15pt;
+  font-family: "Mate", Georgia, serif;
   line-height: 140%;
   margin: 10px 0;
   text-shadow: 0 0 1px #ddd; }
@@ -136,7 +139,7 @@ p {
 a {
   transition: all 100ms; }
   a:link, a:visited {
-    color: #DB240D;
+    color: #db240d;
     text-decoration: underline; }
   a:hover, a:active {
     transition: all 100ms;
@@ -167,6 +170,12 @@ hr {
   width: 40px;
   height: 40px;
   margin: 50px auto 30px auto; }
+  hr.flat {
+    background: none;
+    border-bottom: 2px solid #e6e6e6;
+    height: 0;
+    margin: 3em auto;
+    width: auto; }
 
 blockquote {
   border-left: 2px solid #eee;
@@ -185,18 +194,26 @@ blockquote {
 article {
   margin: 0 auto 50px auto;
   max-width: 700px; }
+  article.wide {
+    max-width: 1080px; }
+    article.wide header figure {
+      margin: 4% 0; }
+    article.wide figure {
+      margin: 4% 4% 4% 0; }
+      @media screen and (max-width: 700px) {
+        article.wide figure {
+          margin: 4% 0; } }
   article h1 {
-    font-family: "PT Serif", Georgia, serif; }
+    font-family: "Mate", Georgia, serif; }
   article h2 {
     margin-top: 36px;
     text-align: center; }
   article p,
   article li {
-    font-family: "PT Serif", Georgia, serif;
-    font-size: 1.16rem;
+    font-family: "Mate", Georgia, serif;
+    font-size: 1.2rem;
     line-height: 160%;
-    margin-bottom: 2em;
-    text-shadow: 0px 0px 1px #ddd; }
+    margin-bottom: 2em; }
   article .summary p {
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
     font-size: 1rem;
@@ -205,10 +222,7 @@ article {
 
 header {
   text-align: center;
-  margin: 40px 0 60px 0;
-  /*
-   * For the methodology items in the portfolio.
-   */ }
+  margin: 40px 0 80px 0; }
   header p, header li {
     color: #616161;
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
@@ -218,19 +232,8 @@ header {
   header .description {
     margin: 40px auto 0 auto;
     max-width: 520px; }
-  header ul {
-    margin: 20px auto;
-    width: 80%; }
-  header li {
-    display: inline-block;
-    font-size: 0.92rem; }
-    header li:after {
-      content: " ·";
-      color: #999999; }
-    header li:nth-child(1) {
-      margin-left: 0; }
-    header li:nth-last-child(1):after {
-      content: ""; }
+  header figure {
+    margin: 7% 0; }
 
 figure {
   margin: 7% 0;
@@ -295,6 +298,8 @@ figcaption {
 img {
   display: block;
   width: 100%; }
+  img.bordered {
+    border: 2px solid #e6e6e6; }
   img.fake {
     background: #e6e6e6; }
 
@@ -304,8 +309,10 @@ img {
 /* Nav
    ========================================================================== */
 nav {
-  padding: 32px 0;
-  cursor: default; }
+  cursor: default;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 32px 0; }
   nav .logo {
     display: inline-block;
     background: url("../img/logo.svg") no-repeat center;
@@ -327,7 +334,7 @@ nav {
       margin: 0;
       line-height: 100%; }
     nav.big .logo-text h1 {
-      color: #DB240D;
+      color: #db240d;
       font-weight: normal;
       line-height: 54%;
       text-transform: lowercase; }
@@ -340,7 +347,7 @@ nav {
           font-size: 0.92rem; } }
   nav.small {
     border-bottom: none;
-    padding-bottom: 10px; }
+    padding-bottom: 20px; }
     nav.small .logo {
       background-size: 38px;
       height: 38px;
@@ -360,6 +367,8 @@ nav {
       padding-top: 6px; }
     nav.small p {
       font-size: 1.4em;
+      font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
+      font-weight: 500;
       margin: 0;
       text-transform: lowercase;
       vertical-align: middle; }
@@ -374,6 +383,7 @@ nav {
    ========================================================================== */
 .content {
   margin: 0 auto;
+  max-width: 900px;
   min-height: 500px; }
 
 .footnotes {
@@ -402,7 +412,9 @@ nav {
 /* Footer
    ========================================================================== */
 footer {
-  border-top: 1px solid #e6e6e6; }
+  border-top: 1px solid #e6e6e6;
+  margin: 0 auto;
+  max-width: 900px; }
   footer p {
     color: #888;
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
@@ -414,10 +426,12 @@ footer {
 /* Home
    ========================================================================== */
 .home-block {
-  padding: 10px 0 40px 0;
-  border-top: 1px solid #e6e6e6; }
+  border-top: 1px solid #e6e6e6;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 10px 0 40px 0; }
   .home-block h2 {
-    margin: 6px 0; }
+    margin: 4px 0; }
   .home-block p {
     margin: 0; }
   .home-block .grid__col {
@@ -449,7 +463,8 @@ footer {
     .bio div + div p {
       margin: 20px 0; }
     .bio div + div p:nth-child(1) {
-      font-size: 1.4rem; }
+      font-size: 1.4rem;
+      font-family: "Mate", Georgia, serif; }
       @media screen and (max-width: 700px) {
         .bio div + div p:nth-child(1) {
           text-align: center; } }
@@ -457,7 +472,8 @@ footer {
       .bio div + div ul {
         text-align: center; } }
     .bio div + div li {
-      display: inline-block; }
+      display: inline-block;
+      font-weight: 500; }
       .bio div + div li a {
         margin: 0 4px; }
       .bio div + div li:after {
@@ -498,9 +514,9 @@ footer {
     text-decoration: none; }
     .content-filter a:hover {
       background: #e6e6e6;
-      color: #DB240D; }
+      color: #db240d; }
   .content-filter a.selected {
-    background: #DB240D;
+    background: #db240d;
     color: #fff; }
   @media screen and (max-width: 700px) {
     .content-filter {
@@ -526,7 +542,7 @@ footer {
    Utility
    ========================================================================== */
 .primary {
-  color: #DB240D; }
+  color: #db240d; }
 
 .green {
   color: #23AD63; }
