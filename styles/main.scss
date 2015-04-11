@@ -22,6 +22,7 @@
 
 $primary-color: #db240d;
 
+$faintest-grey: hsla(0, 0%, 96%, 1);
 $faint-grey: hsla(0, 0%, 90%, 1);
 $light-grey: hsla(0, 0%, 60%, 1);
 $grey: hsla(0, 0%, 38%, 1);
@@ -180,13 +181,14 @@ h2 {
 }
 
 h3 {
+  color: $dark-grey;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
 h4 {
-  color: #959595;
-  margin: 2px 0 16px 0;
+  color: $light-grey;
+  margin: 1em 0;
 }
 
 p {
@@ -278,6 +280,7 @@ article {
   margin: 0 auto 50px auto;
   max-width: $break-medium;
 
+  // Used for portfolio pages
   &.wide {
     max-width: $break-large;
 
@@ -291,6 +294,10 @@ article {
       @media screen and (max-width: $break-medium) {
         margin: 4% 0;
       }
+
+      &:nth-last-child(1) {
+        margin-bottom: 4rem;
+      }
     }
   }
 
@@ -303,19 +310,11 @@ article {
     text-align: center;
   }
 
-  p, 
-  li {
+  p {
     font-family: $serif;
     font-size: 1.2rem;
     line-height: 160%;
     margin-bottom: 2em;
-  }
-
-  .summary p {
-    font-family: $sans-serif;
-    font-size: 1rem;
-    line-height: 150%;
-    text-indent: 0;
   }
 }
 
@@ -323,17 +322,19 @@ header {
   text-align: center;
   margin: 40px 0 80px 0;
 
-  p, li {
-    color: $grey;
-    font-family: $sans-serif;
-    line-height: inherit;
-    margin: 0;
-    text-indent: 0;
+  p {
+    font-size: 1.4rem;
+    margin: 3em auto;
+    max-width: $content-width;
   }
   
   .description {
-    margin: 40px auto 0 auto;
-    max-width: 520px;
+    color: $grey;
+    font-family: $sans-serif;
+    font-size: 1.1rem;
+    line-height: 130%;
+    margin: 20px auto 40px auto;
+    max-width: $break-medium;
   }
 
   figure {
@@ -611,6 +612,64 @@ footer {
   }
 }
 
+.next-page{
+  line-height: 120%;
+  padding: 50px 0;
+  transition: ease-in-out 150ms;
+  vertical-align: top;
+  width: 50%;
+
+  &:link {
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+
+  &:hover {
+    background: $faintest-grey;
+  }
+
+  span {
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 30%;
+    transition: ease-in-out 150ms;
+  }
+}
+
+.next-page.left {
+  padding-left: 40px;
+
+  @media screen and (max-width: $break-medium) {
+    padding-left: 20px;
+  }
+
+  span {
+    padding-right: 4px;
+  }
+
+  &:hover span{
+    transform: scale(1.2) translate(-4px, 0);
+  }
+}
+
+.next-page.right {
+  padding-right: 40px;
+  text-align: right;
+
+  @media screen and (max-width: $break-medium) {
+    padding-right: 20px;
+  }
+
+  span {
+    padding-left: 4px;
+  }
+
+  &:hover span{
+    transform: scale(1.2) translate(4px, 0);
+  }
+}
+
 
 /* ==========================================================================
    Pages
@@ -711,6 +770,26 @@ footer {
     @media screen and (max-width: $break-medium) {
       margin-left: 0;
     }
+  }
+}
+
+/* Portfolio
+   ========================================================================== */
+
+.methods {
+
+  h4 {
+    margin: 1.5em 0 0.2em 0;
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    font-family: $serif;
+    font-size: 1.1rem;
+    line-height: 150%;
   }
 }
 
@@ -829,5 +908,9 @@ footer {
 
 .hidden {
   display: none;
+}
+
+.no-border {
+  border: none;
 }
 
