@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1000 240" enable-background="new 0 0 1000 240" xml:space="preserve">
+<g>
+	<g>
+		<rect x="361.6" y="29.5" fill="none" width="276.8" height="84.1"/>
+		<text transform="matrix(1 0 0 1 361.6016 42.2862)"><tspan x="0" y="0" font-family="'AvenirNext-DemiBold'" font-size="15">Doers</tspan><tspan x="0" y="23.6" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13">Service, interface, and data developers who </tspan><tspan x="0" y="39.2" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13">deploy and configure application code in </tspan><tspan x="0" y="54.8" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13">platform environments.</tspan></text>
+		<rect x="361.6" y="135.6" fill="none" width="276.8" height="72.2"/>
+		<text transform="matrix(1 0 0 1 361.6016 146.6722)"><tspan x="0" y="0" fill="#414042" font-family="'AvenirNext-DemiBold'" font-size="13">Goal:</tspan><tspan x="32.5" y="0" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13"> Deploy code to development </tspan><tspan x="0" y="15.6" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13">environments without hindrances.</tspan><tspan x="0" y="39.2" fill="#414042" font-family="'AvenirNext-DemiBold'" font-size="13">Obstacle:</tspan><tspan x="57.8" y="39.2" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13"> Repetitive navigation and form </tspan><tspan x="0" y="54.8" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13">entry.</tspan></text>
+	</g>
+	<g>
+		<rect x="678.4" y="29.5" fill="none" width="276.8" height="84.1"/>
+		<text transform="matrix(1 0 0 1 678.3984 42.2862)"><tspan x="0" y="0" font-family="'AvenirNext-DemiBold'" font-size="15">Admin</tspan><tspan x="0" y="23.6" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13">Product owners and operations folks </tspan><tspan x="0" y="39.2" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13">responsible for the efficiency, reliabiliy, and </tspan><tspan x="0" y="54.8" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13">usability of the platform infrastructure.</tspan></text>
+		<rect x="678.4" y="135.6" fill="none" width="276.8" height="72.2"/>
+		<text transform="matrix(1 0 0 1 678.3984 146.6722)"><tspan x="0" y="0" fill="#414042" font-family="'AvenirNext-DemiBold'" font-size="13">Goal:</tspan><tspan x="32.5" y="0" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13"> Quickly troubleshoot issues.</tspan><tspan x="0" y="23.6" fill="#414042" font-family="'AvenirNext-DemiBold'" font-size="13">Obstacle:</tspan><tspan x="57.8" y="23.6" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13"> Rapid context switching between </tspan><tspan x="0" y="39.2" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13">development tools.</tspan></text>
+	</g>
+	<g>
+		<rect x="44.8" y="29.4" fill="none" width="276.8" height="107.1"/>
+		<text transform="matrix(1 0 0 1 44.8047 42.2399)"><tspan x="0" y="0" font-family="'AvenirNext-DemiBold'" font-size="15">Readers</tspan><tspan x="0" y="23.6" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13">People with read-only access to development </tspan><tspan x="0" y="39.2" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13">environments, who regulalry reference </tspan><tspan x="0" y="54.8" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13">information about applications (e.g. </tspan><tspan x="0" y="70.4" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13">configuration, owrnership, history, etc.).</tspan></text>
+		<rect x="46.6" y="135.6" fill="none" width="275" height="84"/>
+		<text transform="matrix(1 0 0 1 46.6016 145.3983)"><tspan x="0" y="0" fill="#414042" font-family="'AvenirNext-DemiBold'" font-size="13">Goal:</tspan><tspan x="32.5" y="0" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13"> Easily find reliable information about </tspan><tspan x="0" y="15.6" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13">applications and environments.</tspan><tspan x="0" y="39.2" fill="#414042" font-family="'AvenirNext-DemiBold'" font-size="13">Obstacle:</tspan><tspan x="57.8" y="39.2" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13"> Extraneous or confusing </tspan><tspan x="0" y="54.8" fill="#414042" font-family="'AvenirNext-Regular'" font-size="13">information.</tspan></text>
+	</g>
+</g>
+</svg>

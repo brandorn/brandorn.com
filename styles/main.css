@@ -87,6 +87,9 @@ html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
   font-size: 96%; }
+  @media screen and (max-width: 700px) {
+    html {
+      font-size: 88%; } }
 
 *, *:before, *:after {
   box-sizing: inherit; }
@@ -110,10 +113,10 @@ h1 {
 
 h2 {
   color: #242424;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 500;
   line-height: 1;
-  margin: 12px 0; }
+  margin: 1em 0; }
   h2 a:link,
   h2 a:visited {
     text-decoration: none; }
@@ -132,7 +135,6 @@ h4 {
 
 p {
   color: #242424;
-  font-family: "Mate", Georgia, serif;
   line-height: 140%;
   margin: 10px 0;
   text-shadow: 0 0 1px #ddd; }
@@ -175,7 +177,8 @@ hr {
     background: none;
     border-bottom: 2px solid #e6e6e6;
     height: 0;
-    margin: 3em auto;
+    margin: 5em auto;
+    max-width: 400px;
     width: auto; }
 
 blockquote {
@@ -209,7 +212,7 @@ article {
   article h1 {
     font-family: "Mate", Georgia, serif; }
   article h2 {
-    margin-top: 36px;
+    font-weight: bold;
     text-align: center; }
   article p {
     font-family: "Mate", Georgia, serif;
@@ -221,16 +224,18 @@ header {
   text-align: center;
   margin: 40px 0 80px 0; }
   header p {
-    font-size: 1.4rem;
-    margin: 3em auto;
-    max-width: 900px; }
-  header .description {
     color: #616161;
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
     font-size: 1.1rem;
     line-height: 130%;
     margin: 20px auto 40px auto;
     max-width: 700px; }
+  header .description {
+    color: #242424;
+    font-family: "Mate", Georgia, serif;
+    font-size: 1.4rem;
+    margin: 4em auto;
+    max-width: 900px; }
   header figure {
     margin: 7% 0; }
 
@@ -602,6 +607,9 @@ footer {
 .right {
   float: right; }
 
+.center {
+  margin: 0 auto; }
+
 .text-center {
   text-align: center; }
 
@@ -616,5 +624,11 @@ footer {
 
 .no-border {
   border: none; }
+
+.mt-5 {
+  margin-top: 5em; }
+
+.wide {
+  max-width: 1080px; }
 
 /*# sourceMappingURL=main.css.map */

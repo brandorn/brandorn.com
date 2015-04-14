@@ -138,6 +138,10 @@ html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
   font-size: 96%;
+
+  @media screen and (max-width: $break-medium) {
+    font-size: 88%;
+  }
 }
 
 *, *:before, *:after {
@@ -165,10 +169,10 @@ h1 {
 
 h2 {
   color: $dark-grey;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 500;
   line-height: 1;
-  margin: 12px 0;
+  margin: 1em 0;
 
   a:link,
   a:visited {
@@ -194,7 +198,6 @@ h4 {
 
 p {
   color: $dark-grey;
-  font-family: $serif;
   // letter-spacing: -0.15pt;
   line-height: 140%;
   margin: 10px 0;
@@ -253,7 +256,8 @@ hr {
     background: none;
     border-bottom: 2px solid $faint-grey;
     height: 0;
-    margin: 3em auto;
+    margin: 5em auto;
+    max-width: 400px;
     width: auto;
   }
 }
@@ -307,7 +311,7 @@ article {
   }
 
   h2 {
-    margin-top: 36px;
+    font-weight: bold;
     text-align: center;
   }
 
@@ -324,18 +328,20 @@ header {
   margin: 40px 0 80px 0;
 
   p {
-    font-size: 1.4rem;
-    margin: 3em auto;
-    max-width: $content-width;
-  }
-  
-  .description {
     color: $grey;
     font-family: $sans-serif;
     font-size: 1.1rem;
     line-height: 130%;
     margin: 20px auto 40px auto;
     max-width: $break-medium;
+  }
+  
+  .description {
+    color: $dark-grey;
+    font-family: $serif;
+    font-size: 1.4rem;
+    margin: 4em auto;
+    max-width: $content-width;
   }
 
   figure {
@@ -895,6 +901,10 @@ footer {
   float: right;
 }
 
+.center {
+  margin: 0 auto;
+}
+
 .text-center {
   text-align: center;
 }
@@ -913,5 +923,14 @@ footer {
 
 .no-border {
   border: none;
+}
+
+// Odd class used on the Approach page images...
+.mt-5 {
+  margin-top: 5em;
+}
+
+.wide {
+  max-width: $break-large;
 }
 
