@@ -542,6 +542,8 @@ nav {
       width: 1px;
       height: 32px;
       background: #CCC;
+      -webkit-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
       transform: rotate(30deg);
       padding: 0;
       margin: 3px 16px 0 12px;
