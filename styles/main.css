@@ -87,6 +87,9 @@
 .small-type {
   font-size: 0.92rem; }
 
+.smallest-type {
+  font-size: 0.8rem; }
+
 /* HTML elements
    ========================================================================== */
 html {
@@ -133,13 +136,15 @@ h2 {
 h3 {
   color: #242424;
   font-size: 1.2rem;
-  font-weight: bold; }
+  font-weight: bold;
+  margin: 0.5em 0; }
 
 h4 {
-  color: #999999;
+  color: #616161;
   margin: 1em 0; }
 
-p {
+p,
+li {
   color: #242424;
   letter-spacing: -0.15pt;
   line-height: 140%;
@@ -172,38 +177,59 @@ sup a:visited,
 
 ul {
   list-style-type: none;
+  margin: 0;
   padding: 0; }
 
+ol {
+  counter-reset: li;
+  margin: 0;
+  margin-left: 0;
+  padding-left: 0; }
+  ol > li {
+    list-style: none;
+    margin: 0 0 6px 2em;
+    padding: 4px 8px;
+    position: relative; }
+    ol > li:before {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      color: #242424;
+      content: counter(li);
+      counter-increment: li;
+      font-family: "Avenir", Georgia, serif;
+      font-size: 1.4rem;
+      left: -2em;
+      margin: 5px 0 0 1.4rem;
+      padding: 4px;
+      position: absolute;
+      text-align: center;
+      top: 8px; }
+
 li {
+  font-family: "Avenir", Georgia, serif;
   margin: 0.5em 0; }
 
 hr {
-  background: url(../img/hr.svg) no-repeat;
-  border: 0;
-  width: 40px;
-  height: 40px;
-  margin: 50px auto 30px auto; }
-  hr.flat {
-    background: none;
-    border-bottom: 2px solid #e6e6e6;
-    height: 0;
-    margin: 5em auto;
-    max-width: 400px;
-    width: auto; }
+  border: none;
+  border-bottom: 2px solid #e6e6e6;
+  margin: 5em auto;
+  max-width: 400px; }
 
 blockquote {
-  border-left: 2px solid #eee;
-  margin: 30px auto;
-  max-width: 400px;
-  padding: 4px 16px; }
-  blockquote p {
-    color: #777;
-    font-style: italic;
-    line-height: 1.5;
-    margin: 4px 0; }
-  blockquote .author {
-    font-style: normal;
-    text-align: right; }
+  border-left: 3px solid #e6e6e6;
+  color: #db240d;
+  font-family: "Avenir", Georgia, serif;
+  font-size: 1.3rem;
+  margin: 2rem;
+  padding: 0.5em 2em;
+  width: auto; }
+
+.author {
+  color: #616161;
+  font-style: normal;
+  margin: -2rem 2rem 2rem 2rem;
+  text-align: right; }
 
 article {
   margin: 0 auto 50px auto;
@@ -224,6 +250,7 @@ article {
   article h2 {
     font-size: 1.7rem;
     font-weight: bold;
+    margin: 3em 0 1em 0;
     text-align: center; }
   article p {
     font-family: "Avenir", Georgia, serif;
@@ -300,6 +327,14 @@ figure {
         display: block;
         width: 100%;
         margin: 2% 0; } }
+  figure.three-up {
+    display: inline-block;
+    margin: 5% 2%;
+    width: 44%; }
+    figure.three-up.left {
+      margin-left: -20%; }
+    figure.three-up.right {
+      margin-right: -20%; }
   figure.natural-width img {
     width: auto;
     margin: 0 auto; }
@@ -309,6 +344,9 @@ figcaption {
   font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
   font-size: 0.92rem;
   margin: 1em 0; }
+  figcaption a:link,
+  figcaption a:visited {
+    color: #616161; }
 
 img {
   display: block;
@@ -317,6 +355,10 @@ img {
     border: 2px solid #e6e6e6; }
   img.fake {
     background: #e6e6e6; }
+
+strong {
+  color: #db240d;
+  font-weight: 500; }
 
 /* ==========================================================================
    Layout
@@ -425,6 +467,13 @@ nav {
 
 .footnotes:first-child {
   counter-reset: nodecimal; }
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background-color: #db240d; }
 
 /* Footer
    ========================================================================== */
@@ -572,8 +621,6 @@ footer {
     display: inline-block;
     margin: 8px 2px;
     padding: 0; }
-    .content-filter li:nth-child(1) {
-      margin-left: 0; }
   .content-filter a {
     border-radius: 2px;
     font-weight: bold;
@@ -621,6 +668,7 @@ footer {
   float: right; }
 
 .center {
+  display: block;
   margin: 0 auto; }
 
 .text-center {
@@ -641,14 +689,17 @@ footer {
 .no-border {
   border: none; }
 
+.mt-0 {
+  margin-top: 0; }
+
+.mt-1 {
+  margin-top: 1em; }
+
 .mt-5 {
   margin-top: 5em; }
 
-.mb-5 {
-  margin-bottom: 5em; }
-
-.mb-2 {
-  margin-bottom: 2em; }
+.mb-3 {
+  margin-bottom: 3em; }
 
 .wide {
   max-width: 1080px; }
