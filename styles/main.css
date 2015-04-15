@@ -208,10 +208,6 @@ blockquote {
 article {
   margin: 0 auto 50px auto;
   max-width: 700px; }
-  article.content-width {
-    max-width: 900px; }
-    article.content-width header p {
-      margin: 20px 0 40px 0; }
   article.full-width {
     max-width: 1080px; }
     article.full-width header figure {
