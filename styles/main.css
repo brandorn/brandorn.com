@@ -15,6 +15,9 @@
    ========================================================================== */
 /* Color variables
    ========================================================================== */
+.grey {
+  color: #616161; }
+
 /* Responsive sizing variables
    ========================================================================== */
 /* Font variables and declarations
@@ -26,7 +29,7 @@
  * Need to figure out how to avoid delay using @font-face.
  */
 .serif {
-  font-family: "Mate", Georgia, serif; }
+  font-family: "Avenir", Georgia, serif; }
 
 @font-face {
   font-family: Mate;
@@ -81,6 +84,9 @@
 /*
  * Font sizes
  */
+.small-type {
+  font-size: 0.92rem; }
+
 /* HTML elements
    ========================================================================== */
 html {
@@ -113,7 +119,7 @@ h1 {
 
 h2 {
   color: #242424;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: 500;
   line-height: 1;
   margin: 1em 0; }
@@ -135,6 +141,7 @@ h4 {
 
 p {
   color: #242424;
+  letter-spacing: -0.15pt;
   line-height: 140%;
   margin: 10px 0;
   text-shadow: 0 0 1px #ddd; }
@@ -167,6 +174,9 @@ ul {
   list-style-type: none;
   padding: 0; }
 
+li {
+  margin: 0.5em 0; }
+
 hr {
   background: url(../img/hr.svg) no-repeat;
   border: 0;
@@ -198,24 +208,29 @@ blockquote {
 article {
   margin: 0 auto 50px auto;
   max-width: 700px; }
-  article.wide {
+  article.content-width {
+    max-width: 900px; }
+    article.content-width header p {
+      margin: 20px 0 40px 0; }
+  article.full-width {
     max-width: 1080px; }
-    article.wide header figure {
+    article.full-width header figure {
       margin: 4% 0; }
-    article.wide figure {
+    article.full-width figure {
       margin: 4% 4% 4% 0; }
       @media screen and (max-width: 700px) {
-        article.wide figure {
+        article.full-width figure {
           margin: 4% 0; } }
-      article.wide figure:nth-last-child(1) {
+      article.full-width figure:nth-last-child(1) {
         margin-bottom: 4rem; }
   article h1 {
-    font-family: "Mate", Georgia, serif; }
+    font-family: "Avenir", Georgia, serif; }
   article h2 {
+    font-size: 1.7rem;
     font-weight: bold;
     text-align: center; }
   article p {
-    font-family: "Mate", Georgia, serif;
+    font-family: "Avenir", Georgia, serif;
     font-size: 1.2rem;
     line-height: 160%;
     margin-bottom: 2em; }
@@ -232,7 +247,7 @@ header {
     max-width: 700px; }
   header .description {
     color: #242424;
-    font-family: "Mate", Georgia, serif;
+    font-family: "Avenir", Georgia, serif;
     font-size: 1.4rem;
     margin: 4em auto;
     max-width: 900px; }
@@ -507,7 +522,7 @@ footer {
       margin: 20px 0; }
     .bio div + div p:nth-child(1) {
       font-size: 1.4rem;
-      font-family: "Mate", Georgia, serif; }
+      font-family: "Avenir", Georgia, serif; }
       @media screen and (max-width: 700px) {
         .bio div + div p:nth-child(1) {
           text-align: center; } }
@@ -537,7 +552,7 @@ footer {
 .methods ul {
   margin: 0; }
 .methods li {
-  font-family: "Mate", Georgia, serif;
+  font-family: "Avenir", Georgia, serif;
   font-size: 1.1rem;
   line-height: 150%; }
 
@@ -613,6 +628,9 @@ footer {
 .text-center {
   text-align: center; }
 
+.text-left {
+  text-align: left; }
+
 .clear {
   clear: both; }
 
@@ -627,6 +645,12 @@ footer {
 
 .mt-5 {
   margin-top: 5em; }
+
+.mb-5 {
+  margin-bottom: 5em; }
+
+.mb-2 {
+  margin-bottom: 2em; }
 
 .wide {
   max-width: 1080px; }

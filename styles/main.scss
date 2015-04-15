@@ -30,12 +30,15 @@ $dark-grey: hsla(0, 0%, 14%, 1);
 
 $green: #23AD63;
 
+.grey {
+  color: $grey;
+}
+
 
 /* Responsive sizing variables
    ========================================================================== */
 
 $content-width: 900px;
-
 $break-medium: 700px;
 $break-large: 1080px;
 
@@ -50,7 +53,7 @@ $break-large: 1080px;
  * Need to figure out how to avoid delay using @font-face.
  */
 
- $serif: 'Mate', Georgia, serif;
+ $serif: 'Avenir', Georgia, serif;
 
 .serif {
   font-family: $serif;
@@ -129,6 +132,10 @@ $sans-serif: Avenir, 'Raleway', Helvetica, Arial, sans-serif;
 $smallest-type: 0.8rem;
 $small-type: .92rem;
 
+.small-type {
+  font-size: $small-type;
+}
+
 
 /* HTML elements
    ========================================================================== */
@@ -169,7 +176,7 @@ h1 {
 
 h2 {
   color: $dark-grey;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   font-weight: 500;
   line-height: 1;
   margin: 1em 0;
@@ -198,7 +205,7 @@ h4 {
 
 p {
   color: $dark-grey;
-  // letter-spacing: -0.15pt;
+  letter-spacing: -0.15pt;
   line-height: 140%;
   margin: 10px 0;
   text-shadow: 0 0 1px #ddd;
@@ -243,6 +250,7 @@ ul {
 }
 
 li {
+  margin: 0.5em 0;
 }
 
 hr {
@@ -285,8 +293,19 @@ article {
   margin: 0 auto 50px auto;
   max-width: $break-medium;
 
+  // Used on the resources page
+  &.content-width {
+    max-width: $content-width;
+
+    header {
+      p {
+        margin: 20px 0 40px 0;
+      }
+    }
+  }
+
   // Used for portfolio pages
-  &.wide {
+  &.full-width {
     max-width: $break-large;
 
     header figure {
@@ -311,6 +330,7 @@ article {
   }
 
   h2 {
+    font-size: 1.7rem;
     font-weight: bold;
     text-align: center;
   }
@@ -909,6 +929,10 @@ footer {
   text-align: center;
 }
 
+.text-left {
+  text-align: left;
+}
+
 .clear {
   clear: both;
 }
@@ -928,6 +952,14 @@ footer {
 // Odd class used on the Approach page images...
 .mt-5 {
   margin-top: 5em;
+}
+
+.mb-5 {
+  margin-bottom: 5em;
+}
+
+.mb-2 {
+  margin-bottom: 2em;
 }
 
 .wide {
