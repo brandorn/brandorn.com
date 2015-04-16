@@ -115,7 +115,7 @@ body {
 
 h1 {
   color: #242424;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: normal;
   line-height: 120%;
   margin: 10px 0; }
@@ -148,7 +148,7 @@ li {
   color: #242424;
   letter-spacing: -0.15pt;
   line-height: 140%;
-  margin: 10px 0;
+  margin: 0.5em 0;
   text-shadow: 0 0 1px #ddd; }
 
 a {
@@ -179,6 +179,11 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0; }
+  ul.dot li {
+    background: url("img/list-dot.png") no-repeat 7px 10px transparent;
+    list-style-type: none;
+    padding: 0 0 1px 24px;
+    vertical-align: middle; }
 
 ol {
   counter-reset: li;
@@ -194,13 +199,13 @@ ol {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
-      color: #242424;
+      color: #616161;
       content: counter(li);
       counter-increment: li;
       font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       left: -2em;
-      margin: 5px 0 0 1.4rem;
+      margin: 0 0 0 1rem;
       padding: 4px;
       position: absolute;
       text-align: center;
@@ -257,10 +262,12 @@ article {
     font-weight: bold;
     margin: 3em 0 1em 0;
     text-align: center; }
-  article p {
+  article p,
+  article li {
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
-    font-size: 1.2rem;
-    line-height: 160%;
+    font-size: 1.1rem;
+    line-height: 160%; }
+  article p {
     margin-bottom: 2em; }
 
 header {
@@ -269,8 +276,7 @@ header {
   header p {
     color: #616161;
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
-    font-size: 1.1rem;
-    line-height: 130%;
+    font-size: 0.92rem;
     margin: 20px auto 40px auto;
     max-width: 700px; }
   header .description {
@@ -370,6 +376,15 @@ img {
   img.bordered {
     border: 2px solid #e6e6e6; }
 
+table {
+  margin: 2em 0; }
+
+td,
+th {
+  padding: 0.5em 1em;
+  text-align: left;
+  vertical-align: top; }
+
 strong {
   color: #db240d;
   font-weight: 500; }
@@ -462,25 +477,14 @@ nav {
 .footnotes {
   margin: 60px 0 120px 0;
   color: #bbb; }
-  .footnotes p {
+  .footnotes li:before {
+    font-size: 1rem;
+    top: 1px; }
+  .footnotes li {
     font-size: 0.92rem;
     margin: 4px 0;
-    color: #777;
-    padding-left: 20px;
+    color: #616161;
     margin-bottom: 10px; }
-
-.footnotes > li {
-  counter-increment: nodecimal;
-  display: block; }
-
-.footnotes > li:before {
-  content: counter(nodecimal) " ";
-  float: left;
-  width: 20px;
-  margin-top: 2px; }
-
-.footnotes:first-child {
-  counter-reset: nodecimal; }
 
 .scroll-progress {
   position: fixed;
@@ -614,7 +618,7 @@ footer {
   margin: 0; }
 .methods li {
   font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
-  font-size: 1.1rem;
+  font-size: 1em;
   line-height: 150%; }
 
 /* Content list pages
@@ -667,7 +671,7 @@ footer {
     .content-list li .type {
       color: #616161;
       display: inline-block;
-      font-size: 0.92rem;
+      font-size: 0.8rem;
       padding: 2px 0;
       margin-top: 6px; }
     .content-list li .type {
@@ -675,6 +679,7 @@ footer {
       border: 1px solid #e6e6e6;
       border-radius: 2px;
       float: right;
+      margin-top: 4px;
       padding: 2px 4px; }
 
 /* ==========================================================================
@@ -702,6 +707,9 @@ footer {
 .text-left {
   text-align: left; }
 
+.text-right {
+  text-align: right; }
+
 .clear {
   clear: both; }
 
@@ -720,13 +728,22 @@ footer {
 .mt-1 {
   margin-top: 1em; }
 
+.mt-3 {
+  margin-top: 3em; }
+
 .mt-5 {
   margin-top: 5em; }
+
+.mb-0 {
+  margin-bottom: 0; }
 
 .mb-3 {
   margin-bottom: 3em; }
 
 .wide {
   max-width: 1080px; }
+
+.bb {
+  border-bottom: 2px solid #e6e6e6; }
 
 /*# sourceMappingURL=main.css.map */
