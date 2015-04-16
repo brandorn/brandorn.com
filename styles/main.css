@@ -29,7 +29,7 @@
  * Need to figure out how to avoid delay using @font-face.
  */
 .serif {
-  font-family: "Avenir", Georgia, serif; }
+  font-family: "Mate", Georgia, serif; }
 
 @font-face {
   font-family: Mate;
@@ -197,7 +197,7 @@ ol {
       color: #242424;
       content: counter(li);
       counter-increment: li;
-      font-family: "Avenir", Georgia, serif;
+      font-family: "Mate", Georgia, serif;
       font-size: 1.4rem;
       left: -2em;
       margin: 5px 0 0 1.4rem;
@@ -207,7 +207,7 @@ ol {
       top: 8px; }
 
 li {
-  font-family: "Avenir", Georgia, serif;
+  font-family: "Mate", Georgia, serif;
   margin: 0.5em 0; }
 
 hr {
@@ -219,7 +219,7 @@ hr {
 blockquote {
   border-left: 3px solid #e6e6e6;
   color: #db240d;
-  font-family: "Avenir", Georgia, serif;
+  font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
   font-size: 1.3rem;
   margin: 2rem;
   padding: 0.5em 2em;
@@ -227,6 +227,7 @@ blockquote {
 
 .author {
   color: #616161;
+  font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
   font-style: normal;
   margin: -2rem 2rem 2rem 2rem;
   text-align: right; }
@@ -246,21 +247,21 @@ article {
       article.full-width figure:nth-last-child(1) {
         margin-bottom: 4rem; }
   article h1 {
-    font-family: "Avenir", Georgia, serif; }
+    font-family: "Mate", Georgia, serif; }
   article h2 {
     font-size: 1.7rem;
     font-weight: bold;
     margin: 3em 0 1em 0;
     text-align: center; }
   article p {
-    font-family: "Avenir", Georgia, serif;
+    font-family: "Mate", Georgia, serif;
     font-size: 1.2rem;
     line-height: 160%;
     margin-bottom: 2em; }
 
 header {
-  text-align: center;
-  margin: 40px 0 80px 0; }
+  margin: 40px 0 80px 0;
+  text-align: center; }
   header p {
     color: #616161;
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
@@ -270,8 +271,8 @@ header {
     max-width: 700px; }
   header .description {
     color: #242424;
-    font-family: "Avenir", Georgia, serif;
-    font-size: 1.4rem;
+    font-family: "Mate", Georgia, serif;
+    font-size: 1.5rem;
     margin: 4em auto;
     max-width: 900px; }
   header figure {
@@ -346,15 +347,13 @@ figcaption {
   margin: 1em 0; }
   figcaption a:link,
   figcaption a:visited {
-    color: #616161; }
+    color: #999999; }
 
 img {
   display: block;
   width: 100%; }
   img.bordered {
     border: 2px solid #e6e6e6; }
-  img.fake {
-    background: #e6e6e6; }
 
 strong {
   color: #db240d;
@@ -569,7 +568,7 @@ footer {
       margin: 20px 0; }
     .bio div + div p:nth-child(1) {
       font-size: 1.4rem;
-      font-family: "Avenir", Georgia, serif; }
+      font-family: "Mate", Georgia, serif; }
       @media screen and (max-width: 700px) {
         .bio div + div p:nth-child(1) {
           text-align: center; } }
@@ -599,7 +598,7 @@ footer {
 .methods ul {
   margin: 0; }
 .methods li {
-  font-family: "Avenir", Georgia, serif;
+  font-family: "Mate", Georgia, serif;
   font-size: 1.1rem;
   line-height: 150%; }
 
@@ -623,6 +622,7 @@ footer {
     padding: 0; }
   .content-filter a {
     border-radius: 2px;
+    font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
     font-weight: bold;
     padding: 4px 8px;
     text-decoration: none; }
