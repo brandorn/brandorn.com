@@ -50,10 +50,12 @@ $break-large: 1080px;
  */
 
 /*
- * Need to figure out how to avoid delay using @font-face.
+ * Need to figure out how to avoid delay using @font-face, and how to use Mate on mobile...
  */
 
- $serif: 'Mate', Georgia, serif;
+// Temporary variable until everything made sans-serif
+$serif: Avenir, 'Raleway', Helvetica, Arial, sans-serif;
+//$serif: 'Mate', Georgia, serif;
 
 .serif {
   font-family: $serif;
@@ -304,9 +306,14 @@ blockquote {
   color: $primary-color;
   font-family: $sans-serif;
   font-size: 1.3rem;
-  margin: 2rem;
+  margin: 2em;
   padding: 0.5em 2em;
   width: auto;
+
+  @media screen and (max-width: $break-medium) {
+    margin: 1em;
+    padding: 0.5em 1em;
+  }
 }
   
   // Place below blockquotes in the HTML
@@ -466,10 +473,24 @@ figure {
 
     &.left {
       margin-left: -20%;
+
+      @media screen and (max-width: $break-large) {
+        margin-left: 0;
+      }
     }
 
     &.right {
       margin-right: -20%;
+
+      @media screen and (max-width: $break-large) {
+        margin-right: 0;
+      }
+    }
+
+    @media screen and (max-width: $break-large) {
+      display: block;
+      width: 100%;
+      margin: 2% 0;
     }
 
   }
@@ -671,7 +692,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  height: 2px;
+  height: 3px;
   background-color: $primary-color;
 }
 
@@ -904,6 +925,7 @@ footer {
     font-weight: bold;
     padding: 4px 8px;
     text-decoration: none;
+    text-transform: capitalize;
   
     &:hover {
       background: $faint-grey;
@@ -940,10 +962,21 @@ footer {
       margin: 0;
     }
 
-    .meta {
+    .date,
+    .type {
       color: $grey;
+      display: inline-block;
       font-size: $small-type;
+      padding: 2px 0;
       margin-top: 6px;
+    }
+
+    .type {
+      background: $faintest-grey;
+      border: 1px solid $faint-grey;
+      border-radius: 2px;
+      float: right;
+      padding: 2px 4px;
     }
   }
 }

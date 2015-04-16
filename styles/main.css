@@ -26,10 +26,10 @@
  * Mate (serif)
  */
 /*
- * Need to figure out how to avoid delay using @font-face.
+ * Need to figure out how to avoid delay using @font-face, and how to use Mate on mobile...
  */
 .serif {
-  font-family: "Mate", Georgia, serif; }
+  font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif; }
 
 @font-face {
   font-family: Mate;
@@ -197,7 +197,7 @@ ol {
       color: #242424;
       content: counter(li);
       counter-increment: li;
-      font-family: "Mate", Georgia, serif;
+      font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
       font-size: 1.4rem;
       left: -2em;
       margin: 5px 0 0 1.4rem;
@@ -207,7 +207,7 @@ ol {
       top: 8px; }
 
 li {
-  font-family: "Mate", Georgia, serif;
+  font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
   margin: 0.5em 0; }
 
 hr {
@@ -221,9 +221,13 @@ blockquote {
   color: #db240d;
   font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
   font-size: 1.3rem;
-  margin: 2rem;
+  margin: 2em;
   padding: 0.5em 2em;
   width: auto; }
+  @media screen and (max-width: 700px) {
+    blockquote {
+      margin: 1em;
+      padding: 0.5em 1em; } }
 
 .author {
   color: #616161;
@@ -247,14 +251,14 @@ article {
       article.full-width figure:nth-last-child(1) {
         margin-bottom: 4rem; }
   article h1 {
-    font-family: "Mate", Georgia, serif; }
+    font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif; }
   article h2 {
     font-size: 1.7rem;
     font-weight: bold;
     margin: 3em 0 1em 0;
     text-align: center; }
   article p {
-    font-family: "Mate", Georgia, serif;
+    font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
     font-size: 1.2rem;
     line-height: 160%;
     margin-bottom: 2em; }
@@ -271,7 +275,7 @@ header {
     max-width: 700px; }
   header .description {
     color: #242424;
-    font-family: "Mate", Georgia, serif;
+    font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
     font-size: 1.5rem;
     margin: 4em auto;
     max-width: 900px; }
@@ -334,8 +338,19 @@ figure {
     width: 44%; }
     figure.three-up.left {
       margin-left: -20%; }
+      @media screen and (max-width: 1080px) {
+        figure.three-up.left {
+          margin-left: 0; } }
     figure.three-up.right {
       margin-right: -20%; }
+      @media screen and (max-width: 1080px) {
+        figure.three-up.right {
+          margin-right: 0; } }
+    @media screen and (max-width: 1080px) {
+      figure.three-up {
+        display: block;
+        width: 100%;
+        margin: 2% 0; } }
   figure.natural-width img {
     width: auto;
     margin: 0 auto; }
@@ -471,7 +486,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  height: 2px;
+  height: 3px;
   background-color: #db240d; }
 
 /* Footer
@@ -568,7 +583,7 @@ footer {
       margin: 20px 0; }
     .bio div + div p:nth-child(1) {
       font-size: 1.4rem;
-      font-family: "Mate", Georgia, serif; }
+      font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif; }
       @media screen and (max-width: 700px) {
         .bio div + div p:nth-child(1) {
           text-align: center; } }
@@ -598,7 +613,7 @@ footer {
 .methods ul {
   margin: 0; }
 .methods li {
-  font-family: "Mate", Georgia, serif;
+  font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
   font-size: 1.1rem;
   line-height: 150%; }
 
@@ -625,7 +640,8 @@ footer {
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
     font-weight: bold;
     padding: 4px 8px;
-    text-decoration: none; }
+    text-decoration: none;
+    text-transform: capitalize; }
     .content-filter a:hover {
       background: #e6e6e6;
       color: #db240d; }
@@ -647,10 +663,19 @@ footer {
       margin: 4px 0; }
     .content-list li p {
       margin: 0; }
-    .content-list li .meta {
+    .content-list li .date,
+    .content-list li .type {
       color: #616161;
+      display: inline-block;
       font-size: 0.92rem;
+      padding: 2px 0;
       margin-top: 6px; }
+    .content-list li .type {
+      background: whitesmoke;
+      border: 1px solid #e6e6e6;
+      border-radius: 2px;
+      float: right;
+      padding: 2px 4px; }
 
 /* ==========================================================================
    Utility
