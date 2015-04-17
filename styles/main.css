@@ -242,7 +242,7 @@ blockquote {
   text-align: right; }
 
 article {
-  margin: 0 auto 50px auto;
+  margin: 0 auto 8em auto;
   max-width: 700px; }
   article.full-width {
     max-width: 1080px; }
@@ -276,7 +276,7 @@ header {
   header p {
     color: #616161;
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
-    font-size: 0.92rem;
+    font-size: 1rem;
     margin: 20px auto 40px auto;
     max-width: 700px; }
   header .description {
@@ -477,14 +477,14 @@ nav {
 .footnotes {
   margin: 60px 0 120px 0;
   color: #bbb; }
-  .footnotes li:before {
-    font-size: 1rem;
-    top: 1px; }
   .footnotes li {
     font-size: 0.92rem;
     margin: 4px 0;
     color: #616161;
     margin-bottom: 10px; }
+    .footnotes li:before {
+      font-size: 1rem;
+      top: 1px; }
 
 .scroll-progress {
   position: fixed;
@@ -497,12 +497,20 @@ nav {
    ========================================================================== */
 footer {
   border-top: 1px solid #e6e6e6;
+  clear: both;
   margin: 0 auto;
   max-width: 900px; }
   footer p {
     color: #888;
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
     font-size: 0.8rem; }
+  footer .nav-links {
+    margin: 0.5em 0;
+    text-align: center; }
+    footer .nav-links li {
+      display: inline-block; }
+      footer .nav-links li:nth-last-child(n+2) {
+        margin-right: 1em; }
 
 .next-page {
   line-height: 120%;
@@ -674,12 +682,12 @@ footer {
       font-size: 0.8rem;
       padding: 2px 0;
       margin-top: 6px; }
+    .content-list li .date {
+      display: none; }
     .content-list li .type {
       background: whitesmoke;
       border: 1px solid #e6e6e6;
       border-radius: 2px;
-      float: right;
-      margin-top: 4px;
       padding: 2px 4px; }
 
 /* ==========================================================================

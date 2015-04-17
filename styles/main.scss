@@ -335,7 +335,7 @@ blockquote {
   }
 
 article {
-  margin: 0 auto 50px auto;
+  margin: 0 auto 8em auto;
   max-width: $break-medium;
 
 
@@ -390,7 +390,7 @@ header {
   p {
     color: $grey;
     font-family: $sans-serif;
-    font-size: $small-type;
+    font-size: 1rem;
     margin: 20px auto 40px auto;
     max-width: $break-medium;
   }
@@ -688,19 +688,17 @@ nav {
   margin: 60px 0 120px 0;
   color: #bbb;
 
-  li:before {
-    font-size: 1rem;
-    top: 1px;
-  }
-
   li {
     font-size: $small-type;
     margin: 4px 0;
     color: $grey;
     margin-bottom: 10px;
-  }
 
-  
+    &:before {
+      font-size: 1rem;
+      top: 1px;
+    }
+  }
 
 }
   
@@ -721,6 +719,7 @@ nav {
 
 footer {
   border-top: 1px solid $faint-grey;
+  clear: both;
   margin: 0 auto;
   max-width: $content-width;
 
@@ -728,6 +727,19 @@ footer {
     color: #888;
     font-family: $sans-serif;
     font-size: $smallest-type;
+  }
+
+  .nav-links {
+    margin: 0.5em 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+
+      &:nth-last-child(n+2) {
+        margin-right: 1em;
+      }
+    }
   }
 }
 
@@ -991,12 +1003,14 @@ footer {
       margin-top: 6px;
     }
 
+    .date {
+      display: none;
+    }
+
     .type {
       background: $faintest-grey;
       border: 1px solid $faint-grey;
       border-radius: 2px;
-      float: right;
-      margin-top: 4px;
       padding: 2px 4px;
     }
   }
