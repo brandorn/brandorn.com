@@ -213,7 +213,8 @@ ol {
 
 li {
   font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
-  margin: 0.5em 0; }
+  margin: 0.5em 0;
+  vertical-align: top; }
 
 hr {
   border: none;
@@ -498,7 +499,7 @@ nav {
 footer {
   border-top: 1px solid #e6e6e6;
   clear: both;
-  margin: 0 auto;
+  margin: 2em auto 0 auto;
   max-width: 900px; }
   footer p {
     color: #888;
@@ -664,31 +665,76 @@ footer {
     .content-filter {
       text-align: center; } }
 
-.content-list {
+.content-items {
   padding-left: 20px; }
   @media screen and (max-width: 700px) {
-    .content-list {
+    .content-items {
       padding-left: 0; } }
-  .content-list li {
+  .content-items li {
     margin-bottom: 24px; }
-    .content-list li h2 {
+    .content-items li h2 {
       margin: 4px 0; }
-    .content-list li p {
+    .content-items li p {
       margin: 0; }
-    .content-list li .date,
-    .content-list li .type {
+    .content-items li .date,
+    .content-items li .type {
       color: #616161;
       display: inline-block;
       font-size: 0.8rem;
       padding: 2px 0;
       margin-top: 6px; }
-    .content-list li .date {
+    .content-items li .date {
       display: none; }
-    .content-list li .type {
+    .content-items li .type {
       background: whitesmoke;
       border: 1px solid #e6e6e6;
       border-radius: 2px;
       padding: 2px 4px; }
+  .content-items.books {
+    font-size: 0.92rem;
+    margin-top: 2em;
+    padding-left: 0; }
+    .content-items.books li {
+      display: inline-block;
+      width: 48%; }
+      @media screen and (max-width: 700px) {
+        .content-items.books li {
+          width: auto; } }
+      .content-items.books li h2 {
+        font-size: 1.2rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 130%; }
+      .content-items.books li .author {
+        color: #242424;
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+        text-align: left; }
+      .content-items.books li p {
+        margin: 0.5em 0; }
+        .content-items.books li p:nth-last-child(2) {
+          font-style: italic; }
+      .content-items.books li:nth-child(2n) {
+        padding-left: 2em; }
+        @media screen and (max-width: 700px) {
+          .content-items.books li:nth-child(2n) {
+            padding-left: 0; } }
+      .content-items.books li div {
+        display: inline-block; }
+        .content-items.books li div:nth-child(1) {
+          position: absolute; }
+          .content-items.books li div:nth-child(1) img {
+            height: 110px;
+            width: auto; }
+            @media screen and (max-width: 700px) {
+              .content-items.books li div:nth-child(1) img {
+                display: none; } }
+        .content-items.books li div:nth-child(2) {
+          padding-left: 90px; }
+          @media screen and (max-width: 700px) {
+            .content-items.books li div:nth-child(2) {
+              padding-left: 0; } }
 
 /* ==========================================================================
    Utility

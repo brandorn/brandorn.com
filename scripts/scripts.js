@@ -39,13 +39,13 @@ $(document).ready(function(){
         
         // Show all if "all" clicked
         if ( filterName == 'all') {
-            $('.content-list').children('.item').show();
+            $('.content-items').children('.item').show();
         }
         
         // Show items of selected type
         else {
-            $('.content-list').children('li:not(.' + filterName + ')').hide();
-            $('.content-list').children('li.' + filterName).show();
+            $('.content-items').children('li:not(.' + filterName + ')').hide();
+            $('.content-items').children('li.' + filterName).show();
         }
     });
 

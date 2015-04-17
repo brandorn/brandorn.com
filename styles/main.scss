@@ -301,6 +301,7 @@ ol {
 li {
   font-family: $serif;
   margin: 0.5em 0;
+  vertical-align: top;
 }
 
 hr {
@@ -720,7 +721,7 @@ nav {
 footer {
   border-top: 1px solid $faint-grey;
   clear: both;
-  margin: 0 auto;
+  margin: 2em auto 0 auto;
   max-width: $content-width;
 
   p {
@@ -942,7 +943,6 @@ footer {
 }
 
 .content-filter {
-
   margin-top: 20px;
 
   li {
@@ -976,7 +976,7 @@ footer {
 
 }
 
-.content-list {
+.content-items {
   padding-left: 20px;
 
   @media screen and (max-width: $break-medium) {
@@ -986,13 +986,9 @@ footer {
   li {
     margin-bottom: 24px;
 
-    h2 {
-      margin: 4px 0;
-    }
+    h2 { margin: 4px 0; }
 
-    p {
-      margin: 0;
-    }
+    p { margin: 0; }
 
     .date,
     .type {
@@ -1003,15 +999,86 @@ footer {
       margin-top: 6px;
     }
 
-    .date {
-      display: none;
-    }
+    .date { display: none; }
 
     .type {
       background: $faintest-grey;
       border: 1px solid $faint-grey;
       border-radius: 2px;
       padding: 2px 4px;
+    }
+  }
+
+  &.books {
+    font-size: $small-type;
+    margin-top: 2em;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      width: 48%;
+
+      @media screen and (max-width: $break-medium) {
+        width: auto;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+        font-style: italic;
+        font-weight: 600;
+        line-height: 130%;
+      }
+
+      .author {
+        color: $dark-grey;
+        font-size: $smallest-type;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+        text-align: left;
+      }
+
+      p {
+        margin: 0.5em 0;
+
+        &:nth-last-child(2) {
+          font-style: italic;
+        }
+      }
+
+      // For padding between books on desktop
+      &:nth-child(2n) {
+        padding-left: 2em;
+
+        @media screen and (max-width: $break-medium) {
+          padding-left: 0;
+        }
+      }
+
+      // Image and text divs
+      div {
+        display: inline-block;
+
+        &:nth-child(1) {
+          position: absolute;
+
+          img {
+            height: 110px;
+            width: auto;
+
+            @media screen and (max-width: $break-medium) {
+              display: none;
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          padding-left: 90px;
+
+          @media screen and (max-width: $break-medium) {
+            padding-left: 0;
+          }
+        }
+      }
     }
   }
 }
@@ -1021,85 +1088,47 @@ footer {
    Utility
    ========================================================================== */
 
-.primary {
-  color: $primary-color;
-}
+.primary { color: $primary-color; }
 
-.green {
-  color: $green;
-}
+.green { color: $green; }
 
-.left {
-  float: left;
-}
+.left { float: left; }
 
-.right {
-  float: right;
-}
+.right { float: right; }
 
 .center {
   display: block;
   margin: 0 auto;
 }
 
-.text-center {
-  text-align: center;
-}
+.text-center { text-align: center; }
 
-.text-left {
-  text-align: left;
-}
+.text-left { text-align: left; }
 
-.text-right {
-  text-align: right;
-}
+.text-right { text-align: right; }
 
-.clear {
-  clear: both;
-}
+.clear { clear: both; }
 
-.small-caps {
-  font-variant: small-caps;
-}
+.small-caps { font-variant: small-caps; }
 
-.hidden {
-  display: none;
-}
+.hidden { display: none; }
 
-.no-border {
-  border: none;
-}
+.no-border { border: none; }
 
 // Odd class used on the Approach page images...
-.mt-0 {
-  margin-top: 0;
-}
+.mt-0 { margin-top: 0; }
 
-.mt-1 {
-  margin-top: 1em;
-}
+.mt-1 { margin-top: 1em; }
 
-.mt-3 {
-  margin-top: 3em;
-}
+.mt-3 { margin-top: 3em; }
 
-.mt-5 {
-  margin-top: 5em;
-}
+.mt-5 { margin-top: 5em; }
 
-.mb-0 {
-  margin-bottom: 0;
-}
+.mb-0 { margin-bottom: 0; }
 
-.mb-3 {
-  margin-bottom: 3em;
-}
+.mb-3 { margin-bottom: 3em; }
 
-.wide {
-  max-width: $break-large;
-}
+.wide { max-width: $break-large; }
 
-.bb {
-  border-bottom: 2px solid $faint-grey;
-}
+.bb { border-bottom: 2px solid $faint-grey; }
 
