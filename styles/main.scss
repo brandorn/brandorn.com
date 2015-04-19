@@ -289,7 +289,7 @@ ol {
       font-family: $serif;
       font-size: 1.2rem;
       left: -2em;
-      margin: 0 0 0 1rem;
+      margin: 0.1em 0 0 1em;
       padding: 4px;
       position: absolute;
       text-align: center;
@@ -367,7 +367,8 @@ article {
 
   h2 {
     font-size: 1.7rem;
-    font-weight: bold;
+    font-weight: 600;
+    letter-spacing: 0.05em;
     margin: 3em 0 1em 0;
     text-align: center;
   }
@@ -379,9 +380,9 @@ article {
     line-height: 160%;
   }
 
-  p {
-    margin-bottom: 2em;
-  }
+  p { margin-bottom: 2em; }
+
+  li { line-height: 140%; }
 }
 
 header {
@@ -1001,11 +1002,13 @@ footer {
 
     .date { display: none; }
 
+    // Used for the books on the bookshelf, types of writing on the writing overview
     .type {
       background: $faintest-grey;
       border: 1px solid $faint-grey;
       border-radius: 2px;
-      padding: 2px 4px;
+      margin-right: 4px;
+      padding: 2px 6px 1px 6px;
     }
   }
 
@@ -1016,7 +1019,8 @@ footer {
 
     li {
       display: inline-block;
-      width: 48%;
+      padding-right: 2em;
+      width: 49%;
 
       @media screen and (max-width: $break-medium) {
         width: auto;
@@ -1039,15 +1043,11 @@ footer {
 
       p {
         margin: 0.5em 0;
-
-        &:nth-last-child(2) {
-          font-style: italic;
-        }
       }
 
       // For padding between books on desktop
-      &:nth-child(2n) {
-        padding-left: 2em;
+      &:nth-child(2n + 1) {
+        
 
         @media screen and (max-width: $break-medium) {
           padding-left: 0;

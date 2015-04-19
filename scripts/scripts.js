@@ -9,7 +9,7 @@ $(document).ready(function(){
 
   function setSizes(){
       wh = $w.height();
-      h = $('article').height();
+      h = $('body').height();
       sHeight = h - wh;
   }
 
