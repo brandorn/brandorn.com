@@ -368,7 +368,6 @@ article {
   h2 {
     font-size: 1.7rem;
     font-weight: 600;
-    letter-spacing: 0.05em;
     margin: 3em 0 1em 0;
     text-align: center;
   }
@@ -991,7 +990,7 @@ footer {
 
     p { margin: 0; }
 
-    // TODO: Simplify these into one class (use class for "type" span) - see writing.html and bookshelf.html
+    // TODO: Simplify these into one class (use class for "type" span), delete date class - see writing.html and bookshelf.html
 
     .date,
     .type {
