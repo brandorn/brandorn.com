@@ -991,6 +991,8 @@ footer {
 
     p { margin: 0; }
 
+    // TODO: Simplify these into one class (use class for "type" span) - see writing.html and bookshelf.html
+
     .date,
     .type {
       color: $grey;
