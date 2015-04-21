@@ -238,12 +238,7 @@ a {
 }
 
 sup {
-  font-size: .9rem;
-  font-weight: bold;
   padding: 2px;
-  position: relative;
-  top: -5px;
-  vertical-align: top;
 }
 
   sup a:link,
@@ -377,7 +372,8 @@ article {
   li {
     font-family: $serif;
     font-size: 1.1rem;
-    line-height: 150%;
+    letter-spacing: 1;
+    line-height: 170%;
   }
 
   p { margin-bottom: 2em; }
@@ -819,14 +815,6 @@ footer {
   margin: 0 auto;
   max-width: $content-width;
   padding: 0.5em 0 3em 0;
-
-  h2 {
-    //margin: 4px 0;
-  }
-
-  p {
-    //margin:0;
-  }
 
   .grid__col {
     margin-top: 1em;

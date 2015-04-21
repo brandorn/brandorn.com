@@ -161,12 +161,7 @@ a {
     -webkit-tap-highlight-color: transparent; }
 
 sup {
-  font-size: .9rem;
-  font-weight: bold;
-  padding: 2px;
-  position: relative;
-  top: -5px;
-  vertical-align: top; }
+  padding: 2px; }
 
 sup a:link,
 sup a:visited,
@@ -266,7 +261,8 @@ article {
   article li {
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
     font-size: 1.1rem;
-    line-height: 150%; }
+    letter-spacing: 1;
+    line-height: 170%; }
   article p {
     margin-bottom: 2em; }
   article li {
