@@ -176,7 +176,7 @@ body {
 
 h1 {
   color: $dark-grey;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: normal;
   line-height: 120%;
   margin: 10px 0;
@@ -186,7 +186,7 @@ h2 {
   color: $dark-grey;
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 1;
+  line-height: 120%;
   margin: 1em 0 0 0;
 
   a:link,
@@ -201,21 +201,23 @@ h2 {
 }
 
 h3 {
-  color: $dark-grey;
-  font-size: 1.2rem;
+  color: $grey;
+  font-size: 1.32rem;
   font-weight: bold;
   margin: 0.5em 0;
 }
 
 h4 {
   color: $grey;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   margin: 1em 0;
 }
 
 p,
 li {
   color: $dark-grey;
-  letter-spacing: -0.15pt;
   line-height: 140%;
   margin: 0.5em 0;
   text-shadow: 0 0 1px #ddd;
@@ -816,6 +818,10 @@ footer {
   max-width: $content-width;
   padding: 0.5em 0 3em 0;
 
+  p {
+    margin: 0.2em 0;
+  }
+
   .grid__col {
     margin-top: 1em;
   }
@@ -946,7 +952,8 @@ footer {
   a {
     border-radius: 2px;
     font-family: $sans-serif;
-    font-weight: bold;
+    font-weight: 600;
+    letter-spacing: 0.05em;
     padding: 4px 8px;
     text-decoration: none;
     text-transform: capitalize;

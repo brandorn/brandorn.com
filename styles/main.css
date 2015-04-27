@@ -115,7 +115,7 @@ body {
 
 h1 {
   color: #242424;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: normal;
   line-height: 120%;
   margin: 10px 0; }
@@ -124,7 +124,7 @@ h2 {
   color: #242424;
   font-size: 1.4rem;
   font-weight: 500;
-  line-height: 1;
+  line-height: 120%;
   margin: 1em 0 0 0; }
   h2 a:link,
   h2 a:visited {
@@ -134,19 +134,21 @@ h2 {
     text-decoration: underline; }
 
 h3 {
-  color: #242424;
-  font-size: 1.2rem;
+  color: #616161;
+  font-size: 1.32rem;
   font-weight: bold;
   margin: 0.5em 0; }
 
 h4 {
   color: #616161;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
   margin: 1em 0; }
 
 p,
 li {
   color: #242424;
-  letter-spacing: -0.15pt;
   line-height: 140%;
   margin: 0.5em 0;
   text-shadow: 0 0 1px #ddd; }
@@ -561,6 +563,8 @@ footer {
   margin: 0 auto;
   max-width: 900px;
   padding: 0.5em 0 3em 0; }
+  .home-block p {
+    margin: 0.2em 0; }
   .home-block .grid__col {
     margin-top: 1em; }
 
@@ -646,7 +650,8 @@ footer {
   .content-filter a {
     border-radius: 2px;
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
-    font-weight: bold;
+    font-weight: 600;
+    letter-spacing: 0.05em;
     padding: 4px 8px;
     text-decoration: none;
     text-transform: capitalize; }
