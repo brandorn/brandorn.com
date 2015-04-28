@@ -150,8 +150,7 @@ p,
 li {
   color: #242424;
   line-height: 140%;
-  margin: 0.5em 0;
-  text-shadow: 0 0 1px #ddd; }
+  margin: 0.5em 0; }
 
 a {
   transition: all 100ms; }
@@ -388,6 +387,12 @@ th {
 strong {
   color: #db240d;
   font-weight: 500; }
+
+*::selection {
+  background: #e6e6e6; }
+
+*:focus {
+  outline: 1px dotted #999999; }
 
 /* ==========================================================================
    Layout

@@ -40,9 +40,9 @@ $green: #23AD63;
 
 $content-width: 900px;
 
-$break-small: 500px;
-$break-medium: 700px;
 $break-large: 1080px;
+$break-medium: 700px;
+$break-small: 500px;
 
 /* Font variables and declarations
    ========================================================================== */
@@ -133,8 +133,8 @@ $sans-serif: Avenir, 'Raleway', Helvetica, Arial, sans-serif;
  * Font sizes
  */
 
-$smallest-type: 0.8rem;
 $small-type: .92rem;
+$smallest-type: 0.8rem;
 
 .small-type {
   font-size: $small-type;
@@ -220,7 +220,6 @@ li {
   color: $dark-grey;
   line-height: 140%;
   margin: 0.5em 0;
-  text-shadow: 0 0 1px #ddd;
 }
 
 a {
@@ -325,7 +324,7 @@ blockquote {
   }
 }
   
-  // Place below blockquotes in the HTML
+  // Place in <p> below <blockquotes>
   .author {
     color: $grey;
     font-family: $sans-serif;
@@ -337,7 +336,6 @@ blockquote {
 article {
   margin: 0 auto 8em auto;
   max-width: $break-medium;
-
 
   // Used for portfolio pages
   &.full-width {
@@ -553,6 +551,14 @@ th {
 strong {
   color: $primary-color;
   font-weight: 500;
+}
+
+*::selection {
+  background: $faint-grey;
+}
+
+*:focus {
+  outline: 1px dotted $light-grey;
 }
   
 
