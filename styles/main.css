@@ -128,7 +128,8 @@ h2 {
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 120%;
-  margin: 1em 0 0 0; }
+  margin: 1em 0 0 0;
+  text-align: center; }
   h2 a:link,
   h2 a:visited {
     text-decoration: none; }
@@ -140,14 +141,16 @@ h3 {
   color: #616161;
   font-size: 1.2rem;
   font-weight: bold;
-  margin: 0.5em 0; }
+  margin: 0.5em 0;
+  text-align: center; }
 
 h4 {
   color: #616161;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  margin: 1em 0; }
+  margin: 1em 0;
+  text-align: center; }
 
 p,
 li {
@@ -259,9 +262,8 @@ article {
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif; }
   article h2 {
     font-weight: bold;
-    letter-spacing: 0.05rem;
-    margin: 3em 0 1em 0;
-    text-align: center; }
+    letter-spacing: 0.03rem;
+    margin: 5em 0 1em 0; }
   article p,
   article li {
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
@@ -572,6 +574,8 @@ footer {
   margin: 0 auto;
   max-width: 900px;
   padding: 0.5em 0 3em 0; }
+  .home-block h2 {
+    text-align: left; }
   .home-block p {
     margin: 0.2em 0; }
   .home-block .grid__col {
@@ -684,7 +688,8 @@ footer {
   .content-items li {
     margin-bottom: 24px; }
     .content-items li h2 {
-      margin: 4px 0; }
+      margin: 4px 0;
+      text-align: left; }
     .content-items li p {
       margin: 0; }
     .content-items li .meta {
