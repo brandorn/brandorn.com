@@ -133,8 +133,13 @@ $sans-serif: Avenir, 'Raleway', Helvetica, Arial, sans-serif;
  * Font sizes
  */
 
-$small-type: .92rem;
+$medium-type: 1.1rem;
+$small-type: 0.92rem;
 $smallest-type: 0.8rem;
+
+.medium-type {
+  font-size: $medium-type;
+}
 
 .small-type {
   font-size: $small-type;
@@ -202,7 +207,7 @@ h2 {
 
 h3 {
   color: $grey;
-  font-size: 1.32rem;
+  font-size: 1.2rem;
   font-weight: bold;
   margin: 0.5em 0;
 }
@@ -363,7 +368,8 @@ article {
   }
 
   h2 {
-    font-weight: 600;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
     margin: 3em 0 1em 0;
     text-align: center;
   }
@@ -936,6 +942,7 @@ footer {
 
 .content-description {
   font-size: $small-type;
+  padding-right: 1rem;
   margin-top: 14px;
 
   @media screen and (max-width: $break-medium) {
@@ -943,6 +950,7 @@ footer {
     font-size: 1rem;
     margin-bottom: 40px;
     padding-bottom: 30px;
+    padding-right: 0;
   }
 }
 

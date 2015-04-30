@@ -84,6 +84,9 @@
 /*
  * Font sizes
  */
+.medium-type {
+  font-size: 1.1rem; }
+
 .small-type {
   font-size: 0.92rem; }
 
@@ -135,7 +138,7 @@ h2 {
 
 h3 {
   color: #616161;
-  font-size: 1.32rem;
+  font-size: 1.2rem;
   font-weight: bold;
   margin: 0.5em 0; }
 
@@ -255,7 +258,8 @@ article {
   article h1 {
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif; }
   article h2 {
-    font-weight: 600;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
     margin: 3em 0 1em 0;
     text-align: center; }
   article p,
@@ -638,13 +642,15 @@ footer {
    ========================================================================== */
 .content-description {
   font-size: 0.92rem;
+  padding-right: 1rem;
   margin-top: 14px; }
   @media screen and (max-width: 700px) {
     .content-description {
       border-bottom: 1px solid #e6e6e6;
       font-size: 1rem;
       margin-bottom: 40px;
-      padding-bottom: 30px; } }
+      padding-bottom: 30px;
+      padding-right: 0; } }
 
 .content-filter {
   margin-top: 20px; }
