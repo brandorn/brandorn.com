@@ -1077,8 +1077,6 @@ footer {
 
       // For padding between books on desktop
       &:nth-child(2n + 1) {
-        
-
         @media screen and (max-width: $break-medium) {
           padding-left: 0;
         }
@@ -1092,7 +1090,10 @@ footer {
           position: absolute;
 
           img {
+            background: #fff;
+            box-shadow: 1px 1px 4px 1px #DADADA;
             height: 110px;
+            padding: 2px;
             width: auto;
 
             @media screen and (max-width: $break-medium) {

@@ -744,7 +744,10 @@ footer {
         .content-items.books li div:nth-child(1) {
           position: absolute; }
           .content-items.books li div:nth-child(1) img {
+            background: #fff;
+            box-shadow: 1px 1px 4px 1px #DADADA;
             height: 110px;
+            padding: 2px;
             width: auto; }
             @media screen and (max-width: 700px) {
               .content-items.books li div:nth-child(1) img {
