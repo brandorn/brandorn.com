@@ -82,7 +82,7 @@ $smallest-type: 0.8rem;
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  font-size: 100%;
+  font-size: 94%;
 
   @media screen and (max-width: $break-medium) {
     font-size: 88%;
@@ -107,7 +107,7 @@ body {
 
 h1 {
   color: $dark-grey;
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: normal;
   line-height: 120%;
   margin: 10px 0;
@@ -443,7 +443,7 @@ th {
 
 strong {
   color: $primary-color;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 *::selection {
@@ -554,7 +554,6 @@ nav {
 
     p {
       font-size: 1.4em;
-      font-weight: 500;
       margin: 0;
       text-transform: lowercase;
       vertical-align: middle;
@@ -650,7 +649,7 @@ footer {
   width: 50%;
 
   &:link {
-    font-weight: 500;
+    font-weight: bold;
     font-size: 1.2rem;
     text-decoration: none;
   }
@@ -777,7 +776,7 @@ footer {
 
     li {
       display: inline-block;
-      font-weight: 500;
+      font-weight: bold;
 
       a {
         margin: 0 4px;
@@ -851,7 +850,7 @@ footer {
 
   a {
     border-radius: 2px;
-    font-weight: 600;
+    font-weight: bold;
     padding: 4px 8px;
     text-decoration: none;
     text-transform: capitalize;
@@ -938,7 +937,7 @@ footer {
       h2 {
         font-size: 1.2rem;
         font-style: italic;
-        font-weight: 600;
+        font-weight: bold;
         line-height: 130%;
       }
 
