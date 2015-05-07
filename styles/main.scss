@@ -47,87 +47,12 @@ $break-small: 500px;
 /* Font variables and declarations
    ========================================================================== */
 
-/*
- * Mate (serif)
- */
-
-/*
- * Need to figure out how to avoid delay using @font-face, and how to use Mate on mobile...
- */
-
-// Temporary variable until everything made sans-serif
-$serif: Avenir, 'Raleway', Helvetica, Arial, sans-serif;
-//$serif: 'Mate', Georgia, serif;
-
-.serif {
-  font-family: $serif;
-}
-
-@font-face {
-  font-family: Mate;
-  src: url("mate-regular.ttf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Mate;
-  src: url("fonts/mate-italic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-}
-/*
-@font-face {
-  font-family: Mate;
-  src: url("fonts/pt-serif-bold.ttf") format("truetype");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Mate;
-  src: url("fonts/pt-serif-bold-italic.ttf") format("truetype");
-  font-weight: bold;
-  font-style: italic;
-}*/
-
-/*
- * Raleway (sans-serif)
- */
-
-$sans-serif: Avenir, 'Raleway', Helvetica, Arial, sans-serif;
+$sans-serif: 'Karla', 'Raleway', Helvetica, Arial, sans-serif;
 
 .sans-serif {
   font-family: $sans-serif;
 }
 
-@font-face {
-  font-family: Raleway;
-  src: url("fonts/raleway-normal.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Raleway;
-  src: url("fonts/raleway-normal-italic.otf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: Raleway;
-  src: url("fonts/raleway-semi-bold.ttf") format("truetype");
-  font-weight: 500;
-  font-style: bold;
-}
-
-@font-face {
-  font-family: Raleway;
-  src: url("fonts/raleway-semi-bold-italic.otf") format("truetype");
-  font-weight: 500;
-  font-style: italic;
-}
 
 /*
  * Font sizes
@@ -172,6 +97,7 @@ body {
   background: hsla(0, 0%, 99%, 1);
   font-family: $sans-serif;
   font-weight: normal;
+  letter-spacing: -0.02em;
   margin: 0 auto;
   overflow: scroll;
   padding: 0 20px;
@@ -189,9 +115,7 @@ h1 {
 
 h2 {
   color: $dark-grey;
-  font-family: $sans-serif;
   font-size: 1.6rem;
-  font-weight: 500;
   line-height: 120%;
   margin: 1em 0 0 0;
 
@@ -209,21 +133,18 @@ h2 {
 h3 {
   color: $grey;
   font-size: 1.2rem;
-  font-weight: 500;
   margin: 0.5em 0;
 }
 
 h4 {
   color: $grey;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-size: 1rem;
   margin: 1em 0;
 }
 
 p,
 li {
   color: $dark-grey;
-  font-family: $serif;
   line-height: 140%;
   margin: 0.5em 0;
 }
@@ -290,7 +211,6 @@ ol {
       color: $grey;
       content: counter(li);
       counter-increment: li;
-      font-family: $serif;
       font-size: 1.2rem;
       left: -2em;
       margin: 0.1em 0 0 1em;
@@ -303,7 +223,6 @@ ol {
 }
 
 li {
-  font-family: $serif;
   margin: 0.5em 0;
   vertical-align: top;
 }
@@ -318,7 +237,6 @@ hr {
 blockquote {
   border-left: 3px solid $faint-grey;
   color: $primary-color;
-  font-family: $sans-serif;
   font-size: 1.3rem;
   margin: 2em;
   padding: 0.5em 2em;
@@ -333,7 +251,6 @@ blockquote {
   // Place in <p> below <blockquotes>
   .author {
     color: $grey;
-    font-family: $sans-serif;
     font-style: normal;
     margin: -2rem 2rem 2rem 2rem;
     text-align: right;
@@ -364,19 +281,13 @@ article {
     }
   }
 
-  h1 {
-    font-family: $serif;
-  }
-
   h2 {
     margin: 5em 0 1em 0;
   }
 
   p,
   li {
-    font-family: $serif;
     font-size: 1.1rem;
-    letter-spacing: 1;
     line-height: 170%;
   }
 
@@ -391,7 +302,6 @@ header {
 
   p {
     color: $grey;
-    font-family: $sans-serif;
     font-size: 1rem;
     margin: 0 auto 2em auto;
     max-width: $break-medium;
@@ -399,7 +309,6 @@ header {
   
   .description {
     color: $dark-grey;
-    font-family: $serif;
     font-size: 1.5rem;
     margin: 4em auto;
     max-width: $content-width;
@@ -519,7 +428,6 @@ figure {
 
 figcaption {
   color: $grey;
-  font-family: $sans-serif;
   font-size: $small-type;
   margin: 1em 0;
 
@@ -665,7 +573,6 @@ nav {
 
     p {
       font-size: 1.4em;
-      font-family: $sans-serif;
       font-weight: 500;
       margin: 0;
       text-transform: lowercase;
@@ -738,7 +645,6 @@ footer {
 
   p {
     color: #888;
-    font-family: $sans-serif;
     font-size: $smallest-type;
   }
 
@@ -828,6 +734,10 @@ footer {
   max-width: $content-width;
   padding: 0.5em 0 3em 0;
 
+  h2 {
+    font-weight: normal;
+  }
+  
   p {
     margin: 0.2em 0;
   }
@@ -868,12 +778,11 @@ footer {
     margin-left: 170px;
 
     p {
-      margin: 20px 0;
+      margin: 1em 0;
     }
 
     p:nth-child(1) {
       font-size: 1.4rem;
-      font-family: $sans-serif;
 
       @media screen and (max-width: $break-medium) {
         text-align: center;
@@ -927,7 +836,6 @@ footer {
   }
 
   li {
-    font-family: $serif;
     font-size: 1em;
     line-height: 150%;
   }
@@ -963,9 +871,7 @@ footer {
 
   a {
     border-radius: 2px;
-    font-family: $sans-serif;
     font-weight: 600;
-    letter-spacing: 0.05em;
     padding: 4px 8px;
     text-decoration: none;
     text-transform: capitalize;
@@ -1006,7 +912,6 @@ footer {
 
     .meta {
       color: $grey;
-      font-family: $sans-serif;
       font-size: $smallest-type;
       line-height: 180%;
       padding: 2px 0;
@@ -1020,7 +925,7 @@ footer {
           border: 1px solid $faint-grey;
           border-radius: 2px;
           margin-right: 4px;
-          padding: 2px 6px 1px 6px;
+          padding: 2px 6px;
         }
         
           /* For fixing the weird text height on mobile - requires two spans in the p tag
