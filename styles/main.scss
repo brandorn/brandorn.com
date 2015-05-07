@@ -82,7 +82,7 @@ $smallest-type: 0.8rem;
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  font-size: 92%;
+  font-size: 100%;
 
   @media screen and (max-width: $break-medium) {
     font-size: 88%;
@@ -166,6 +166,7 @@ a {
 }
 
 sup {
+  font-weight: bold;
   padding: 2px;
 }
 
@@ -184,10 +185,11 @@ ul {
 
   &.dot {
     li {
+      list-style-type: disc;
+      /* Until I find a way to use SVG... 
       background: url('img/list-dot.png') no-repeat 7px 10px transparent;
-      list-style-type: none;
       padding: 0 0 1px 24px;
-      vertical-align: middle;
+      vertical-align: middle;*/
     }
   }
 }
@@ -198,28 +200,6 @@ ol {
   margin-left: 0;
   padding-left: 0;
 
-  & > li {
-    list-style: none;
-    margin: 0 0 6px 2em;
-    padding: 4px 8px;
-    position: relative;
-
-    &:before {
-      -moz-box-sizing: border-box;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      color: $grey;
-      content: counter(li);
-      counter-increment: li;
-      font-size: 1.2rem;
-      left: -2em;
-      margin: 0.1em 0 0 1em;
-      padding: 4px;
-      position: absolute;
-      text-align: center;
-      top: 8px;
-    }
-  }
 }
 
 li {
@@ -238,6 +218,7 @@ blockquote {
   border-left: 3px solid $faint-grey;
   color: $primary-color;
   font-size: 1.3rem;
+  line-height: 150%;
   margin: 2em;
   padding: 0.5em 2em;
   width: auto;
@@ -610,13 +591,12 @@ nav {
 
   li {
     font-size: $small-type;
-    margin: 4px 0;
+    margin: 0.5em 0;
     color: $grey;
     margin-bottom: 10px;
 
-    &:before {
-      font-size: 1rem;
-      top: 1px;
+    @media screen and (max-width: $break-medium) {
+      margin: 0.5em 1em;
     }
   }
 
