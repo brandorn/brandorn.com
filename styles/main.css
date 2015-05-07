@@ -608,6 +608,7 @@ footer {
     margin-bottom: 2em; }
     .content-items li h2 {
       font-size: 1.4rem;
+      font-weight: normal;
       margin: 0 0 0.2em 0; }
     .content-items li p {
       margin: 0; }
