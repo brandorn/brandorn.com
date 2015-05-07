@@ -23,7 +23,7 @@
 /* Font variables and declarations
    ========================================================================== */
 .sans-serif {
-  font-family: "Karla", "Raleway", Helvetica, Arial, sans-serif; }
+  font-family: "Karla", Helvetica, Arial, sans-serif; }
 
 /*
  * Font sizes
@@ -52,7 +52,7 @@ html {
 
 body {
   background: #fcfcfc;
-  font-family: "Karla", "Raleway", Helvetica, Arial, sans-serif;
+  font-family: "Karla", Helvetica, Arial, sans-serif;
   font-weight: normal;
   letter-spacing: -0.02em;
   margin: 0 auto;
@@ -192,7 +192,6 @@ header {
   text-align: center; }
   header p {
     color: #616161;
-    font-size: 1rem;
     margin: 0 auto 2em auto;
     max-width: 700px; }
   header .description {
@@ -535,16 +534,6 @@ footer {
     @media screen and (max-width: 700px) {
       .bio div + div {
         margin-left: 0; } }
-
-/* Portfolio
-   ========================================================================== */
-.methods h4 {
-  margin: 1.5em 0 0.2em 0; }
-.methods ul {
-  margin: 0; }
-.methods li {
-  font-size: 1em;
-  line-height: 150%; }
 
 /* Content list pages
    ========================================================================== */

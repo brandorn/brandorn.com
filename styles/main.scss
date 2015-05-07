@@ -47,7 +47,7 @@ $break-small: 500px;
 /* Font variables and declarations
    ========================================================================== */
 
-$sans-serif: 'Karla', 'Raleway', Helvetica, Arial, sans-serif;
+$sans-serif: 'Karla', Helvetica, Arial, sans-serif;
 
 .sans-serif {
   font-family: $sans-serif;
@@ -283,7 +283,6 @@ header {
 
   p {
     color: $grey;
-    font-size: 1rem;
     margin: 0 auto 2em auto;
     max-width: $break-medium;
   }
@@ -798,25 +797,6 @@ footer {
     @media screen and (max-width: $break-medium) {
       margin-left: 0;
     }
-  }
-}
-
-/* Portfolio
-   ========================================================================== */
-
-.methods {
-
-  h4 {
-    margin: 1.5em 0 0.2em 0;
-  }
-
-  ul {
-    margin: 0;
-  }
-
-  li {
-    font-size: 1em;
-    line-height: 150%;
   }
 }
 
