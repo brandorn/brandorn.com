@@ -98,7 +98,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  font-size: 96%; }
+  font-size: 92%; }
   @media screen and (max-width: 700px) {
     html {
       font-size: 88%; } }
@@ -125,11 +125,11 @@ h1 {
 
 h2 {
   color: #242424;
-  font-size: 1.4rem;
+  font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 120%;
-  margin: 1em 0 0 0;
-  text-align: center; }
+  margin: 1em 0 0 0; }
   h2 a:link,
   h2 a:visited {
     text-decoration: none; }
@@ -140,21 +140,19 @@ h2 {
 h3 {
   color: #616161;
   font-size: 1.2rem;
-  font-weight: bold;
-  margin: 0.5em 0;
-  text-align: center; }
+  font-weight: 500;
+  margin: 0.5em 0; }
 
 h4 {
   color: #616161;
-  font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.02em;
-  margin: 1em 0;
-  text-align: center; }
+  margin: 1em 0; }
 
 p,
 li {
   color: #242424;
+  font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
   line-height: 140%;
   margin: 0.5em 0; }
 
@@ -261,8 +259,6 @@ article {
   article h1 {
     font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif; }
   article h2 {
-    font-weight: bold;
-    letter-spacing: 0.03rem;
     margin: 5em 0 1em 0; }
   article p,
   article li {
@@ -574,8 +570,6 @@ footer {
   margin: 0 auto;
   max-width: 900px;
   padding: 0.5em 0 3em 0; }
-  .home-block h2 {
-    text-align: left; }
   .home-block p {
     margin: 0.2em 0; }
   .home-block .grid__col {
@@ -686,14 +680,15 @@ footer {
     .content-items {
       padding-left: 0; } }
   .content-items li {
-    margin-bottom: 24px; }
+    margin-bottom: 2em; }
     .content-items li h2 {
-      margin: 4px 0;
-      text-align: left; }
+      font-size: 1.4rem;
+      margin: 0 0 0.2em 0; }
     .content-items li p {
       margin: 0; }
     .content-items li .meta {
       color: #616161;
+      font-family: Avenir, "Raleway", Helvetica, Arial, sans-serif;
       font-size: 0.8rem;
       line-height: 180%;
       padding: 2px 0;
@@ -735,6 +730,7 @@ footer {
         margin-bottom: 0.5em;
         text-align: left; }
       .content-items.books li p {
+        line-height: 160%;
         margin: 0.5em 0; }
       @media screen and (max-width: 700px) {
         .content-items.books li:nth-child(2n + 1) {
@@ -744,10 +740,8 @@ footer {
         .content-items.books li div:nth-child(1) {
           position: absolute; }
           .content-items.books li div:nth-child(1) img {
-            background: #fff;
-            box-shadow: 1px 1px 4px 1px #DADADA;
+            box-shadow: 1px 1px 2px 1px #DADADA;
             height: 110px;
-            padding: 2px;
             width: auto; }
             @media screen and (max-width: 700px) {
               .content-items.books li div:nth-child(1) img {
@@ -778,8 +772,7 @@ footer {
       .favorite-thing img {
         margin: 0 auto 2em auto; } }
   .favorite-thing h2 {
-    margin: 0.5em 0;
-    text-align: left; }
+    margin: 0.5em 0; }
     @media screen and (max-width: 500px) {
       .favorite-thing h2 {
         text-align: center; } }
