@@ -85,7 +85,7 @@ html {
   font-size: 94%;
 
   @media screen and (max-width: $break-medium) {
-    font-size: 88%;
+    font-size: 98%;
   }
 }
 
@@ -371,11 +371,12 @@ figure {
 
   &.three-up {
     display: inline-block;
-    margin: 5% 2%;
+    margin: 5% 1%;
     width: 44%;
 
     &.left {
       margin-left: -20%;
+      float: none;
 
       @media screen and (max-width: $break-large) {
         margin-left: 0;
@@ -384,6 +385,7 @@ figure {
 
     &.right {
       margin-right: -20%;
+      float: none;
 
       @media screen and (max-width: $break-large) {
         margin-right: 0;
@@ -865,7 +867,7 @@ footer {
     h2 { 
       font-size: 1.4rem;
       font-weight: normal;
-      margin: 0 0 0.2em 0;
+      margin: 0;
     }
 
     p { margin: 0; }
