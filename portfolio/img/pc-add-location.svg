@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1080 700" enable-background="new 0 0 1080 700" xml:space="preserve">
+<g>
+	<g>
+		<g>
+			<rect x="143" y="92" fill="none" stroke="#939598" stroke-width="2" stroke-miterlimit="10" width="320" height="496"/>
+			<path fill="none" stroke="#939598" stroke-width="2" stroke-miterlimit="10" d="M490,612.9c0,31-25.1,56.1-56.1,56.1H173.1
+				c-31,0-56.1-25.1-56.1-56.1V66.1c0-31,25.1-56.1,56.1-56.1h260.8c31,0,56.1,25.1,56.1,56.1V612.9z"/>
+			<circle fill="none" stroke="#939598" stroke-width="2" stroke-miterlimit="10" cx="245.2" cy="50.8" r="7"/>
+			<circle fill="none" stroke="#939598" stroke-width="2" stroke-miterlimit="10" cx="303.8" cy="29.2" r="4.7"/>
+			<path fill="none" stroke="#939598" stroke-width="2" stroke-miterlimit="10" d="M333,51c0,2.2-1.8,4-4,4h-52c-2.2,0-4-1.8-4-4v0
+				c0-2.2,1.8-4,4-4h52C331.2,47,333,48.8,333,51L333,51z"/>
+			<circle fill="none" stroke="#939598" stroke-width="2" stroke-miterlimit="10" cx="303.8" cy="625.2" r="28"/>
+			<circle fill="none" stroke="#939598" stroke-width="2" stroke-miterlimit="10" cx="303.8" cy="625.2" r="23.3"/>
+		</g>
+		<g>
+			<rect x="143" y="92" fill="#6D6E71" stroke="#939598" stroke-width="2" stroke-miterlimit="10" width="320" height="39.3"/>
+			<g>
+				<g>
+					
+						<line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="154.5" y1="106.6" x2="171.5" y2="106.6"/>
+					
+						<line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="154.5" y1="112.6" x2="171.5" y2="112.6"/>
+					
+						<line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="154.5" y1="118.6" x2="171.5" y2="118.6"/>
+				</g>
+			</g>
+			<text transform="matrix(1 0 0 1 255.9133 118.6282)" fill="#FFFFFF" font-family="'Karla-Bold'" font-size="16">Prime Climb</text>
+		</g>
+		<g>
+			
+				<line fill="none" stroke="#58595B" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="428.1" y1="176.2" x2="419.8" y2="184.4"/>
+			
+				<line fill="none" stroke="#58595B" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="428.1" y1="184.4" x2="419.8" y2="176.2"/>
+		</g>
+		<g>
+			<rect x="159.5" y="149.1" fill="none" stroke="#939598" stroke-miterlimit="10" width="288.7" height="43.9"/>
+			<g>
+				<text transform="matrix(1 0 0 1 171.6205 169.778)"><tspan x="0" y="0" fill="#58595B" font-family="'Karla-Regular'" font-size="15">This weekend</tspan><tspan x="0" y="14" fill="#939598" font-family="'Karla-Regular'" font-size="11">Fri, May 8 - Sun, May 10</tspan></text>
+			</g>
+			
+				<polyline fill="none" stroke="#58595B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				421.8,169.3 429,176.5 436.1,169.3 			"/>
+		</g>
+		<rect x="143" y="92" opacity="0.4" fill="#808285" stroke="#939598" stroke-miterlimit="10" width="320" height="496"/>
+		<g>
+			<g>
+				<path fill="#FFFFFF" stroke="#939598" stroke-miterlimit="10" d="M443,447.3H163c-2.2,0-4-1.8-4-4V162.1c0-2.2,1.8-4,4-4h280
+					c2.2,0,4,1.8,4,4v281.2C447,445.5,445.2,447.3,443,447.3z"/>
+				<rect x="174.9" y="173.3" fill="none" width="261.1" height="62.7"/>
+				<text transform="matrix(1 0 0 1 174.8958 186.5273)"><tspan x="0" y="0" fill="#58595B" font-family="'Karla-Bold'" font-size="16">Add a location</tspan><tspan x="0" y="24" fill="#6D6E71" font-family="'Karla-Regular'" font-size="11">Add favorite climbing spots to easily check on </tspan><tspan x="0" y="38" fill="#6D6E71" font-family="'Karla-Regular'" font-size="11">upcoming conditions.</tspan></text>
+				<g>
+					<rect x="176" y="256.3" fill="none" stroke="#939598" stroke-miterlimit="10" width="259" height="39"/>
+					<g>
+						<text transform="matrix(1 0 0 1 189.1266 281.0009)" fill="#A7A9AC" font-family="'Karla-Regular'" font-size="14">Search by zipcode or location name</text>
+					</g>
+				</g>
+				<g opacity="0.4">
+					<path fill="#F1F2F2" stroke="#939598" stroke-miterlimit="10" d="M431,422.7H180c-2.2,0-4-1.8-4-4v-31c0-2.2,1.8-4,4-4h251
+						c2.2,0,4,1.8,4,4v31C435,421,433.2,422.7,431,422.7z"/>
+					<g>
+						<text transform="matrix(1 0 0 1 292.4819 407.4092)" fill="#58595B" font-family="'Karla-Bold'" font-size="14">Add</text>
+					</g>
+				</g>
+			</g>
+			<g>
+				
+					<line fill="none" stroke="#58595B" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="432.1" y1="175.2" x2="423.8" y2="183.4"/>
+				
+					<line fill="none" stroke="#58595B" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="432.1" y1="183.4" x2="423.8" y2="175.2"/>
+			</g>
+		</g>
+	</g>
+	<g>
+		<g>
+			<rect x="616" y="92" fill="none" stroke="#939598" stroke-width="2" stroke-miterlimit="10" width="320" height="496"/>
+			<path fill="none" stroke="#939598" stroke-width="2" stroke-miterlimit="10" d="M963,612.9c0,31-25.1,56.1-56.1,56.1H646.1
+				c-31,0-56.1-25.1-56.1-56.1V66.1c0-31,25.1-56.1,56.1-56.1h260.8c31,0,56.1,25.1,56.1,56.1V612.9z"/>
+			<circle fill="none" stroke="#939598" stroke-width="2" stroke-miterlimit="10" cx="718.2" cy="50.8" r="7"/>
+			<circle fill="none" stroke="#939598" stroke-width="2" stroke-miterlimit="10" cx="776.8" cy="29.2" r="4.7"/>
+			<path fill="none" stroke="#939598" stroke-width="2" stroke-miterlimit="10" d="M806,51c0,2.2-1.8,4-4,4h-52c-2.2,0-4-1.8-4-4v0
+				c0-2.2,1.8-4,4-4h52C804.2,47,806,48.8,806,51L806,51z"/>
+			<circle fill="none" stroke="#939598" stroke-width="2" stroke-miterlimit="10" cx="776.8" cy="625.2" r="28"/>
+			<circle fill="none" stroke="#939598" stroke-width="2" stroke-miterlimit="10" cx="776.8" cy="625.2" r="23.3"/>
+		</g>
+		<rect x="616" y="92" fill="#6D6E71" stroke="#939598" stroke-width="2" stroke-miterlimit="10" width="320" height="39.3"/>
+		<g>
+			<g>
+				
+					<line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="627.5" y1="106.6" x2="644.5" y2="106.6"/>
+				
+					<line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="627.5" y1="112.6" x2="644.5" y2="112.6"/>
+				
+					<line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="627.5" y1="118.6" x2="644.5" y2="118.6"/>
+			</g>
+		</g>
+		<text transform="matrix(1 0 0 1 730.9367 118.6282)" fill="#FFFFFF" font-family="'Karla-Regular'" font-size="16">Prime Climb</text>
+		<g>
+			<rect x="632.5" y="151.4" fill="none" stroke="#939598" stroke-miterlimit="10" width="288.7" height="43.9"/>
+			<g>
+				<text transform="matrix(1 0 0 1 644.6205 172.0505)"><tspan x="0" y="0" fill="#58595B" font-family="'Karla-Regular'" font-size="15">This weekend</tspan><tspan x="0" y="14" fill="#939598" font-family="'Karla-Regular'" font-size="11">Fri, May 8 - Sun, May 10</tspan></text>
+			</g>
+			
+				<polyline fill="none" stroke="#58595B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+				894.8,171.6 902,178.7 909.1,171.6 			"/>
+		</g>
+		<rect x="616" y="92" opacity="0.4" fill="#808285" stroke="#939598" stroke-miterlimit="10" width="320" height="496"/>
+		<g>
+			<g>
+				<path fill="#FFFFFF" stroke="#939598" stroke-miterlimit="10" d="M916,489.5H636c-2.2,0-4-1.8-4-4V162.1c0-2.2,1.8-4,4-4h280
+					c2.2,0,4,1.8,4,4v323.4C920,487.7,918.2,489.5,916,489.5z"/>
+				<rect x="647.9" y="173.3" fill="none" width="261.1" height="62.7"/>
+				<text transform="matrix(1 0 0 1 647.8958 186.5273)"><tspan x="0" y="0" fill="#58595B" font-family="'Karla-Bold'" font-size="16">Add a location</tspan><tspan x="0" y="24" fill="#6D6E71" font-family="'Karla-Regular'" font-size="11">Add favorite climbing spots to easily check on </tspan><tspan x="0" y="38" fill="#6D6E71" font-family="'Karla-Regular'" font-size="11">upcoming conditions.</tspan></text>
+				<rect x="649" y="258.3" fill="none" stroke="#939598" stroke-miterlimit="10" width="259" height="39"/>
+				<g>
+					<text transform="matrix(1 0 0 1 662.1266 283.0009)"><tspan x="0" y="0" fill="#6D6E71" font-family="'Karla-Regular'" font-size="14">Jacks</tspan><tspan x="36" y="0" fill="#BCBEC0" font-family="'Karla-Regular'" font-size="14">on Hole, WY</tspan></text>
+				</g>
+				<rect x="649" y="297.3" fill="#FFFFFF" stroke="#939598" stroke-miterlimit="10" width="259" height="108.3"/>
+				<g>
+					<text transform="matrix(1 0 0 1 662.1266 322.0009)"><tspan x="0" y="0" fill="#6D6E71" font-family="'Karla-Regular'" font-size="14">Jackson Falls, IL</tspan><tspan x="0" y="30" fill="#6D6E71" font-family="'Karla-Regular'" font-size="14">Jackson, MI</tspan><tspan x="0" y="60" fill="#6D6E71" font-family="'Karla-Regular'" font-size="14">Jackson Run, ID</tspan></text>
+				</g>
+			</g>
+			<g>
+				
+					<line fill="none" stroke="#58595B" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="906" y1="176" x2="897.7" y2="184.3"/>
+				
+					<line fill="none" stroke="#58595B" stroke-width="3" stroke-linecap="round" stroke-miterlimit="10" x1="906" y1="184.3" x2="897.7" y2="176"/>
+			</g>
+		</g>
+		<g>
+			<path fill="#F1F2F2" stroke="#939598" stroke-miterlimit="10" d="M904,470.7H653c-2.2,0-4-1.8-4-4v-31c0-2.2,1.8-4,4-4h251
+				c2.2,0,4,1.8,4,4v31C908,469,906.2,470.7,904,470.7z"/>
+			<g>
+				<text transform="matrix(1 0 0 1 765.4822 455.4092)" fill="#58595B" font-family="'Karla-Bold'" font-size="14">Add</text>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
