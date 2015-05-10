@@ -527,9 +527,6 @@ footer {
       margin: 1em 0; }
     .bio div + div p:nth-child(1) {
       font-size: 1.4rem; }
-      @media screen and (max-width: 700px) {
-        .bio div + div p:nth-child(1) {
-          text-align: center; } }
     @media screen and (max-width: 700px) {
       .bio div + div ul {
         text-align: center; } }
@@ -634,7 +631,7 @@ footer {
         .content-items.books li:nth-child(2n + 1) {
           padding-left: 0; } }
     .content-items.books h2 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-style: italic;
       font-weight: bold;
       line-height: 130%; }

@@ -771,10 +771,6 @@ footer {
 
     p:nth-child(1) {
       font-size: 1.4rem;
-
-      @media screen and (max-width: $break-medium) {
-        text-align: center;
-      }
     }
 
     ul {
@@ -934,7 +930,7 @@ footer {
     }
 
     h2 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-style: italic;
       font-weight: bold;
       line-height: 130%;
