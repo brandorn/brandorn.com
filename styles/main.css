@@ -491,8 +491,11 @@ footer {
   max-width: 900px;
   padding: 0.5em 0 3em 0; }
   .home-block h2 {
-    font-weight: normal; }
+    font-weight: normal;
+    margin: 1em 0 0 0; }
   .home-block p {
+    font-size: 1rem;
+    line-height: 130%;
     margin: 0.2em 0; }
   .home-block .grid__col {
     margin-top: 1em; }
@@ -532,6 +535,7 @@ footer {
         text-align: center; } }
     .bio div + div li {
       display: inline-block;
+      font-size: 1rem;
       font-weight: bold; }
       .bio div + div li a {
         margin: 0 4px; }
