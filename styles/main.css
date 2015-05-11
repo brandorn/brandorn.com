@@ -71,6 +71,9 @@ body {
   transition: all 150ms;
   -webkit-font-smoothing: antialiased; }
 
+section {
+  display: block; }
+
 h1 {
   font-size: 2rem;
   font-weight: normal;
@@ -124,6 +127,7 @@ sup a:visited,
   border-bottom: none; }
 
 ul {
+  display: block;
   list-style-type: none;
   margin: 0;
   padding: 0; }
@@ -135,6 +139,7 @@ ul {
     vertical-align: middle;*/ }
 
 ol {
+  display: block;
   margin: 1em 0;
   margin-left: 0;
   padding-left: 0; }
