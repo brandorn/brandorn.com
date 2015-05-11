@@ -1,8 +1,26 @@
 $(document).ready(function(){
   
-  //Scroll progress indicator
-
+  // Scroll progress indicator
+  
   var $w = $(window);
+  var $prog = $('.scroll-progress');
+  var wh = $w.height();
+  var h = $('body').height();
+  var sHeight = h - wh;
+  
+  
+  $w.on('scroll', function(){
+      var perc = Math.max(0, Math.min(1, $w.scrollTop()/sHeight));
+      updateProgress(perc);
+  });
+
+  function updateProgress(perc){
+      $prog.css({width : perc*100 + '%'});
+  }
+
+  // Scroll progress indicator with window resizing (doesn't work for some reason)
+
+  /*var $w = $(window);
   var $prog = $('.scroll-progress');
 
   var wh, h, sHeight;
@@ -26,7 +44,7 @@ $(document).ready(function(){
   function updateProgress(perc){
     $prog.css({width : perc*100 + '%'});
   }
-
+*/
 
   // Content list filtering
 
