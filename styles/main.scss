@@ -279,6 +279,10 @@ article {
     line-height: 170%;
   }
 
+  td {
+    font-size: 1.1rem;
+  }
+
   p,
   ol,
   ul { margin-bottom: 2em; }
@@ -1069,6 +1073,13 @@ footer {
 .bb { border-bottom: 2px solid $faint-grey; }
 
 .bt { border-top: 2px solid $faint-grey; }
+
+.pw-0 { 
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.m-0 { margin: 0; }
 
 .mt--3 { margin-top: -3em; }
 
