@@ -46,6 +46,23 @@
 .smallest-type {
   font-size: 0.8rem; }
 
+/* Keyframes
+   ========================================================================== */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 /* HTML elements
    ========================================================================== */
 html {
@@ -308,7 +325,17 @@ figcaption {
 
 img {
   display: block;
-  width: 100%; }
+  width: 100%;
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.4s;
+  -moz-animation-duration: 0.4s;
+  animation-duration: 0.4s; }
 
 table {
   margin: 2em 0; }
@@ -522,7 +549,17 @@ footer {
     position: absolute;
     transition: 200ms;
     vertical-align: top;
-    width: 140px; }
+    width: 140px;
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 0.4s;
+    -moz-animation-duration: 0.4s;
+    animation-duration: 0.4s; }
     .bio .portrait:hover {
       background: url("../img/bd-portrait-2.png");
       background-size: 140px; }
@@ -652,11 +689,11 @@ footer {
       margin-bottom: 0.5em;
       text-align: left; }
     .content-items.books p {
-      font-size: 1rem;
+      font-size: 0.92rem;
       line-height: 160%;
       margin: 0.5em 0; }
       .content-items.books p.meta {
-        font-size: 0.92rem; }
+        font-size: 0.8rem; }
     .content-items.books div {
       display: inline-block; }
       .content-items.books div:nth-child(1) {
