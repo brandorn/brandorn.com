@@ -30,9 +30,7 @@ $dark-grey: hsla(0, 0%, 14%, 1);
 
 $green: #23AD63;
 
-.grey {
-  color: $grey;
-}
+.grey { color: $grey; }
 
 
 /* Responsive sizing variables
@@ -58,9 +56,7 @@ $break-small: 500px;
 
 $sans-serif: 'Karla', Helvetica, Arial, sans-serif;
 
-.sans-serif {
-  font-family: $sans-serif;
-}
+.sans-serif { font-family: $sans-serif; }
 
 
 /*
@@ -71,17 +67,11 @@ $medium-type: 1.1rem;
 $small-type: 0.92rem;
 $smallest-type: 0.8rem;
 
-.medium-type {
-  font-size: $medium-type;
-}
+.medium-type { font-size: $medium-type; }
 
-.small-type {
-  font-size: $small-type;
-}
+.small-type { font-size: $small-type; }
 
-.smallest-type {
-  font-size: $smallest-type;
-}
+.smallest-type { font-size: $smallest-type; }
 
 /* Keyframes
    ========================================================================== */
@@ -99,16 +89,12 @@ $smallest-type: 0.8rem;
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  font-size: 94%;
+  font-size: 92%;
 
-  @media screen and (max-width: $break-medium) {
-    font-size: 98%;
-  }
+  @media screen and (max-width: $break-medium) { font-size: 96%; }
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+*, *:before, *:after { box-sizing: inherit; }
 
 body {
   background: hsla(0, 0%, 99%, 1);
@@ -118,14 +104,14 @@ body {
   letter-spacing: -0.02em;
   margin: 0 auto;
   overflow: scroll;
-  padding: 0 20px;
+  padding: 0 3em;
   transition: all 150ms;
   -webkit-font-smoothing: antialiased;
+
+  @media screen and (max-width: $break-small) { padding: 0 1em; }
 }
 
-section {
-  display: block;
-}
+section { display: block; }
 
 h1 {
   font-size: 2rem;
@@ -135,7 +121,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   line-height: 120%;
   margin: 1em 0 0 0;
 
@@ -268,9 +254,7 @@ article {
   &.full-width {
     max-width: $break-large;
 
-    header figure {
-      margin: 4% 0;
-    }
+    header figure { margin: 4% 0; }
 
     figure {
       margin: 4% 4% 4% 0;
@@ -288,9 +272,7 @@ article {
     }
   }
 
-  h2 {
-    margin: 5em 0 1em 0;
-  }
+  h2 { margin: 5em 0 1em 0; }
 
   p,
   li {
@@ -298,9 +280,7 @@ article {
     line-height: 170%;
   }
 
-  td {
-    font-size: 1.1rem;
-  }
+  td { font-size: 1.1rem; }
 
   p,
   ol,
@@ -326,9 +306,7 @@ header {
     max-width: $content-width;
   }
 
-  figure {
-    margin: 7% 0;
-  }
+  figure { margin: 7% 0; }
 
 }
 
@@ -381,17 +359,13 @@ figure {
     &.left{
         margin-left: -20%;
 
-        @media screen and (max-width: $break-large) {
-          margin-left: 0;
-        }
+        @media screen and (max-width: $break-large) { margin-left: 0; }
     }
 
     &.right{
         margin-right: -20%;
 
-        @media screen and (max-width: $break-large) {
-          margin-right: 0;
-        }
+        @media screen and (max-width: $break-large) { margin-right: 0; }
     }
 
     @media screen and (max-width: $break-large) {
@@ -446,9 +420,7 @@ figcaption {
   margin: 1em 0;
 
   a:link,
-  a:visited {
-    color: $light-grey;
-  }
+  a:visited { color: $light-grey; }
 }
 
 img {
@@ -470,12 +442,9 @@ img {
   animation-duration:0.4s;
 }
 
-table {
-  margin: 2em 0;
-}
+table { margin: 2em 0; }
 
-tr {
-}
+tr { }
 
 td,
 th {
@@ -489,13 +458,9 @@ strong {
   font-weight: bold;
 }
 
-*::selection {
-  background: $faint-grey;
-}
+*::selection { background: $faint-grey; }
 
-*:focus {
-  outline: 1px dotted $light-grey;
-}
+*:focus { outline: 1px dotted $light-grey; }
   
 
 
@@ -520,6 +485,8 @@ nav {
   }
 
   &.big{
+    border-bottom: 1px solid $faint-grey;
+    margin-bottom: 2em;
 
     .logo {
       background-size: 60px;
@@ -553,13 +520,9 @@ nav {
       @media screen and (max-width: $break-medium) {
         margin: 0 10px;
 
-        h1 {
-          font-size: 1.8rem;
-        }
+        h1 { font-size: 1.8rem; }
 
-        p {
-          font-size: $small-type;
-        }
+        p { font-size: $small-type; }
       }
     }
   }
@@ -573,9 +536,7 @@ nav {
       height: 38px;
       width: 38px;
     
-      &:hover {
-        transform: scale(1.2);
-      }
+      &:hover { transform: scale(1.2); }
     }
 
     .forward-slash {
@@ -602,9 +563,7 @@ nav {
       vertical-align: middle;
 
       a:link,
-      a:visited {
-        text-decoration: none;
-      }
+      a:visited { text-decoration: none; }
 
       a:hover,
       a:active {
@@ -643,9 +602,6 @@ nav {
   }
 
 }
-  
-  
-    
 
 // Used at the top of long-ish essays
 .scroll-progress {
@@ -664,10 +620,16 @@ footer {
   clear: both;
   margin: 2em auto 0 auto;
   max-width: $content-width;
+  padding: 1em 0;
 
   p {
-    color: #888;
+    color: $grey;
     font-size: $smallest-type;
+
+    a:link,
+    a:visited,
+    a:active,
+    a:hover { color: $grey; }
   }
 
   .nav-links {
@@ -677,12 +639,10 @@ footer {
     li {
       display: inline-block;
 
-      &:nth-last-child(n+2) {
-        margin-right: 1em;
-      }
+      &:nth-last-child(n+2) { margin-right: 1em; }
     }
   }
-}
+} // footer
 
 .next-page{
   line-height: 120%;
@@ -697,9 +657,7 @@ footer {
     text-decoration: none;
   }
 
-  &:hover {
-    background: $faintest-grey;
-  }
+  &:hover { background: $faintest-grey; }
 
   span {
     display: inline-block;
@@ -712,34 +670,22 @@ footer {
 .next-page.left {
   padding-left: 40px;
 
-  @media screen and (max-width: $break-medium) {
-    padding-left: 20px;
-  }
+  @media screen and (max-width: $break-medium) { padding-left: 20px; }
 
-  span {
-    padding-right: 4px;
-  }
+  span { padding-right: 4px; }
 
-  &:hover span{
-    transform: scale(1.2) translate(-4px, 0);
-  }
+  &:hover span{ transform: scale(1.2) translate(-4px, 0); }
 }
 
 .next-page.right {
   padding-right: 40px;
   text-align: right;
 
-  @media screen and (max-width: $break-medium) {
-    padding-right: 20px;
-  }
+  @media screen and (max-width: $break-medium) { padding-right: 20px; }
 
-  span {
-    padding-left: 4px;
-  }
+  span { padding-left: 4px; }
 
-  &:hover span{
-    transform: scale(1.2) translate(4px, 0);
-  }
+  &:hover span{ transform: scale(1.2) translate(4px, 0); }
 }
 
 
@@ -751,10 +697,8 @@ footer {
    ========================================================================== */
 
 .home-block {
-  border-top: 1px solid $faint-grey;
   margin: 0 auto;
   max-width: $content-width;
-  padding: 0.5em 0 3em 0;
 
   h2 {
     font-weight: normal;
@@ -767,12 +711,57 @@ footer {
     margin: 0.2em 0;
   }
 
-  .grid__col {
-    margin-top: 1em;
+  .grid__col { margin-top: 1em; }
+}
+
+.big-blog {
+  border: 1px solid $faint-grey;
+  border-radius: 2px;
+  display: block;
+  margin-bottom: 2em;
+  padding: 2em;
+  text-align: center;
+  width: 100%;
+
+  &.m-a-f {
+    &:link,
+    &:visited { color: #1d74a8}
+
+    &:hover { background: rgba(28, 115, 168, 0.04); } 
   }
+
+  &.abundance {
+    &:link,
+    &:visited { color: #963768}
+
+    &:hover { background: rgba(150, 55, 104, 0.04); }
+  }
+
+  &:link { text-decoration: none; }
+
+  &:hover { 
+    h2 { text-decoration: underline; }
+  }
+
+  img { 
+    margin: 0 auto;
+    width: 60px;
+  }
+
+  p { color: $grey; }
+
+} // .big-blog
+
+.interests {
+  background: $faintest-grey;
+  color: $grey;
+  font-size: $small-type;
+  padding: 1em;
 }
 
 .bio {
+  border-top: 1px solid $faint-grey;
+  margin-top: 3em;
   padding: 40px 0;
 
   .portrait {
@@ -813,21 +802,15 @@ footer {
     }
   }
 
-  div + div {
+  .about {
     margin-left: 170px;
 
-    p {
-      margin: 1em 0;
-    }
+    p { margin: 1em 0; }
 
-    p:nth-child(1) {
-      font-size: 1.4rem;
-    }
+    p:nth-child(1) { font-size: 1.4rem; }
 
     ul {
-      @media screen and (max-width: $break-medium) {
-        text-align: center;
-      }
+      @media screen and (max-width: $break-medium) { text-align: center; }
     }
 
     li {
@@ -835,28 +818,27 @@ footer {
       font-size: 1rem;
       font-weight: bold;
 
-      a {
-        margin: 0 4px;
-      }
+      a { margin: 0 4px; }
+
+      a:link,
+      a:visited { text-decoration: none;}
+
+      a:hover,
+      a:active { text-decoration: underline;}
     
       &:after {
         content: " · ";
         color: $light-grey;
       }
 
-      &:nth-child(1) a{
-          margin-left: 0;
-        }
+      &:nth-child(1) a { margin-left: 0; }
 
-      &:nth-last-child(1):after {
-        content: "";
-      }
+      &:nth-last-child(1):after { content: ""; }
     }
-    @media screen and (max-width: $break-medium) {
-      margin-left: 0;
-    }
+
+    @media screen and (max-width: $break-medium) { margin-left: 0; }
   }
-}
+} // .bio
 
 
 /* Content list pages
@@ -864,24 +846,153 @@ footer {
 
 
 .content-description {
-  font-size: $small-type;
-  padding-right: 1rem;
-  margin-top: 14px;
+  padding-right: 1em;
+  max-width: 620px;
+
+  &.side { font-size: $small-type; }
 
   @media screen and (max-width: $break-medium) {
     border-bottom: 1px solid $faint-grey;
-    font-size: 1rem;
-    margin-bottom: 40px;
-    padding-bottom: 30px;
+    margin: 1em 0 2em 0;
+    max-width: 100%;
+    padding-bottom: 1em;
     padding-right: 0;
+
+    &.side { font-size: 1rem; }
   }
 }
 
+/* Need to clean .content-items and .items up to make it more flexible across bookshelf 
+and project pages – use .item class within Toast grids, potentially  */
+
+.content-items {
+
+  .meta {
+    color: $grey;
+    font-size: $smallest-type;
+    line-height: 180%;
+    padding: 2px 0;
+    margin-top: 6px;
+
+    // Used for the "type tag"
+    span:nth-child(1) {
+      background: $faintest-grey;
+      border: 1px solid $faint-grey;
+      border-radius: 2px;
+      margin-right: 4px;
+      padding: 2px 6px;
+    }
+  } // .meta
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 130%;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 1.5em;
+
+    p { margin: 0; }
+  }   
+
+  img {
+    background: $faint-grey;
+    height: auto;
+    margin: 2em auto 1em auto;
+    max-width: 200px;
+    width: 100%;
+  }
+
+  } // .content-items
+
+  // Used instead of .grid-col because for horz. spacing when filtering
+
+  .item-grid {
+    font-size: $small-type;
+    margin-top: 2em;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      padding-right: 2em;
+      width: 49%;
+
+      @media screen and (max-width: $break-medium) {
+        padding-right: 0;
+        width: auto;
+      }
+
+      // For padding between items on desktop
+      &:nth-child(2n + 1) {
+        @media screen and (max-width: $break-medium) {
+          padding-left: 0;
+        }
+      }
+    }
+
+    p {
+      font-size: $small-type;
+      line-height: 160%;
+      margin: 0.5em 0;
+
+      &.meta { font-size: $smallest-type; }
+    }
+
+    // Image and text divs
+
+    img {
+      display: inline-block;
+      height: 110px;
+      position: absolute;
+      width: auto;
+
+      @media screen and (max-width: $break-medium) {
+        display: none;
+      }
+    }
+      
+    div {
+      display: inline-block;
+      padding-left: 100px;
+
+      @media screen and (max-width: $break-medium) {
+        padding-left: 0;
+      }
+    }
+
+    &.books {
+      h2 { 
+        font-style: italic; 
+        font-weight: bold;
+      }
+
+      .author {
+        color: $dark-grey;
+        font-size: $small-type;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+        text-align: left;
+      }
+
+      img { 
+        box-shadow: 1px 1px 2px 1px #dadada; 
+        margin-top: 0;
+      }
+
+    }
+
+  } // .item-grid
+
+
+
 .content-filter {
-  margin-top: 20px;
+  margin: 1em 0 1.5em 0;
 
   li {
     display: inline-block;
+    font-size: 1rem;
     margin: 8px 2px;
     padding: 0;
   }
@@ -904,136 +1015,12 @@ footer {
     color: #fff;
   }
 
-  @media screen and (max-width: $break-medium) {
-    text-align: center;
+  @media screen and (max-width: $break-medium) { 
+    margin: 2em 0 1em 0;
+    text-align: center; 
   }
 
-}
-
-.content-items {
-  padding-left: 20px;
-
-  @media screen and (max-width: $break-medium) {
-    padding-left: 0;
-  }
-
-  li {
-    margin-bottom: 2em;
-
-    h2 { 
-      font-size: 1.4rem;
-      font-weight: normal;
-      margin: 0;
-    }
-
-    p { margin: 0; }
-
-    .meta {
-      color: $grey;
-      font-size: $smallest-type;
-      line-height: 180%;
-      padding: 2px 0;
-      margin-top: 6px;
-
-      // Used for the "type tag"
-      span {
-
-        &:nth-child(1) {
-          background: $faintest-grey;
-          border: 1px solid $faint-grey;
-          border-radius: 2px;
-          margin-right: 4px;
-          padding: 2px 6px;
-        }
-        
-          /* For fixing the weird text height on mobile - requires two spans in the p tag
-          @media screen and (max-width: $break-medium) {
-          clear: both;
-          display: block;
-          float: left;
-        }*/
-
-      }
-    }    
-  }
-
-  &.books {
-    font-size: $small-type;
-    margin-top: 2em;
-    padding-left: 0;
-
-    li {
-      display: inline-block;
-      padding-right: 2em;
-      width: 49%;
-
-      @media screen and (max-width: $break-medium) {
-        padding-right: 0;
-        width: auto;
-      }
-
-      // For padding between books on desktop
-      &:nth-child(2n + 1) {
-        @media screen and (max-width: $break-medium) {
-          padding-left: 0;
-        }
-      }
-    }
-
-    h2 {
-      font-size: 1.3rem;
-      font-style: italic;
-      font-weight: bold;
-      line-height: 130%;
-    }
-
-    .author {
-      color: $dark-grey;
-      font-size: $small-type;
-      font-weight: bold;
-      margin-bottom: 0.5em;
-      text-align: left;
-    }
-
-    p {
-      font-size: $small-type;
-      line-height: 160%;
-      margin: 0.5em 0;
-
-      &.meta {
-        font-size: $smallest-type;
-      }
-    }
-
-    // Image and text divs
-    div {
-      display: inline-block;
-
-      &:nth-child(1) {
-        position: absolute;
-
-        img {
-          box-shadow: 1px 1px 2px 1px #dadada;
-          height: 110px;
-          width: auto;
-
-          @media screen and (max-width: $break-medium) {
-            display: none;
-          }
-        }
-      }
-
-      &:nth-child(2) {
-        padding-left: 100px;
-
-        @media screen and (max-width: $break-medium) {
-          padding-left: 0;
-        }
-      }
-    }
-
-  }
-}
+} // .content-filter
 
 /* Favorite things page
    ========================================================================== */
@@ -1055,9 +1042,7 @@ footer {
     margin-right: 3em;
     width: 120px;
 
-    @media screen and (max-width: $break-small) {
-      margin: 0 auto 2em auto;
-    }
+    @media screen and (max-width: $break-small) { margin: 0 auto 2em auto; }
   }
 
   h2 {
@@ -1096,9 +1081,7 @@ footer {
 }
 
 .li-inline {
-  li {
-    display: inline-block;
-  }
+  li { display: inline-block; }
 }
 
 .text-center { text-align: center; }
@@ -1107,7 +1090,11 @@ footer {
 
 .text-right { text-align: right; }
 
+.bold { font-weight: bold; }
+
 .clear { clear: both; }
+
+.all-caps { text-transform: uppercase; }
 
 .small-caps { font-variant: small-caps; }
 
