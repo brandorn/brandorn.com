@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Prime Climb &middot; Brandon Dorn</title>
+  <meta charset="utf-8">
+  <meta name="description" content= "Description...">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../styles/normalize.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/toast.css"/>
+  <link rel="stylesheet" type="text/css" href="../styles/main.css"/>
+  <script src="../scripts/jquery-1.11.1.min.js"></script>
+  <script src="../scripts/scripts.js"></script>
+</head>
+
+<body>
+  <!-- <div class="scroll-progress"></div> -->
+  
+  <nav class="small">
+    <a href="http://brandorn.com" title="Home" class="logo"></a>
+    <div class="forward-slash"></div>
+  	<div>
+      <p><a href="../projects.html">Projects</a></p>
+    </div>
+  </nav>
+  
+  <article class="full-width">
+    <header class="mb-1">
+      <h1>Prime Climb</h1>
+      <p>Prime Climb looks at weather conditions and route characteristics to recommend the best crags for your trip.</p>
+      <p class="text-center"><a href="#overview">Overview and research</a> &nbsp; &middot; &nbsp; <a href="#wireframe">Wireframe</a> &nbsp; &middot; &nbsp; <a href="#plan">Timeline and considerations</a>
+
+      </p>
+    </header>
+
+    <section class="mb-5 medium center">
+      <h2 id="overview" class="mb-0 mt-3">Purpose</h2>
+      <p>When planning a rock climbing trip, climbers have a handful of things to consider:</p>
+      <ol>
+        <li>How much time do I have?</li>
+        <li>What kind of climbing do I want to do?</li>
+        <li>What will the weather be like?</li>
+        <li>Whom might I go with?</li>
+      </ol>
+      <p>The first two questions – the type of climbing and when to go – are the easiest to answer. However, the latter two (determining the weather and finding folks to climb with) require some juggling to determine the feasibility of a trip, which analysis goes something like:</p>
+
+      <table class="ml-1">
+        <tbody>
+          <tr>
+            <td class="pw-0"><img src="img/pc-x.svg" style="width: 20px;"></td>
+            <td>Bad weather</td>
+          </tr>
+          <tr>
+            <td class="pw-0"><img src="img/pc-x.svg" style="width: 20px;"></td>
+            <td>Friends unavailable</td>
+          </tr>
+          <tr>
+            <td class="pw-0"><img src="img/pc-x.svg" style="width: 20px;"></td>
+            <td>Bad weather + friends unavailable</td>
+          </tr>
+          <tr>
+            <td class="pw-0"><img src="img/pc-x.svg" style="width: 20px;"></td>
+            <td>Good weather + friends unavailable</td>
+          </tr>
+          <tr>
+            <td class="pw-0"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="pw-0"><img src="img/pc-check.svg" style="width: 20px;"></td>
+            <td>Good weather + friends available</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Basic math, yet the actual process of arriving there can be complex. Preliminary user research (i.e. conversation with friends of mine who climb) indicated that climbers typically use some combination of weather reports, climbing location descriptions, and texts or emails between friends to figure out if and where to climb – a task that can be hard to pull off the week before a trip.</p>
+
+      <p><b>Prime Climb</b> aids this decision-making process by combining information about climbing spots with relevant weather reports to recommend ideal climbing locations. In addition to these recommendations, users can indicate whether they plan to climb at a location and can invite friends to join.</p>
+
+      <h2 class="mb-0 mt-3">Audience</h2>
+      <p>People who climb outdoors. To make the application appeal to them, it needs to speak their language (without sounding patronizing) and remain straightforward enough to <em>simplify</em> climb planning rather than add another layer of complexity to it. The information needs to be clear, useful, and easily shared.</p>
+      <p>Most of all, however, Prime Climb needs to provide reliable recommendations.</p>
+
+      <h2 class="mb-0 mt-3">Aspects</h2>
+      <p>Because it will need to regularly access users' locations and possibly their contacts, Prime Climb will be a mobile app. It will have a few main features:</p>
+      <ol>
+        <li>Climbing locations displayed, along with relevant information (e.g. types of routes, distance from current location, and current weather) and whether the place is climbable for the given time frame.</li>
+        <li>Users can indicate whether or not they plan to climb at a certain location.</li>
+        <li>Users can invite friends to join a climbing trip.</li>
+      </ol>
+
+    </section>
+
+    <hr>
+
+    <section class="mb-5 medium center">
+      <h2 class="mb-0 mt-3">Data</h2>
+      <p>In order to determine whether to recommend a climbing location, a set of rules need to be written that take into account these variables (and perhaps others):</p>
+
+      <ol>
+        <li><b>Weather conditions</b></li>
+          <ul class="ml-1">
+            <li>Temperature</li>
+            <li>Precipitation / Humidity</li>
+            <li>Wind</li>
+          </ul>
+        <li><b>Route characteristics</b></li>
+          <ul class="ml-1">
+            <li>Relation to sun (i.e. climbing in the sun or shade)</li>
+            <li>Protection (e.g. exposed, sheltered, etc.)</li>
+          </ul>
+      </ol>
+
+      <p>Generally speaking, the recommendation analysis might look something like this:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th class="text-center">
+              Climb on <br>
+              <img src="img/pc-check.svg" style="width: 20px; margin-top:8px;" class="center">
+            </th>
+            <th class="text-center">
+              Iffy <br>
+              <img src="img/pc-iffy.svg" style="width: 20px; margin-top:8px;" class="center">
+            </th>
+            <th class="text-center">
+              No go <br>
+              <img src="img/pc-x.svg" style="width: 20px; margin-top:8px;" class="center">
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hot + Dry + Strong wind + Sheltered</td>
+            <td>Cool + Damp + Moderate wind + Sheltered</td>
+            <td>Sweltering + Dry + Strong wind + Exposed</td>
+          </tr>
+          <tr>
+            <td>Warm + Dry + No wind + Exposed</td>
+            <td>Warm + Dry + Strong wind + Exposed</td>
+            <td>Cool + Thunderstorms + Sheltered</td>
+          </tr>
+          <tr>
+            <td>Cool + Dry + Light wind + Sheltered</td>
+            <td>Cold + Dry + Moderate wind + Exposed</td>
+            <td>Warm + Moderate rain + Light wind + Exposed</td>
+          </tr>
+          <tr>
+            <td>. . .</td>
+            <td>. . .</td>
+            <td>. . .</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>And so on.</p>
+
+    </section>
+
+
+    <section id="wireframe" class="mb-3 bt bb">
+      <div class="grid">
+        <div class="grid__col grid__col--2-of-3">
+          <figure>
+            <img src="img/pc-login.png">
+          </figure>
+        </div>
+
+        <div class="grid__col grid__col--1-of-3">
+          <h2 class="mt-3">Login</h2>
+          <p>The login page is relatively basic, allowing users to either log in with their current account or register if it's their first time.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-3 bb">
+      <div class="grid">
+        <div class="grid__col grid__col--2-of-3">
+          <figure>
+            <img src="img/pc-add-location.png">
+          </figure>
+        </div>
+
+        <div class="grid__col grid__col--1-of-3">
+          <h2 class="mt-3">Add location</h2>
+          <p>Upon logging in for the first time, a user will be prompted to add a climbing location. This gives Prime Climb a reference for providing recommendations, and allows the user to see those places where she most often climbs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-3 bb">
+      <div class="grid">
+        <div class="grid__col grid__col--2-of-3">
+          <figure>
+            <img src="img/pc-home.png">
+          </figure>
+        </div>
+
+        <div class="grid__col grid__col--1-of-3">
+          <h2 class="mt-3">Home</h2>
+          <p>The home screen shows a catalog of locations and their recommendations, framed by a date selection.</p>
+          <p>The primary sorting criteria of the locations is the strength of the recommendation: recommended climbs are positioned at the top, followed by less-strongly recommended places. The second sorting criteria is distance, closest locations being first.</p>
+          <p>Additionally, the visual appearance of cards will change depending on the nature of the recommendation. If a location should be avoided, for example, the border might be red.</p>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="grid__col grid__col--2-of-3">
+          <figure>
+            <img src="img/pc-home-location-up-close.png">
+          </figure>
+        </div>
+
+        <div class="grid__col grid__col--1-of-3">
+          <p>Each location is presented as a card, which shows general information about the place.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="mb-3 bb">
+      <div class="grid">
+        <div class="grid__col grid__col--2-of-3">
+          <figure>
+            <img src="img/pc-home-date-drop.png">
+          </figure>
+        </div>
+
+        <div class="grid__col grid__col--1-of-3">
+          <h2 class="mt-3 mb-0">Home</h2>
+          <h3 class="mb-1">Date selection</h3>
+          <p>The date selection is key, since it provides context for Prime Climb's recommendations. By default it will be set to "This weekend," meaning the upcoming weekend. Users will also be able to select other general options, such as "Today," and "Next week," all of which show the specific dates for further clarity.</p>
+          <p>For greater flexibility in choosing dates, a granular date selection may make sense. However, beyond a certain time frame (say, two weeks into the future), users would need to be notified that weather predictions are unreliable. A flexible time frame selection would allow users to track weather changes for climbs planned further in advance, which could prove valuable.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-3 bb">
+      <div class="grid">
+        <div class="grid__col grid__col--2-of-3">
+          <figure>
+            <img src="img/pc-location-detail.png">
+          </figure>
+        </div>
+
+        <div class="grid__col grid__col--1-of-3">
+          <h2 class="mt-3">Location Detail</h2>
+          <p>The location detail page provides information about a climbing location, beginning with Prime Climb's recommendation for the time frame. Further down, users will be able to read about the place, see popular routes, and view and upload pictures.</p>
+          <p>Prime Climb will likely rely on open source climbing databases for location descriptions, however a possible future feature would allow users to add notes and photos of their own.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-3 bb">
+      <div class="grid">
+        <div class="grid__col grid__col--2-of-3">
+          <figure>
+            <img src="img/pc-planning-to-climb.png">
+          </figure>
+        </div>
+
+        <div class="grid__col grid__col--1-of-3">
+          <h2 class="mt-3 mb-0">Location detail</h2>
+          <h3 class="mb-1">“Planning to Climb”</h3>
+          <p>From the location detail page, users can indicate whether or not they plan to climb at a location for a specified timeframe. By default, none of the options will be selected. When selected, they will act as radio buttons, only allowing one to be selected at a time. To unselect an option, a user will touch it again, returning it to the default state.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-3 bb">
+      <div class="grid">
+        <div class="grid__col grid__col--2-of-3">
+          <figure>
+            <img src="img/pc-invite-a-friend.png">
+          </figure>
+        </div>
+
+        <div class="grid__col grid__col--1-of-3">
+          <h2 class="mt-3">“Invite a Friend”</h2>
+          <p>When a user indicates that she is going to climb at a location, she'll be prompted to invite friends. She can search by their Prime Climb user name, or send them a text message. The invitation confirmation button text will be tailored to the time frame for which she plans to climb (e.g. "This weekend").</p>
+          <p>Once sent, selected Prime Climb users will receive an invitation notification in the application for the trip. Those to whom a text message was sent will receive information about the trip, as well as the option to view it in Prime Climb.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-3 bb">
+      <div class="grid">
+        <div class="grid__col grid__col--2-of-3">
+          <figure>
+            <img src="img/pc-home-planning-to-climb.png">
+          </figure>
+        </div>
+
+        <div class="grid__col grid__col--1-of-3">
+          <h2 class="mt-3 mb-0">Home</h2>
+          <h3 class="mb-1">Planning to climb, friends invited</h3>
+          <p>When a user indicates that they're planning to climb at a location, the card for that location will sort to the top of the location list and stand out visually (here with a bolder border). Its heading will read "Upcoming trip." Likewise, once friends have been invited to join a climb, their user names will display in the location card.</p>
+          <p>If the user decides not to climb, she can select "Not going" from the location detail page, which, if she wishes, will notify any users who accepted his invite to the trip. The location will then return to the default sort order.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-3 bb">
+      <div class="grid">
+        <div class="grid__col grid__col--2-of-3">
+          <figure>
+            <img src="img/pc-weather-alert.png">
+          </figure>
+        </div>
+
+        <div class="grid__col grid__col--1-of-3">
+          <h2 class="mt-3">Weather alert</h2>
+          <p>Prime Climb tries to help climbers avoid obsessively checking weather conditions before a climb. So that they don't need to obsessively check <i>Prime Climb's recommendations</i>, they can set alerts to let them know if the weather turns sour for a planned trip.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-3 bb">
+      <div class="grid">
+        <div class="grid__col grid__col--2-of-3">
+          <figure>
+            <img src="img/pc-navigation.png">
+          </figure>
+        </div>
+
+        <div class="grid__col grid__col--1-of-3">
+          <h2 class="mt-3">Navigation</h2>
+          <p>Users can view their profile and settings through a menu that slides in from the app's left edge. From here they'll be able access their profile, along with pages that show their locations, their friends, alert settings, and help (tips and FAQ).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-3 bb">
+      <div class="grid">
+        <div class="grid__col grid__col--2-of-3">
+          <figure>
+            <img src="img/pc-web-app.png">
+          </figure>
+        </div>
+
+        <div class="grid__col grid__col--1-of-3">
+          <h2 class="mt-3">Web application</h2>
+          <p>Although Prime Climb would exist primarily as a mobile app, a web app counterpart might appeal to people who live in areas of minimal cell receptivity. A web app might also provide the opportunity to connect users to other climbing communities, such as <a href="https://www.thecrag.com/">The Crag</a>.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="grid">
+        <div class="grid__col grid__col--2-of-3">
+          <figure>
+            <img src="img/pc-sitemap.png" alt="">
+          </figure>
+        </div>
+
+        <div class="grid__col grid__col--1-of-3">
+          <h2 class="mt-3">Sitemap</h2>
+          <p>Prime climb is a relatively shallow mobile app, the navigation not going much deeper than two layers. A sensible third layer would be pages showing others' profiles, navigated to (or searched) through the "friends" page.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="plan" >
+      <div class="medium center">
+        <h2>Planning</h2>
+        <p>Given 12 weeks to develop a prototype, the design and development timeline might look like this:</p>
+      </div>
+
+      <table class="bordered">
+        <thead>
+          <tr>
+            <th>Weeks 1-3 <br> <i>Initial research</i></th>
+            <th>Weeks 4-5 <br> <i>Develop minimum viable product</i></th>
+            <th>Week 6 <br> <i>Test internally, revise</i></th>
+            <th>Weeks 7-9 <br> <i>User test</i></th>
+            <th>Weeks 10-12 <br> <i>Refine and share prototype</i></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Conversations with the customer about the aim and approach of the project.</td>
+            <td>Revise wireframes. Create a taxonomy for the language of the application, and create a general outline for the recommendation algorithm.</td>
+            <td>Test Prime Climb internally to get an initial sense of the accuracy of its recommendations.</td>
+            <td>Share Prime Climb MVP with a small group of users. Create open channels for feedback.</td>
+            <td>Work with frontend and backend development teams to create secondary features, such as the ability to invite friends, upload photos.</td>
+          </tr>
+          <tr>
+            <td>Identify hypotheses about climbers' planning process and the value of the app.</td>
+            <td>Work with frontend and backend developers to develop iPhone and/or Android MVP that includes primary functionality (e.g. only location recommendations).</td>
+            
+            <td>Invite climbers to try the prototype (aim for a dozen or so). Post invitations online, share through word of mouth, etc.</td>
+            <td>Study analytics over the three weeks. Revise functionality in response.</td>
+            <td>Refine features, finalize for initial prototype release.</td>
+            
+          </tr>
+          <tr>
+            <td>Informal conversations with groups of climbers to understand and document their experience. Create story map, share with team and customer.</td>
+            <td>Identify initial analytics to test (e.g. how often certain date ranges used or how often people indicate they're planning to climb). Work with analytics team to create strategy for gathering information from the MVP release.</td>
+            
+            <td>Share MVP with the customer.</td>
+            <td>Conduct survey with users to learn about their experience using Prime Climb. Receive input on additional features.</td>
+            <td>Hand prototype off to customer, recommend strategy for sharing with a broader audience of climbers.</td>
+          </tr>
+          <tr>
+            <td>Create, review, and revise wireframes, share internally and with customer.</td>
+            <td>Share progress with customer.</td>
+            <td></td>
+            <td>Share findings with team and customer throughout.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Conversations with backend developers about possibilities and limitations of data in the application.</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+    </section>
+
+    <section class="medium center">
+      <h2>Further ideas</h2>
+      <p class="grey mt--1"><i>Or, What I would have made if I had more time</i></p>
+      <ol>
+        <li><b>A feature that shows who – people inside or outside a user's network – is climbing at certain locations.</b> Users would see a list of their friends and where they are planning to climb, if they are. Users would also see others' names alongside various locations, and be able to message them.</li>
+        <li><b>Climbing badges and history.</b> When a person climbs somewhere, they'd be able to save information about their climb which would be visible to others. They'd also see where they climbed and when, which could serve as a useful analytic for the success of the recommendation system. For example, if they planned to climb somewhere and saved their climb, then the recommendation was accurate.</li>
+        <li><b>A useful profile page.</b> Users would be able to determine alert behavior, add locations, and edit information about themselves.</li>
+      </ol>
+    </section>
+
+    <section class="medium center">
+      <h2>Considerations and challenges</h2>
+      <ol>
+        <li><b>Getting accurate data.</b> The accuracy of the recommendations is important (they are the core of the application), and depends on two things being accurate: the weather predictions, and the characteristics of the climbing routes at certain locations. While weather predictions are increasingly reliable, it may be difficult to find or gather data about route characteristics. Websites like <a href="https://www.thecrag.com/">The Crag</a> allow climbers to contribute information to a database of locations and routes, which would be useful for the latter type of data. Additionally, if a location doesn't exist yet, Prime Climb would need functionality to allow users to add information about a new place.</li>
+        <li><b>Designing the “planning” interaction.</b> Because the recommendations exist for a certain time period (e.g. "today" or "this weekend"), if a user indicates that she is climbing "next weekend," then this indication will reset once the weekend has passed. I would want to make sure that this interaction makes sense, and that the time frame concept makes sense across the entire application. It would help to study how other planning applications solve these problems (e.g. Airbnb, Vamo, Foursquare). The planning feature needs to be flexible but still useful.</li>
+        <li><b>Offline functionality.</b> Most outdoor climbing takes place in areas of little-to-no cell receptivity. Prime Climb would need useful offline features for this reason, potentially allowing users to access climb data or upload photos or other information locally before syncing with the application.</li>
+      </ol>
+    </section>
+
+  </article>
+
+
+  <footer>
+    <ul class="nav-links">
+      <li><a href="http://brandorn.com">Home</a></li>
+      <li><a href="http://brandorn.com/writing.html">Writing</a></li>
+      <li><a href="http://brandorn.com/projects.html">Projects</a></li>
+      <li><a href="http://brandorn.com/bookshelf">Bookshelf</a></li>
+      <li><a href="http://brandorn.com/approach">Approach</a></li>
+      <li><a href="http://brandorn.com/resources">Resources</a></li>
+    </ul>
+  </footer>
+		
+</body>
+</html>
