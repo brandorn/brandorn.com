@@ -9,7 +9,7 @@
 title: Brandon Dorn
 email: your-email@domain.com
 description: A designer who thinks with his heart and acts with his mind.
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://brandorn.com" # the base hostname & protocol for your site
 
 # Build settings
