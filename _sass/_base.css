@@ -180,8 +180,6 @@ hr {
 
 blockquote {
   border-left: 3px solid #e6e6e6;
-  color: #db240d;
-  font-size: 1.3rem;
   line-height: 150%;
   margin: 2em;
   padding: 0.5em 2em;
@@ -896,4 +894,78 @@ and project pages – use .item class within Toast grids, potentially  */
 .ml-1 {
   margin-left: 1em; }
 
-/*# sourceMappingURL=main.css.map */
+/* PLACEHOLDER SITE STYLES */
+body {
+  background: #fff; }
+
+.content {
+  margin: 12vh auto;
+  max-width: 40em; }
+
+.portrait {
+  background: url("/img/bd-portrait-1.jpg");
+  background-size: 170px;
+  border-radius: 2px;
+  height: 164px;
+  transition: 200ms;
+  vertical-align: top;
+  width: 170px;
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.4s;
+  -moz-animation-duration: 0.4s;
+  animation-duration: 0.4s; }
+  .portrait:hover {
+    background: url("../img/bd-portrait-2.png");
+    background-size: 170px; }
+    @media screen and (max-width: 500px) {
+      .portrait:hover {
+        background-size: 120px; } }
+  @media screen and (max-width: 500px) {
+    .portrait {
+      background-size: 120px;
+      display: block;
+      height: 114px;
+      margin: 1em;
+      position: inherit;
+      width: 120px; } }
+
+.intro {
+  background: #fff;
+  border-radius: 2px;
+  margin: -3em 0 4em 8em;
+  max-width: 32em;
+  padding: 1em;
+  position: absolute; }
+  @media screen and (max-width: 500px) {
+    .intro {
+      font-size: 80%;
+      margin: 0 auto 2em auto; } }
+  .intro h1 {
+    color: #db240d;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0; }
+  .intro p {
+    margin: 1rem 0; }
+  .intro .small {
+    color: #616161;
+    margin: 0.5rem 0; }
+  .intro ul {
+    margin: 1.5rem 0; }
+  .intro blockquote {
+    margin: 2em 0;
+    padding: 0 1.5em; }
+  .intro cite {
+    font-size: 0.9rem;
+    font-style: normal; }
+    @media screen and (max-width: 500px) {
+      .intro cite {
+        font-size: 0.8rem; } }
+
+/*# sourceMappingURL=_base.css.map */

@@ -1,0 +1,1248 @@
+@charset "UTF-8";
+
+/* ==========================================================================
+   brandorn.com styles
+   Brandon Dorn - 2015
+ 
+ * CONTENTS
+ *
+ * Global
+ * Layout
+ * Page-specific
+ * Utility
+ ========================================================================== */
+
+
+/* ==========================================================================
+   Global
+   ========================================================================== */
+
+/* Color variables
+   ========================================================================== */
+
+$primary-color: #db240d;
+
+$faintest-grey: hsla(0, 0%, 96%, 1);
+$faint-grey: hsla(0, 0%, 90%, 1);
+$light-grey: hsla(0, 0%, 60%, 1);
+$grey: hsla(0, 0%, 38%, 1);
+$dark-grey: hsla(0, 0%, 14%, 1);
+
+$green: #23AD63;
+
+.grey { color: $grey; }
+
+
+/* Responsive sizing variables
+   ========================================================================== */
+
+$content-width: 900px;
+
+$break-large: 1080px;
+$break-medium: 700px;
+$break-small: 500px;
+
+.wide { max-width: $break-large; }
+
+.medium { max-width: $break-medium; }
+
+.narrow { max-width: $break-small; }
+
+
+/* Font variables and declarations
+   ========================================================================== */
+
+@import url(http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic);
+
+$sans-serif: 'Karla', Helvetica, Arial, sans-serif;
+
+.sans-serif { font-family: $sans-serif; }
+
+
+/*
+ * Font sizes
+ */
+
+$medium-type: 1.1rem;
+$small-type: 0.92rem;
+$smallest-type: 0.8rem;
+
+.medium-type { font-size: $medium-type; }
+
+.small-type { font-size: $small-type; }
+
+.smallest-type { font-size: $smallest-type; }
+
+/* Keyframes
+   ========================================================================== */
+
+// fadeIn keyframe
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+
+
+/* HTML elements
+   ========================================================================== */
+
+
+html {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  font-size: 92%;
+
+  @media screen and (max-width: $break-medium) { font-size: 96%; }
+}
+
+*, *:before, *:after { box-sizing: inherit; }
+
+body {
+  background: hsla(0, 0%, 99%, 1);
+  color: $dark-grey;
+  font-family: $sans-serif;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  margin: 0 auto;
+  overflow: scroll;
+  padding: 0 3em;
+  transition: all 150ms;
+  -webkit-font-smoothing: antialiased;
+
+  @media screen and (max-width: $break-small) { padding: 0 1em; }
+}
+
+section { display: block; }
+
+h1 {
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 120%;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 120%;
+  margin: 1em 0 0 0;
+
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:active {
+    text-decoration: underline;
+  }
+}
+
+h3 {
+  color: $grey;
+  font-size: 1.2rem;
+  margin: 0.5em 0;
+}
+
+h4 {
+  color: $grey;
+  font-size: 1rem;
+  margin: 1em 0;
+}
+
+p,
+li {
+  line-height: 140%;
+  margin: 0.5em 0;
+}
+
+a {
+  transition: all 100ms;
+
+  &:link,
+  &:visited {
+    color: $primary-color;
+    text-decoration: underline;
+  }
+  
+  &:hover,
+  &:active {
+    transition: all 100ms;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+}
+
+sup {
+  font-weight: bold;
+  padding: 2px;
+}
+
+  sup a:link,
+  sup a:visited,
+  .footnotes .returnUp:link,
+  .footnotes .returnUp:visited {
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+ul {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  &.dot {
+    li {
+      list-style-type: disc;
+      /* Until I find a way to use SVG... 
+      background: url('img/list-dot.png') no-repeat 7px 10px transparent;
+      padding: 0 0 1px 24px;
+      vertical-align: middle;*/
+    }
+  }
+}
+
+ol {
+  display: block;
+  margin: 1em 0;
+  margin-left: 0;
+  padding-left: 0;
+
+    @media screen and (max-width: $break-medium) {
+      margin-left: 1em;
+    }
+}
+
+li {
+  margin: 0.5em 0;
+  vertical-align: top;
+}
+
+hr {
+  border: none;
+  border-bottom: 2px solid $faint-grey;
+  margin: 5em auto;
+  max-width: 400px;
+}
+
+blockquote {
+  border-left: 3px solid $faint-grey;
+  line-height: 150%;
+  margin: 2em;
+  padding: 0.5em 2em;
+  width: auto;
+
+  @media screen and (max-width: $break-medium) {
+    margin: 1em;
+    padding: 0.5em 1em;
+  }
+
+  cite {  }
+}
+  
+  // Place in <p> below <blockquotes>
+  .author {
+    color: $grey;
+    font-style: normal;
+    margin: -2rem 2rem 2rem 2rem;
+    text-align: right;
+  }
+
+article {
+  margin: 0 auto 8em auto;
+  max-width: $break-medium;
+
+  // Used for portfolio pages
+  &.full-width {
+    max-width: $break-large;
+
+    header figure { margin: 4% 0; }
+
+    figure {
+      margin: 4% 4% 4% 0;
+
+      @media screen and (max-width: $break-medium) {
+        margin: 4% 0;
+      }
+
+
+      /* I don't know what this was for...
+      &:nth-last-child(1) {
+        margin-bottom: 4rem;
+      }
+      */
+    }
+  }
+
+  h2 { margin: 5em 0 1em 0; }
+
+  p,
+  li {
+    font-size: 1.1rem;
+    line-height: 170%;
+  }
+
+  td { font-size: 1.1rem; }
+
+  p,
+  ol,
+  ul { margin-bottom: 2em; }
+
+  li { line-height: 140%; }
+}
+
+header {
+  margin: 40px 0 80px 0;
+  text-align: center;
+
+  p {
+    color: $grey;
+    margin: 0 auto 2em auto;
+    max-width: $break-medium;
+  }
+  
+  .description {
+    color: $dark-grey;
+    font-size: 1.3rem;
+    margin: 4em auto;
+    max-width: $content-width;
+  }
+
+  figure { margin: 7% 0; }
+
+}
+
+figure {
+  margin: 7% 0;
+  vertical-align: top;
+
+  &.double-wide {
+    width: 140%;
+    margin-left: -20%;
+
+    @media screen and (max-width: $break-large) {
+      float: none;
+      width: 100%;
+      margin: 5% 0;
+    }
+  }
+
+  &.to-the-left {
+    float: left;
+    width: 50%;
+    margin: 2% 5%;
+    margin-left: -20%;
+
+    @media screen and (max-width: $break-large) {
+      float: none;
+      width: 100%;
+      margin: 5% 0;
+    }
+  }
+
+  &.to-the-right {
+    float: right;
+    width: 50%;
+    margin: 2% 5%;
+    margin-right: -20%;
+
+    @media screen and (max-width: $break-large) {
+      float: none;
+      width: 100%;
+      margin: 5% 0;
+    }
+  }
+
+  &.two-up{
+    display: inline-block;
+    margin: 5% 2%;
+    width: 68%;
+
+    &.left{
+        margin-left: -20%;
+
+        @media screen and (max-width: $break-large) { margin-left: 0; }
+    }
+
+    &.right{
+        margin-right: -20%;
+
+        @media screen and (max-width: $break-large) { margin-right: 0; }
+    }
+
+    @media screen and (max-width: $break-large) {
+      display: block;
+      width: 100%;
+      margin: 2% 0;
+    }
+  }
+
+  &.three-up {
+    display: inline-block;
+    margin: 5% 1%;
+    width: 44%;
+
+    &.left {
+      margin-left: -20%;
+      float: none;
+
+      @media screen and (max-width: $break-large) {
+        margin-left: 0;
+      }
+    }
+
+    &.right {
+      margin-right: -20%;
+      float: none;
+
+      @media screen and (max-width: $break-large) {
+        margin-right: 0;
+      }
+    }
+
+    @media screen and (max-width: $break-large) {
+      display: block;
+      width: 100%;
+      margin: 2% 0;
+    }
+
+  }
+
+  &.natural-width {
+    img {
+      width: auto;
+      margin: 0 auto;
+    }
+  }
+}
+
+figcaption {
+  color: $grey;
+  font-size: $small-type;
+  margin: 1em 0;
+
+  a:link,
+  a:visited { color: $light-grey; }
+}
+
+img {
+  display: block;
+  width: 100%;
+
+  // Fade in on load
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards; 
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:0.4s;
+  -moz-animation-duration:0.4s;
+  animation-duration:0.4s;
+}
+
+table { margin: 2em 0; }
+
+tr { }
+
+td,
+th {
+  padding: 0.5em 1em;
+  text-align: left;
+  vertical-align: top;
+}
+
+strong {
+  color: $primary-color;
+  font-weight: bold;
+}
+
+*::selection { background: $faint-grey; }
+
+*:focus { outline: 1px dotted $light-grey; }
+  
+
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+  
+  
+/* Nav
+   ========================================================================== */
+
+nav {
+  cursor: default;
+  margin: 0 auto;
+  max-width: $content-width;
+  padding: 32px 0;
+
+  .logo {
+    display: inline-block;
+    background: url('../img/logo.svg') no-repeat center;
+    border-bottom: none;
+  }
+
+  &.big{
+    border-bottom: 1px solid $faint-grey;
+    margin-bottom: 2em;
+
+    .logo {
+      background-size: 60px;
+      height: 56px;  
+      width: 40px;
+
+      @media screen and (max-width: $break-medium) {
+        background-size: 48px;
+        height: 48px;  
+        width: 34px;
+      }
+    }
+
+    .logo-text {
+      display: inline-block;
+      margin: 3px 10px;
+      vertical-align: top;
+
+      p {
+        margin: 0;
+        line-height: 100%;
+      }
+
+      h1 {
+        color: $primary-color;
+        font-weight: normal;
+        line-height: 54%;
+        text-transform: lowercase;
+      }
+
+      @media screen and (max-width: $break-medium) {
+        margin: 0 10px;
+
+        h1 { font-size: 1.8rem; }
+
+        p { font-size: $small-type; }
+      }
+    }
+  }
+
+  &.small {
+    border-bottom: none;
+    padding-bottom: 20px;
+
+    .logo {
+      background-size: 38px;
+      height: 38px;
+      width: 38px;
+    
+      &:hover { transform: scale(1.2); }
+    }
+
+    .forward-slash {
+      width: 1px;
+      height: 32px;
+      background: #CCC;
+      -webkit-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+      transform: rotate(30deg);
+      padding: 0;
+      margin: 3px 16px 0 12px;
+    }
+
+    div {
+      display: inline-block;
+      vertical-align: top;
+      padding-top: 6px;
+    }
+
+    p {
+      font-size: 1.4em;
+      margin: 0;
+      text-transform: lowercase;
+      vertical-align: middle;
+
+      a:link,
+      a:visited { text-decoration: none; }
+
+      a:hover,
+      a:active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+}
+    
+/* Content
+   ========================================================================== */
+
+.content {
+  margin: 0 auto;
+  max-width: $content-width;
+  min-height: 500px;
+}
+
+.footnotes {
+  border-top: 2px solid $faint-grey;
+  color: $light-grey;
+  margin: 6em 0 2em 0;
+  padding-top: 2em;
+  
+
+  li {
+    font-size: $small-type;
+    margin: 0.5em 0;
+    color: $grey;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: $break-medium) {
+      margin: 0.5em 1em;
+    }
+  }
+
+}
+
+// Used at the top of long-ish essays
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background-color: $primary-color;
+}
+
+/* Footer
+   ========================================================================== */
+
+footer {
+  border-top: 1px solid $faint-grey;
+  clear: both;
+  margin: 2em auto 0 auto;
+  max-width: $content-width;
+  padding: 1em 0;
+
+  p {
+    color: $grey;
+    font-size: $smallest-type;
+
+    a:link,
+    a:visited,
+    a:active,
+    a:hover { color: $grey; }
+  }
+
+  .nav-links {
+    margin: 0.5em 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+
+      &:nth-last-child(n+2) { margin-right: 1em; }
+    }
+  }
+} // footer
+
+.next-page{
+  line-height: 120%;
+  padding: 50px 0;
+  transition: ease-in-out 150ms;
+  vertical-align: top;
+  width: 50%;
+
+  &:link {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+  }
+
+  &:hover { background: $faintest-grey; }
+
+  span {
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 30%;
+    transition: ease-in-out 150ms;
+  }
+}
+
+.next-page.left {
+  padding-left: 40px;
+
+  @media screen and (max-width: $break-medium) { padding-left: 20px; }
+
+  span { padding-right: 4px; }
+
+  &:hover span{ transform: scale(1.2) translate(-4px, 0); }
+}
+
+.next-page.right {
+  padding-right: 40px;
+  text-align: right;
+
+  @media screen and (max-width: $break-medium) { padding-right: 20px; }
+
+  span { padding-left: 4px; }
+
+  &:hover span{ transform: scale(1.2) translate(4px, 0); }
+}
+
+
+/* ==========================================================================
+   Pages
+   ========================================================================== */
+
+/* Home
+   ========================================================================== */
+
+.home-block {
+  margin: 0 auto;
+  max-width: $content-width;
+
+  h2 {
+    font-weight: normal;
+    margin: 1em 0 0 0;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 130%;
+    margin: 0.2em 0;
+  }
+
+  .grid__col { margin-top: 1em; }
+}
+
+.big-blog {
+  border: 1px solid $faint-grey;
+  border-radius: 2px;
+  display: block;
+  margin-bottom: 2em;
+  padding: 2em;
+  text-align: center;
+  width: 100%;
+
+  &.m-a-f {
+    &:link,
+    &:visited { color: #1d74a8}
+
+    &:hover { background: rgba(28, 115, 168, 0.04); } 
+  }
+
+  &.abundance {
+    &:link,
+    &:visited { color: #963768}
+
+    &:hover { background: rgba(150, 55, 104, 0.04); }
+  }
+
+  &:link { text-decoration: none; }
+
+  &:hover { 
+    h2 { text-decoration: underline; }
+  }
+
+  img { 
+    margin: 0 auto;
+    width: 60px;
+  }
+
+  p { color: $grey; }
+
+} // .big-blog
+
+.interests {
+  background: $faintest-grey;
+  color: $grey;
+  font-size: $small-type;
+  padding: 1em;
+}
+
+.bio {
+  border-top: 1px solid $faint-grey;
+  margin-top: 3em;
+  padding: 40px 0;
+
+  .portrait {
+    background: url('../img/bd-portrait-1.jpg');
+    background-size: 140px;
+    border-radius: 2px;
+    display: inline-block;
+    height: 135px;
+    margin-top: 16px;
+    position: absolute;
+    transition: 200ms;
+    vertical-align: top;
+    width: 140px;
+
+    // Fade in on load
+    opacity:0;
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards; 
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:0.4s;
+    -moz-animation-duration:0.4s;
+    animation-duration:0.4s;
+
+    &:hover {
+      background: url('../img/bd-portrait-2.png');
+      background-size: 140px;
+    }
+
+    @media screen and (max-width: $break-medium) {
+      display: block;
+      margin: 20px auto 40px auto;
+      position: inherit;
+    }
+  }
+
+  .about {
+    margin-left: 170px;
+
+    p { margin: 1em 0; }
+
+    p:nth-child(1) { font-size: 1.4rem; }
+
+    ul {
+      @media screen and (max-width: $break-medium) { text-align: center; }
+    }
+
+    li {
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: bold;
+
+      a { margin: 0 4px; }
+
+      a:link,
+      a:visited { text-decoration: none;}
+
+      a:hover,
+      a:active { text-decoration: underline;}
+    
+      &:after {
+        content: " · ";
+        color: $light-grey;
+      }
+
+      &:nth-child(1) a { margin-left: 0; }
+
+      &:nth-last-child(1):after { content: ""; }
+    }
+
+    @media screen and (max-width: $break-medium) { margin-left: 0; }
+  }
+} // .bio
+
+
+/* Content list pages
+   ========================================================================== */
+
+
+.content-description {
+  padding-right: 1em;
+  max-width: 620px;
+
+  &.side { font-size: $small-type; }
+
+  @media screen and (max-width: $break-medium) {
+    border-bottom: 1px solid $faint-grey;
+    margin: 1em 0 2em 0;
+    max-width: 100%;
+    padding-bottom: 1em;
+    padding-right: 0;
+
+    &.side { font-size: 1rem; }
+  }
+}
+
+/* Need to clean .content-items and .items up to make it more flexible across bookshelf 
+and project pages – use .item class within Toast grids, potentially  */
+
+.content-items {
+
+  .meta {
+    color: $grey;
+    font-size: $smallest-type;
+    line-height: 180%;
+    padding: 2px 0;
+    margin-top: 6px;
+
+    // Used for the "type tag"
+    span:nth-child(1) {
+      background: $faintest-grey;
+      border: 1px solid $faint-grey;
+      border-radius: 2px;
+      margin-right: 4px;
+      padding: 2px 6px;
+    }
+  } // .meta
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    line-height: 130%;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 1.5em;
+
+    p { margin: 0; }
+  }   
+
+  img {
+    background: $faint-grey;
+    height: auto;
+    margin: 2em auto 1em auto;
+    max-width: 200px;
+    width: 100%;
+  }
+
+  } // .content-items
+
+  // Used instead of .grid-col because for horz. spacing when filtering
+
+  .item-grid {
+    font-size: $small-type;
+    margin-top: 2em;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      padding-right: 2em;
+      width: 49%;
+
+      @media screen and (max-width: $break-medium) {
+        padding-right: 0;
+        width: auto;
+      }
+
+      // For padding between items on desktop
+      &:nth-child(2n + 1) {
+        @media screen and (max-width: $break-medium) {
+          padding-left: 0;
+        }
+      }
+    }
+
+    p {
+      font-size: $small-type;
+      line-height: 160%;
+      margin: 0.5em 0;
+
+      &.meta { font-size: $smallest-type; }
+    }
+
+    // Image and text divs
+
+    img {
+      display: inline-block;
+      height: 110px;
+      position: absolute;
+      width: auto;
+
+      @media screen and (max-width: $break-medium) {
+        display: none;
+      }
+    }
+      
+    div {
+      display: inline-block;
+      padding-left: 100px;
+
+      @media screen and (max-width: $break-medium) {
+        padding-left: 0;
+      }
+    }
+
+    &.books {
+      h2 { 
+        font-style: italic; 
+        font-weight: bold;
+      }
+
+      .author {
+        color: $dark-grey;
+        font-size: $small-type;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+        text-align: left;
+      }
+
+      img { 
+        box-shadow: 1px 1px 2px 1px #dadada; 
+        margin-top: 0;
+      }
+
+    }
+
+  } // .item-grid
+
+
+
+.content-filter {
+  margin: 1em 0 1.5em 0;
+
+  li {
+    display: inline-block;
+    font-size: 1rem;
+    margin: 8px 2px;
+    padding: 0;
+  }
+
+  a {
+    border-radius: 2px;
+    font-weight: bold;
+    padding: 4px 8px;
+    text-decoration: none;
+    text-transform: capitalize;
+  
+    &:hover {
+      background: $faint-grey;
+      color: $primary-color;
+    }
+  }
+
+  a.selected {
+    background: $primary-color;
+    color: #fff;
+  }
+
+  @media screen and (max-width: $break-medium) { 
+    margin: 2em 0 1em 0;
+    text-align: center; 
+  }
+
+} // .content-filter
+
+/* Favorite things page
+   ========================================================================== */
+.favorite-thing {
+  margin-bottom: 6em;
+
+  img,
+  div {
+    display: inline-block;
+    vertical-align: top;
+
+    @media screen and (max-width: $break-small) {
+      display: block;
+    }
+  }
+
+  img {
+    height: 120px;
+    margin-right: 3em;
+    width: 120px;
+
+    @media screen and (max-width: $break-small) { margin: 0 auto 2em auto; }
+  }
+
+  h2 {
+    margin: 0.5em 0;
+
+    @media screen and (max-width: $break-small) {
+      text-align: center;
+    }
+  }
+
+  p {
+    font-size: 1rem;
+    margin: 0.5em 0;
+  }
+
+
+
+}
+
+
+/* ==========================================================================
+   Utility
+   ========================================================================== */
+
+.primary { color: $primary-color; }
+
+.green { color: $green; }
+
+.left { float: left; }
+
+.right { float: right; }
+
+.center {
+  display: block;
+  margin: 0 auto;
+}
+
+.li-inline {
+  li { display: inline-block; }
+}
+
+.text-center { text-align: center; }
+
+.text-left { text-align: left; }
+
+.text-right { text-align: right; }
+
+.bold { font-weight: bold; }
+
+.clear { clear: both; }
+
+.all-caps { text-transform: uppercase; }
+
+.small-caps { font-variant: small-caps; }
+
+.hidden { display: none; }
+
+.bordered{ border: 2px solid $faint-grey; }
+
+.no-border { border: none; }
+
+.bb { border-bottom: 2px solid $faint-grey; }
+
+.bt { border-top: 2px solid $faint-grey; }
+
+.pw-0 { 
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.m-0 { margin: 0; }
+
+.mt--3 { margin-top: -3em; }
+
+.mt--1 { margin-top: -1em; }
+
+.mt-0 { margin-top: 0; }
+
+.mt-1 { margin-top: 1em; }
+
+.mt-3 { margin-top: 3em; }
+
+.mt-5 { margin-top: 5em; }
+
+.mb--3 { margin-bottom: -3em; }
+
+.mb--1 { margin-bottom: -1em; }
+
+.mb-0 { margin-bottom: 0; }
+
+.mb-1 { margin-bottom: 1em; }
+
+.mb-3 { margin-bottom: 3em; }
+
+.mb-5 { margin-bottom: 5em; }
+
+.ml-1 { margin-left: 1em; }
+
+
+
+
+
+/* PLACEHOLDER SITE STYLES */
+
+body { background: #fff; }
+
+.content {
+  margin: 12vh auto;
+  max-width: 40em;
+}
+
+.portrait {
+    background: url('/img/bd-portrait-1.jpg');
+    background-size: 170px;
+    border-radius: 2px;
+    height: 164px;
+    transition: 200ms;
+    vertical-align: top;
+    width: 170px;
+
+    // Fade in on load
+    opacity:0;
+    -webkit-animation:fadeIn ease-in 1;
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards; 
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration:0.4s;
+    -moz-animation-duration:0.4s;
+    animation-duration:0.4s;
+
+    &:hover {
+      background: url('../img/bd-portrait-2.png');
+      background-size: 170px;
+
+        @media screen and (max-width: $break-small) {
+          background-size: 120px;
+        }
+    }
+
+    @media screen and (max-width: $break-small) {
+      background-size: 120px;
+      display: block;
+      height: 114px;
+      margin: 1em;
+      position: inherit;
+      width: 120px;
+    }
+  }
+
+.intro {
+
+  background: #fff;
+  border-radius: 2px;
+  margin: -3em 0 4em 8em;
+  max-width: 32em;
+  padding: 1em;
+  position: absolute;
+
+  @media screen and (max-width: $break-small) { 
+    font-size: 80%;
+    margin: 0 auto 2em auto; 
+  }
+
+  h1 {
+    color: $primary-color;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  p { margin: 1rem 0; }
+
+  .small { 
+    color: $grey;
+    margin: 0.5rem 0;
+  }
+
+  ul { margin: 1.5rem 0; }
+
+  blockquote { 
+    margin: 2em 0;
+    padding: 0 1.5em; 
+  }
+
+  cite { 
+    font-size: 0.9rem;
+    font-style: normal; 
+
+    @media screen and (max-width: $break-small) {
+      font-size: 0.8rem;
+    }
+  }
+
+
+}
+
+
+
