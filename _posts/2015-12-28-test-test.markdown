@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  “This is a test“
+title:  BD post test
 date:   2015-12-28 18:51:20 -0500
+permalink: :title
 ---
 
 # This is a test.
