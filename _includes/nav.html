@@ -1,0 +1,29 @@
+<nav>
+  <div class="logo">
+    <a href="/"></a>
+  </div>
+  <div class="nav-links">
+    <ul>
+        {% if page.active == "writing" %}
+            <li class="active"><p><a href="../">writing</a></p></li>
+        {% else %}
+            <li><p><a href="../">writing</a></p></li>
+        {% endif %}
+        <!--{% if page.active == "notebooks" %}
+            <li class="active"><p><a href="../notebooks/">notebooks</a></p></li>
+        {% else %}
+            <li><p><a href="../notebooks/">notebooks</a></p></li>
+        {% endif %} -->
+        {% if page.active == "bookshelf" %}
+            <li class="active"><p><a href="../bookshelf/">bookshelf</a></p></li>
+        {% else %}
+            <li><p><a href="../bookshelf/">bookshelf</a></p></li>
+        {% endif %}
+        {% if page.active == "about" %}
+            <li class="active"><p><a href="../about/">about</a></p></li>
+        {% else %}
+            <li><p><a href="../about/">about</a></p></li>
+        {% endif %}
+    </ul>
+  </div>
+</nav>

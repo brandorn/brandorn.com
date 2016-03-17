@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<article class="post book">
+
+	<figure class="book-cover">
+		<a href="{{ page.worldcat }}"><img src="/img/bookshelf/{{ page.cover }}" alt="Cover of {{ page.title }}"></a>
+	</figure>
+
+	<section>
+	  <header>
+	    <h1><a href="{{ page.worldcat }}">{{ page.title }}</a></h1>
+	    <p class="author">by {{ page.author-first }} {{ page.author-last }}</p>
+	  </header>
+
+	  {{ content }}
+
+  </section>
+
+
+</article>

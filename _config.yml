@@ -1,15 +1,7 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # General
 title: Brandon Dorn
-email: your-email@domain.com
+email: brandon.s.dorn@gmail.com
 description: A designer who thinks with his heart and acts with his mind.
-baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://brandorn.com" # the base hostname & protocol for your site
 
 # Build settings

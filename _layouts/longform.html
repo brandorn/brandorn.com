@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<article class="post longform">
+
+  <header>
+    <h1>{{ post.title }}</h1>
+    <p class="description">{{ post.description }}</p>
+  </header>
+
+  <section>
+    {{ content }}
+  </section>
+
+  <div class="post-end">
+  	<p>Brandon Dorn</p>
+  	<p>{{ page.location }}, {{ page.date | date: "%b %Y" }}</p>
+  </div>
+
+</article>

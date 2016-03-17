@@ -1,0 +1,35 @@
+/* Serif
+   ================================ */
+
+@font-face {
+    src: url(../src/fonts/mate.ttf);
+    font-family: 'Mate';
+    font-weight: normal;
+}
+
+@font-face {
+    src: url(../src/fonts/mate-italic.ttf);
+    font-family: 'Mate';
+    font-style: italic;
+    font-weight: normal;
+}
+
+$serif: "Mate", Georgia, serif;
+.serif { font-family: $serif; }
+
+
+/* Sans-serif
+   ================================ */
+
+$sans-serif: BlinkMacSystemFont,"Helvetica","Arial",sans-serif;
+.sans-serif { font-family: $sans-serif; }
+
+
+/* Font sizes
+   ================================ */
+
+$medium-type: 0.84rem;
+$small-type: 0.74rem;
+
+.medium-type { font-size: $medium-type; }
+.small-type { font-size: $small-type; }

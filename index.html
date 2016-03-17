@@ -1,29 +1,39 @@
 ---
-layout: default
+layout: page
+active: writing
+title: Brandon Dorn
+description: I’m a writer who thinks in images; I’m a designer who thinks in words. This is where I share some of these thinks. I put them elsewhere too&#58; <a href="http://meaningandform.tumblr.com/">Meaning and Form</a> is a blog about design. <a href="http://brandorn.tumblr.com/">Abundance</a> is a blog about everything else.
 ---
 
-<div class="portrait"></div>
+<!-- <div class="featured-post uxla">
+	<a href="/ux-and-the-liberal-arts">
+		<p>UX and the Liberal Arts</p>
+		<p>How liberal arts students are unwitting design thinkers-in-training. </p>
+	</a>
+</div> -->
 
-<div class="intro">
+<div class="posts">
+	{% for writing in site.categories.writing %}
+		{% assign year = writing.date | date: "%Y" %}
+		
+		{% if year != date %}
+		{% unless forloop.first %}</div>{% endunless %}
+		
+		<div class="year-posts">
+			<h2>{{ year }}</h2>
+			
+			<ul>
+				{% assign date = year %}
+				{% endif %}
+		
+			<li>
+					<a href="{{ writing.url }}">
+						<p>{{ writing.title }}</p>
+						<p class="date">{{ writing.date | date: "%b %Y" }}</p>
+					</a>
+			</li>
 
-  <h1>Brandon Dorn</h1>
-  <p class="small">Information Architecture &amp; Interaction Design</p>
+	{% if forloop.last %}</div>{% endif %}
+{% endfor %}
 
-  <p>I’m a designer living in Chapel Hill, NC, with my wife, BethAnne. I work on digital products at <a href="http://viget.com">Viget Labs</a>, where my daily task is to help others make sense of things through considered design.</p>
-
-  <ul>
-    <li><a href="mailto:brandon.s.dorn@gmail.com">Email</a> is the best way to reach me.</li>
-    <li><a href="http://meaningandform.tumblr.com">Meaning &amp; Form</a> is a blog about user experience design.</li>
-    <li><a href="http://brandorn.tumblr.com">Abundance</a> is a blog about everything else.</li>
-  </ul>
-
-  <p>Here's a quote that inspired me recently, which you may like:</p>
-
-  <blockquote>
-    <p>Touch a limit of your understanding and it falls away, to reveal mystery upon mystery.</p>
-    –<cite>Marilynne Robinson, <i>The Givenness of Things</i></cite>
-  </blockquote>
-
-</div>
-
-
+</div> <!-- writing posts -->
