@@ -1,6 +1,6 @@
 .writing {
 
-	header { margin-bottom: 4em; }
+	header { margin-bottom: 3em; }
 }
 
 .featured-post {
@@ -61,6 +61,8 @@
 	border-top: 1px solid $faint-grey;
 	margin-top: 1em;
 
+	@media screen and (max-width: $break-small) { border-top: none; }
+
 	&:nth-child(1) { margin-top: 2.5em; }
   
  	h2 { 
@@ -114,4 +116,4 @@
 	    }
 	  }
 	}
-}
+} // .year-posts

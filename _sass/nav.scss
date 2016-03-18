@@ -43,9 +43,9 @@ nav {
     }
 
     @media screen and (max-width: $break-small) { 
-      background-size: 40px; 
-      height: 40px;
-      width: 40px;
+      background-size: 42px; 
+      height: 42px;
+      width: 42px;
     }
   }
 
@@ -70,7 +70,7 @@ nav {
     @media all and (max-width: $break-medium) { margin-top: 14px;}
 
     @media all and (max-width: $break-small) { 
-      margin-right: 0.86em;
+      margin-right: 0.7em;
       margin-top: 10px;
     }
 
@@ -78,6 +78,8 @@ nav {
       font-size: $medium-type; 
       letter-spacing: -0.01em;
       text-transform: capitalize;
+
+      @media all and (max-width: $break-small) { font-size: 0.92rem; }
     }
 
     a:link,
