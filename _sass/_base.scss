@@ -4,7 +4,7 @@ html {
   box-sizing: border-box;
   font-size: 100%;
 
-  @media screen and (min-width: $break-large) { font-size: 108%; }
+  @media screen and (min-width: $break-large) { font-size: 114%; }
 
   @media screen and (max-width: $break-small) { font-size: 96%; }
 
@@ -25,7 +25,7 @@ body {
   position: relative;
   width: $main-width-large;
 
-  @media screen and (min-width: $break-large) { max-width: 860px; }
+  @media screen and (min-width: $break-large) { max-width: 960px; }
 
   @media screen and (max-width: $break-medium) { 
     padding: 0 2em;
@@ -84,7 +84,7 @@ h4 {
 p,
 li {
   font-size: 1.05rem;
-  line-height: 165%;
+  line-height: 170%;
   margin: 0;
 }
   

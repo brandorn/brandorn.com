@@ -54,7 +54,8 @@
         max-width: 300px; 
       }
 
-    @media all and (min-width: $break-large) { margin-left: 8%; }
+    @media all and (min-width: 1400px) { margin-left: 10%; }
+    //@media all and (min-width: $break-large) { margin-left: 8%; }
     @media all and (max-width: 1040px) { margin-left: 3%; }
 
     @media all and (max-width: $break-medium) {
