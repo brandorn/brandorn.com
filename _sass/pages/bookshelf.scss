@@ -1,7 +1,8 @@
 /* Bookshelf index page
    ================================ */
 
-$book-height: 200px;
+$book-height-large: 200px;
+$book-height-medium: 170px;
 
 .bookshelf {
 	margin: 0;
@@ -62,7 +63,6 @@ $book-height: 200px;
 
 	@media all and (max-width: $break-small) { 
 		margin-left: 0;
-		text-align: center;
 		width: 100%; 
 	}
 
@@ -74,7 +74,7 @@ $book-height: 200px;
 		position: relative;
 
 		&:before {
-			height: $book-height;
+			height: $book-height-large;
 	    left: 0;
 	    position: absolute;
 	    top: 0;
@@ -82,6 +82,8 @@ $book-height: 200px;
 	    content: '';
 	    background-color: rgba(0,0,0,0);
 		  transition: all 200ms;
+
+		  @media all and (max-width: $break-medium) { height: $book-height-medium }
 		}
 
     &:hover {
@@ -94,9 +96,11 @@ $book-height: 200px;
 		.book-title { 
   		display: block;
   		position: absolute;
-  		height: $book-height;
+  		height: $book-height-large;
   		text-align: center;
   		width: 100%;
+
+  		@media all and (max-width: $break-medium) { height: $book-height-medium }
 
   		.title,
   		.author {
@@ -118,17 +122,21 @@ $book-height: 200px;
     }
 
     img { 
-    	height: $book-height;
+    	height: $book-height-large;
     	width: auto; 
+
+    	@media all and (max-width: $break-medium) { height: $book-height-medium }
     }
 
     a:link,
     a:visited { 
     	color: #fff;
     	display: block;
-    	height: $book-height;
+    	height: $book-height-large;
     	text-decoration: none; 
     	width: 100%;
+
+    	@media all and (max-width: $break-medium) { height: $book-height-medium }
     }
 
 		&:hover,
@@ -224,7 +232,7 @@ article.book { }
 
 	blockquote {
 
-		p { font-style: italic; }
+		// p { font-style: italic; }
 
 		cite { 
 			display: inline-block;

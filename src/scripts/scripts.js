@@ -12,7 +12,7 @@ $(document).ready(function(){
 
 // Bookshelf filters
 
-  $('.book-filter li a').click(function() {
+  $('.book-filter li span').click(function() {
         var filterName = $(this).text();
         
         // Add active class to clicked filter

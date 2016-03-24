@@ -97,7 +97,7 @@ All of the websites I mentioned - the Spotifys and Etsys - have UX design teams 
 
 ---
 
-Briefly defined, **UX is the attempt to make digital products make sense**. If something about a product is confusing to someone, a UX designer assumes fault in the design and not in the person.
+Briefly defined, *UX is the attempt to make digital products make sense*. If something about a product is confusing to someone, a UX designer assumes fault in the design and not in the person.
 
 Think about it this way: We all make things. Maybe may sew a hat for a friend, or write an essay for a class, or make a sandwich in Saga. Every single thing we make has an interface. A book has a page, a hammer has a handle, a sandwich has two pieces of bread. These planes — interfaces — are how we interact with the thing. How we make it do our bidding. You read and turn a page, swing a hammer, hold a sandwich.
 

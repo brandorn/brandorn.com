@@ -7,7 +7,7 @@
     font-weight: normal;
     margin: 2em 0;
 
-    @media all and (max-width: $break-medium) { text-align: center; }
+    @media all and (max-width: $break-tiny) { text-align: center; }
   }
 
   .intro {

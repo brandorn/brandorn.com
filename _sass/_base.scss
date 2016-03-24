@@ -28,13 +28,13 @@ body {
   @media screen and (min-width: $break-large) { max-width: 960px; }
 
   @media screen and (max-width: $break-medium) { 
-    padding: 0 2em;
+    padding: 0 4em;
     min-width: $break-small;
   }
 
   @media screen and (max-width: $break-small) { 
     min-width: inherit;
-    padding: 0 1.5em; 
+    padding: 0 2em; 
     width: auto;
   }
 
@@ -81,12 +81,11 @@ h4 {
   margin: 2em 0 1em 0;
 }
 
-p,
-li {
-  font-size: 1.05rem;
-  line-height: 170%;
+p { 
+  font-size: $normal-type;
+  line-height: 170%; 
   margin: 0;
-}
+} 
   
   section > p,
   li > p {
@@ -152,14 +151,12 @@ ol {
   margin: 1em 0;
   margin-left: 0;
   padding-left: 0;
-
-    @media screen and (max-width: $break-medium) {
-      margin-left: 1em;
-    }
 }
 
 li {
-  margin: 0.5em 0;
+  font-size: $normal-type;
+  margin: 1em 0;
+  line-height: 170%;
   vertical-align: top;
 }
 
@@ -177,10 +174,11 @@ hr {
 }
 
 blockquote {
+  border-left: 2px solid $faint-grey;
   font-size: 1rem; 
-  // font-style: italic;
   line-height: 160%;
   margin: 2em;
+  padding: 0 2em;
 
   p:nth-child(n+2) { text-indent: 1em; }
 
@@ -237,7 +235,10 @@ i {
   font-weight: normal;
 }
 
-strong { font-weight: bold; }
+strong { 
+  font-family: $sans-serif;
+  font-weight: bold; 
+}
 
 *::selection { background: #FFF7CA; }
 
