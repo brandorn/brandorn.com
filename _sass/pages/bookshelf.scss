@@ -2,7 +2,7 @@
    ================================ */
 
 $book-height-large: 200px;
-$book-height-medium: 170px;
+$book-height-medium: 164px;
 
 .bookshelf {
 	margin: 0;
@@ -33,6 +33,7 @@ $book-height-medium: 170px;
 
 	li { 
 		display: block;
+		font-size: $small-type;
 		margin-bottom: 1em; 
 
 		&:nth-child(1) { margin-top: 0; }
@@ -42,8 +43,6 @@ $book-height-medium: 170px;
 			margin-top: 0.5em;
 
 			&:nth-child(1) { margin-top: 0.5em; }
-
-			&:nth-last-child(1) { margin-left: 12px; }
 		}
 
 	}
@@ -65,6 +64,8 @@ $book-height-medium: 170px;
 		margin-left: 0;
 		width: 100%; 
 	}
+
+	@media all and (max-width: $break-tiny) { text-align: center }
 
 	li {
 		border-radius: 2px;

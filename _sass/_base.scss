@@ -174,11 +174,23 @@ hr {
 }
 
 blockquote {
-  border-left: 2px solid $faint-grey;
+  // border-left: 2px solid $faint-grey;
   font-size: 1rem; 
   line-height: 160%;
   margin: 2em;
   padding: 0 2em;
+
+  &:before {
+    color: $faint-grey;
+    content: "“";
+    display: block;
+    font-size: 2.5rem;
+    margin-left: -0.8em;
+    margin-top: 0.1em;
+    position: absolute;
+
+    @media all and (max-width: $break-medium) { margin-left: -0.5em; }
+  } 
 
   p:nth-child(n+2) { text-indent: 1em; }
 
