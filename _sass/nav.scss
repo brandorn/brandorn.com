@@ -116,7 +116,7 @@ footer {
     display: inline-block;
     font-family: $sans-serif;
     font-size: $small-type;
-    margin: 0;
+    margin: 0 0 1em 0;
 
     a:link,
     a:visited { color: $light-grey; }
@@ -132,7 +132,7 @@ footer {
       display: inline-block;
       margin: 0;
 
-      &:nth-last-child(n+2) { margin-right: 1em; }
+      &:nth-last-child(n+2) { margin-right: 1.4em; }
     }
   }
 

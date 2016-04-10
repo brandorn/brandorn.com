@@ -126,7 +126,7 @@
       &:first-of-type { text-indent: 0; }
     }
 
-    blockquote { @media all and (max-width: $break-medium) { margin: 0 0.5em; } }
+    blockquote { @media all and (max-width: $break-medium) { margin: 1.5em 0; } }
 
     // &:first-of-type { blockquote { margin-top: 0; } }
     // &:last-of-type { blockquote { margin-bottom: 0; } }
