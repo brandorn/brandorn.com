@@ -6,11 +6,12 @@ layout: default
 
 	<figure class="book-cover">
 		<a href="{{ page.worldcat }}"><img src="/img/bookshelf/{{ page.cover }}" alt="Cover of {{ page.title }}"></a>
+		<figcaption><a href="{{ page.worldcat }}">Worldcat</a></figcaption>
 	</figure>
 
 	<section>
 	  <header>
-	    <h1><a href="{{ page.worldcat }}">{{ page.title }}</a></h1>
+	    <h1>{{ page.title }}</h1>
 	    <p class="author">by {{ page.author-first }} {{ page.author-last }}</p>
 	  </header>
 

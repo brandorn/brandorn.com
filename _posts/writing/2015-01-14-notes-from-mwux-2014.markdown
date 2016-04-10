@@ -187,10 +187,6 @@ Patterns must first be felt, plumbed, questioned before the process of solving c
       <td class="grey">Pac-man</td>
       <td class="grey">Open-world videogames</td>
     </tr> 
-    <tr>
-      <td></td>
-      <td class="grey">Kickstarter</td>
-    </tr>
   </tbody>
 </table>
 

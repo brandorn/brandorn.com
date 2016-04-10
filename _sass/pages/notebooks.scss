@@ -16,6 +16,7 @@
     border: 1px solid $faint-grey;
     border-radius: 2px;
     display: inline-block;
+    // font-family: "Permanent Marker";
     margin: 0.5em 0;
     transition: all 200ms;
     width: 48%;
@@ -23,7 +24,6 @@
     @media all and (max-width: $break-small) { width: 100%; }
 
     &:hover { 
-      border: 1px solid darken($faint-grey, 3%); 
       box-shadow: 0px 1px 10px rgba(140, 140, 140, 0.3);
       transition: all 200ms;
     }
@@ -42,7 +42,17 @@
 
       p {
         text-align: center;
-        text-indent: 0;
+        margin: 0;
+
+        &:first-of-type:before { 
+          content: "📓";
+          font-size: 1rem;
+          margin-left: -1.5em;
+          margin-top: 0.02em;
+          opacity: 0.3;
+          position: absolute; 
+          transition: all 200ms;
+        }
 
         @media all and (max-width: $break-small) { text-align: left; }
 
@@ -51,6 +61,11 @@
           font-family: $sans-serif;
           font-size: $small-type;
         }
+      }
+
+      &:hover p:first-of-type:before { 
+        opacity: 1; 
+        transition: all 200ms;
       }
 
     }
@@ -66,6 +81,7 @@
 
   &.post h1 {
     margin-bottom: 3em;
+    // font-family: "Permanent Marker";
 
     &:before { 
       content: "📓";
@@ -106,16 +122,10 @@
       &:first-of-type { text-indent: 0; }
     }
 
-    blockquote {
+    blockquote { @media all and (max-width: $break-medium) { margin: 0 0.5em; } }
 
-      &:first-of-type { 
-        margin: 0 2em 2em 2em;
-
-        @media all and (max-width: $break-medium) { margin: 0 0.5em; }
-      }
-
-      &:last-of-type { margin-bottom: 0; }
-    }
+    // &:first-of-type { blockquote { margin-top: 0; } }
+    // &:last-of-type { blockquote { margin-bottom: 0; } }
 
     aside { 
       margin-top: 0; 
@@ -128,6 +138,6 @@
   } // .note
   
 
-  hr { margin: 4em 0;}
+  hr { background: transparent; }
 
 }

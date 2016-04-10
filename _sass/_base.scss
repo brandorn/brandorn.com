@@ -4,7 +4,7 @@ html {
   box-sizing: border-box;
   font-size: 100%;
 
-  @media screen and (min-width: $break-large) { font-size: 114%; }
+  @media screen and (min-width: $break-large) { font-size: 110%; }
 
   @media screen and (max-width: $break-small) { font-size: 96%; }
 
@@ -64,7 +64,7 @@ h2 {
   font-size: 1.5rem;
   font-weight: normal;
   line-height: 120%;
-  margin: 2em 0 1em 0;
+  margin: 3em 0 1em 0;
 }
 
 h3 {
@@ -83,23 +83,22 @@ h4 {
 
 p { 
   font-size: $normal-type;
-  line-height: 170%; 
-  margin: 0;
+  line-height: 150%; 
+  margin: 1em 0;
 } 
   
-  section > p,
+  /*section > p,
   li > p {
     text-indent: 1em;
 
     &:first-of-type { text-indent: 0; }
-    
   }
 
   hr + p, 
   h1 + p,
   h2 + p,
   h3 + p,
-  h4 + p { text-indent: 0; }
+  h4 + p { text-indent: 0; } */
 
 a {
 
@@ -161,23 +160,18 @@ li {
 }
 
 hr {
-  border: none;
   height: 2px;
-  margin: 1.5em 0;
-
-  &.line {
-    background: $faint-grey;
-    margin: 4em auto;
-    width: 4em;
-  }
-
+  background: $faint-grey;
+  border: none;
+  margin: 4em auto;
+  width: 4em;
 }
 
 blockquote {
   // border-left: 2px solid $faint-grey;
   font-size: 1rem; 
-  line-height: 160%;
-  margin: 2em;
+  // font-style: italic;
+  margin: 2em 1em;
   padding: 0 2em;
 
   &:before {
@@ -185,14 +179,20 @@ blockquote {
     content: "“";
     display: block;
     font-size: 2.5rem;
+    font-style: normal;
     margin-left: -0.8em;
-    margin-top: 0.1em;
+    margin-top: -0.2em;
     position: absolute;
 
     @media all and (max-width: $break-medium) { margin-left: -0.5em; }
   } 
 
-  p:nth-child(n+2) { text-indent: 1em; }
+  p { 
+    margin: 0; 
+
+    &:nth-child(n+2) { margin: 1em 0; }
+  }
+  /*p:nth-child(n+2) { text-indent: 1em; }*/
 
   &.intro-quote { 
     font-style: italic; 
@@ -249,6 +249,7 @@ i {
 
 strong { 
   font-family: $sans-serif;
+  font-size: $medium-type;
   font-weight: bold; 
 }
 

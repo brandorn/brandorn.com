@@ -11,7 +11,7 @@ custom_js:
 
   <header>
     <h1>Bookshelf</h1>
-    <p>Books that have opened my eyes and changed my mind, the sinewy kind. I keep them close as friends and recommend them to close friends.</p>
+    <p>Books that have opened my eyes and changed my mind, the sinewy kind, and something of what they've meant to me. Their meanings change, of course; they're the ones worth returning to. I keep them close as friends and recommend them to close friends.</p>
   </header>
 
   <nav>
@@ -31,7 +31,7 @@ custom_js:
      {% assign book-list = site.categories.books | sort:'author-last' %}
      {% for books in book-list %}
           <li class= "{{ books.genre }}">
-            <a href="{{ books.worldcat }}">
+            <a href="{{ books.url }}">
               <div class="book-title">
                 <p class="title"> {{ books.title }} </p> 
                 <p class="author"> by {{ books.author-first }} <span class="last-name">{{ books.author-last }}</span></p>

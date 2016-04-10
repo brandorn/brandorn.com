@@ -26,8 +26,6 @@ location: Bloomington
 </div>
 
 
-<hr class="line">
-
 Hi everyone. Thanks for coming tonight, and thanks to Robyn and Warren for the chance to speak.
 
 My name is Brandon Dorn. I graduated from IWU in 2011 with a major in English Literature and a minor in Economics, and now work at State Farm as a user experience designer. Tonight I’m going to discuss the field of user experience design. I’ll give an overview of the discipline, describe some methods and examples, give some recommendations, and finish with reasons why you, as liberal arts students, would be brilliant UX designers and should consider pursuing this kind of work.
@@ -99,9 +97,15 @@ All of the websites I mentioned - the Spotifys and Etsys - have UX design teams 
 
 Briefly defined, *UX is the attempt to make digital products make sense*. If something about a product is confusing to someone, a UX designer assumes fault in the design and not in the person.
 
-Think about it this way: We all make things. Maybe may sew a hat for a friend, or write an essay for a class, or make a sandwich in Saga. Every single thing we make has an interface. A book has a page, a hammer has a handle, a sandwich has two pieces of bread. These planes — interfaces — are how we interact with the thing. How we make it do our bidding. You read and turn a page, swing a hammer, hold a sandwich.
+<div class="asided">
+  <p> Think about it this way: We all make things. Maybe may sew a hat for a friend, or write an essay for a class, or make a sandwich in Saga <sup>2</sup>. Every single thing we make has an interface. A book has a page, a hammer has a handle, a sandwich has two pieces of bread. These planes — interfaces — are how we interact with the thing. How we make it do our bidding. You read and turn a page, swing a hammer, hold a sandwich. </p>
 
-<figure class="to-the-right">
+  <aside> 
+    <p><sup>2</sup> Nickname for the IWU cafeteria, harkening back to the food supplier for much of the 20th century.</p>
+  </aside>
+</div>
+
+<figure class="to-the-left">
   <img src="img/ux-and-the-la/sandwich.png" alt="Yours truly, holding a sandwich.">
   <figcaption>Yours truly, holding and regarding a sandwich.</figcaption>
 </figure>
@@ -126,7 +130,7 @@ I use the Cybiko as an example because usability problems with physical products
 
 This was a UX problem, at least in part.
 
-<hr class="line">
+<hr>
 
 When things meet our expectations, when they prove to be useful, when they make sense, we like them and use them. If asked, we might describe these kinds of things with the words “intuitive” or “user-friendly.” We don’t need to think too much about it to use it. And if something is useful, intuitive, and it surprises us with something nice, we might describe it as delightful. Whenever you use these words, somewhere a UX designer gets their wings.
 
@@ -287,7 +291,7 @@ The Standard is a UX undertaking. Here’s a case study of how the Claim Carer�
   <iframe style="width: 100%" class="center mb-3" width="560" height="315" src="https://www.youtube.com/embed/IYBLX3V8ek4" frameborder="0" allowfullscreen></iframe>
 </figure>
 
-<hr class="line">
+<hr>
 
 In making these points, I don't mean to credit UX designers for all smart web design. Excellent design comes from teams that work together and good ideas can come from anyone. However, the discipline of UX design attempts to systematize the way in which digital products conform to people rather than asking people to conform to the product, which is what everyone's after. UX design makes sure the right questions are being asked and offers methodologies for finding answers: “Who are we making this for?” “What do they care about?” “How do they think about it?” “How do they use it?”
 
@@ -325,7 +329,7 @@ At the beginning of this presentation I said that you, as liberal arts students,
 
 	By the way, this is one reason why, I think, liberal arts students end up being so successful in the world. Their sense of possibility is attractive, and people want to work with them.
 
-<hr class="line">
+<hr>
 
 The technologists of our day come up with interesting things, but it’s up to UX designers to figure out how to make them meaningful. And liberal arts students are specialists in meaning. As one person put it,
 

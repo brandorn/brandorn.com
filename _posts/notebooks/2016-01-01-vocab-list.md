@@ -8,8 +8,19 @@ description:
 ---
 
 <figure>
+	<img src="img/notebooks/vocab-list/congeries.png" alt="Congeries: a disorderly collection; a jumble.">
+</figure>
+
+---
+
+<figure>
+	<img src="img/notebooks/vocab-list/phantasmagoria.png" alt="Phantasmagoria: a sequence of real or imaginary images like those seen in a dream.">
+</figure>
+
+---
+
+<figure>
 	<img src="img/notebooks/vocab-list/putrescent.png" alt="Putrescent: undergoing the process of decay rotting">
-	
 </figure>
 
 ---
