@@ -1,15 +1,12 @@
 ---
 layout: page
 active: notebooks
-custom_js:
-- jquery-1.11.1.min
-- masonry.pkgd
 
 title: Notebooks
 description: Quotes, thoughts, questions, sayings, prayers, miscellanea, loosely organized by topic. Like the <a href="https://en.wikipedia.org/wiki/Commonplace_book">commonplace books</a> of old, these are collage-lists of things considered, sketched, and found along the way.
 ---
 
-<ul class="notebook-list js-masonry" data-masonry-options='{"itemSelector": "li", "gutter": 18}'>
+<ul class="notebook-list">
 
 	{% assign notebooks-list = site.categories.notebooks | sort:'title' %}
 	 {% for notebooks in notebooks-list %}

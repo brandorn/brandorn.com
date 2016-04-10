@@ -70,12 +70,7 @@ nav {
     margin-right: 1.5em;
     margin-top: 16px;
 
-    @media all and (max-width: $break-medium) { margin-top: 14px;}
-
-    @media all and (max-width: $break-small) { 
-      margin-right: 0.7em;
-      margin-top: 10px;
-    }
+    @media all and (max-width: $break-small) { margin: 0.6em; }
 
 // span for filters on bookshelf index
 
