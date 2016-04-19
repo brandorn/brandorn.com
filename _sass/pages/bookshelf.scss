@@ -197,7 +197,8 @@ article.book { }
 	section { 
 		display: inline-block;
 		margin-left: 6%;
-		width: 78%;
+		margin-right: -22%;
+		width: 100%;
 
 		@media all and (max-width: $break-medium) { 
 			margin-left: 0; 
