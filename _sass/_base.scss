@@ -2,9 +2,9 @@
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  font-size: 100%;
+  font-size: 110%;
 
-  @media screen and (min-width: $break-large) { font-size: 110%; }
+  @media screen and (min-width: $break-large) { font-size: 130%; }
 
   @media screen and (max-width: $break-small) { font-size: 96%; }
 
@@ -83,7 +83,7 @@ h4 {
 
 p { 
   font-size: $normal-type;
-  line-height: 150%; 
+  line-height: 170%; 
   margin: 1em 0;
 } 
   
