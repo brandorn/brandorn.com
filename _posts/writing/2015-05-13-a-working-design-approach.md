@@ -13,7 +13,7 @@ That said, I've come to recognize a sequence of phases that loosely constitute a
 
 ---
 
-<figure class="narrow" style="margin: 4em 0 -2em 0">
+<figure style="margin: 4em auto -2em auto; width: 6em;">
 	<img src="img/writing/approach-listen.svg" alt="Illustration of some cards.">
 </figure>
 
@@ -25,7 +25,7 @@ All design begins in listening because design is the forever attempt to improve 
 
 At the outset each design project I seek to inhabit a posture of receptiveness, knowing that past solutions won't fit the unique design problem at hand.
 
-<figure class="narrow" style="margin: 4em 0 -2em 0">
+<figure style="margin: 4em auto -2em auto; width: 6em;">
 	<img src="img/writing/approach-connect.svg" alt="Illustration of connection.">
 </figure>
 
@@ -36,7 +36,7 @@ We make sense of things by connecting: finding the relationships between this an
 My tools for connecting are basic. I like to use paper, pencil, and post-its to take notes, cluster ideas and questions, and freely discuss thoughts with my teammates. Connecting is a relatively messy task (think those cork boards in detective offices covered in pushpinned photos and printouts and sketches), yet the diagrams, notes, summaries, and documents that emerge at the end become the tools of thought for the rest of the design process.
 
 
-<figure class="narrow" style="margin: 4em 0 -2em 0">
+<figure style="margin: 4em auto -2em auto; width: 6em;">
 	<img src="img/writing/approach-design.svg" alt="Illustration of some wireframes.">
 </figure>
 
@@ -49,7 +49,7 @@ By this point data has been gathered, some sense has been made of it, yielding t
 A childlike, playful seriousness is needed to design. Watching children play at dolls or Legos, you notice their all-consuming attentiveness to the activity as they enact what they imagine. They are caught up in their own world of rules and possibilities, inventors of their own conventions. This spirit of play creates in the designer an openness to possible solutions, a kind of intellectual pliability. The first ideas are rarely the best, yet the cutting room floor isn’t covered with trash; it’s covered in something more like a wood-carver’s shavings that are scattered as he hones his art.
 
 
-<figure class="narrow" style="margin: 4em 0 -2em 0">
+<figure style="margin: 4em auto -2em auto; width: 6em;">
 	<img src="img/writing/approach-produce.svg" alt="Illustration of a screen.">
 </figure>
 

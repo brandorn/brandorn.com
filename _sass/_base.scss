@@ -168,14 +168,12 @@ hr {
 }
 
 blockquote {
-  // border-left: 2px solid $faint-grey;
+  border-left: 2px solid $faint-grey;
   color: $grey;
-  font-size: 1.15rem; 
-  font-style: italic;
-  margin: 2em 1em;
+  margin: 2em 0;
   padding: 0 1.5em;
 
-  &:before {
+  /* &:before {
     color: $faint-grey;
     content: "“";
     display: block;
@@ -186,7 +184,7 @@ blockquote {
     position: absolute;
 
     @media all and (max-width: $break-medium) { margin-left: -0.5em; }
-  } 
+  } */
 
   p { 
     margin: 0; 
@@ -209,6 +207,7 @@ cite {
   display: block;
   font-size: 0.9rem;
   font-style: normal;
+  line-height: 160%;
   margin-left: 2em;
   margin-top: 1em;
 
