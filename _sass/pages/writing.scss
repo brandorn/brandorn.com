@@ -59,9 +59,11 @@
 
 .year-posts {
 	border-top: 1px solid $faint-grey;
+	margin-left: -7em;
 	margin-top: 1em;
+	padding-left: 7em;
 
-	@media screen and (max-width: $break-small) { border-top: none; }
+	@media screen and (max-width: $break-medium) { border-top: none; }
 
 	&:nth-child(1) { margin-top: 2.5em; }
   
@@ -69,12 +71,11 @@
  		background: #fff;
  		color: $light-grey;
  		font-size: $small-type;
- 		margin-top: -.6em;
- 		margin-left: -4em;
- 		padding-right: 1em;
+ 		margin-top: 1.8em;
+ 		margin-left: -8.5em;
  		position: absolute;
 
- 		@media screen and (max-width: $break-small) { display: none; }
+ 		@media screen and (max-width: $break-medium) { display: none; }
  	}
   
   ul { 
@@ -112,7 +113,7 @@
 	    	float: right; 
 	    	font-family: $sans-serif;
 	    	font-size: $small-type;
-	    	margin-top: 0.5em;
+	    	margin-top: 0.2em;
 	    	// text-decoration: none;
 	    }
 	  }

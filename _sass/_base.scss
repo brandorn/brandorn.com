@@ -4,7 +4,7 @@ html {
   box-sizing: border-box;
   font-size: 110%;
 
-  @media screen and (min-width: $break-large) { font-size: 130%; }
+  @media screen and (min-width: $break-large) { font-size: 122%; }
 
   @media screen and (max-width: $break-small) { font-size: 96%; }
 
@@ -170,6 +170,7 @@ hr {
 blockquote {
   border-left: 2px solid $faint-grey;
   color: $grey;
+  font-size: 1rem;
   margin: 2em 0;
   padding: 0 1.5em;
 
