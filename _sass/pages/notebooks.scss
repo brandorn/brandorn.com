@@ -48,7 +48,7 @@
         text-align: center;
         margin: 0;
 
-        &:first-of-type:before { 
+        /*&:first-of-type:before { 
           content: "📓";
           font-size: 1rem;
           margin-left: -1.5em;
@@ -56,7 +56,7 @@
           opacity: 0.3;
           position: absolute; 
           transition: all 200ms;
-        }
+        }*/
 
         @media all and (max-width: $break-small) { text-align: left; }
 
