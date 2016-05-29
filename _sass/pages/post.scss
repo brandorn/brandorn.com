@@ -19,7 +19,48 @@
 
 }
 
-.asided {
+  /*p { text-indent: 1em; }*/
+  
+  // New aside pattern – follows image layout styling
+
+  aside {
+    float: right;
+    margin: 1em -35% 1em 5%;
+    width: 50%; 
+
+    @media screen and (min-width: $break-large - 100px) { margin-right: -50%; }
+
+    @media screen and (max-width: $break-medium) {
+      margin-right: -10%;
+      width: 40%;
+    }
+
+    @media screen and (max-width: $break-small) {
+      float: none;
+      width: 100%;
+      margin: 2em 0;
+    }
+
+    p {
+      color: $grey;
+      font-family: $sans-serif;
+      font-size: $small-type;
+    }
+
+    figure {
+      margin: 1em auto;
+
+      img {
+        max-height: 200px;
+        margin: 0 auto;
+        width: auto;
+      }
+    }
+  }
+
+  /* Old aside pattern
+
+  .asided {
   white-space: nowrap;
   overflow: visible;
   
@@ -29,44 +70,43 @@
     white-space: normal;
   }
 
-  /*p { text-indent: 1em; }*/
-  
-  aside {
-    color: $grey;
-    font-family: $sans-serif;
-    font-size: $small-type;
-    height: 0;
-    line-height: 160%;
-    margin: 1em 0 0 6%;
-    width: 36%;
-
-    p { // For asides w/ images included
+    aside {
       color: $grey;
       font-family: $sans-serif;
       font-size: $small-type;
+      height: 0;
       line-height: 160%;
-      margin: 0.5em 0;
-    }
+      margin: 1em 0 0 6%;
+      width: 36%;
 
-      figure a,
-      figure img { 
-        display: block;
-        margin: 0 auto;
-        max-width: 300px; 
+      p { // For asides w/ images included
+        color: $grey;
+        font-family: $sans-serif;
+        font-size: $small-type;
+        line-height: 160%;
+        margin: 0.5em 0;
       }
 
-    @media all and (min-width: 1460px) { margin-left: 10%; }
+        figure a,
+        figure img { 
+          display: block;
+          margin: 0 auto;
+          max-width: 300px; 
+        }
 
-    @media all and (max-width: $break-medium) {
-      display: block;
-      height: auto;
-      margin: 0 2em 2em 2em;
-      width: auto;
-    }
+      @media all and (min-width: 1460px) { margin-left: 10%; }
+
+      @media all and (max-width: $break-medium) {
+        display: block;
+        height: auto;
+        margin: 0 2em 2em 2em;
+        width: auto;
+      }
+  
   }
   
-  /* &.first > p { text-indent: 0; } */
-}
+  &.first > p { text-indent: 0; }
+} */
 
 .post-end {
 

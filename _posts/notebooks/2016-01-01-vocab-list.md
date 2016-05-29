@@ -8,6 +8,12 @@ description:
 ---
 
 <figure>
+	<img src="img/notebooks/vocab-list/cant.png" alt="Cant: hypocritical and sanctimonious talk, typically of a religious or political nature.">
+</figure>
+
+---
+
+<figure>
 	<img src="img/notebooks/vocab-list/congeries.png" alt="Congeries: a disorderly collection; a jumble.">
 </figure>
 

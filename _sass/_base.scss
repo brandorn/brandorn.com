@@ -18,22 +18,25 @@ body {
   font-family: $serif;
   font-size: 100%;
   margin: 0 auto 1em auto;
-  max-width: 800px;
-  min-width: 720px;
+  max-width: 860px;
+  min-width: $break-small;
   overflow: scroll;
   padding: 0 6em;
   position: relative;
-  width: $main-width-large;
+  width: 80%;
 
   @media screen and (min-width: $break-large) { max-width: 960px; }
 
   @media screen and (max-width: $break-medium) { 
-    padding: 0 4em;
-    min-width: $break-small;
+    padding: 0 2em; 
+    min-width: 0; 
+    max-width: $break-small;
+    width: 90%;
   }
 
   @media screen and (max-width: $break-small) { 
     min-width: inherit;
+    max-width: 520px;
     padding: 0 2em; 
     width: auto;
   }
@@ -168,10 +171,10 @@ hr {
 }
 
 blockquote {
-  border-left: 2px solid $faint-grey;
+  // border-left: 2px solid $faint-grey;
   color: $grey;
   font-size: 1rem;
-  margin: 2em 0;
+  margin: 2em 1em;
   padding: 0 1.5em;
 
   /* &:before {

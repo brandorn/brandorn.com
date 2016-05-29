@@ -20,17 +20,13 @@ $green: #23AD63;
 .transition { transition: all 150ms; }
 
 
-/* Device sizing variables
+/* Breakpoints
    ================================ */
 
 $break-large: 1281px;
 $break-medium: 960px;
-$break-small: 540px;
+$break-small: 640px;
 $break-tiny: 440px;
-
-$main-width-large: 70%;
-$main-width-medium: 86%;
-
 
 
 /* Sass partials (from _sass)

@@ -11,19 +11,18 @@ location: Bloomington
   <img src="img/ux-and-the-la/intro.png" alt="UX and the Liberal Arts">
 </figure>
 
-<div class="asided first">
-	<p class="intro">A presentation given to undergraduates at my alma mater, to make the case why liberal arts students make excellent user experience designers. <sup>1</sup> The idea for the presentation came in part from Steve Jobs' <a href="https://www.youtube.com/watch?v=KlI1MR-qNt8">conviction</a> that "Technology alone is not enough...it’s technology married with liberal arts, married with the humanities, that yields us the result that makes our heart’s sing."</p>
+<aside> 
+  <p><sup>1</sup> For the sake of simplicity, and to avoid delving into disciplinary turf wars, I simplified the work of user experience design into information architecture, user research, and interaction design.</p>
+  <p>This handout accompanied the presentation:</p>
+  <figure>
+      <a href="img/ux-and-the-la/handout.pdf"><img src="img/ux-and-the-la/handout.png" alt="PDF handout from the preso."></a>
+  </figure>
+</aside>
 
-	<aside> 
-		<p><sup>1</sup> For the sake of simplicity, and to avoid delving into disciplinary turf wars, I simplified the work of user experience design into information architecture, user research, and interaction design.</p>
+<p class="intro">A presentation given to undergraduates at my alma mater, to make the case why liberal arts students make excellent user experience designers. <sup>1</sup> The idea for the presentation came in part from Steve Jobs' <a href="https://www.youtube.com/watch?v=KlI1MR-qNt8">conviction</a> that "Technology alone is not enough...it’s technology married with liberal arts, married with the humanities, that yields us the result that makes our heart’s sing."</p>
 
-		<p>This handout accompanied the presentation:</p>
 
-		<figure>
-			<a href="img/ux-and-the-la/handout.pdf"><img src="img/ux-and-the-la/handout.png" alt="PDF handout from the preso."></a>
-		</figure>
-	</aside>
-</div>
+
 
 
 Hi everyone. Thanks for coming tonight, and thanks to Robyn and Warren for the chance to speak.
@@ -97,13 +96,11 @@ All of the websites I mentioned - the Spotifys and Etsys - have UX design teams 
 
 Briefly defined, *UX is the attempt to make digital products make sense*. If something about a product is confusing to someone, a UX designer assumes fault in the design and not in the person.
 
-<div class="asided">
-  <p> Think about it this way: We all make things. Maybe may sew a hat for a friend, or write an essay for a class, or make a sandwich in Saga <sup>2</sup>. Every single thing we make has an interface. A book has a page, a hammer has a handle, a sandwich has two pieces of bread. These planes — interfaces — are how we interact with the thing. How we make it do our bidding. You read and turn a page, swing a hammer, hold a sandwich. </p>
+<aside> 
+    <p><sup>2</sup> Nickname for the IWU cafeteria, hearkening back to the food supplier for much of the 20th century.</p>
+</aside>
 
-  <aside> 
-    <p><sup>2</sup> Nickname for the IWU cafeteria, harkening back to the food supplier for much of the 20th century.</p>
-  </aside>
-</div>
+<p> Think about it this way: We all make things. Maybe may sew a hat for a friend, or write an essay for a class, or make a sandwich in Saga <sup>2</sup>. Every single thing we make has an interface. A book has a page, a hammer has a handle, a sandwich has two pieces of bread. These planes — interfaces — are how we interact with the thing. How we make it do our bidding. You read and turn a page, swing a hammer, hold a sandwich. </p>
 
 <figure class="to-the-left">
   <img src="img/ux-and-the-la/sandwich.png" alt="Yours truly, holding a sandwich.">
