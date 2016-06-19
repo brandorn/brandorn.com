@@ -30,6 +30,7 @@ $book-height-medium: 164px;
 
 
 .book-filter {
+	display: none;
 
 	li { 
 		display: block;
@@ -52,10 +53,10 @@ $book-height-medium: 164px;
 	display: inline-block;
 	margin-bottom: 7em;
 	vertical-align: top;
-	width: 140%;
+	width: 130%;
 
 	@media all and (max-width: $break-medium) {	
-		margin: 2em -10%;
+		margin: 2em 0 2em -12%;
 		width: 130%;
 	}
 
@@ -196,8 +197,7 @@ article.book { }
 	section { 
 		display: inline-block;
 		margin-left: 6%;
-		margin-right: -22%;
-		width: 100%;
+		width: 78%;
 
 		@media all and (max-width: $break-medium) { 
 			margin-left: 0; 
