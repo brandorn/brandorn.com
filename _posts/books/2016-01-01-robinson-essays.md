@@ -11,9 +11,9 @@ cover: robinson-essays.png
 worldcat: https://www.worldcat.org/title/when-i-was-a-child-i-read-books/oclc/740628822
 ---
 
-I first read Marilynne Robinson's fiction, was enthralled, then found out that she writes essays. Long, impassioned essays that excavate the depths of her broad interests. Hers are essays in the truest sense: the patient, critical testing of ideas (her own and others') in search of the truth of things. But as in her fiction, the seriousness of her subject matter – democracy, American history, theology, the prevalance of fear and cynicism in society, nuclear waste – is handled with wry sincerity as she disassembles conventional wisdom ("Everything always bears looking into") or reflects on the contradictions and wonder of being human.
+I was enthralled by Marilynne Robinson's fiction, and then found out that she writes essays. Lucid, impassioned essays about things like democracy, American history, theology, the prevalance of fear and cynicism in society, and nuclear waste. Hers are essays in the truest sense: the patient, critical testing of ideas (her own and others') in search of the truth of things. But as in her fiction, the seriousness of her subject matter is handled with wry sincerity as she disassembles conventional wisdom ("Everything always bears looking into") or reflects on the contradictions and wonder of being human.
 
-Reading Robinson's essays reveal the maturation of a profound curiosity and generous faith, and show that literacy can be developed and espoused (she's an inveterate reader of primary sources) free of pretension. These collections are a celebration of the mind, and we are as astonished at her insight as she is. I recommend all of them. Each book is as expansive and original as the rest. Hopefully there are more to come.
+Robinson's essays reveal the maturation of an enduring curiosity and generous faith, and show that literacy can be developed (she's an inveterate reader of primary sources) free of pretension. These collections are a celebration of the mind, and we are as astonished at her insight as she is. I recommend all of them. Each book is as expansive and original as the rest. Hopefully there are more to come.
 
 <blockquote>
 	<p>Science can give us knowledge, but it cannot give us wisdom. Nor can religion, until it puts aside nonsense and distraction and becomes itself again.</p>
