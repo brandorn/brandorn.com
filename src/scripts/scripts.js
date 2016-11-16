@@ -8,7 +8,9 @@ var quotes = [
   { quote: "I feel sometimes as if I were a child who opens its eyes on the world once and sees amazing things it will never know any names for and then has to close its eyes again.", author: "Marilynne Robinson", source: "Gilead"},
   { quote: "Ask questions. Find out what has been going on all these years before you were born.", author: "Deuteronomy 4.32", source: "The Message"},
   { quote: "You mustn’t wish for another life. You mustn’t want to be somebody else. What you must do is this: ‘Rejoice evermore. Pray without ceasing. In everything give thanks.’ I am not all the way capable of so much, but those are the right instructions.", author: "Wendell Berry", source: "Hannah Coulter"},
-   { quote: "I cannot find language of sufficient energy to convey my sense of the sacredness of private integrity.", author: "Emerson", source: "Lecture on the Times"}
+   { quote: "I cannot find language of sufficient energy to convey my sense of the sacredness of private integrity.", author: "Emerson", source: "Lecture on the Times"},
+   { quote: "Introverts are collectors of thoughts, and solitude is where the collection is curated and rearranged to make sense of the present and future.", author: "Laurie Helgoe", source: "Revenge of the Introverts"}
+
 ],  i = 0,
     blockquote = document.getElementById('quote'),
     quoteContent = document.getElementById('quote-content'),
