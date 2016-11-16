@@ -1,0 +1,104 @@
+h1{
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin-bottom: 1.8em;
+
+  &::after {
+    background-image: url(/img/bd-logo-2.svg);
+    background-position: 50%;
+    background-size: 38px;
+    content: "";
+    display: inline-block;
+    height: 36px;
+    float: right;
+    width: 38px;
+    margin-top: -8px;
+  }
+}
+
+.landing-container {
+  border-top: 1px solid $color-secondary;
+  margin: 14vh 10vw;
+  max-width: 400px;
+  padding: 1em 0;
+  
+  @media all and (max-width: 600px){
+    margin: 20vh 1.5em;
+  }
+}
+
+blockquote {
+  color: rgba(40, 55, 59, .8);
+  font-family: Georgia, serif;
+  margin: 1.5em 0 0 0;
+  min-height: 140px;
+  opacity: 1; 
+  transition: all 0.5s;
+  
+  &.hide { opacity: 0; }
+  
+  p {
+    border-left: 1px solid $color-secondary;
+    font-size: $normal-type;
+    line-height: 160%;
+    padding-left: 1em;
+  }
+  
+  cite { 
+    font-size: $normal-type; 
+  }
+  #quote-author { font-style: normal; }
+  #quote-source { font-style: italic; }
+  
+  
+}
+
+.buttons {  
+  padding-left: 0;
+  
+  li { 
+    display: inline-block;
+    list-style-type: none;
+  }
+  
+  div {
+    background: transparent;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    display: inline-block;  
+    height: 36px;
+    transition: all 0.3s;
+    width: 36px;
+    
+    &::before {
+      border-style: solid;
+      border-width: 2px 2px 0 0;
+      content: '';
+      display: table;
+      height: 8px;
+      left: 14px;
+      position: relative;
+      top: 13px;
+      transform: rotate(-135deg);
+      vertical-align: top;
+      width: 8px;
+    }
+  
+    &:hover { 
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(40, 55, 59, 0.1);
+      box-shadow: 0px 2px 3px 0px rgba(40, 55, 59, 0.1);
+      cursor: pointer;
+    }
+  }
+  
+  #next-button {
+  
+    margin-left: 4px;
+    
+    &::before { 
+      left: 11px;
+      transform: rotate(45deg); 
+    }
+  }
+}

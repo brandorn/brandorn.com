@@ -20,7 +20,7 @@
 	h2 { 
 		color: $grey;
 		font-family: $sans-serif;
-		font-size: $medium-type;
+		font-size: $normal-type;
 		margin: 0 0 4em 0;
 		text-indent: 0;
 	}
@@ -44,7 +44,7 @@
 	margin-top: -7em;
 	
 	a {
-		border: 1px solid $primary-color;
+		border: 1px solid $color-primary;
 		border-radius: 2px;
 		padding: 0.8em 1.5em;
 		@extend .transition;
@@ -52,16 +52,16 @@
 
 	a:link,
 	a:visited { 
-		color: $primary-color;
+		color: $color-primary;
 		text-decoration: none; 
 	}
 
 	a:hover {
-		background: lighten($primary-color, 52%);
+		background: lighten($color-primary, 52%);
 		@extend .transition;
 	}
 
-	a:active { background: lighten($primary-color, 50%);}
+	a:active { background: lighten($color-primary, 50%);}
 
 	@media screen and (max-width: $break-small) {    
 		display: block;

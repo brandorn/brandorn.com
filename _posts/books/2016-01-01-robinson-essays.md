@@ -13,7 +13,7 @@ worldcat: https://www.worldcat.org/title/when-i-was-a-child-i-read-books/oclc/74
 
 I was enthralled by Marilynne Robinson's fiction, and then found out that she writes essays. Lucid, impassioned essays about things like democracy, American history, theology, the prevalance of fear and cynicism in society, and nuclear waste. Hers are essays in the truest sense: the patient, critical testing of ideas (her own and others') in search of the truth of things. But as in her fiction, the seriousness of her subject matter is handled with wry sincerity as she disassembles conventional wisdom ("Everything always bears looking into") or reflects on the contradictions and wonder of being human.
 
-Robinson's essays reveal the maturation of an enduring curiosity and generous faith, and show that literacy can be developed (she's an inveterate reader of primary sources) free of pretension. These collections are a celebration of the mind, and we are as astonished at her insight as she is. I recommend all of them. Each book is as expansive and original as the rest. Hopefully there are more to come.
+Robinson's essays reveal the maturation of an enduring curiosity and generous faith (she's an inveterate reader of primary sources and encourages others to do the same), and show that literacy can be developed free of pretension. These collections are a celebration of the mind, and we are as astonished at her insight as she is. I recommend all of them. Each book is as expansive and original as the rest. Hopefully there are more to come.
 
 <blockquote>
 	<p>Science can give us knowledge, but it cannot give us wisdom. Nor can religion, until it puts aside nonsense and distraction and becomes itself again.</p>

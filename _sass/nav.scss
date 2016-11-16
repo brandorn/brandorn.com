@@ -64,7 +64,7 @@ nav {
   
   li { 
     display: inline-block; 
-    font-size: $medium-type; 
+    font-size: $normal-type; 
     letter-spacing: -0.01em;
     text-transform: capitalize;
     margin-right: 1.5em;
@@ -83,7 +83,7 @@ nav {
     a:visited,
     span { 
       border-bottom: 2px solid transparent;
-      color: $primary-color; 
+      color: $color-primary; 
       padding-bottom: 0.3em;
       text-decoration: none;
     }
@@ -91,15 +91,15 @@ nav {
     a:hover, 
     a:active,
     span:hover {
-      color: $primary-color; 
+      color: $color-primary; 
       cursor: pointer;
-      border-bottom: 2px solid $primary-color;
+      border-bottom: 2px solid $color-primary;
     }
 
     &.active a,
     &.active span { 
       font-weight: bold; 
-      border-bottom: 2px solid $primary-color;
+      border-bottom: 2px solid $color-primary;
     }
   }
 

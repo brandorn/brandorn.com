@@ -1,7 +1,7 @@
 /* Serif
    ================================ */
 
-@font-face {
+/* @font-face {
     src: url(../src/fonts/mate.ttf);
     font-family: 'Mate';
     font-weight: normal;
@@ -12,9 +12,9 @@
     font-family: 'Mate';
     font-style: italic;
     font-weight: normal;
-}
+} */
 
-$serif: "Mate", Georgia, serif;
+$serif: Georgia, serif;
 .serif { font-family: $serif; }
 
 
@@ -28,9 +28,9 @@ $sans-serif: BlinkMacSystemFont,"Helvetica","Arial",sans-serif;
 /* Font sizes
    ================================ */
 
-$normal-type: 1.05rem;
-$medium-type: 0.85rem;
-$small-type: 0.8rem;
+$large-type: 1.1rem;
+$normal-type: 0.8rem;
+$small-type: 0.7rem;
 
-.medium-type { font-size: $medium-type; }
+.normal-type { font-size: $normal-type; }
 .small-type { font-size: $small-type; }

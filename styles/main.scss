@@ -6,7 +6,9 @@
 /* Color variables
    ================================ */
 
-$primary-color: #db240d;
+$color-primary: rgba(40, 55, 59, 1);
+$color-secondary: rgba(40, 55, 59, 0.2);
+
 
 $dark-grey: hsla(0, 0%, 14%, 1);
 $grey: hsla(0, 0%, 40%, 1);
@@ -43,5 +45,5 @@ $break-tiny: 440px;
   "pages/bookshelf.scss",
   "pages/about.scss",
   "pages/post.scss",
-  "pages/longform.scss"
+  "pages/landing.scss"
 ;

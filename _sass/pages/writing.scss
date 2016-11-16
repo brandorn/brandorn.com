@@ -95,12 +95,12 @@
   		&:visited { color: $grey; }
 
   		&:hover { 
-  			color: $primary-color; 
+  			color: $color-primary; 
 
   			.date { color: $grey; }
   		}
 
-  		&:active { color: darken($primary-color, 10%); }
+  		&:active { color: darken($color-primary, 10%); }
   	}
 
 	  p { 
