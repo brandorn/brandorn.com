@@ -1,0 +1,20 @@
+---
+layout: index
+active: fragments
+title: Fragments
+description: This is the description
+---
+
+<p class="fragments-list">
+
+	{% for fragments in site.categories.fragments %}
+	<a href="{{ fragments.url }}" title="">
+		<span>
+			{% if fragments.thumb %} <img src="/img/fragments/{{ fragments.thumb }}" alt="">{% else %}{% endif %}
+			<cite>{{ fragments.date | date: "%d %b %Y" }}</cite> 
+			{{ fragments.title }} 
+		</span>
+	</a>
+	{% endfor %}
+
+</p>

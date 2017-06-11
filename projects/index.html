@@ -1,0 +1,25 @@
+---
+layout: index
+active: 
+- projects
+- index
+title: Projects
+description: This is the description
+---
+
+<ul class="project-list">
+
+{% assign project-list = site.categories.projects | sort:'title' %}
+ {% for projects in project-list %}
+  <li>
+    <a href="{{ projects.url }}">
+      <img src="/img/projects/{{ projects.thumb }}" alt="" />
+	     <div class="meta">
+	     	<p class="title">{{ projects.title }}</p>
+	      <p class="description">{{ projects.description }}</p>
+	     </div>
+    </a>
+  </li>
+  {% endfor %}
+
+</ul>

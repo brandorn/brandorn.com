@@ -1,36 +1,71 @@
-/* Serif
-   ================================ */
+/* ====== Fonts ====== */
 
-/* @font-face {
-    src: url(../src/fonts/mate.ttf);
-    font-family: 'Mate';
-    font-weight: normal;
+/* === Serif === */
+
+@font-face {
+  src: url(../src/fonts/Vollkorn-Semibold.otf);
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: medium;
 }
 
 @font-face {
-    src: url(../src/fonts/mate-italic.ttf);
-    font-family: 'Mate';
-    font-style: italic;
-    font-weight: normal;
-} */
+  src: url(../src/fonts/Vollkorn-SemiboldItalic.otf);
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: medium;
+}
 
-$serif: Georgia, serif;
+@font-face {
+  src: url(../src/fonts/Vollkorn-Regular.otf);
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  src: url(../src/fonts/Vollkorn-Italic.otf);
+  font-family: 'Vollkorn';
+  font-style: italic;
+  font-weight: normal;
+} 
+
+$serif: "Vollkorn", Georgia, serif;
 .serif { font-family: $serif; }
 
 
-/* Sans-serif
-   ================================ */
+/* === Sans-serif === */
 
-$sans-serif: BlinkMacSystemFont,"Helvetica","Arial",sans-serif;
+@font-face {
+  src: local(HelveticaNeueMedium),
+  url(../src/fonts/Helvetica-Neue-MediumItalic.ttf);
+  font-family: 'Helvetica Neue Medium';
+  font-style: italic;
+  font-weight: 500;
+}
+
+@font-face {
+  src: local(HelveticaNeueMedium),
+  url(../src/fonts/Helvetica-Neue-Medium.ttf);
+  font-family: 'Helvetica Neue Medium';
+  font-style: normal;
+  font-weight: 500;
+}
+
+$sans-serif: "Helvetica Neue Medium", "Helvetica Neue", "Helvetica","Arial",sans-serif;
 .sans-serif { font-family: $sans-serif; }
 
 
 /* Font sizes
    ================================ */
 
-$large-type: 1.1rem;
-$normal-type: 0.8rem;
-$small-type: 0.7rem;
+/* Get rid of "$type-normal" and others, replace across files */
 
-.normal-type { font-size: $normal-type; }
-.small-type { font-size: $small-type; }
+$type-largest: 1.7em;
+$type-large: 1.2em;
+$type-normal: 1em;
+$type-small: 0.8em;
+
+.type-large { font-size: $type-large; }
+.type-normal { font-size: $type-normal; }
+.type-small { font-size: $type-small; }

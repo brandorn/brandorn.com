@@ -1,12 +1,10 @@
 .primary { color: $color-primary; }
 
-.green { color: $green; }
-
 .left { float: left; }
 
 .right { float: right; }
 
-.center {
+.centered {
   display: block;
   margin: 0 auto;
 }

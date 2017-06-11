@@ -1,151 +1,295 @@
-/* Primary nav
-   ================================ */
+/* === Primary nav (desktop) === */
 
-nav {
-  cursor: default;
-  display: flex;
-  height: auto;
-  flex-direction: row;
-  flex-flow: row wrap;
+$timing-function: cubic-bezier(.4,0,.2,1);
+
+#nav {
   font-family: $sans-serif;
-  margin-top: 1.5em;
-}
+  margin: 10px auto 60px auto;
 
-.logo {
-  margin-left: -142px;
-  position: absolute;
+  @media all and (max-width: $break-medium) { width: auto; }
 
-  @media screen and (max-width: $break-medium) { 
-    display: inline-block;
-    margin-left: 0;
-    margin-right: 2em;
-    position: inherit;
+  @media all and (max-width: $break-small) {
+    border-bottom: 1px solid $light-grey;
+    padding-bottom: 20px;
   }
-
-  @media screen and (max-width: $break-tiny) { 
-    display: block;
-    margin: 0 auto 1em auto; 
-  }
-  
-  a { 
-    background: url('/img/bd-logo.svg');
-    background-position: 50%;
-    background-size: 50px;
-    border: none;
-    display: block; 
-    height: 50px;
-    width: 40px;
-
-    @media screen and (min-width: $break-large) { 
-      background-size: 56px; 
-      height: 56px;
-      width: 46px; // Check dis
-    }
-
-    @media screen and (max-width: $break-small) { 
-      background-size: 42px; 
-      height: 42px;
-      width: 34px;
-    }
-  }
-
-}
-
-.nav-links { 
-  margin: 0;
 
   @media all and (max-width: $break-tiny) {
-    display: block;
-    text-align: center;
-    width: 100%;
-  }
-  
-  ul { padding: 0; }
-  
-  li { 
-    display: inline-block; 
-    font-size: $normal-type; 
-    letter-spacing: -0.01em;
-    text-transform: capitalize;
-    margin-right: 1.5em;
-    margin-top: 0.7em;
+    background: white;
+    bottom: 0;
+    margin: 0;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 0;
+    transition: all $transition-fade;
+    transition-timing-function: $timing-function;
+    transform: translateX(-241px);
+    width: 180px;
+    z-index: 3;
+    -webkit-overflow-scrolling: touch;
 
-    &:nth-last-child(1) { margin-right: 0; }
+    &:after {
+      content: "";
+      background-image: url(/img/bd-logo.svg);
+      bottom: 32px;
+      display: block;
+      height: 42px;
+      left: 28px;
+      position: absolute;
+      width: 40px;
+    }
+
+    &.visible { 
+      margin-left: -20px;
+      transform: translateX(0); 
+    }
+  } // $break-tiny
+
+  .home {
+    border-bottom: none;
+    padding: 14px 0;
+    position: absolute;
+
+    @media all and (max-width: 860px) { 
+      display: inline-block; 
+      margin-right: 32px;
+      position: initial;
+    }
 
     @media all and (max-width: $break-small) { 
-      font-size: 0.88em;
-      margin: 0.6em; 
+      display: block;
+      margin-right: 0;
+      padding: 14px 0 8px 0;
+      text-align: center;
     }
 
-// span for filters on bookshelf index
-
-    a:link,
-    a:visited,
-    span { 
-      border-bottom: 2px solid transparent;
-      color: $color-primary; 
-      padding-bottom: 0.3em;
-      text-decoration: none;
+    @media all and (max-width: $break-tiny) { 
+      border-bottom: 2px solid $faint-grey;
+      display: block;
+      padding: 16px 32px;
+      margin: 0 0 12px 0;
+      text-align: left;
     }
 
-    a:hover, 
-    a:active,
-    span:hover {
-      color: $color-primary; 
-      cursor: pointer;
-      border-bottom: 2px solid $color-primary;
+    h1 { 
+      font-size: $type-normal;
+      font-weight: 500;
+      margin: 0; 
+
+      &:hover,
+      &:active { color: $color-accent; }
+    }
+  } // .home
+
+  ul.page-links {
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: $container-width;
+    padding: 0;
+    vertical-align: top;
+
+    @media all and (max-width: 860px) { display: inline-block; }
+
+    @media all and (max-width: $break-small) { 
+      display: block; 
+      text-align: center;
+    } 
+
+    @media all and (max-width: $break-tiny) { text-align: left; }
+    
+    li { 
+      display: inline-block;
+      font-size: $type-small; 
+      font-weight: 500;
+      margin: 0;
+      padding: 0 16px;
+      text-transform: capitalize;
+
+      &:nth-child(1) { padding-left: 0; }
+
+      @media all and (max-width: $break-small) { padding: 0 9px; }
+
+      @media all and (max-width: $break-tiny) { 
+        display: block; 
+        padding: 0;
+      }
+
+      a {
+        &:link,
+        &:visited { 
+          border-bottom: none;
+          color: $color-tertiary; 
+          display: block;
+          padding: 14px 0 10px 0;
+          text-decoration: none;
+
+          @media all and (max-width: $break-small) { padding: 4px 0 12px 0; }
+
+          @media all and (max-width: $break-tiny) { 
+            font-size: 14px;
+            padding: 12px 32px; 
+          }
+        }
+
+        &:hover, 
+        &:active { color: $color-primary; }
+      }
+
+      &.active {
+        a { color: $color-primary; }
+      }
+    } // ul.page-links li
+  } // ul.page-links
+} // #nav
+
+
+/* === Primary nav (mobile) === */
+
+nav.narrow {
+  display: none;
+
+  @media all and (max-width: $break-tiny) { display: block }
+
+  #nav-reveal {
+    border-bottom: none;
+    display: none;
+    margin-left: -20px;
+    padding: 20px 16px 20px 20px;
+
+    @media all and (max-width: $break-tiny) { display: inline-block; }
+
+    div {
+      background-color: $color-tertiary;
+      height: 2px;
+      margin-bottom: 3px;
+      width: 16px;
     }
 
-    &.active a,
-    &.active span { 
-      font-weight: bold; 
-      border-bottom: 2px solid $color-primary;
+    &:hover div,
+    &:active div { background-color: $color-tertiary;}
+  }
+
+  .home {
+    border-bottom: none;
+    display: inline-block;
+    vertical-align: top;
+
+    h1 { 
+      font-size: 15px; 
+      font-weight: 500;
+      line-height: 100%;
+      margin: 19px 0;
     }
   }
 
+  .page-type {
+    color: $color-tertiary;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 100%;
+    margin: 19px 26px;
+    vertical-align: top;
+
+    &::before { 
+      background-color: $color-tertiary;
+      content: ""; 
+      display: block;
+      height: 2px;
+      margin: 7px 0 0 -26px;
+      padding: 0 6px;
+      position: absolute;
+      width: 20px;
+    }
+  }
 }
 
-/* Footer nav
-   ================================ */
+
+
+/* === Nav scrim (mobile) === */
+
+#nav-scrim {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,.5);
+  left: 0;
+  top: 0;
+  opacity: .1;
+  visibility: hidden;
+  z-index: 2;
+  transition: all $transition-fade $timing-function;
+  transform: translateZ(0);
+
+  &.visible {
+    transition-delay: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+/* === Footer === */
 
 footer {
-  border-top: 1px solid $faint-grey;
-  clear: both;
-  margin-top: 7em;
-  padding: 1em 0;
-  margin-bottom: 1em;
+  margin: 140px auto 70px auto;
+  // width: $container-width;
 
-  .footer-links li,
-  .name {
-    color: $light-grey;
+  p {
+    color: $color-tertiary;
     display: inline-block;
-    font-family: $sans-serif;
-    font-size: $small-type;
-    margin: 0 0 1em 0;
+    font-size: $type-small;
 
-    a:link,
-    a:visited { color: $light-grey; }
+    /* &:before {
+      content: "";
+      background-image: url(/img/bd-logo.svg);
+      bottom: 24px;
+      display: block;
+      height: 42px;
+      width: 40px;
 
-    a:active,
-    a:hover { color: $grey; }
+      @media all and (max-width: $break-small) { right: 20px; }
+
+      @media all and (max-width: $break-tiny) { display: none; }
+    } */
   }
 
-  .footer-links {
+  .social-links {
+    display: inline-block;
     float: right;
+    margin-top: -10px;
 
     li {
       display: inline-block;
-      margin: 0;
 
-      &:nth-last-child(n+2) { margin-right: 1.4em; }
+      &.twitter a { background-image: url(/img/icon-twitter.svg) }
+
+      &.insta a { background-image: url(/img/icon-insta.svg) }
+
+      &.email a { background-image: url(/img/icon-email.svg) }
+
+      a {
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        display: block;
+        height: 16px;
+        margin: 0 8px;
+        opacity: .4;
+        padding: 12px;
+        width: 20px;
+
+        &:link { border-bottom: none; }
+        &:hover { opacity: 1; }
+      }
     }
+  } // .social-links
+
+  .return {
+    background-image: url(/img/bd-logo.svg);
+    border-bottom: none;
+    display: block;
+    margin: 0 auto;
+    height: 42px;
+    width: 40px;
   }
 
-  @media screen and (max-width: $break-small) { 
-    text-align: center; 
-
-    .footer-links { 
-      display: block;
-      float: none; }
-  }
-}
+} // footer

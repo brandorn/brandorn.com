@@ -1,60 +1,13 @@
 ---
 layout: default
-active: 
 title: Brandon Dorn
-description: 
-custom_js:
-- jquery-1.11.1.min
-- scripts
+description: Description
 ---
 
-
-<div class="landing-container">
-  
-  <h1>Brandon Dorn</h1>
-
-  <p>I'm an information architect at <a href="http://viget.com">Viget</a>, where I work on the research and design of digital products. I studied English Literature and Economics, but mostly I’ve been influenced by Lego instruction manuals and Shel Silverstein poems.
- 
-  <p>I live in Durham with my wife, BethAnne, where I spend my free time in books and forests, sometimes in both. Sometimes I use <a href="http://twitter.com/brandorn">Twitter</a>, though <a href="mailto:brandon.s.dorn@gmail.com?Subject=Howdy">email</a> is the best way to reach me.</p>
-  
-  <p>Lastly, here are some words that have been on my mind:</p>
-
-  <blockquote id="quote">
-    <p id="quote-content"></p>
-    <cite><span id="quote-author"></span>, <span id="quote-source"></span></cite>
-  </blockquote>
-  
-  <ul class="buttons">
-    <li><div id="prev-button"></div></li>
-    <li><div id="next-button"></div></li>
-  </ul>
-
+<div class="home">
+	
+	<p>In every important way we are such secrets from one another, and I do believe that there is a separate language in each of us, also a separate aesthetics and a separate jurisprudence. Every single one of us is a little civilization built on the ruins of any number of preceding civilizations, but with our own variant notions of what is beautiful and what is acceptable - which, I hasten to add, we generally do not satisfy and by which we struggle to live. We take fortuitous resemblances among us to be actual likeness, because those around us have also fallen heir to the same customs, trade in the same coin, acknowledge, more or less, the same notions of decency and sanity. But all that really just allows us to coexist with the inviolable, intraversable, and utterly vast spaces between us.
+	<cite>Marilynne Robinson, <i>Gilead</i></cite>
+	</p>
+	
 </div>
-
-<!--
-
-<div class="posts">
-	{% for writing in site.categories.writing %}
-		{% assign year = writing.date | date: "%Y" %}
-		
-		{% if year != date %}
-		{% unless forloop.first %}</div>{% endunless %}
-		
-		<div class="year-posts">
-			<h2>{{ year }}</h2>
-			
-			<ul>
-				{% assign date = year %}
-				{% endif %}
-		
-			<li>
-					<a href="{{ writing.url }}">
-						<p>{{ writing.title }}</p>
-						<p class="date">{{ writing.date | date: "%b %Y" }}</p>
-					</a>
-			</li>
-
-	{% if forloop.last %}</div>{% endif %}
-{% endfor %}
-
-</div> writing posts -->

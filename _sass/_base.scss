@@ -2,80 +2,78 @@
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-
-  @media screen and (min-width: $break-large) {}
-
-  @media screen and (max-width: $break-small) {}
-
+  font-size: 100%;
+  text-rendering: optimizeLegibility;
 }
 
 *, *:before, *:after { box-sizing: inherit; }
 
 body {
   color: $color-primary;
-  font-weight: normal;
+  font-weight: 500;
   font-family: $sans-serif;
-  font-size: 100%;
+  font-size: 1.05em;
+  font-variant-ligatures: normal;
+  letter-spacing: 0.03em;
   line-height: 140%;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1000px;
   overflow: scroll;
-  padding: 0;
-  position: relative;
-
-  @media screen and (min-width: $break-large) { }
+  padding: 0 1em;
 
   @media screen and (max-width: $break-medium) { }
 
   @media screen and (max-width: $break-small) { }
 
-
 }
 
-section { display: block; }
+section { 
+  margin: 0 auto;
+  max-width: $container-width;
+}
 
 h1 {
-  font-size: 1.8rem;
+  font-size: $type-largest;
   font-weight: normal;
-  line-height: 120%;
+  letter-spacing: 0;
+  line-height: 140%;
+  margin: 20px 0;
 }
 
-  .page h1 {  // For index pages
-    font-family: $sans-serif;
-    font-size: 1.4rem; 
-    font-weight: bold;
-    letter-spacing: 0.02em;
-    margin: 1em 0;
-  }
+h2 { 
+  font-size: $type-normal;
+  font-weight: 600;
+  margin: 6em 0 2em 0;
+}
 
-h2 { }
-
-h3 { }
+h3 { 
+  color: $color-secondary;
+  font-size: $type-small;
+  font-weight: 600; 
+  margin: 4em 0 1em 0;
+}
 
 h4 { }
 
 p { 
-  font-size: $normal-type;
-  line-height: 170%; 
-  margin: 1em 0;
-} 
-  
+  font-size: $type-normal;
+  line-height: 160%; 
+  margin: .5em 0 1.5em 0;
+}
 
 a {
-
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  
   text-decoration: none;
-  transition: all 0.2s;
   
   &:link,
   &:visited {
-    border-bottom: 1px solid $color-secondary;
-    color: rgba(40, 55, 59, 1);
+    border-bottom: 1px solid lighten($color-tertiary, 30%) ;
+    color: $color-primary;
   }
   
   &:hover,
   &:active {
-    border-bottom: 1px solid rgba(40, 55, 59, 1);
+    border-bottom: 1px solid $color-primary;
   }
 
 }
@@ -83,18 +81,27 @@ a {
 sup {
   color: $grey;
   font-family: $sans-serif;
-  font-size: 0.6em;
+  font-size: 10px;
   font-weight: bold;
-  padding-right: 0.3em;
-}
+  left: -1px;
+  padding-right: 2px;
+  top: -6px;
 
-  sup a:link,
-  sup a:visited,
+  a:link,
+  a:visited,
   .footnotes .returnUp:link,
   .footnotes .returnUp:visited {
     text-decoration: none;
     border-bottom: none;
   }
+} // sup
+
+ol, ul {
+  &.boxed {
+    background-color: $faint-grey;
+    padding: 20px 40px;
+  }
+}
 
 ul {
   display: block;
@@ -102,9 +109,7 @@ ul {
   margin: 0;
   padding: 0;
 
-  &.dot {
-    li { list-style-type: disc; }
-  }
+  li { list-style: disc; }
 }
 
 ol {
@@ -115,66 +120,18 @@ ol {
 }
 
 li {
-  font-size: $normal-type;
+  font-size: $type-small;
+  line-height: 160%;
   margin: 1em 0;
-  line-height: 170%;
   vertical-align: top;
 }
 
 hr {
   height: 2px;
-  background: $faint-grey;
+  background: $color-tertiary;
   border: none;
-  margin: 4em auto;
-  width: 4em;
-}
-
-blockquote {
-  // border-left: 2px solid $faint-grey;
-  color: $grey;
-  font-size: 1rem;
-  margin: 2em 1em;
-  padding: 0 1.5em;
-
-  p { 
-    margin: 0; 
-
-    &:nth-child(n+2) { margin: 1em 0; }
-  }
-
-  &.intro-quote { 
-    font-style: italic; 
-    margin: 4em 2em;
-
-    @media screen and (max-width: $break-medium) { margin: 3em 0.5em; }
-  }
-
-  @media screen and (max-width: $break-medium) { margin: 3em 0.5em; }
-}
-
-cite { 
-  display: block;
-  font-size: 0.9rem;
-  font-style: normal;
-  line-height: 160%;
-  margin-left: 2em;
-  margin-top: 1em;
-
-  &:before {
-    content: "–";
-  }
-}
-  
-article { }
-
-header {
-  margin: 3em 0;
-
-  h1 {
-    font-family: $sans-serif;
-    font-weight: bold;
-  }
-
+  margin: 6em auto;
+  width: 40px;
 }
 
 table { margin: 2em 0; }
@@ -187,7 +144,7 @@ th {
 }
 
 thead th {
-  font-size: $normal-type;
+  font-size: $type-normal;
 }
 
 i { 
@@ -195,12 +152,8 @@ i {
   font-weight: normal;
 }
 
-strong { 
-  font-family: $sans-serif;
-  font-size: $normal-type;
-  font-weight: bold; 
-}
+strong {font-weight: bold; }
 
 *::selection { background: #FFF7CA; }
 
-*:focus { outline: 1px dotted $light-grey; }
+*:focus { outline: 1px dotted $color-tertiary; }

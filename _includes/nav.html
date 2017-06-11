@@ -1,29 +1,35 @@
-<nav>
-  <div class="logo">
-    <a href="/"></a>
-  </div>
-  <div class="nav-links">
-    <ul>
-        {% if page.active == "writing" %}
-            <li class="active"><a href="../">writing</a></li>
-        {% else %}
-            <li><a href="../">writing</a></li>
-        {% endif %}
-        {% if page.active == "notebooks" %}
-            <li class="active"><a href="../notebooks/">notebooks</a></li>
-        {% else %}
-            <li><a href="../notebooks/">notebooks</a></li>
-        {% endif %}
-        {% if page.active == "bookshelf" %}
-            <li class="active"><a href="../bookshelf/">bookshelf</a></li>
-        {% else %}
-            <li><a href="../bookshelf/">bookshelf</a></li>
-        {% endif %}
-        {% if page.active == "about" %}
-            <li class="active"><a href="../about/">about</a></li>
-        {% else %}
-            <li><a href="../about/">about</a></li>
-        {% endif %}
-    </ul>
-  </div>
+<nav id="nav">
+  <a href="../" class="home">
+    <h1>Brandorn</h1>
+  </a>
+
+  <ul class="page-links">
+    <!-- {% if page.active == "essays" %}
+        <li class="active"><a href="../essays/">essays</a></li>
+    {% else %}
+        <li><a href="../essays/">essays</a></li>
+    {% endif %} 
+    {% if page.active == "fragments" %}
+        <li class="active"><a href="../fragments/">fragments</a></li>
+    {% else %}
+        <li><a href="../fragments/">fragments</a></li>
+    {% endif %} -->
+    {% if page.active == "projects" %}
+        <li class="active"><a href="../projects/">projects</a></li>
+    {% else %}
+        <li><a href="../projects/">projects</a></li>
+    {% endif %}
+    <!-- {% if page.active == "favorites" %}
+        <li class="active"><a href="../favorites/">favorites</a></li>
+    {% else %}
+        <li><a href="../favorites/">favorites</a></li>
+    {% endif %} -->
+    {% if page.active == "about" %}
+        <li class="active"><a href="../about/">about</a></li>
+    {% else %}
+        <li><a href="../about/">about</a></li>
+    {% endif %}
+  </ul>
 </nav>
+
+<div id="nav-scrim"></div>

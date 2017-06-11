@@ -1,0 +1,170 @@
+---
+layout: index
+active: favorites
+title: Favorites
+description: Description
+---
+
+<h2>Books</h2>
+
+<h3>Nonfiction and Essays</h3>
+
+<ul class="favorite-list nonfiction">
+{% assign nonfiction = site.categories.favorites | sort:'author-last' %}
+ {% for favorites in nonfiction %}
+ {% if favorites.type == 'nonfiction' %}
+  <li>
+    <a href="{{ favorites.link }}">
+      <img src="/img/favorites/{{ favorites.thumb }}" alt="" />
+      <div class="meta">
+        <p class="title">{{ favorites.title }}</p>
+        <p class="creator">{{ favorites.author-first }} {{ favorites.author-last }}</p>
+        <p class="description"> {{ favorites.description }}</p>
+      </div>
+    </a>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul> <!-- nonfiction -->
+
+<h3>Fiction</h3>
+
+<ul class="favorite-list fiction">
+{% assign fiction = site.categories.favorites | sort:'author-last' %}
+ {% for favorites in fiction %}
+ {% if favorites.type == 'fiction' %}
+  <li>
+    <a href="{{ favorites.link }}">
+      <img src="/img/favorites/{{ favorites.thumb }}" alt="" />
+      <div class="meta">
+        <p class="title">{{ favorites.title }}</p>
+        <p class="creator">{{ favorites.author-first }} {{ favorites.author-last }}</p>
+        <p class="description"> {{ favorites.description }}</p>
+      </div>
+    </a>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul> <!-- fiction -->
+
+<h3>Design</h3>
+
+<ul class="favorite-list design">
+{% assign design = site.categories.favorites | sort:'author-last' %}
+ {% for favorites in design %}
+ {% if favorites.type == 'design' %}
+  <li>
+    <a href="{{ favorites.link }}">
+      <img src="/img/favorites/{{ favorites.thumb }}" alt="" />
+      <div class="meta">
+        <p class="title">{{ favorites.title }}</p>
+        <p class="creator">{{ favorites.author-first }} {{ favorites.author-last }}</p>
+        <p class="description"> {{ favorites.description }}</p>
+      </div>
+    </a>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul> <!-- design -->
+
+<h3>Philosophy and Literary Criticism</h3>
+
+<ul class="favorite-list philosophy">
+{% assign philosophy = site.categories.favorites | sort:'author-last' %}
+ {% for favorites in philosophy %}
+ {% if favorites.type == 'philosophy' %}
+  <li>
+    <a href="{{ favorites.link }}">
+      <img src="/img/favorites/{{ favorites.thumb }}" alt="" />
+      <div class="meta">
+        <p class="title">{{ favorites.title }}</p>
+        <p class="creator">{{ favorites.author-first }} {{ favorites.author-last }}</p>
+        <p class="description"> {{ favorites.description }}</p>
+      </div>
+    </a>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul> <!-- philosophy -->
+
+<h3>Theology</h3>
+
+<ul class="favorite-list theology">
+{% assign theology = site.categories.favorites | sort:'author-last' %}
+ {% for favorites in theology %}
+ {% if favorites.type == 'theology' %}
+  <li>
+    <a href="{{ favorites.link }}">
+      <img src="/img/favorites/{{ favorites.thumb }}" alt="" />
+      <div class="meta">
+        <p class="title">{{ favorites.title }}</p>
+        <p class="creator">{{ favorites.author-first }} {{ favorites.author-last }}</p>
+        <p class="description"> {{ favorites.description }}</p>
+      </div>
+    </a>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul> <!-- theology -->
+
+<h2>Music</h2>
+
+<ul class="favorite-list music">
+{% assign music = site.categories.favorites | sort:'author-last' %}
+ {% for favorites in music %}
+ {% if favorites.type == 'music' %}
+  <li>
+    <a href="{{ favorites.link }}">
+      <img src="/img/favorites/{{ favorites.thumb }}" alt="" />
+      <div class="meta">
+        <p class="title">{{ favorites.title }}</p>
+        <p class="creator">{{ favorites.author-first }} {{ favorites.author-last }}</p>
+        <p class="description"> {{ favorites.description }}</p>
+      </div>
+    </a>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul> <!-- music -->
+
+
+<h2>Movies</h2>
+
+<ul class="favorite-list movies">
+{% assign movies = site.categories.favorites | sort:'author-last' %}
+ {% for favorites in movies %}
+ {% if favorites.type == 'movies' %}
+  <li>
+    <a href="{{ favorites.link }}">
+      <img src="/img/favorites/{{ favorites.thumb }}" alt="" />
+      <div class="meta">
+        <p class="title">{{ favorites.title }}</p>
+        <p class="creator">{{ favorites.author-first }} {{ favorites.author-last }}</p>
+        <p class="description"> {{ favorites.description }}</p>
+      </div>
+    </a>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul> <!-- movies -->
+
+
+<h2>Things</h2>
+
+<ul class="favorite-list things">
+{% assign things = site.categories.favorites | sort:'company' %}
+ {% for favorites in things %}
+ {% if favorites.type == 'things' %}
+  <li>
+    <a href="{{ favorites.link }}">
+      <img src="/img/favorites/{{ favorites.thumb }}" alt="" />
+      <div class="meta">
+        <p class="title">{{ favorites.title }}</p>
+        <p class="creator">{{ favorites.company }}</p>
+        <p class="description"> {{ favorites.description }}</p>
+      </div>
+    </a>
+  </li>
+  {% endif %}
+  {% endfor %}
+</ul> <!-- things -->
