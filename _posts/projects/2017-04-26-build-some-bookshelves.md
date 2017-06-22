@@ -19,7 +19,7 @@ Whether you want to upgrade from IKEA bookshelves to something more substantial,
 Turns out we could, and we're really happy with the final result. It was a challenging project, yet it can be done with a little patience, practice, and planning. This is a walkthrough of how we did it. _Note: I'm going to describe how we installed big, heavy 2" x 12" boards, but the process applies to any type of bracket-supported shelving._
 
 
-## Part 1/2: Installing the Brackets
+## Part 1 of 2: Installing the Brackets
 
 ### Tools
 
@@ -87,7 +87,7 @@ Double check your markings to suss out any false readings.
 <hr>
 
 
-## Part 2/2: Preparing, Staining, and Finishing the Boards
+## Part 2 of 2: Preparing, Staining, and Finishing the Boards
 
 ### Tools
 
