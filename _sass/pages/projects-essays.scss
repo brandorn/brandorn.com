@@ -113,7 +113,14 @@
   p {
     font-family: $serif;
     letter-spacing: 0;
-    line-height: 170%;
+    line-height: 180%;
+
+    &.type-large { 
+      font-family: $sans-serif; 
+      font-weight: 400;
+      line-height: 150%;
+      margin: 2em 0;
+    }
   } 
 
   blockquote {
@@ -183,7 +190,7 @@
 	}
 
 	cite {
-		color: $color-secondary;
+		color: $color-accent;
 		font-family: $sans-serif;
 		font-size: 0.7em;
 		font-style: normal;

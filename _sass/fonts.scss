@@ -54,8 +54,8 @@ $sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, A
 /* Get rid of "$type-normal" and others, replace across files */
 
 $type-largest: 1.7em;
-$type-large: 1.2em;
-$type-normal: 1em;
+$type-large: 1.3em;
+$type-normal: 1.05em;
 $type-small: 0.8em;
 
 .type-large { font-size: $type-large; }
