@@ -37,35 +37,13 @@
 
 .bt { border-top: 2px solid $faint-grey; }
 
-.pw-0 { 
-  padding-left: 0;
-  padding-right: 0;
+@media all and (min-width: $break-small) {
+	.narrow-hide { display: block; }
+	.narrow-show { display: none;}
 }
 
-.m-0 { margin: 0; }
+@media all and (max-width: $break-small) {
+	.narrow-hide { display: none; }
+	.narrow-show { display: block;}
+}
 
-.mt--3 { margin-top: -3em; }
-
-.mt--1 { margin-top: -1em; }
-
-.mt-0 { margin-top: 0; }
-
-.mt-1 { margin-top: 1em; }
-
-.mt-3 { margin-top: 3em; }
-
-.mt-5 { margin-top: 5em; }
-
-.mb--3 { margin-bottom: -3em; }
-
-.mb--1 { margin-bottom: -1em; }
-
-.mb-0 { margin-bottom: 0; }
-
-.mb-1 { margin-bottom: 1em; }
-
-.mb-3 { margin-bottom: 3em; }
-
-.mb-5 { margin-bottom: 5em; }
-
-.ml-1 { margin-left: 1em; }

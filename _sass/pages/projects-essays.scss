@@ -69,7 +69,10 @@
         transition: all $transition-fade;
       }
 
-      .description { color: $color-secondary; }
+      .description { 
+        color: $color-secondary; 
+        font-size: $type-normal;
+      }
     } // .meta
 
   } // .project-list li
@@ -94,7 +97,6 @@
       color: $color-secondary;
       font-family: $sans-serif;
       font-size: 0.9em;
-      font-weight: 500;
 
       a:link,
       a:visited { 
@@ -122,31 +124,6 @@
       margin: 2em 0;
     }
   } 
-
-  blockquote {
-    font-style: italic;
-    margin: 3em -20%;
-    
-    p { 
-      font-size: 1.1em;
-      line-height: 180%;
-    }
-
-    cite {
-      color: $color-secondary;
-      font-size: $type-normal;
-      font-style: normal;
-
-      &:before {
-        content: " – "
-      }
-    }
-
-    @media screen and (max-width: $break-medium) { 
-      margin: 24px 12px; 
-      width: auto;
-    }
-  } // blockquote
 
 } // .project, .essay
 
@@ -186,7 +163,7 @@
 		font-size: $type-large;
 		line-height: 180%;
 		padding-bottom: 1em;
-		transition: all 0.5s;
+		transition: all 0.3s;
 	}
 
 	cite {
