@@ -1,6 +1,7 @@
 ---
 layout: fragment
 category: fragments
+active: fragments
 
 title: Thoughts on a Concert Schedule
 thumb: cats-cradle-thumb.png
