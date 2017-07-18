@@ -11,7 +11,7 @@ thumb: cats-cradle-thumb.png
 	<img src="../img/fragments/cats-cradle-full.png" alt="">
 </figure>
 
-This is the kind of schedule that staff hand out after shows at [Cat’s Cradle](http://catscradle.com/), a long-time venue in Carrboro, NC, just west of Chapel Hill. The schedule is small, relevant, and indy, just like the venue itself.
+This is the kind of schedule that staff hand out after shows at [Cat’s Cradle](http://catscradle.com/), a long-time venue in Carrboro, NC, just west of Chapel Hill. The schedule is small, relevant, and indy, like the venue itself.
 
 After picking up a couple of these, I began noticing how thoughtfully they were designed despite being throwaway strips of paper.
 
