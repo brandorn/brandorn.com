@@ -65,13 +65,14 @@
       .title { 
         font-size: 15px;
         font-weight: 500;
+        line-height: 140%;
         margin-top: 0;
         transition: all $transition-fade;
       }
 
       .description { 
         color: $color-secondary; 
-        font-size: $type-normal;
+        font-size: 1em;
       }
     } // .meta
 

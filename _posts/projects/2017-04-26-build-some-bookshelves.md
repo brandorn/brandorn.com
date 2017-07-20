@@ -3,7 +3,7 @@ categories: projects
 layout: project
 active: projects
 
-title: Build Yourself Some Bookshelves to Be Proud Of
+title: Hanging Shelves from Scratch
 description: An amateur's guide to preparing and mounting hanging shelves without destroying your walls (or your budget, or yourself) in the process.
 thumb: bookshelves/bookshelves-thumb.png
 intro: An amateur's guide to preparing and mounting hanging shelves without destroying your walls (or your budget, or yourself) in the process.
