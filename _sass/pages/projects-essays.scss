@@ -58,13 +58,12 @@
     }
 
     .meta { 
-      padding: 8px 16px; 
+      padding: 16px; 
 
       p { margin: 8px 0; }
 
       .title { 
-        font-size: 15px;
-        font-weight: 500;
+        font: bold 20px/28px $serif;
         line-height: 140%;
         margin-top: 0;
         transition: all $transition-fade;
@@ -116,7 +115,7 @@
   p {
     font-family: $serif;
     letter-spacing: 0;
-    line-height: 180%;
+    line-height: 170%;
 
     &.type-large { 
       font-family: $sans-serif; 

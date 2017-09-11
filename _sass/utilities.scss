@@ -1,5 +1,7 @@
 .primary { color: $color-primary; }
 
+.accent { color: $color-accent;}
+
 .left { float: left; }
 
 .right { float: right; }
@@ -32,6 +34,8 @@
 .bordered{ border: 2px solid $faint-grey; }
 
 .no-border { border: none; }
+
+.ml {margin-left: 60px; }
 
 .bb { border-bottom: 2px solid $faint-grey; }
 

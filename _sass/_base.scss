@@ -11,7 +11,6 @@ html {
 body {
   color: $color-primary;
   font-family: $sans-serif;
-  font-size: 1.1em;
   font-variant-ligatures: normal;
   line-height: 140%;
   margin: 0 auto;
@@ -55,8 +54,8 @@ h4 { }
 
 p { 
   font-size: $type-normal;
-  line-height: 160%; 
-  margin: .5em 0 1.5em 0;
+  line-height: 170%; 
+  margin: .5rem 0 1.5rem 0;
 }
 
 a {
@@ -77,18 +76,45 @@ a {
 }
 
 blockquote {
+
+  margin-bottom: 2rem;
+
+  &.poem { 
+    margin: 3rem 0 6rem 2rem;
+
+    @media screen and (max-width: $break-medium) { margin-left: 0.5rem }
+
+    p { 
+      font-size: $type-normal; 
+
+      &.title { 
+        font-size: $type-large; 
+        font-style: italic;
+        margin-bottom: 2rem;
+      }
+
+      &.poet { 
+        color: $color-secondary;
+        font-family: $sans-serif;
+        font-size: $type-small;
+        margin-bottom: 2rem;
+        margin-top: -2rem; 
+      }
+    }
+
+  }
   
   p { 
-    color: $color-secondary;
-    font-size: 0.94em;
-    line-height: 180%;
+    font-size: 0.96rem;
+    margin-bottom: 1rem;
   }
 
   cite {
     color: $color-secondary;
-    font-size: $type-normal;
+    display: block;
+    font-size: $type-small;
     font-style: normal;
-
+    margin-top: -0.5rem;
     &:before { content: " – " }
   }
 
