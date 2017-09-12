@@ -72,9 +72,9 @@ The poem is about the tutor's return to sense from her chill academic aloofness,
 
 The tutor's true self is revealed, though it isn't embraced. This is the tragedy of the poem, which takes on dimension when we consider Diaz's pun of the word “choler.” Choler was one of the four bodily humors of medieval science, thought to be “associated with a peevish or irascible temperament.” In Herbert's poem (below), we learn that the collar is in fact self-imposed, an arbitrary product of the mind: “Forsake thy cage, / Thy ropes of sand, / which petty thoughts have made.” Encountering the self-discovery of Herbert's poem, the tutor almost recovered her self, yet her collar remained.
 
-When our thoughts are wed with our felt experience, they can change us and change others. They loose the cords of our solitude, binding us to the world once again, which we experience as the return of sanity and calm.
+When our thoughts are wed with our felt experience, they can change us and change others. It seems to me our words take on this potency *only when* they are grounded in our experience. They loose the cords of our solitude, binding us to the world once again, which we experience as the return of sanity and calm.
 
-For Herbert, feeling led to thinking, which led to spiritual freedom. 
+For Herbert, feeling led to thinking, which led to spiritual freedom – a freedom that nearly transformed the tutor.
 
 
 <blockquote class="poem">
