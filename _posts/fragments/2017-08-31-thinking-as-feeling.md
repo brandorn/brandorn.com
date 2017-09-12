@@ -17,7 +17,9 @@ Wendell Berry puts it like this:
   <cite>Wendell Berry, <i>Standing By Words</i></cite>
 </blockquote>
 
-Berry argues that thought begins and ends in feeling and depends on it, that we cannot think without feeling. Of course, feeling can inhibit thinking when we concede our reason to emotion. We can err in either direction: feeling without thinking, thinking without feeling. One is the error of the angry mob, the other the error of the solitary philosopher. What becomes clear is that the only path toward trustworthy judgment – toward *sense* – is the right interdependence of the heart and the mind. As James Agee has written, “The mind and the spirit are constantly formed by, and as constantly form, the senses, and we misuse or neglect the senses only at grave peril to every possibility of wisdom and wellbeing.” 
+Berry argues that thought begins and ends in feeling and depends on it, that we cannot think without feeling. Of course, feeling can inhibit thinking when we concede our reason to emotion. We can err in either direction: feeling without thinking, thinking without feeling. One is the error of the angry mob, the other the error of the solitary philosopher. What becomes clear is that the only path toward trustworthy judgment – toward *sense* – is the right interdependence of the heart and the mind. 
+
+When our thoughts are wed with our felt experience, they can change us and change others. It seems to me our words take on this potency *only when* they are grounded in our experience. They loose the cords of our solitude, binding us to the world once again, which we experience as the return of sanity and calm. As James Agee has written, “The mind and the spirit are constantly formed by, and as constantly form, the senses, and we misuse or neglect the senses only at grave peril to every possibility of wisdom and wellbeing.” 
 
 Joanne Diaz’ poem “The Griffin” meditates on this reciprocal formation:
 
@@ -70,11 +72,7 @@ Joanne Diaz’ poem “The Griffin” meditates on this reciprocal formation:
 
 The poem is about the tutor's return to sense from her chill academic aloofness, the intrusion into her intellectual solitude of a felt connection to the world. It is significant that she reads the poem out loud: rather than only being perceived intellectually, Herbert's words are audible, and *felt*.  The change begins in the tutor as the narrator fades from view, and the tutor begins reading Herbert's words as if they were “her own.” By the end, the tutor nearly leaves “the prison of her body,” nearly living into some fullness of her true self by leaving behind her stodgy solitude to return to her creaturely wildness: “she really was part lion, part eagle.”
 
-The tutor's true self is revealed, though it isn't embraced. This is the tragedy of the poem, which takes on dimension when we consider Diaz's pun of the word “choler.” Choler was one of the four bodily humors of medieval science, thought to be “associated with a peevish or irascible temperament.” In Herbert's poem (below), we learn that the collar is in fact self-imposed, an arbitrary product of the mind: “Forsake thy cage, / Thy ropes of sand, / which petty thoughts have made.” Encountering the self-discovery of Herbert's poem, the tutor almost recovered her self, yet her collar remained.
-
-When our thoughts are wed with our felt experience, they can change us and change others. It seems to me our words take on this potency *only when* they are grounded in our experience. They loose the cords of our solitude, binding us to the world once again, which we experience as the return of sanity and calm.
-
-For Herbert, feeling led to thinking, which led to spiritual freedom – a freedom that nearly transformed the tutor.
+The tutor's true self is revealed, though it isn't embraced. This is the tragedy of the poem, which takes on dimension when we consider Diaz's pun of the word “choler.” Choler was one of the four bodily humors of medieval science, thought to be “associated with a peevish or irascible temperament.” In Herbert's poem (below), we learn that the collar is in fact self-imposed: “Forsake thy cage, / Thy ropes of sand, / which petty thoughts have made.” It is a chosen restraint, his Christian devotion, that Herbert rebels against, feeling that it is preventing experience of the world: ”leave thy cold dispute / Of what is fit and not.” He worries he is missing out on life: “Is the year lost only to me?” which is the same concern aroused in the tutor when she reads his line. Each poem ends ambiguously, leaving the tutor and the narrator in the same position we found them – restrained, but with a fuller sense of freedom.
 
 
 <blockquote class="poem">
@@ -94,7 +92,7 @@ For Herbert, feeling led to thinking, which led to spiritual freedom – a freed
     Before my sighs did dry it; there was corn <br>
     &nbsp; &nbsp; &nbsp; &nbsp; Before my tears did drown it. <br>
     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Is the year only lost to me? <br>
-    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Have I no bays to crown it, <br>
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Have I no bays to crown it, <br>
     No flowers, no garlands gay? All blasted? <br>
     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;All wasted? <br>
     Not so, my heart; but there is fruit, <br>
