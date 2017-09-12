@@ -6,7 +6,9 @@ active: fragments
 title: Thinking as Feeling
 ---
 
-When I'm not thinking about words, I'm usually thinking about sentences. The sentence is the foundation of thought. The sentences we think or speak may not always be complete, or may run on, or may be single words, like “No.” But they are inescapably sentences in the way that music always has a rhythm, even if it is erratic, and paintings are always composed of color, even if only <a href="http://www.nytimes.com/slideshow/2008/01/31/arts/20080203_VOGE_SLIDESHOW.html?mcubz=3">variations of grey</a>. We cannot make meaning without making sentences.
+When I’m not thinking about the words people use, I’m usually thinking about their sentences. The way they structure them, how they’re spoken, what their words are hiding or revealing. What people are really thinking, which is what we’re all after, after all. This is why we read literature, I think: to experience the mind of someone else in a way that ordinary language usually doesn’t satisfy.
+
+Sentences are the foundation of thought. The sentences we think or speak may not always be complete, or may run on, or may be single words, like “No.” But they are inescapably sentences in the way that music always has a rhythm, even if it is erratic, and paintings are always composed of color, even if only <a href="http://www.nytimes.com/slideshow/2008/01/31/arts/20080203_VOGE_SLIDESHOW.html?mcubz=3">variations of grey</a>. We cannot make meaning without making sentences, and our sentences begin in inarticulate, felt meanings.
 
 Wendell Berry puts it like this:
 
@@ -15,13 +17,14 @@ Wendell Berry puts it like this:
   <cite>Wendell Berry, <i>Standing By Words</i></cite>
 </blockquote>
 
-Berry argues that thought begins in feeling and depends on it, that we cannot think without feeling. Of course, feeling can inhibit thinking when we concede our reason to our emotion. We can err in either direction: thinking without feeling, feeling without thinking. One is the error of the philosopher, the other the error of the mob. What becomes clear is that the only path toward trustworthy judgment – toward *sense* – is the right interdependence of the two. As James Agee has written, “The mind and the spirit are constantly formed by, and as constantly form, the senses, and we misuse or neglect the senses only at grave peril to every possibility of wisdom and wellbeing.” 
+Berry argues that thought begins and ends in feeling and depends on it, that we cannot think without feeling. Of course, feeling can inhibit thinking when we concede our reason to emotion. We can err in either direction: feeling without thinking, thinking without feeling. One is the error of the angry mob, the other the error of the solitary philosopher. What becomes clear is that the only path toward trustworthy judgment – toward *sense* – is the right interdependence of the heart and the mind. As James Agee has written, “The mind and the spirit are constantly formed by, and as constantly form, the senses, and we misuse or neglect the senses only at grave peril to every possibility of wisdom and wellbeing.” 
 
-“The Griffin” by Joanne Diaz meditates on this reciprocal formation:
+Joanne Diaz’ poem “The Griffin” meditates on this reciprocal formation:
 
 
 <blockquote class="poem">
   <p class="title">The Griffin</p>
+  <p class="poet"> by Joanne Diaz</p>
   <p>
     For George Herbert, thinking meant feeling; <br>
     &nbsp; &nbsp; &nbsp; &nbsp; a sermon on the complexities of predestination <br>
@@ -42,7 +45,7 @@ Berry argues that thought begins in feeling and depends on it, that we cannot th
     &nbsp; &nbsp; &nbsp; &nbsp; after several like this, she must have decided <br>
     <br>
     that reading aloud could help. She cleared her throat, <br>
-    &nbsp; &nbsp; &nbsp; &nbsp; adjusted her giant glasses, opened to "The Collar," <br>
+    &nbsp; &nbsp; &nbsp; &nbsp; adjusted her giant glasses, opened to “The Collar,” <br>
     <br>
     and read. With her Cornish lilt, she lingered <br>
     &nbsp; &nbsp; &nbsp; &nbsp; over <span class="italic">Shall I ever sigh and pine?</span> as if it were <br>
@@ -65,17 +68,18 @@ Berry argues that thought begins in feeling and depends on it, that we cannot th
   </p>
 </blockquote>
 
+The poem is about the tutor's return to sense from her chill academic aloofness, the intrusion into her intellectual solitude of a felt connection to the world. It is significant that she reads the poem out loud: rather than only being perceived intellectually, Herbert's words are audible, and *felt*.  The change begins in the tutor as the narrator fades from view, and the tutor begins reading Herbert's words as if they were “her own.” By the end, the tutor nearly leaves “the prison of her body,” nearly living into some fullness of her true self by leaving behind her stodgy solitude to return to her creaturely wildness: “she really was part lion, part eagle.”
 
+The tutor's true self is revealed, though it isn't embraced. This is the tragedy of the poem, which takes on dimension when we consider Diaz's pun of the word “choler.” Choler was one of the four bodily humors of medieval science, thought to be “associated with a peevish or irascible temperament.” In Herbert's poem (below), we learn that the collar is in fact self-imposed, an arbitrary product of the mind: “Forsake thy cage, / Thy ropes of sand, / which petty thoughts have made.” Encountering the self-discovery of Herbert's poem, the tutor almost recovered her self, yet her collar remained.
 
-It is a tragic poem: the griffin remains bound; the Oxford tutor remains in the “prison of her body.” Diaz's pun of the word “choler” seems to me the crux of the tragedy. Choler was one of the four bodily humors of medieval science, thought to be “associated with a peevish or irascible temperament.” The tutor's temper closes her off from the world. Yet Herbert's poem resonates in the freedom of the tutor's mind, revealing her creaturely wildness obscured by her academic restraint and consequent solitude: “she really was part lion, part eagle.”
+When our thoughts are wed with our felt experience, they can change us and change others. They loose the cords of our solitude, binding us to the world once again, which we experience as the return of sanity and calm.
 
-The tragedy of the poem is the dominance of the mind over the heart. The griffin can only flex its wings; we don't get to see it fly. Reading Herbert's poem, one realizes that the titular collar is self-imposed, its limitations chosen, and therefore mutable: “Forsake thy cage, / Thy ropes of sand, / which petty thoughts have made.” For Herbert, feeling led to thinking, which led to spiritual freedom. 
+For Herbert, feeling led to thinking, which led to spiritual freedom. 
 
 
 <blockquote class="poem">
   <p class="title">The Collar</p>
   <p class="poet"> by George Herbert</p>
-
   <p>
     I struck the board, and cried, “No more; <br>
     &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; I will abroad! <br>
