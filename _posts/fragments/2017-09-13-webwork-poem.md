@@ -9,7 +9,7 @@ title: Work Life, a Sonnet
 Do spiders tire of weaving honest webs? <br>
 Proportions true, each strand strung as precise <br>
 as Euclid's lines. Unflagging, never ebbs, <br>
-Their pride of craft (once cursed) suggests advice. <br>
+Their pride of craft ([once cursed](https://en.wikipedia.org/wiki/Arachne)) suggests advice. <br>
 
 Fair morning light reveals keen intellect <br>
 Practiced beneath an eight-eyed stellar gaze. <br>
