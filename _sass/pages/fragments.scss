@@ -18,11 +18,11 @@
     &:active { 
       color: $color-accent; 
 
-      cite { color: $color-accent; }
+      //cite { color: $color-accent; }
     }
 
     span { 
-      line-height: 230%;
+      line-height: 260%;
       padding: 12px 0;
     }
 
@@ -35,8 +35,11 @@
 
     cite {
       color: $color-tertiary;
+      font-size: 0.7rem;
       font-style: normal;
+      margin-top: 1.1rem;
       padding-right: 2px;
+      position: absolute;
       transition: all $transition-fade;
 
       // &:after { content: " – "; }
