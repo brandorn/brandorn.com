@@ -8,7 +8,7 @@ title: Work Life, a Sonnet
 
 Do spiders tire of weaving honest webs? <br>
 Proportions true, each strand strung as precise <br>
-as Euclid's lines. Unself-conscious, never ebbs, <br>
+as Euclid's lines. Unflagging, never ebbs, <br>
 Their pride of craft (once cursed) suggests advice. <br>
 
 Fair morning light reveals keen intellect <br>
