@@ -7,8 +7,6 @@ title: A Few of My Favorite Red Things
 thumb: things-that-are-red/olivetti.jpg
 ---
 
-<br>
-
 <figure>
 	<img src="../img/fragments/things-that-are-red/bmw-e30.jpg" alt="">
 	<figcaption>BMW E30 M3</figcaption>
