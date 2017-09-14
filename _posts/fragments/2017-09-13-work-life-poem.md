@@ -3,7 +3,7 @@ layout: fragment
 category: fragments
 active: fragments
 
-title: Work Life, a Sonnet
+title: “Work Life,” a Sonnet
 ---
 
 Do spiders tire of weaving honest webs? <br>
