@@ -14,7 +14,7 @@ body {
   font-variant-ligatures: normal;
   line-height: 140%;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: $break-large;
   overflow: scroll;
   padding: 0 1em;
 
@@ -34,7 +34,7 @@ h1 {
   font-weight: normal;
   letter-spacing: 0;
   line-height: 140%;
-  margin: 20px 0;
+  margin: 1.5rem 0;
 }
 
 h2 { 
@@ -85,7 +85,7 @@ blockquote {
     @media screen and (max-width: $break-medium) { margin-left: 0.5rem }
 
     p { 
-      font-size: $type-normal; 
+      font-size: 1rem; 
 
       &.title { 
         font-size: $type-large; 
@@ -94,7 +94,6 @@ blockquote {
       }
 
       &.poet { 
-        color: $color-secondary;
         font-family: $sans-serif;
         font-size: $type-small;
         margin-bottom: 2rem;

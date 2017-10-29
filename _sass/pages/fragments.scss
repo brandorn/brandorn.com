@@ -3,7 +3,7 @@
 /* === Fragments index === */
 
 .fragments-list {
-  font-size: 18px;
+  font-size: $type-large;
   transition: all $transition-fade;
 
   a {
@@ -20,7 +20,7 @@
     }
 
     span { 
-      line-height: 260%;
+      line-height: 240%;
       padding: 12px 0;
     }
 
@@ -36,18 +36,18 @@
       font-size: 0.7rem;
       font-style: normal;
       line-height: 100%;
-      margin-top: 2rem;
+      margin-top: 2.2rem;
       opacity: 0;
       padding-right: 2px;
       position: absolute;
-      transition: all 400ms ease;
+      transition: all 500ms ease;
     }
 
     &:hover,
     &:active {
       cite { 
         opacity: 1; 
-        margin-top: 2.2rem;
+        margin-top: 2.4rem;
         transition: all $transition-fade;
       }
     }
