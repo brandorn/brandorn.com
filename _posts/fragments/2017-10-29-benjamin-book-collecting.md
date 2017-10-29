@@ -12,7 +12,7 @@ thumb: non-reading/benjamin-thumb.jpg
 	<figcaption>Walter Benjamin at work.</figcaption>
 </figure>
 
-The other day I read Walter Benjamin's essay "Unpacking My Library" that made me feel better about my unshakeable habit of buying books far more frequently than I read them:
+The other day I read a part in Walter Benjamin's essay "Unpacking My Library" that made me feel better about my unshakeable habit of buying books far more frequently than I read them:
 
 <blockquote>
 	<p>The book borrower of real stature whom we envisage here proves himself to be an inveterate collector of books not so much by the fervor with which he guards his borrowed treasures and by the deaf ear which he turns to all reminders from the everyday world of legality as by his failure to read these books. If my experience may serve as evidence, a man is more likely to return a borrowed book upon occasion than to read it. And the non-reading of books, you will object, should be characteristic of collectors? This is news to me, you may say. It is not news at all. Experts will bear me out when I say that it is the oldest thing in all the world. Suffice it to quote the answer which Anatole France gave to a philistine who admired his library and then finished with the standard question, “And you have read all these books, Monsieur France?” “Not one-tenth of them. I don't suppose you use your Sèvres china every day?</p>
