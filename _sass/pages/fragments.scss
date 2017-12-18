@@ -40,7 +40,7 @@
       opacity: 0;
       padding-right: 2px;
       position: absolute;
-      transition: all 500ms ease;
+      transition: all $transition-fade;
     }
 
     &:hover,

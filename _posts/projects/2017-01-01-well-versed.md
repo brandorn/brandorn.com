@@ -10,6 +10,7 @@ intro: Christians believe that Scripture is the spoken word of God. Some take th
 ---
 
 <p class="verse-list">
+  <span>Have I not commanded you? Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go. <cite>Jos 1.9, NIV</cite></span>
   <span>Don’t fret or worry. Instead of worrying, pray. Let petitions and praises shape your worries into prayers, letting God know your concerns. Before you know it, a sense of God’s wholeness, everything coming together for good, will come and settle you down. It’s wonderful what happens when Christ displaces worry at the center of your life. <cite>Phil 4.6-7, MSG</cite> </span>
   <span>But those who hope in the LORD will renew their strength. They will soar on wings like eagles; they will run and not grow weary, they will walk and not be faint. <cite>Isa 40.31, ESV</cite></span>
   <span>Trust in the Lord with all your heart, and do not lean on your own understanding. In all your ways acknowledge him, and he will make straight your paths. <cite>Prov 3.5-6, NIV</cite></span>
