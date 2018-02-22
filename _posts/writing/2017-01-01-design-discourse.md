@@ -4,10 +4,10 @@ category: writing
 
 title: A Brief Rant Against Khoi Vinh
 description: He's right to criticize the current state of design discourse, but doesn't recognize the lively, incisive critique happening off the beaten path.
-intro: In his article <a href="https://www.fastcodesign.com/90155005/design-discourse-is-in-a-state-of-arrested-development">"Design Discourse Is in a State of Arrested Development"</a>, Khoi Vinh argues that the industry lacks substantive critique from unbiased outsiders. Yet it's there to be found, just not where he seems to expect.
+intro: In his article "<a href="https://www.fastcodesign.com/90155005/design-discourse-is-in-a-state-of-arrested-development">Design Discourse Is in a State of Arrested Development</a>", Khoi Vinh argues that the industry lacks substantive critique from unbiased outsiders. Yet it's there to be found, just not where he seems to expect.
 thumb: 
 - image: design-discourse-thumb.jpg
-  credit: Alexander Andrews
+  credit: <a href="https://unsplash.com/photos/cU2lda3kbls">Alexander Andrews</a>
 ---
 
 It's hard to disagree with [Khoi Vinh](https://www.fastcodesign.com/90155005/design-discourse-is-in-a-state-of-arrested-development) that much writing about design is mediocre, predictable, a thin soup of tips and tricks, self-help, and case studies for prototyping tools that will be outdated in a month. I'm a designer. I've read these articles, maybe I've even written some of them. As designers, we're habitually technique-focused, and much of the technique that we focus on, as Vinh points out, ends up being about maximizing clicks.
