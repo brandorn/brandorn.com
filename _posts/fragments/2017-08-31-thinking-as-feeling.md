@@ -1,7 +1,6 @@
 ---
 layout: fragment
 category: fragments
-active: fragments
 
 title: Thinking as Feeling
 ---

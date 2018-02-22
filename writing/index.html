@@ -1,0 +1,27 @@
+---
+layout: index
+category: essays
+
+title: Essays
+description: This is the description
+thumb: essay-img.png
+---
+
+<ul class="essay-list">
+
+{% assign writing-list = site.categories.writing | sort:'title' %}
+ {% for item in writing-list %}
+  <li>
+    <a href="{{ item.url }}">
+      {% for thumb-image in item.thumb %}
+      <img src="/img/writing/{{ thumb-image.image }}" alt="" />
+      {% endfor %}
+       <div class="meta">
+        <p class="title">{{ item.title }}</p>
+        <p class="description">{{ item.description }}</p>
+       </div>
+    </a>
+  </li>
+  {% endfor %}
+
+</ul>

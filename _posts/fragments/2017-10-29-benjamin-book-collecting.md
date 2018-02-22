@@ -1,14 +1,13 @@
 ---
 layout: fragment
 category: fragments
-active: fragments
 
 title: Easing the Guilt of Non-Reading
-thumb: non-reading/benjamin-thumb.jpg
+thumb: benjamin-thumb.jpg
 ---
 
 <figure>
-	<img src="img/fragments/non-reading/benjamin.jpg">
+	<img src="img/fragments/benjamin.jpg">
 	<figcaption>Walter Benjamin at work.</figcaption>
 </figure>
 

@@ -9,3 +9,5 @@ markdown: kramdown
 
 # Other
 permalink: :title
+sass:
+  sass_dir: /src/styles/_sass

@@ -2,33 +2,12 @@
   <a href="../" class="home">
     <h1>Brandorn</h1>
   </a>
-
   <ul class="page-links">
-    <!-- {% if page.active == "essays" %}
-        <li class="active"><a href="../essays/">essays</a></li>
-    {% else %}
-        <li><a href="../essays/">essays</a></li>
-    {% endif %} -->
-    {% if page.active == "fragments" %}
-        <li class="active"><a href="../fragments/">fragments</a></li>
-    {% else %} 
-        <li><a href="../fragments/">fragments</a></li>
-    {% endif %}
-    {% if page.active == "projects" %}
-        <li class="active"><a href="../projects/">projects</a></li>
-    {% else %}
-        <li><a href="../projects/">projects</a></li>
-    {% endif %}
-    <!-- {% if page.active == "favorites" %}
-        <li class="active"><a href="../favorites/">favorites</a></li>
-    {% else %}
-        <li><a href="../favorites/">favorites</a></li>
-    {% endif %} -->
-    {% if page.active == "about" %}
-        <li class="active"><a href="../about/">about</a></li>
-    {% else %}
-        <li><a href="../about/">about</a></li>
-    {% endif %}
+    <li {% if page.category == "writing" %} class="active" {% endif %}><a href="../writing/">writing</a></li>
+    <li {% if page.category == "fragments" %} class="active" {% endif %}><a href="../fragments/">fragments</a></li>
+    <li {% if page.category == "projects" %} class="active" {% endif %}><a href="../projects/">projects</a></li>
+    <!-- <li {% if page.category == "favorites" %} class="active" {% endif %}><a href="../favorites/">favorites</a></li> -->
+    <li {% if page.category == "about" %} class="active" {% endif %}><a href="../about/">about</a></li>
   </ul>
 </nav>
 

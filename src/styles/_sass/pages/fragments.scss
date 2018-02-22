@@ -1,0 +1,78 @@
+/* ====== Fragments ======*/
+
+/* === Fragments index === */
+
+.fragments-list {
+  font-size: $type-large;
+  transition: all $transition-fade;
+
+  a {
+    border-bottom: none;
+    font-weight: 500;
+    margin-right: 2rem;
+    transition: all $transition-fade;
+
+    &:link {  }
+
+    &:hover,
+    &:active { 
+      color: $color-accent; 
+    }
+
+    span { 
+      line-height: 240%;
+      padding: 12px 0;
+    }
+
+    img {
+      height: 36px;
+      margin-right: 6px;
+      width: 48px;
+      vertical-align: middle;
+    }
+
+    cite {
+      color: $color-tertiary;
+      font-size: 0.7rem;
+      font-style: normal;
+      line-height: 100%;
+      margin-top: 2.2rem;
+      opacity: 0;
+      padding-right: 2px;
+      position: absolute;
+      transition: all $transition-fade;
+    }
+
+    &:hover,
+    &:active {
+      cite { 
+        opacity: 1; 
+        margin-top: 2.4rem;
+        transition: all $transition-fade;
+      }
+    }
+  }
+}
+
+/* === Fragments page === */
+
+.fragment-content {
+
+  h1 { 
+    font-size: $type-small;
+    font-weight: bold;
+    margin-bottom: 3rem; 
+    text-transform: uppercase;
+
+    cite { 
+      color: $color-tertiary;
+      font-style: normal; 
+      padding-right: 8px;
+    }
+  }
+
+  p { 
+    font-family: $serif;
+  }
+
+} // .fragment-content

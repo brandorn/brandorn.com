@@ -1,0 +1,71 @@
+/* === Home === */
+
+.home {
+
+	> p { text-indent: 1.4em; }
+	
+	p {
+		font-size: 2em;
+		font-weight: 700;
+		letter-spacing: 0.03em;
+		line-height: 140%;
+		margin: 60px auto;
+
+		&:before {
+			background-color: $color-primary;
+			content: "";
+			display: block;
+			height: 3px;
+			margin-top: 0.7em;
+			position: absolute;
+			width: 1.2em;
+		}
+
+		a:link,
+		a:visited  { border-bottom: 2px solid $color-tertiary; }
+		
+		a:hover,
+		a:active { border-bottom: 2px solid $color-primary; }
+	}
+
+	cite {
+		display: block;
+		font-size: 0.8em;
+		font-style: normal;
+		font-weight: bold;
+		margin-top: 40px;
+		text-indent: 0;
+
+		i { font-weight: bold; }
+	}
+}
+
+/* === About === */
+
+.about-container {
+	display: flex;
+	justify-content: space-between;
+	max-width: 100%;
+
+	@media all and (max-width: $break-small) { display: block; }
+
+	figure {
+		margin-top: 0;
+		width: 38%;
+	}
+
+	.about-content { 
+		padding-right: 2rem;
+		width: 54%; 
+	}
+
+	figure,
+	.about-content {
+		@media all and (max-width: $break-small) { 
+			margin: 0 auto 2rem auto;
+			padding: 0;
+			max-width: 420px; 
+			width: 100%;
+		}
+	}
+}

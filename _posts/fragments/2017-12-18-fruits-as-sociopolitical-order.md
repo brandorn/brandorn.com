@@ -1,7 +1,6 @@
 ---
 layout: fragment
 category: fragments
-active: fragments
 
 title: Books We'd Be Reading if Fruit Comprised the Sociopolitical Order
 ---
