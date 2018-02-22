@@ -2,9 +2,8 @@
 layout: index
 category: essays
 
-title: Essays
-description: This is the description
-thumb: essay-img.png
+title: Writing
+description:
 ---
 
 <ul class="essay-list">
@@ -19,6 +18,7 @@ thumb: essay-img.png
        <div class="meta">
         <p class="title">{{ item.title }}</p>
         <p class="description">{{ item.description }}</p>
+        <p class="date">{{ item.date | date:"%B %Y" }}</p>
        </div>
     </a>
   </li>
