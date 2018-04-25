@@ -2,7 +2,7 @@
 layout: writing
 category: writing
 
-title: “Work Life,” a Sonnet
+title: “Work Life,” a sonnet
 ---
 
 Do spiders tire of weaving honest webs? <br>

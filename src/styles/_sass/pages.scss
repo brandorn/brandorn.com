@@ -46,7 +46,27 @@
 				display: inline-block;
 				font-size: $type-secondary;
 				list-style: none;
-				margin: 0 0.4rem 3rem 0;
+				margin: 0 1rem 3rem 0;
+			}
+		}
+
+		.love-hover {
+			position: relative;
+
+			img { 
+				display: none; 
+				bottom: 20px;
+				left: -50px;
+				position: absolute;
+			}
+
+			&.ba img { width: 190px; }
+
+			&.ani img { width: 220px; }
+
+			&:hover,
+			&:active {
+				img { display: block; }
 			}
 		}
 
