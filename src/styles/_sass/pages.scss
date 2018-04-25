@@ -1,0 +1,155 @@
+/* === Home === */
+
+.home {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 4rem;
+
+	@media all and (max-width: $break-small) { display: block; }
+
+	.mug {
+		max-width: 300px;
+		text-align: center;
+		
+		@media all and (max-width: $break-small) { 
+			margin: 0 auto -2rem auto;
+			max-width: 200px; 
+		}
+
+		img { width: 100%; }
+
+		.contact {
+			@media all and (max-width: $break-small) { display: none; }
+
+			li { 
+				display: inline-block;
+				font-size: $type-secondary;
+				list-style: none;
+				margin: 0 0.4rem 0 0;
+			}
+
+			h2 { margin: 2rem 0 0.6rem 0;}
+
+		}
+		
+	}
+
+	.home-things {
+		margin-left: 4em;
+		max-width: 600px;
+
+		.contact {
+			@media all and (min-width: $break-small) { display: none; }
+			@media all and (max-width: $break-small) { display: block; }
+
+			li { 
+				display: inline-block;
+				font-size: $type-secondary;
+				list-style: none;
+				margin: 0 0.4rem 3rem 0;
+			}
+		}
+
+		@media all and (max-width: $break-small) { margin-left: 0; }
+	} // .home-things
+
+	.writing-list {
+		li {
+			list-style: none;
+
+			.title { margin: 0.5rem 0; }
+
+			.meta { 
+				color: $color-secondary;
+				font-size: $type-secondary;
+			}
+
+		}
+	} // .writing-list
+
+	.reading-list {
+		li {
+			display: flex;
+			justify-content: space-between;
+			list-style: none;
+			margin: 2rem 0;
+
+			.thumb {
+				margin-right: 4%;
+
+				img { 
+					width: 90px;
+					
+					@media all and (max-width: $break-small) { width: 80px; }
+				}
+			}
+
+			.meta {	
+				color: $color-secondary;
+
+				.title { margin-bottom: 0.5rem;}
+				
+				.description { font-size: $type-secondary; }
+			}
+		} // li
+
+	} // .reading-list
+
+} // .home
+
+
+
+
+/* === Writing === */
+
+.writing {
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 6rem;
+
+	@media all and (max-width: $break-small) { 
+		display: block;
+		margin-top: 4rem;
+	}
+
+	.home-link {
+
+		a { 
+			display: block; 
+			margin-right: 6rem; 
+			width: 100px;
+
+			@media all and (max-width: $break-small) { margin: 2rem auto 4rem auto }
+
+			&:link,
+			&:visited { 
+				border-bottom: none; 
+				transition: all .2s ease-in-out;
+			}
+
+			&:hover,
+			&:active { 
+				border-bottom: none; 
+				transform: scale(1.05);
+				transition: all .2s ease-in-out;
+			}
+		}
+	} // .home-link
+
+	.text-body {
+		max-width: 600px;
+
+		h1 {
+			margin-bottom: 0.5rem;
+		}
+
+		.intro {
+			color: $color-secondary;
+			margin-bottom: 4rem;
+		}
+
+
+
+	} // .text-body
+
+} // .writing

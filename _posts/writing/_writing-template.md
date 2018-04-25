@@ -1,12 +1,13 @@
 ---
 categories: writing
-layout: essay
+layout: writing
 
 title: Essay title
-description: This is the description
 intro: This is the essay intro
 
-thumb: 
-- image: [ Thumb should be 360px x 212px - maybe bigger, test on tablet]
-  credit:
+original_source: [name, if published elsewhere]
+original_link: [full URL]
+
+intro_image: [should be 4 x 4...]
+intro_image_credit:
 ---

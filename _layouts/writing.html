@@ -2,24 +2,29 @@
 layout: default
 ---
 
-<section class="essay">
+<section class="writing">
 
-	<header>
+	<div class="home-link">
+		<a href="/" title="">
+			<img src="../src/img/bd-mug.png" alt="">
+		</a>
+	</div>
+
+	<div class="text-body">
 	  <h1>{{ page.title }}</h1>
-	  <p class="author">by <span>Brandon Dorn</span> — {{ page.date | date:"%d %B %Y"}}</p>
+	  <p class="meta text-secondary"><span>Brandon Dorn</span> — {{ page.date | date:"%d %B %Y"}}</p>
 	  {% if page.intro %}<p class="intro"> {{ page.intro }}</p>{% endif %}
 
-	  {% if page.thumb %}
-	  {% for item in page.thumb %}
-	  <figure>
-	  	<img src="/img/writing/{{ item.image }}">
-	  	<figcaption>Photo by {{ item.credit }}</figcaption>
-	  </figure>
-	  {% endfor %}
-	  {% endif %}
-	</header>
+	  {{ content }}
+	</div>
 
-	{{ content }}
-	
-	<!-- <p class="date">{{ page.date | date: "%B %Y" }}</p> -->
 </section>
+
+
+
+
+  
+
+ 
+
+

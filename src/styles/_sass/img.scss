@@ -1,6 +1,12 @@
+img { width: 100%; }
+
+
 figure {
+  color: $color-secondary;
+  font-size: $type-secondary;
   margin: 2em 0;
   vertical-align: top;
+  text-align: center;
 
   img {
     display: block;
@@ -71,13 +77,13 @@ figure {
 figcaption {
   color: $color-secondary;
   font-family: $sans-serif;
-  font-size: $type-small;
+  font-size: 0.9rem;
   line-height: 150%;
   margin-top: 12px;
 
   a:link,
   a:visited { 
-    border-bottom: 1px solid $color-tertiary;
+    border-bottom: 1px solid #eee;
     color: $color-secondary; 
   }
 

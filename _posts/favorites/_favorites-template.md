@@ -1,12 +1,12 @@
 ---
 category: favorites
-type: [nonfiction, fiction, design, philosophy, theology, movies, music, things]
+genre: [nonfiction, fiction, design, philosophy, theology]
 
 title: 
-author-first: 
-author-last:
-[ ^ or company, if thing ]
-description:
+author_first:
+author_last:
 thumb: 
-link: 
+description: [200 char max]
+amz_link: 
 ---
+
