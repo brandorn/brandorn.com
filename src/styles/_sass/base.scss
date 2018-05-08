@@ -5,6 +5,9 @@ html {
   box-sizing: border-box;
   font-size: 100%;
   text-rendering: optimizeLegibility;
+
+  @media all and (min-width: $break-large) { font-size: 110%; }
+  @media all and (max-width: $break-tiny) { font-size: 94%; }
 }
 
 *, *:before, *:after { box-sizing: inherit; }
@@ -15,10 +18,11 @@ body {
   font-variant-ligatures: normal;
   line-height: 140%;
   margin: 2rem auto 8rem auto;
-  max-width: 1040px;
+  max-width: 1000px;
   overflow: scroll;
   padding: 0 2em;
 
+  @media all and (min-width: $break-large) { max-width: 1100px; }
   @media all and (max-width: $break-tiny) { padding: 0 1rem; }
 
 }
@@ -158,6 +162,6 @@ i {
 
 strong {font-weight: bold; }
 
-*::selection { background: #FFF7CA; }
+*::selection { background: #c0f5ff; }
 
 *:focus { outline: 1px dotted #eee; }
