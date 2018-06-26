@@ -1,7 +1,6 @@
 
 html {
   -webkit-text-size-adjust: 100%;
-  background: #f7f7f7;
   box-sizing: border-box;
   font-size: 100%;
   text-rendering: optimizeLegibility;
@@ -18,7 +17,7 @@ body {
   font-variant-ligatures: normal;
   line-height: 140%;
   margin: 2rem auto 8rem auto;
-  max-width: 1000px;
+  max-width: 960px;
   overflow: scroll;
   padding: 0 2em;
 
@@ -162,6 +161,6 @@ i {
 
 strong {font-weight: bold; }
 
-*::selection { background: #c0f5ff; }
+*::selection { background: #d7f5ff; }
 
 *:focus { outline: 1px dotted #eee; }
