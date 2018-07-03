@@ -21,7 +21,7 @@ body {
   overflow: scroll;
   padding: 0 2em;
 
-  @media all and (min-width: $break-large) { max-width: 1100px; }
+  // @media all and (min-width: $break-large) { max-width: 1100px; }
   @media all and (max-width: $break-tiny) { padding: 0 1rem; }
 
 }
