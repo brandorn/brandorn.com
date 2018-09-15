@@ -30,7 +30,7 @@ description: Durham-based designer, Midwesterner at heart.
 			<li><a href="https://www.instagram.com/brandon_dorn/">Instagram</a></li>
 		</ul>
 
-		<p>I’ve worked with Rotary International, The Nature Conservancy, Privia Medical Group, Dick’s Sporting Goods, Volunteers of America, State Farm, and other organizations to make their digital things more useful and usable.</p>
+		<p>I’ve worked with Rotary International, The Nature Conservancy, Privia Medical Group, Volunteers of America, and other organizations to make their digital things more useful and usable.</p>
 		<p>I like to read, and books themselves have become my standard for product design. Seems to me a digital product should be as easy to handle and learn from as a good book: accessible, durable, self-contained, unobtrusive, words and images helping each other out, information presented in sequence with enough context, nice to look at for lengths of time, designed at a human scale. A vessel of generosity from author to reader.</p>
 		<p>As a designer, I take cues from the <a href="https://en.wikipedia.org/wiki/Bauhaus">Bauhaus</a> school of thought that emphasized close attention to form for the sake of content, prototyping early and often, and a practical familiarity with the methods and materials of production.</p>
 		<p>I live in Durham with my wife, <a href="#!" class="love-hover ba">BethAnne<img src="/src/img/ba-love.png" alt=""></a>, and our scruffy dogger, <a href="#!" class="love-hover ani">Ani<img src="/src/img/ani-love.png" alt=""></a>. Before moving to North Carolina I studied English Literature and Economics in Illinois, yet have mostly been influenced by LEGO instruction manuals and Shel Silverstein poems. Recently I’ve been working on a commentary on the abundant music of <a href="http://sufjan.com">Sufjan Stevens</a>. More on that soon.</p>
@@ -42,7 +42,7 @@ description: Durham-based designer, Midwesterner at heart.
 			{% for item in writing_list %}
 			<li>
 				<p class="title"><a href="{% if item.original_source %} {{ item.original_link }} {% else %} {{ item.url }} {% endif %}" title="">{{ item.title }}</a></p>
-				<p class="meta"> {% if item.original_source %} {{ item.original_source }}, {% endif %} {{ item.date | date: '%d %b %Y'}}</p>
+				<p class="meta"> {% if item.original_source %} {{ item.original_source }}, {% endif %} {{ item.date | date: '%B %Y'}}</p>
 			</li>
 			{% endfor %}
 		</ul>
