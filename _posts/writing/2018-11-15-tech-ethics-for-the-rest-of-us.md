@@ -94,7 +94,7 @@ original_source: <a href="https://www.meetup.com/nova-ux/events/255089259/">Nova
 	<li class="slide">
 		<figure>
 			<img src="/img/writing/tech-ethics/tech-ethics-11.jpg" alt="">
-			<figcaption><a href="https://twitter.com/cennydd/status/1043089613034848256">Cennyd Bowles</a></figcaption>
+			<figcaption><a href="https://twitter.com/cennydd/status/1043089613034848256">Cennydd Bowles</a></figcaption>
 		</figure>
 		<div class="slide-notes">
 			<p>Design ethics is having a moment. This is partly a result of technology playing a larger and larger role in our lives. Ten years ago the iPhone was one year old. Today, we're checking our phones <a href="https://www.inc.com/john-brandon/science-says-this-is-the-reason-millennials-check-their-phones-150-times-per-day.html">150 times a day</a>.</p>
@@ -113,7 +113,7 @@ original_source: <a href="https://www.meetup.com/nova-ux/events/255089259/">Nova
 			<figcaption><a href="https://ainowinstitute.org/people/varoon-mathur.html">Varoon Mathur</a></figcaption>
 		</figure>
 		<div class="slide-notes">
-			<p>Here’s a <a href="https://www.technologyreview.com/s/612318/establishing-an-ai-code-of-ethics-will-be-harder-than-people-think/">timeline</a> showing AI-related scandals <i>just from 2017</i>. That’s a lot of bad! I don’t work with AI, though, so it’s safe to assume I’m OK, right? Maybe.</p>
+			<p>Here’s a <a href="https://www.technologyreview.com/s/612318/establishing-an-ai-code-of-ethics-will-be-harder-than-people-think/">timeline</a> showing AI-related scandals <i>just from 2017</i>. That’s a lot of bad! I don’t work with AI, though, so it’s safe to assume I’m OK, right?</p>
 		</div>
 	</li>
 	<li class="slide">
@@ -122,7 +122,7 @@ original_source: <a href="https://www.meetup.com/nova-ux/events/255089259/">Nova
 			<figcaption><a href="https://www.nytimes.com/video/us/politics/100000004863329/trump-swearing-in-ceremony-2017.html">The New York Times</a></figcaption>
 		</figure>
 		<div class="slide-notes">
-			<p>Also, this happened. Politics aside, I think the 2016 election really changed public perception of our connected information technology.</p>
+			<p>Also, this happened. Politics aside, the 2016 election changed public perception of our connected information technology.</p>
 			<p>The election of Donald Trump showed us, as a nation and in a very public way, that the health of our information ecosystem matters, that people can be nudged and manipulated at scale, and that our digital life has a real impact on the world beyond our screens. The stakes of our technology are getting increasingly higher.</p>
 		</div>
 	</li>
