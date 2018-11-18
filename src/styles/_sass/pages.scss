@@ -186,6 +186,9 @@
 
 	.home-link { width: 10rem; }
 
+// Eventually just make thesed divs, not a ul
+
+
 	.slide-list {
 		margin-left: 0;
 
@@ -224,6 +227,7 @@
 				blockquote {
 					border-left: 1px solid $color-tertiary;
 					font-size: 0.85rem;
+					margin-left: 1rem;
 					padding-left: 1rem;
 				}
 			}

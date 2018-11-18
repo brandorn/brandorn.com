@@ -502,7 +502,6 @@ original_source: <a href="https://www.meetup.com/nova-ux/events/255089259/">Nova
 		<div class="slide-notes">
 			<p>Another feature of the infrastructure is that it affords quantitative measurement. Because metrics like pageviews, time on site, and engagement are simply <i>available</i> to us, they naturally become a kind of default way of understanding user behavior. This data is easier to get than qualitative data about user experience, and it’s often regarded as more reliable and less vulnerable to bias, but this is demonstrably false.</p>
 			<p>And there is so much that data can’t tell us about the user experience. For example, a metric like pageviews is clearly not a proxy for the quality of the content or the user experience. “User engagement,” “time on site,” and “monthly active users” are rightly understood as vanity metrics. </p>
-</p>
 		</div>
 	</li>
 	<li class="slide">
