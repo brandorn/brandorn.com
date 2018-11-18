@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<section class="page-content presentation">
+
+	<div class="home-link">
+		<a href="/" title="">
+			<img src="/img/bd-mug.png" alt="">
+		</a>
+	</div>
+
+	<div class="presentation-body">
+	  <h1>{{ page.title }}</h1>
+	  <p class="meta text-secondary"><span>Brandon Dorn</span> — Presented at {{page.original_source}} on {{ page.date | date:"%d %B %Y"}}</p>
+	  {% if page.intro %}<p class="intro"> {{ page.intro }}</p>{% endif %}
+
+	  {{ content }}
+	</div>
+
+</section>
+
+
+
+
+  
+
+ 
+
+

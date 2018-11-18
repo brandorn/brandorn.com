@@ -7,7 +7,7 @@ intro: An amateur's guide to preparing and mounting hanging shelves without dest
 ---
 
 <figure class="double-wide">
-	<img src="/src/img/writing/bookshelves-full.jpg" alt="">
+	<img src="/img/writing/bookshelves-full.jpg" alt="">
 	<figcaption>I am carpenter and so can you!</figcaption>
 </figure>
 
@@ -45,7 +45,7 @@ Turns out we could, and we're really happy with the final result. It was a chall
 ### Process
 
 <figure>
-	<img src="/src/img/writing/bookshelves-sketch-stud-marks.png" alt="">
+	<img src="/img/writing/bookshelves-sketch-stud-marks.png" alt="">
 </figure>
 
 **1. Mark the studs.** To do this, you'll need a stud finder. Electronic stud finders indicate the edges of studs as you run the device horizontally across the wall. Mark stud edges with a pencil. I recommend sensing for and marking studs at multiple heights per stud to see if the stud is actually perpendicular to the floor. This is especially especially important if you'll be hanging multiple brackets on the same stud (like we did) and want them to be vertically aligned. Mark as many studs as you deem fit for your shelving. It's better to over-engineer in this case. Each of our brackets can hold 200lb if drilled into studs, and we estimated that each board-plus-books combination would weigh around 200lb. To be safe, and since the spacing ended up looking nice, we used three brackets per shelf. Some of our books are heavy.
@@ -53,7 +53,7 @@ Turns out we could, and we're really happy with the final result. It was a chall
 Double check your markings to suss out any false readings.
 
 <figure>
-	<img src="/src/img/writing/bookshelves-sketch-bracket-marks.png" alt="">
+	<img src="/img/writing/bookshelves-sketch-bracket-marks.png" alt="">
 </figure>
 
 **2a. Mark the shelf heights on one stud.** To make sure your shelves are vertically spaced evenly, measure the height of your ceiling and divide accordingly. We spaced our shelves 11" apart, except for the bottom shelf, which is 16" below the second shelf. On one of the marked studs, measure the height of each _shelf_, making sure to account for the board thickness when measuring each shelf. For example, since our boards were 2" thick and we wanted each shelf space to be 11", I measured 13" spaces. Double check these measurements. They're important.
@@ -61,19 +61,19 @@ Double check your markings to suss out any false readings.
 **2b. Mark the shelf heights on the remaining studs.** Use your laser level to mark vertical lines for the shelf heights on the rest of the studs. Don't worry about being vertically precise yet; just make a line where the laser meets the stud that you've marked. If you're hanging heavy shelves, I recommend also marking shelf heights on the flanking walls. This is where we attached <a href="https://www.lowes.com/pd/Stanley-National-Hardware-0-875-in-x-4-in-x-3-98-in-Zinc-Plated-Flat-Brace/3169359">3" brackets</a>, about 6" in front of the back wall, to bolster the shelves.
 
 <figure>
-	<img src="/src/img/writing/bookshelves-sketch-bracket-centers.png" alt="">
+	<img src="/img/writing/bookshelves-sketch-bracket-centers.png" alt="">
 </figure>
 
 **3. Mark the bracket centers.** To vertically align your brackets, create a little plumb line to hang from the top of each stud that you've marked. I taped a battery to a piece of string that nearly hung to the floor when taped near the ceiling. Tape the string at the top of a stud, making sure it remains within the edges you marked when stud-finding (to ensure that you're as close to the center of the stud as possible for each bracket). Then make a cross at each intersection with the horizontal shelf-height markings. This is how you'll determine where to drill the holes for your brackets.
 
 <figure>
-	<img src="/src/img/writing/bookshelves-sketch-bracket-holes.png" alt="">
+	<img src="/img/writing/bookshelves-sketch-bracket-holes.png" alt="">
 </figure>
 
 **4. Mark the _bracket_ heights and pilot holes.** Next, measure 2" below each shelf height marking to indicate the _bracket_ heights. (This distance depends on the height of your boards. If they're 1" deep, you'll measure 1".) Once you've marked the bracket heights, mark the pilot hole for each bracket location by holding an actual bracket up to each marked height, aligning it horizontally with the vertical plumb line marks. Make a tick mark through the bracket's top screw hole. The brackets we used each have two screw holes; I only marked the top one at this point, since I drilled the second pilot holes once each bracket was installed in the wall via the first pilot hole.
 
 <figure>
-	<img src="/src/img/writing/bookshelves-brackets.jpg" alt="">
+	<img src="/img/writing/bookshelves-brackets.jpg" alt="">
 </figure>
 
 **5. Drill the pilot holes and screw in the brackets.** Before you start drilling, double-check your bracket height marks using the laser level. Once you feel confident about those heights (and the top screw hole tick marks), drill pilot holes at each tick mark using a drill bit that slightly narrower than your bracket screws. Make sure to drill holes perpendicular to the floor, using a step stool if you need a better angle for higher brackets. After drilling the pilot hole for each bracket, I would screw the bracket into the wall and drill the lower pilot hole right through the bracket screw hole. Then I'd screw in the lower screw. It takes a while, but you end up with something like this:
@@ -117,7 +117,7 @@ _I recommend test-hanging your boards on your walls before you begin finishing t
 **3. Test your finish.** Stains, like paint, have unpredictable results. Buy small samples of a few stains that seem close to what you're after, then test them on scrap wood left over from the cut boards. I recommend sanding and conditioning the scrap wood, even if not wholeheartedly, so that they'll more closely match the final product (see below). Experiment with multiple coats of stain to see how the wood responds at each point. Many of the articles I read showed people experimenting with 5 or 6 stain variations. We tried 3.
 
 <figure>
-	<img src="/src/img/writing/bookshelves-epoxy.jpg" alt="">
+	<img src="/img/writing/bookshelves-epoxy.jpg" alt="">
 	<figcaption>Epoxying the boards became a morning and evening ritual for about a week. I used painters tape to seal gaps through which the epoxy might've leaked.</figcaption>
 </figure>
 
@@ -144,17 +144,17 @@ _Big note: These steps imply a much more linear process than ours actually was. 
 <hr>
 
 <figure class="double-wide">
-	<img src="/src/img/writing/bookshelves-detail-2.jpg" alt="">
+	<img src="/img/writing/bookshelves-detail-2.jpg" alt="">
 </figure>
 
 <figure class="double-wide">
-	<img src="/src/img/writing/bookshelves-bracket.jpg" alt="">
+	<img src="/img/writing/bookshelves-bracket.jpg" alt="">
 </figure>
 
 <figure class="double-wide">
-	<img src="/src/img/writing/bookshelves-detail-3.jpg" alt="">
+	<img src="/img/writing/bookshelves-detail-3.jpg" alt="">
 </figure>
 
 <figure class="double-wide">
-	<img src="/src/img/writing/bookshelves-full.jpg" alt="">
+	<img src="/img/writing/bookshelves-full.jpg" alt="">
 </figure>
