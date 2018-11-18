@@ -3,7 +3,7 @@ layout: presentation
 category: writing
 
 title: Tech Ethics for the Rest of Us
-intro: This is the essay intro...
+intro: This is a talk I gave at UX Y'all in Raleigh, NC, and Nova UX in Falls Church, VA, a few days apart. It grew out of the desire to figure out how design ethics translates into my day-to-day work as a designer at an agency. We talk about problems in Big Tech all the time — and rightfully so — but what about for the rest of us?
 
 original_source: <a href="https://www.meetup.com/nova-ux/events/255089259/">Nova UX</a>
 
