@@ -188,53 +188,47 @@
 
 // Eventually just make thesed divs, not a ul
 
+	.slide {
+		display: flex;
+		margin-bottom: 2rem;
 
-	.slide-list {
-		margin-left: 0;
+		@media all and (max-width: 540px) { 
+			display: block;
+			margin-bottom: 4rem;
+			width: 100%;
+		}
 
-		li {
-			display: flex;
-			list-style-type: none;
+		figure { 
+			margin: 0 0 1rem 0; 
+			width: 100%;
+		}
+
+		figcaption { 
+			font-size: 0.8rem;
+			margin-top: 0.5rem;
+			text-align: left;
+		}
+
+		.slide-notes {
+			margin-left: 2rem;
+			width: 90%;
 
 			@media all and (max-width: 540px) { 
-				display: block;
-				margin-bottom: 4rem;
+				margin-left: 0;
 				width: 100%;
 			}
 
-			figure { 
-				margin: 0 0 1rem 0; 
-				width: 100%;
+			p { font-size: 0.9rem; }
+
+			blockquote {
+				border-left: 1px solid $color-tertiary;
+				font-size: 0.85rem;
+				margin-left: 1rem;
+				padding-left: 1rem;
 			}
+		}
 
-			figcaption { 
-				font-size: 0.8rem;
-				margin-top: 0.5rem;
-				text-align: left;
-			}
-
-			.slide-notes {
-				margin-left: 2rem;
-				width: 90%;
-
-				@media all and (max-width: 540px) { 
-					margin-left: 0;
-					width: 100%;
-				}
-
-				p { font-size: 0.9rem; }
-
-				blockquote {
-					border-left: 1px solid $color-tertiary;
-					font-size: 0.85rem;
-					margin-left: 1rem;
-					padding-left: 1rem;
-				}
-			}
-
-		} // li
-
-	} // .slide-list
+	} // .slide
 
 } // .presentation
 
