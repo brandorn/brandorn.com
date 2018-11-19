@@ -3,7 +3,7 @@ layout: presentation
 category: writing
 
 title: Tech Ethics for the Rest of Us
-intro: I gave this talk a few days apart at <a href="http://uxyall.org/">UX Y'all</a> in Raleigh, NC, and <a href="https://www.meetup.com/nova-ux/">Nova UX</a> in Falls Church, VA. It grew out of the desire to figure out how design ethics translates into my day-to-day work as a designer at an agency. We talk about problems in Big Tech all the time — and rightfully so — but what about for the rest of us? Here's a PDF of the <a href="/img/writing/tech-ethics/design-ethics-checklist.pdf">Design Ethics Checklist</a> for those who may be interested.
+intro: I gave this talk a few days apart at <a href="http://uxyall.org/">UX Y'all</a> in Raleigh, NC, and <a href="https://www.meetup.com/nova-ux/">Nova UX</a> in Falls Church, VA. It grew out of a desire to figure out how design ethics translates into my day-to-day work as a designer at an agency. We talk about problems in Big Tech all the time — and rightfully so — but what about for the rest of us? Here's a PDF of the <a href="/img/writing/tech-ethics/design-ethics-checklist.pdf">Design Ethics Checklist</a> for those who may be interested.
 
 original_source: <a href="https://www.meetup.com/nova-ux/events/255089259/">Nova UX</a>
 
@@ -24,7 +24,7 @@ original_source: <a href="https://www.meetup.com/nova-ux/events/255089259/">Nova
 		<img src="/img/writing/tech-ethics/tech-ethics-2.jpg" alt="">
 	</figure>
 	<div class="slide-notes">
-		<p>I'm a Senior UX designer in Viget's Durham office where I work mostly on digital products, doing user research, IA, prototyping and the like.</p>
+		<p>I'm a senior UX designer in Viget's Durham office where I work mostly on digital products, doing user research, IA, prototyping and the like.</p>
 	</div>
 </div>
 
