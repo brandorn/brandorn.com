@@ -788,7 +788,7 @@ original_source: <a href="https://www.meetup.com/nova-ux/events/255089259/">Nova
 		<img src="/img/writing/tech-ethics/tech-ethics-82.jpg" alt="">
 	</figure>
 	<div class="slide-notes">
-		<p>Let’s look at one more value: calmness. At this point in the game, we’re all growing tired of our devices shouting at us. We’re getting better about this as a society: you don’t hear ringtones very much anymore, unless you’re visiting your grandparents. And alert settings have improved, with things like Do Not Disturb mode. </p>
+		<p>Let’s look at one more value: calmness. At this point in the game, we’re all growing tired of our devices shouting at us. We’re getting better about this as a society: you don’t hear ringtones very much anymore in public (though they can still be handy). And alert settings have improved, with things like Do Not Disturb mode. </p>
 	</div>
 </div>
 
