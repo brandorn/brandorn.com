@@ -3,7 +3,7 @@ layout: presentation
 category: writing
 
 title: Tech Ethics for the Rest of Us
-intro: This is a talk I gave at <a href="http://uxyall.org/">UX Y'all</a> in Raleigh, NC, and <a href="https://www.meetup.com/nova-ux/">Nova UX</a> in Falls Church, VA, a few days apart. It grew out of the desire to figure out how design ethics translates into my day-to-day work as a designer at an agency. We talk about problems in Big Tech all the time — and rightfully so — but what about for the rest of us?
+intro: I gave this talk a few days apart at <a href="http://uxyall.org/">UX Y'all</a> in Raleigh, NC, and <a href="https://www.meetup.com/nova-ux/">Nova UX</a> in Falls Church, VA. It grew out of the desire to figure out how design ethics translates into my day-to-day work as a designer at an agency. We talk about problems in Big Tech all the time — and rightfully so — but what about for the rest of us? Here's a PDF of the <a href="/img/writing/tech-ethics/design-ethics-checklist.pdf">Design Ethics Checklist</a> for those who may be interested.
 
 original_source: <a href="https://www.meetup.com/nova-ux/events/255089259/">Nova UX</a>
 
@@ -1098,7 +1098,7 @@ original_source: <a href="https://www.meetup.com/nova-ux/events/255089259/">Nova
 	</figure>
 	<div class="slide-notes">
 		<p>The risk with a checklist is that ethics becomes a box to check rather than a pervasive mode of thinking. A four-hour meeting rather than a robust, critical culture. Yet if our ethical thinking doesn’t have practical implications, we might as well not have conversations like these at all.</p>
-		<p>Having a checklist is based on the idea that a concise list of validation points is more effective than a one-time oath. Here is an example of what an <a href="/img/writing/tech-ethics/design-ethics-chekclist.pdf">ethical checklist</a> might look like.</p>
+		<p>Having a checklist is based on the idea that a concise list of validation points is more effective than a one-time oath. Here is an example of what an <a href="/img/writing/tech-ethics/design-ethics-checklist.pdf">ethical checklist</a> might look like.</p>
 	</div>
 </div>
 
@@ -1157,10 +1157,10 @@ original_source: <a href="https://www.meetup.com/nova-ux/events/255089259/">Nova
 
 <div class="slide">
 	<figure>
-		<a href="/img/writing/tech-ethics/design-ethics-chekclist.pdf"><img src="/img/writing/tech-ethics/tech-ethics-120.jpg" alt=""></a>
+		<a href="/img/writing/tech-ethics/design-ethics-checklist.pdf"><img src="/img/writing/tech-ethics/tech-ethics-120.jpg" alt=""></a>
 	</figure>
 	<div class="slide-notes">
-		<p>I encourage you to think about these questions, maybe write some for yourself or for your team. Here's a link to a PDF of them: <a href="/img/writing/tech-ethics/design-ethics-chekclist.pdf">Toward an Ethical Checklist</a> </p>
+		<p>I encourage you to think about these questions, maybe write some for yourself or for your team. Here's a link to a PDF of them: <a href="/img/writing/tech-ethics/design-ethics-checklist.pdf">Toward an Ethical Design Checklist</a> </p>
 	</div>
 </div>
 
