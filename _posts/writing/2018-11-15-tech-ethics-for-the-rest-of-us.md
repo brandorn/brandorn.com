@@ -176,7 +176,7 @@ original_source: <a href="https://www.meetup.com/nova-ux/events/255089259/">Nova
 		<img src="/img/writing/tech-ethics/tech-ethics-18.jpg" alt="">
 	</figure>
 	<div class="slide-notes">
-		<p>Because we make things like the Wildlife Watch for WWF (the conservation people, not the wrestling people). It's an app that helps customs agents quickly identify animal pelts at customs borders. Not all animals are illegal to hunt, but it can be difficult to distinguish between them.</p>
+		<p>Because we make things like the Wildlife Watch for the Wildlife Conservation Society. It's an app that helps customs agents quickly identify animal pelts at customs borders. Not all animals are illegal to hunt, but it can be difficult to distinguish between them.</p>
 	</div>
 </div>
 
@@ -678,7 +678,7 @@ original_source: <a href="https://www.meetup.com/nova-ux/events/255089259/">Nova
 		<img src="/img/writing/tech-ethics/tech-ethics-70.jpg" alt="">
 	</figure>
 	<div class="slide-notes">
-		<p>Maybe you'd see little icons for movies that match the bedtie you set for yourself, and a nice detail on hover.</p>
+		<p>Maybe you'd see little icons for movies that match the bedtime you set for yourself, and a nice detail on hover.</p>
 	</div>
 </div>
 
