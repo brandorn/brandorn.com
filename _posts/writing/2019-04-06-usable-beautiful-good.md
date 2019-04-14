@@ -24,7 +24,7 @@ original_source: Duke Ideate Conference
 		<img src="/img/writing/usable-beautiful-good/usable-beautiful-good-2.jpg" alt="">
 	</figure>
 	<div class="slide-notes">
-		<p>I'm a User Experience designer in Viget's Durham office, just down the road. We do events every now and then — we'll have you over sometime.</p>
+		<p>I'm a User Experience designer at Viget in our Durham office, just down the road. We do events every now and then — we'll have you over sometime.</p>
 	</div>
 </div>
 
@@ -42,7 +42,7 @@ original_source: Duke Ideate Conference
 		<img src="/img/writing/usable-beautiful-good/usable-beautiful-good-4.jpg" alt="">
 	</figure>
 	<div class="slide-notes">
-		<p>I won't talk too much about the our work specifically today, but here's a look at some of our clients. We work with non-profits, start-ups, and all types of businesses. I'm happy to talk more afterward about Viget, design agencies, or the industry overall if anyone is interested.</p>
+		<p>I won't talk too much about our work specifically today, but here's a look at some of our clients. We work with non-profits, start-ups, and all types of businesses. I'm happy to talk more afterward about Viget, design agencies, or the industry overall if anyone is interested.</p>
 	</div>
 </div>
 
