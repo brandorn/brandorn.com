@@ -752,7 +752,7 @@ original_source: Duke Ideate Conference
 		<img src="/img/writing/usable-beautiful-good/usable-beautiful-good-63.jpg" alt="">
 	</figure>
 	<div class="slide-notes">
-		<p>What makes the things on these lists different? Here are some things that stood out to me. The apps on the left are generally straightforward utilities, practical, single-use, idiosyncratic, aid focus and reflection, don‘t demand attention, may be social, but only secondarily. Those on the right have minimal practical value, seek to create addictive loops, distract us from our daily life, are inherently built for judging others, nurture narcissism.</p>
+		<p>What makes the things on these lists different? Here are some things that stood out to me. The apps on the left are generally straightforward utilities, practical, single-use, idiosyncratic, aid focus and reflection, don‘t demand attention, may be social, but only secondarily. Many have a <a href="https://theweek.com/articles/835799/why-humans-love-technology-that-does-literally-only-thing">single purpose</a>. Those on the right have minimal practical value, seek to create addictive loops, distract us from our daily life, are inherently built for judging others, nurture narcissism.</p>
 		<p>This may seem extreme. Instagram isn‘t ruining our lives. But when we try to understand <i>why</i> certain apps leave us feeling drained, despondent, and distracted, I tend to think these are some of the reasons. And those that help us feel productive, focused, and encouraged? The characteristics on the left seem right to me.</p>
 	</div>
 </div>
@@ -798,7 +798,7 @@ original_source: Duke Ideate Conference
 		<img src="/img/writing/tech-ethics/tech-ethics-20.jpg" alt="">
 	</figure>
 	<div class="slide-notes">
-		<p>One of our UXers made a database of all the logic needed to figure out what you’re looking at. This kind of stuff is the best. Doing what we can do to help people make clearsighted decisions that better the world. That's what I aspire to.</p>
+		<p>One of our UXers made a database of all the logic needed to figure out what you’re looking at. This kind of stuff is the best. Doing what we can do to help people make clear-sighted decisions that better the world. That's what I aspire to.</p>
 	</div>
 </div>
 
