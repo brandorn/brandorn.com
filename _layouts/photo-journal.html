@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  {% include head.html %}
+	<body class="photo-journal">
+	{% include nav.html %}
+
+		<header>
+			<p class=label-small>Photo Journal</p>
+			<h1> {{ page.title }}</h1>
+			<p class="intro"> {{ page.description }}</p>
+		</header><!-- /header -->
+
+		<div class="photo-journal-content">
+			{{ page.intro }}
+		</div>
+
+		<div class="photo-gallery">
+			{{ content }}
+		</div>
+
+	{% include photoswipe-elements.html %}
+	  
+	{% include footer.html %}
+  </body>
+</html>

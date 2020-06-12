@@ -1,13 +1,17 @@
 ---
-categories: writing
-layout: writing
+category: writing
+layout: [essay or presentation]
 
-title: Essay title
-intro: This is the essay intro
+title:
+description:
 
-original_source: [name, if published elsewhere]
-original_link: [full URL]
+img_folder:
+thumb:
+hero:
+hero_caption:
 
-intro_image: [should be 4 x 4...]
-intro_image_credit:
+source_preposition:
+source_name:
+source_link:
+
 ---

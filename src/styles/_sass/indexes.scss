@@ -1,0 +1,456 @@
+/* === Reused === */
+
+header.page-intro {
+	margin-bottom: 6rem;
+	max-width: 600px;
+
+	p { @include body-sans-large }
+}
+
+
+/* === Home === */
+
+
+.select-clients {
+	margin: 6rem 0 4rem 0;
+
+	.label {
+		@include label-small;
+	}
+
+	.client-list {
+		display: flex;
+		flex-wrap: wrap;
+
+		@media all and (max-width: 620px) { display: block; }
+
+		.column {
+			margin-right: 4rem;
+
+			@media all and (max-width: $break-small) { margin-right: 2rem; }
+
+			&:nth-last-child(1) { margin-right: 0; }
+
+			p { 
+				@include body-sans-small;
+				margin: 0 0 0.5rem 0;
+			}
+		}
+	} // .client-list
+} // .select-clients
+
+
+.case-study-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 4rem;
+
+	a {
+		display: block;
+		flex: 0 0 29.333333%;
+		margin: 0 4% 5rem 0;
+
+		@media all and (max-width: $break-medium) { 
+			flex: 0 46%;
+			margin: 0 4% 3rem 0;
+		}
+
+		@media all and (max-width: 540px) { 
+			flex: 0 100%; 
+		}
+
+		&:link,
+		&:visited,
+		&:active,
+		&:hover { 
+			color: $black-01;
+			text-decoration: none; 
+		};
+	} // a
+
+	.case-study-preview {
+
+		&:hover { 
+			.thumb { opacity: 0.8; }
+		}
+
+		.thumb {
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 30vw;
+			max-height: 300px;
+		 	width: 100%;
+
+		 	@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
+		 		background-size: contain;
+		 	}
+		 	@media all and (max-width: $break-small) { height: 40vw; }
+		 	@media all and (max-width: 540px) { height: 300px; }
+
+		}
+
+		&.arcadia { 
+			.thumb { 
+				background-color: $highlight-green;
+				background-image: url('/img/design/arcadia/arcadia-thumb@1x.png');
+
+				@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) { 
+					background-image: url('/img/design/arcadia/arcadia-thumb@2x.png');
+				}
+			}
+		}
+
+		&.cybergrx { 
+			.thumb { 
+				background-color: $highlight-blue;
+				background-image: url('/img/design/cybergrx/cybergrx-thumb@1x.png');
+
+				@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) { 
+					background-image: url('/img/design/cybergrx/cybergrx-thumb@2x.png');
+				}
+			}
+		}
+
+		&.nsc { 
+			.thumb { 
+				background-color: $highlight-purple;
+				background-image: url('/img/design/nsc/nsc-thumb@1x.png');
+
+				@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) { 
+					background-image: url('/img/design/nsc/nsc-thumb@2x.png');
+				}
+			}
+		}
+
+		&.darden { 
+			.thumb {
+				background-color: $highlight-orange;
+				background-image: url('/img/design/darden/darden-thumb@1x.png');
+
+				@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) { 
+					background-image: url('/img/design/darden/darden-thumb@2x.png');
+				}
+			}
+		}
+
+		&.privia { 
+			.thumb { 
+				background-color: $highlight-yellow;
+				background-image: url('/img/design/privia/privia-thumb@1x.png');
+
+				@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) { 
+					background-image: url('/img/design/privia/privia-thumb@2x.png');
+				}
+			}
+		}
+
+		&.rotary { 
+			.thumb { 
+				background-color: $highlight-red;
+				background-image: url('/img/design/rotary/rotary-thumb@1x.png');
+
+				@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) { 
+					background-image: url('/img/design/rotary/rotary-thumb@2x.png');
+				}
+			}
+		}
+
+
+		.title {
+			@include label-large;
+			margin: 1.5rem 0 0 0;
+		}
+
+		.description {
+			@include body-sans-large;
+			margin: 0.3rem 0 0.5rem 0;
+		}
+
+		.type {
+			@include label-small;
+			color: $black-02;
+			margin: 0;
+		}
+
+
+	} // .case-study-preview
+
+} //.home-grid
+
+
+/* === Photography === */
+
+.photo-journal-list {
+
+	.label {
+		@include label-small;
+		margin-bottom: -0.5rem;
+	}
+
+	@keyframes photoAnimate {
+    from { 
+    	opacity: 0;
+    	transform: translateY(1rem);
+    }
+    to   { 
+    	opacity: 1;
+    	transform: translateY(0);
+    }
+ 	}
+
+	.photo-journal-preview {
+		display: inline-block;
+		margin: 2rem 2rem 0 0;
+
+		&:link,
+		&:visited,
+		&:active,
+		&:hover { 
+			color: $black-01;
+			text-decoration: none;
+		}
+
+		&:hover img { opacity: 0.8; }
+
+		img {
+			display: inline-block;
+			margin-right: 1rem;
+			max-width: 6rem;
+			vertical-align: middle;
+		}
+
+		.name {
+			display: inline-block;
+			vertical-align: middle;
+
+			.title {
+				@include label-medium;
+				margin: 0.3rem 0 0.1rem 0;
+			}
+
+			.photo-count {
+				@include body-sans-small;
+				color: $black-02;
+				margin: 0;
+			}
+		}
+	}	// .photo-journal-preview
+} // .photo-journal-list
+
+.photo-gallery.misc{
+	columns: 2 200px;
+	column-gap: 2rem;
+	margin-top: 4rem;
+
+	@media all and (max-width: $break-small) { columns: 1; }
+
+	figure {
+		display: inline-block;
+		height: auto;
+		margin: 1rem 0 2rem 0;
+		padding: 1rem;
+		width: 100%;
+
+		&:nth-child(n+0) { margin-top: 2rem };
+		&:nth-child(n+2) { margin-top: -1rem };
+
+		&.narrower { padding: 1rem 4rem; }
+
+		&.narrowest { padding: 1rem 6rem; }
+
+		&.portrait { 
+			@media all and (max-width: $break-medium) { 
+				margin-left: auto;
+				margin-right: auto;
+				max-width: $body-content-width; 
+			}
+		}
+
+		& img:hover {
+			cursor: zoom-in;
+			opacity: 0.8;
+		}
+
+		@media all and (max-width: $break-medium) {
+			display: block;
+			margin: 2rem 0;
+			padding: 1rem 0;
+		}
+
+		figcaption { 
+			display: none;
+			// margin: 0.5rem 0;
+		}
+	} // figure
+} // .misc-photos-gallery
+
+
+/* === Reading & Writing === */
+
+.fav-reads {
+
+	.genre-lists {
+		@media all and (max-width: $break-medium) {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+
+	.genre { 
+		display: inline-block;
+		margin: 0 4rem 1rem 0;
+		vertical-align: top;
+
+		&:nth-child(3n) { margin-right: 0; }
+
+		@media all and (max-width: $break-medium) {
+			width: 50%;
+			margin-right: 0;
+		}
+
+		li { 
+			@include body-sans-small; 
+
+			&.label-small { 
+				@include label-small; 
+				color: $black-02;
+			}
+
+			&:nth-child(n+2) { margin: 0.4rem 0; }
+
+			span { color: $black-02; }
+
+		} // li
+	} // ul
+} // .fav-reads
+
+.writing-list {
+	margin-top: 4rem;
+
+	.writing-item {
+		border-bottom: 1px solid $black-05;
+		display: flex;
+		justify-content: space-between;
+		padding: 2rem 0;
+
+		&:nth-last-child(1){ border-bottom: none; }
+
+		@media all and (max-width: $break-small) { display: block; }
+
+		.link {
+			display: flex;
+
+			figure { 
+				margin: 0 2rem 0 0;
+				min-width: 120px;
+				width: 14%;
+
+				img {
+					margin: 0 auto;
+				}
+			} // figure
+
+			.meta {
+				a:link,
+				a:visited { text-decoration: none; }
+
+				a:hover,
+				a:active { color: $black-02; }
+
+				.title { 
+					@include label-medium; 
+					margin-bottom: -0.75rem;
+				}
+			}
+		} //.link
+
+		.attribution { 
+			@include body-sans-extra-small;
+
+			color: $black-02;
+			text-align: right;
+			width: 20%; 
+
+			a:link,
+			a:visited { color: $black-02; }
+
+			a:active,
+			a:hover { color: $black-01; }
+
+			p:nth-child(1) { margin-bottom: -0.5rem; }
+
+			@media	all and (max-width: $break-small) {
+				display: flex;
+				margin: -1rem 0 0 120px;
+				padding-left: 2rem;
+				text-align: left;
+				width: auto;
+
+				.source { 
+					margin-right: 0.3rem; 
+
+					&::after {
+						content: " — ";
+					}
+				}
+			}
+		} // .attribution
+
+	} // .writing-item
+} // .writing-list
+
+
+/* === About === */
+
+.about-content {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+
+	@media all and (max-width: $break-tiny) { display: block; }
+
+	figure { 
+		margin: 0;
+		margin-top: 2.4rem; 
+		width: 36%;
+
+		@media all and (max-width: $break-medium) { 
+			width: 58%; 
+
+			img {
+				height: 400px;
+				object-fit: cover;
+			}
+		}
+		@media all and (max-width: 600px) { 
+			width: 72%;
+			img { height: 320px; } 
+		}
+
+		@media all and (max-width: $break-tiny) { 
+			margin-top: 0;
+			width: 100%;
+		}
+	}
+
+	.copy {
+		padding-right: 4rem;
+		max-width: 38rem;
+
+		@media all and (max-width: $break-tiny) { padding-right: 0; }
+
+		h2 {
+			@include label-medium;
+
+			margin-top: 4rem;
+
+			&:nth-child(1) { margin-top: 0; }
+
+		} // h2
+
+		p { @include body-sans-medium; }
+		
+	} // .copy
+}
+

@@ -1,0 +1,81 @@
+---
+layout: default
+title: Brandon Dorn
+
+description: Durham-based designer, Midwesterner at heart.
+---
+
+<header class="page-intro">
+	<p>Sometimes I write, every now and then I speak, but mostly I read.</p>
+</header>
+
+<div class="fav-reads">
+
+	<p class="label-small">Favorites</p>
+
+	<div class="genre-lists">
+		<ul class="genre">
+			<li class="label-small">Nonfiction</li>
+			<li>Pilgrim at Tinker Creek <span>by Annie Dillard</span></li>
+			<li>Essays and Lectures <span>by Ralph Waldo Emerson</span></li>
+			<li>The Technological Society <span>by Jacques Ellul</span></li>
+			<li>Understanding Context <span>by Peter Hinton</span></li>
+			<li>The Gift <span>by Lewis Hyde</span></li>
+			<li>How to Do Nothing <span>by Jenny Odell</span></li>
+			<li>Apology for Wonder <span>by Sam Keen</span></li>
+			<li>Maps of the Imagination <span>by Peter Turchi</span></li>
+		</ul>
+
+		<ul class="genre">
+			<li class="label-small">Fiction</li>
+			<li>Dandelion Wine <span>by Ray Bradbury</span></li>
+			<li>Stories of Your Life and Others <span>by Ted Chiang</span></li>
+			<li>The Lord of the Flies <span>by William Golding</span></li>
+			<li>A Prayer for Owen Meany <span>by John Irving</span></li>
+			<li>Till We Have Faces <span>by CS Lewis</span></li>
+			<li>Gilead <span>by Marilynne Robinson</span></li>
+			<li>East of Eden <span>by John Steinbeck</span></li>
+			<li>The Silmarillion <span>by J.R.R. Tolkien</span></li>
+			<li>Mrs. Dalloway <span>by Virginia Woolf</span></li>
+		</ul>
+
+		<ul class="genre">
+			<li class="label-small">Theology</li>
+			<li>The Everlasting Man <span>by GK Chesterton</span></li>
+			<li>Creative Prayer <span>by Edith Herman</span></li>
+			<li>Letters to Malcolm <span>by CS Lewis</span></li>
+			<li>Miracles <span>by CS Lewis</span></li>
+			<li>New Seeds of Contemplation <span>by Thomas Merton</span></li>
+			<li>Christ Plays in 10,000 Places <span>by Eugene Peterson</span></li>
+			<li>Reversed Thunder <span>by Eugene Peterson</span></li>
+			<li>The Divine Conspiracy <span>by Dallas Willard</span></li>
+		</ul>
+	</div> <!-- .genre-lists-->
+</div> <!-- .fav-reads-->
+
+
+<div class='writing-list'>
+	{% assign writing_list = site.categories.writing %}
+
+	<p class="label-small">Writing & Speaking</p>
+
+		{% for item in writing_list %}
+		<div class="writing-item">
+			<div class="link">
+				<figure>
+					<a href="{{ item.url }}"><img src="/img/writing/{{ item.img_folder }}/{{ item.thumb }}" alt=""></a>
+				</figure>
+				<div class="meta">
+					<a href="{{ item.url }}">
+						<p class="title"> {{ item.title }} </p>
+						<p class="intro"> {{ item.description }} </p>
+					</a>
+				</div> 
+			</div> <!-- .link -->
+			<div class="attribution">
+				{% if item.source_name %}<p class="source"> <a href="{{ item.source_link }}">{{ item.source_name }}</a> </p>{% endif %}
+				<p> {{ item.date | date: "%b %d"}} </p>	
+			</div>
+		</div>
+		{% endfor %}
+</div>

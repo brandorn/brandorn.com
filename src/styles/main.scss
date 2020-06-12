@@ -6,21 +6,36 @@
 /* Color variables
    ================================ */
 
-$color-primary: #393e4a;
-$color-secondary: #777d8a;
-$color-tertiary: #bbb;
-$color-accent: #d8332a;
+$white-01: rgba(255,255,255, 1);
+
+$black-01: rgba(0,0,0,.86);
+$black-02: rgba(0,0,0,.58);
+$black-03: rgba(0,0,0,.42);
+$black-04: rgba(0,0,0,.16);
+$black-05: rgba(0,0,0,.08);
+$black-06: rgba(0,0,0,.02);
+
+$red-01: #8B0303;
+$red-02: #DA352B;
+$red-03: #F04242;
+
+$highlight-red: #FEECEA;
+$highlight-orange: #FFEED5;
+$highlight-yellow: #FDFADD;
+$highlight-green: #E5FBED;
+$highlight-blue: #E4F9FF;
+$highlight-purple: #F0E4FF;
 
 
 /* Breakpoints
    ================================ */
 
-$container-width: 580px;
+$body-content-width: 38rem;
 
 $break-large: 1400px;
 $break-medium: 960px;
-$break-small: 700px;
-$break-tiny: 400px;
+$break-small: 760px;
+$break-tiny: 440px;
 
 
 /* Sass partials (from _sass)
@@ -30,5 +45,7 @@ $break-tiny: 400px;
   "fonts",
   "base",
   "img",
-  "pages.scss"
+  "nav",
+  "indexes",
+  "instantiated.scss"
 ;

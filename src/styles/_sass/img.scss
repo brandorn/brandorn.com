@@ -2,92 +2,117 @@ img { width: 100%; }
 
 
 figure {
-  color: $color-secondary;
-  font-size: $type-secondary;
-  margin: 2em 0;
+  @include body-sans-small;
+
+  color: $black-02;
+  margin: 2em auto;
   vertical-align: top;
-  text-align: center;
 
   img {
     display: block;
     width: 100%;
   }
 
-  &.double-wide {
-    width: 140%;
-    margin-left: -20%;
+  &.image-left,
+  &.image-right {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 
-    @media screen and (max-width: $break-medium) {
-      width: auto;
-      margin: 3em 0;
-    }
-  }
+    @media all and (max-width: $break-small) { display: block; }
 
-// Side-by-side pics
+    a { width: 68%; }
 
-  &.two-up{
-    display: inline-block;
-    margin: 2em 0;
-    width: 68%;
+    img { width: 64%; }
 
-    &.left{
-        margin-left: -20%;
+    figcaption { 
+      margin-top: 6vw;
+      width: 22%; 
 
-        @media screen and (max-width: $break-medium) { 
-          margin-left: -10%; 
-          width: 58%;
-        }
-
-        @media screen and (max-width: $break-small) { 
-          margin-bottom: -1em;
-          margin-left: 0; 
-        }
-    }
-
-    &.right{
-        margin-right: -20%;
-
-        @media screen and (max-width: $break-medium) { 
-          margin-right: -10%; 
-          width: 58%;
-        }
-
-        @media screen and (max-width: $break-small) { margin-right: 0; }
-    }
-
-    &.left,
-    &.right {
-      @media screen and (max-width: $break-small) {
-        display: block;
-        float: none;
-        width: 100%;
-        margin: 2em 0;
+      @media all and (max-width: $break-small) { 
+        margin: 1rem auto;
+        max-width: 28rem;
+        width: auto;
       }
+    } // figcaption
+
+    &.tall {
+      max-width: $break-small;
+
+      a { max-width: 30rem; }
+    } // .tall
+  } // .image-left, .image-right
+
+  &.image-right {
+    flex-direction: row-reverse;
+  }
+
+  &.full-width {
+    margin-left: -10%;
+    width: 120%;
+
+    @media all and (max-width: 1180px) { 
+      margin-left: -5%;
+      width: 110%;
+    }
+
+    @media all and (max-width: $break-small) {
+      margin-left: 0;
+      width: 100%;
     }
   }
 
-  &.natural-width {
-    img {
-      width: auto;
-      margin: 0 auto;
-    }
+  &.almost-body-width {
+    margin: 4rem auto;
+    width: 80%;
+
+    @media all and (max-width: $break-small) { width: 100%; }
+  }
+
+  &.content-width {
+    margin: 0 auto;
+    max-width: $body-content-width;
+
+    &.tall { max-width: 30rem; }
   }
 } // figure
 
+// put two figures in a div for side-by-side
+.two-up-container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -5%;
+  width: 110%;
+
+  figure { width: 48%; }
+
+  @media all and (max-width: $break-medium) {
+    display: block;
+    margin-left: 0;
+    width: 100%;
+
+    figure { width: 100%; }
+  }
+}
+
 figcaption {
-  color: $color-secondary;
-  font-family: $sans-serif;
-  font-size: 0.9rem;
-  line-height: 150%;
-  margin-top: 12px;
+
+  @include body-sans-extra-small;
+  color: $black-02;
+  margin: 1rem auto;
+  max-width: 28rem;
+  width: auto;
 
   a:link,
   a:visited { 
-    border-bottom: 1px solid #eee;
-    color: $color-secondary; 
+    color: $black-02; 
   }
 
   a:hover, 
-  a:active { border-bottom: 1px solid $color-primary; }
-}
+  a:active { color: $black-01;}
+
+  @media all and (max-width: $break-small) { 
+    margin: 1rem auto;
+  }
+} // figcaption
 

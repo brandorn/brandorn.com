@@ -8,6 +8,6 @@ url: "http://brandorn.com" # the base hostname & protocol
 markdown: kramdown
 
 # Other
-permalink: :title
+permalink: /:categories/:title
 sass:
-  sass_dir: /src/styles/_sass
+  sass_dir: src/styles/_sass

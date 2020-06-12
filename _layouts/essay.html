@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  {% include head.html %}
+	<body class="essay">
+	{% include nav.html %}
+
+		<header>
+			<div class="meta">
+				<p class=label-small>Writing</p>
+				<h1> {{ page.title }}</h1>
+				<p class="intro"> {{page.description }}</p>
+				<p class="date"> <span class="date">{{ page.date | date: "%b %d"}}</span> {% if page.source_name %} · Originally posted on {{ page.source_preposition }} <a href="{{ page.source_link }}">{{ page.source_name }}</a> {% endif %}</p>
+			</div>
+
+			<figure>
+				<img src="/img/writing/{{page.img_folder}}/{{ page.hero}}" alt="">
+				<figcaption>{{ page.hero_caption }}</figcaption>
+			</figure>
+
+		</header><!-- /header -->
+
+		<div class="start-mark"></div>
+		<section class="essay-content">
+			{{ content }}
+		</section>
+	  
+	{% include footer.html %}
+  </body>
+</html>

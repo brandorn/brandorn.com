@@ -1,43 +1,220 @@
-
-
-/* === Serif === */
-
+/* Font definitions */
 
 /* === Sans-serif === */
 
 @font-face {
-  src: url(/src/fonts/BentonSans-Regular.ttf);
-  font-family: 'Benton Sans';
+  src: url(/src/fonts/BertholdAkzidenz-Light.otf);
+  font-family: 'Berthold Akzidenz Grotesk';
+  font-style: normal;
+  font-weight: 100;
+}
+
+@font-face {
+  src: url(/src/fonts/BertholdAkzidenz-Regular.otf);
+  font-family: 'Berthold Akzidenz Grotesk';
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
-  src: url(/src/fonts/BentonSans-RegularItalic.ttf);
-  font-family: 'Benton Sans';
+  src: url(/src/fonts/BertholdAkzidenz-RegularItalic.otf);
+  font-family: 'Berthold Akzidenz Grotesk';
   font-style: italic;
   font-weight: normal;
 } 
 
 @font-face {
-  src: url(/src/fonts/BentonSans-Medium.ttf);
-  font-family: 'Benton Sans';
+  src: url(/src/fonts/BertholdAkzidenz-Medium.otf);
+  font-family: 'Berthold Akzidenz Grotesk';
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 @font-face {
-  src: url(/src/fonts/BentonSans-MediumItalic.ttf);
-  font-family: 'Benton Sans';
+  src: url(/src/fonts/BertholdAkzidenz-MediumItalic.otf);
+  font-family: 'Berthold Akzidenz Grotesk';
   font-style: italic;
-  font-weight: 600;
+  font-weight: 500;
 }
 
-$sans-serif: "Benton Sans", -apple-system, Helvetica, Arial, sans-serif;
-.sans-serif { font-family: $sans-serif; }
+@font-face {
+  src: url(/src/fonts/BertholdAkzidenz-Bold.otf);
+  font-family: 'Berthold Akzidenz Grotesk';
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  src: url(/src/fonts/BertholdAkzidenz-BoldItalic.otf);
+  font-family: 'Berthold Akzidenz Grotesk';
+  font-style: italic;
+  font-weight: 700;
+}
+
+$sans: 'Berthold Akzidenz Grotesk', -apple-system, Helvetica, Arial, sans-serif;
+.sans { font-family: $sans; }
 
 
-/* Font sizes
-   ================================ */
+@font-face {
+  src: url(/src/fonts/BebasNeue-Bold.otf);
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 700;
+}
 
-   $type-secondary: 0.9rem;
+$sans-condensed: 'Bebas Neue', -apple-system, Helvetica, Arial, sans-serif;
+
+/* === Serif === */
+
+@font-face {
+  src: url(/src/fonts/Calluna-Regular.otf);
+  font-family: 'Calluna';
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  src: url(/src/fonts/Calluna-RegularItalic.otf);
+  font-family: 'Calluna';
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  src: url(/src/fonts/Calluna-Bold.otf);
+  font-family: 'Calluna';
+  font-style: normal;
+  font-weight: 500;
+}
+
+
+@font-face {
+  src: url(/src/fonts/ArnoPro-Bold.otf);
+  font-family: 'Arno Pro';
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+$serif-body: 'Calluna', Georgia, serif;
+$serif-title: 'Arno Pro', Georgia, serif; 
+
+
+
+/* Font mixins */
+
+/* === Sans-serif === */
+
+@mixin body-sans-large {
+  font-family: $sans;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: -0.009em;
+  line-height: 140%;
+}
+
+@mixin body-sans-medium {
+  font-family: $sans;
+  font-size: 1.12rem;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: -0.009em;
+  line-height: 140%;
+}
+
+@mixin body-sans-small {
+  font-family: $sans;
+  font-size: 0.94rem;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: -0.009em;
+  line-height: 140%;
+}
+
+@mixin body-sans-extra-small {
+  font-family: $sans;
+  font-size: 0.82rem;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: -0.009em;
+  line-height: 140%;
+}
+
+@mixin body-sans-big-counter {
+  font-family: $sans;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 100%;
+}
+
+/* === Condensed === */
+
+@mixin body-condensed-jumbo {
+  font-family: $sans-condensed;
+  font-size: 5.24rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+
+/* === Serif === */
+
+@mixin body-serif-jumbo {
+  font-family: $serif-title;
+  font-size: 3.64rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 95%;
+}
+
+@mixin body-serif-medium {
+  font-family: $serif-body;
+  font-size: 1.24rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 150%;
+}
+
+@mixin body-serif-small {
+  font-family: $serif-body;
+  font-size: 1.08rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 150%;
+}
+
+/* === Labels === */
+
+@mixin label-large {
+  font-family: $sans;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.009em;
+  line-height: 120%;
+}
+
+@mixin label-medium {
+  font-family: $sans;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.009em;
+  line-height: 120%;
+}
+
+@mixin label-small {
+  font-family: $sans;
+  font-size: 0.88rem;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.009em;
+  line-height: 120%;
+}
+
+.label-small { @include label-small; }
+.label-medium { @include label-medium; }
+    

@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  {% include head.html %}
+	<body class="case-study">
+	{% include nav.html %}
+
+		<header>
+			<div class="case-study-summary">
+				<p class="label-small">{{ page.case_study_type }}</p>
+				<h1>{{ page.title }}</h1>
+				<p class="intro">{{ page.intro }}</p>
+
+				<div class="roles-and-responsibilities">
+					<ul>
+						<li>Role</li>
+						<li> {{ page.role }} </li>
+					</ul>
+					<ul>
+						<li>Responsibilities</li>
+						<li> {{ page.responsibilities }} </li>
+					</ul>
+				</div>
+			</div>
+			<div class="case-study-hero">
+				<!-- set background image on a <div> using styles in HTML; div flexes, images match proportions -->
+				<img 
+					src="/img/design/{{ page.img_folder }}/{{ page.hero }}"
+					alt="Preview image for the {{ page.title }} case study."
+				>
+			</div>
+		</header><!-- /header -->
+
+		<section class="case-study-content">
+			{{ content }}
+
+			{% if page.project_team %}
+			<div class="project-team-container">
+				<h2>Project Team</h2>
+				<table class= "project-team-table">
+					{% for person in page.project_team %}
+					<tr>
+						<td class="name">{{ person.name }}</td>
+						<td class="role">{{ person.role }}</td>
+					</tr>
+					{% endfor %}
+				</table>
+
+				<div class="button-set">
+					{% if page.case_study_link %}
+						<button class="arrow"><a href="{{ page.case_study_link }}">View Viget case study</a></button>
+					{% endif %}
+
+					{% if page.website_link %}
+						<button><a href="{{ page.website_link }}">View Website</a></button>
+					{% endif %}
+
+					{% if page.app_store_link %}
+						<button class="secondary arrow"><a href="{{ page.app_store_link }}">View in the App Store</a></button>
+					{% endif %}
+				</div>
+
+			</div> <!-- project-team-container -->
+			{% endif %} <!-- if page.project_team -->
+
+			<div class="case-studies-list">
+				<p class="label-small">Case Studies</p>
+				<ul>
+					{{% assign page.title = current_page %}}
+					{% for post in site.categories.design reversed %}
+						<li {% if post.title == page.title %} class="current-page" {% endif %}> {% unless post.title == page.title %}<a href="{{ post.url }}">{% endunless%} {{ post.title }} {% unless post.title == page.title %}</a>{% endunless%}</li>
+					{% endfor %}
+				</ul>
+			</div>
+
+		</section>
+	  
+		{% include photoswipe-elements.html %}
+		{% include footer.html %}
+  </body>
+</html>

@@ -2,76 +2,44 @@
 html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
-  font-size: 100%;
-  text-rendering: optimizeLegibility;
 
-  @media all and (min-width: $break-large) { font-size: 110%; }
-  @media all and (max-width: $break-tiny) { font-size: 94%; }
+  font-size: 96%;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  @media all and (min-width: $break-large) { font-size: 102%; }
+  @media all and (max-width: $break-medium) { font-size: 90%; }
 }
 
 *, *:before, *:after { box-sizing: inherit; }
 
 body {
-  color: $color-primary;
-  font-family: $sans-serif;
+  color: $black-01;
+  font-family: $sans;
+  font-size: 1rem;
   font-variant-ligatures: normal;
   line-height: 140%;
   margin: 2rem auto 8rem auto;
-  max-width: 960px;
+  max-width: 1080px;
   overflow: scroll;
   padding: 0 2em;
+  width: 94%;
 
-  // @media all and (min-width: $break-large) { max-width: 1100px; }
+  @media all and (max-width: $break-small) { width: 100%; }
   @media all and (max-width: $break-tiny) { padding: 0 1rem; }
 
 }
 
-h1 {
-  font-size: 2.4rem;
-  font-weight: normal;
-  letter-spacing: 0;
-  line-height: 140%;
-  margin: 1.5rem 0;
+h1 {  }
+
+h2 { 
+  margin: 1rem 0;
 }
 
-h2 {
-  font-size: 1.4rem;
-  line-height: 140%;
-  margin: 4rem 0 1rem 0;
-}
+h3 { }
 
-.home h2 { 
-  color: $color-secondary;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  margin: 6em 0 2em 0;
-  text-transform: uppercase;
-}
-
-h3 { 
-  color: $color-secondary;
-  font-size: 0.8rem;
-  letter-spacing: 2px;
-  margin: 3rem 0 1rem 0;
-  text-transform: uppercase;
-}
-
-p { 
-  font-size: 1rem;
-  line-height: 170%; 
-  margin: .5rem 0 1.5rem 0;
-
-  &.text-secondary {
-    color: $color-secondary;
-    font-size: $type-secondary;
-  }
-
-  &.big { 
-    font-size: 1.5rem;
-    line-height: 150%;
-  }
-}
+p { }
 
 a {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -79,37 +47,113 @@ a {
   
   &:link,
   &:visited {
-    border-bottom: 1px solid $color-tertiary;
-    color: $color-primary;
+    // border-bottom: 2px solid $black-03;
+    color: $black-01;
+    text-decoration: underline;
   }
   
   &:hover,
-  &:active {
-    border-bottom: 1px solid $color-primary;
+  &:active { 
+    // border-bottom: 2px solid $black-03;
+    color: $red-02;
+    text-decoration: underline;
+  }
+} // a
+
+button {
+  background: #fff;
+  border: 1px solid $red-02;
+  margin: 1rem 0;
+  padding: 0.6rem 1rem;
+  transition: all 200ms;
+
+  &:hover { background-color: $highlight-red; }
+
+  &.secondary { 
+    border: none;
+
+    &.arrow {
+      a::after {
+        background: url("/img/icon-arrow.svg") 50% no-repeat;
+        content: "";
+        float: right;
+        height: 12px;
+        width: 12px;
+        margin-left: 6px;
+        margin-top: 4px;
+      }
+    }
+  } // .secondary
+
+  a { @include label-small; }
+
+  a:link,
+  a:visited { 
+    color: $red-02;
+    text-decoration: none;
   }
 
+  a:hover,
+  a:active { 
+    color: $red-02;
+    text-decoration: none;
+  }
+
+  &.email {
+    a::before {
+      background: url("/img/icon-email.svg") 50% no-repeat;
+      content: "";
+      float: left;
+      height: 12px;
+      width: 14px;
+      margin-right: 6px;
+      margin-top: 4px;
+    }
+  } // .arrow
+
+  &.arrow {
+    a::after {
+      background: url("/img/icon-arrow.svg") 50% no-repeat;
+      content: "";
+      float: right;
+      height: 12px;
+      width: 12px;
+      margin-left: 6px;
+      margin-top: 4px;
+    }
+  } // .arrow
 }
 
+.button-set {
+  button:nth-child(n+2) { margin-left: 1rem; }
+}
+
+// Photoswipe UI Overrides
+
+.pswp__top-bar button:hover { background-color: #000; }
+
+
+
 blockquote {
-  margin-bottom: 2rem;
-  
-  p { 
-    font-size: $type-secondary;
-    margin-bottom: 1rem;
+  @include body-sans-medium;
+
+  margin: 4rem auto;
+  max-width: $body-content-width;
+
+  p {
+    border-left: 2px solid $black-04;
+    font-style: italic !important;
+    padding-left: 2rem;
+    margin-bottom: 2rem;
   }
 
   cite {
-    color: $color-secondary;
-    display: block;
-    font-size: 0.8rem;
-    font-style: normal;
-    margin-top: -0.5rem;
-    &:before { content: " – " }
-  }
+    @include body-sans-small;
 
-  @media screen and (max-width: $break-medium) { 
-    margin: 24px 12px; 
-    width: auto;
+    color: $black-02;
+    font-style: normal;
+    margin-left: 2rem;
+    &:before { content: " – " }
   }
 } // blockquote
 
@@ -119,13 +163,13 @@ ul {
   margin: 0;
   padding: 0;
 
-  li { list-style: disc; }
+  li { }
 }
 
 ol {
   display: block;
   margin: 1em 0;
-  margin-left: 0;
+  margin-left: 2rem;
   padding-left: 0;
 }
 
@@ -136,11 +180,11 @@ li {
 }
 
 hr {
-  height: 2px;
-  background: $color-tertiary;
+  height: 1px;
+  background: $black-04;
   border: none;
-  margin: 6em auto;
-  width: 6rem;
+  margin: 3em auto;
+  width: 7rem;
 }
 
 table { margin: 2em 0; }
@@ -159,8 +203,11 @@ i {
   font-weight: normal;
 }
 
-strong {font-weight: bold; }
+b,
+strong {
+  font-weight: 500; 
+}
 
-*::selection { background: #d7f5ff; }
+*::selection { background: $highlight-yellow; }
 
 *:focus { outline: 1px dotted #eee; }

@@ -5,66 +5,97 @@ title: Brandon Dorn
 description: Durham-based designer, Midwesterner at heart.
 ---
 
-<div class="home">
-	
-	<div class="mug">
-		<img src="/img/bd-mug.png" alt="">
+<header class="page-intro">
+	<p>I'm a senior product designer based in Durham, North Carolina, currently working at <a href='https://viget.com'>Viget</a>. A design generalist, I gravitate toward projects that involve prototyping, research, interaction design, and data visualization.</p>	
+</header>
 
-		<div class="contact">
-			<h2>Contact</h2>
-			<ul>
-				<li><a href="mailto:brandon.dorn@gmail.com">Email</a></li>
-				<li><a href="https://www.linkedin.com/in/brandon-dorn">LinkedIn</a></li>
-				<li><a href="https://www.instagram.com/brandon_dorn/">Instagram</a></li>
-			</ul>
+<div class="select-clients">
+	<p class="label">Select Clients</p>
+	<div class="client-list">
+		<div class="column">
+			<p>Arcadia</p>
+			<p>Couchsurfing</p>
+			<p>CyberGRX</p>
+			<p>Dick’s Sporting Goods</p>
+			<p>National Public Media</p>
+			<p>National Student Clearinghouse</p>
 		</div>
-	</div>
 
-	<div class="home-things">
-		<h2>Hey over there</h2>
-		<p class="big">I'm Brandon Dorn, a digital product designer at <a href="https://viget.com">Viget</a>, where I focus on information architecture, user research, and interaction design.</p>
+		<div class="column">
+			<p>Nest Realty</p>
+			<p>Privia Health</p> 
+			<p>Rotary International</p>
+			<p>Shedd Aquarium</p>
+			<p>Southern African Wildlife College</p>
+			<p>Standard Cognition</p>
+		</div>
 
-		<ul class="contact">
-			<li><a href="mailto:brandon.dorn@gmail.com">Email</a></li>
-			<li><a href="https://www.linkedin.com/in/brandon-dorn">LinkedIn</a></li>
-			<li><a href="https://www.instagram.com/brandon_dorn/">Instagram</a></li>
-		</ul>
-
-		<p>I’ve worked with Rotary International, The Nature Conservancy, Privia Medical Group, Volunteers of America, and other organizations to make their digital things more useful and usable.</p>
-		<p>I like to read, and books themselves have become my standard for product design. Seems to me a digital product should be as easy to handle and learn from as a good book: accessible, durable, self-contained, unobtrusive, words and images helping each other out, information presented in sequence with enough context, nice to look at for lengths of time, designed at a human scale. A vessel of generosity from author to reader.</p>
-		<p>As a designer, I take cues from the <a href="https://en.wikipedia.org/wiki/Bauhaus">Bauhaus</a> school of thought that emphasized close attention to form for the sake of content, prototyping early and often, and a practical familiarity with the methods and materials of production.</p>
-		<p>I live in Durham with my wife, <a href="#!" class="love-hover ba">BethAnne<img src="/img/ba-love.png" alt=""></a>, and our scruffy dogger, <a href="#!" class="love-hover ani">Ani<img src="/img/ani-love.png" alt=""></a>. Before moving to North Carolina I studied English Literature and Economics in Illinois, yet have mostly been influenced by LEGO instruction manuals and Shel Silverstein poems. Recently I’ve been working on a commentary on the abundant music of <a href="http://sufjan.com">Sufjan Stevens</a>. More on that soon.</p>
-
-		<h2>Odds and Ends</h2>
-
-		<ul class="writing-list">
-			{% assign writing_list = site.categories.writing %}
-			{% for item in writing_list %}
-			<li>
-				<p class="title"><a href="{% if item.original_link %} {{ item.original_link }} {% else %} {{ item.url }} {% endif %}" title="">{{ item.title }}</a></p>
-				<p class="meta"> {% if item.original_source %} {{ item.original_source }}, {% endif %} {{ item.date | date: '%B %Y'}}</p>
-			</li>
-			{% endfor %}
-		</ul>
+		<div class="column">
+			<p>State Farm</p>
+			<p>The Nature Conservancy</p>
+			<p>The University of Chicago</p>
+			<p>UVA Darden School of Business</p>
+			<p>Volunteers of America</p>
+			<p>Wildlife Conservation Society</p>
+		</div>
+	</div> <!-- client-list -->
+</div> <!-- select-clients -->
 
 
-		<h2>Recommended Reading</h2>
-		<ul class= "reading-list">
-			{% assign reading_list = site.categories.favorites | sort: 'author_last' %}
-			{% for item in reading_list %}
-			<li>
-				<div class="thumb"><img src="/img/favorites/{{ item.thumb }}" alt="Cover of {{ item.title }}"></div>
-				<div class="meta">
-					<p class="title"><span><a href="{{ item.amz_link }}">{{ item.title }}</a></span> by {{ item.author_first }} {{ item.author_last}}</p>
-					<p class="description"> {{ item.description }}</p>
-				</div>
-			</li>
-			{% endfor %}
-		</ul>
+<div class="case-study-grid">
 
+	<a href="/design/arcadia">
+		<div class="case-study-preview arcadia">
+			<div class="thumb"></div>
+			<p class="title">Arcadia</p>
+			<p class="description">Clarifying clean energy use to support encourage reduction</p>
+			<p class="type">Product Design</p>
+		</div>
+	</a>
 
-		<h2>Love language</h2>
-		<p class="text-secondary">The third-person omniscient, brick red, afternoon errands, unassuming generosity, the quiet heavy energy before a thunderstorm, the ozone air after a thunderstorm, the expression on people’s faces after they’re done smiling and return to their thoughts, stark minimalism and animal warmth in Scandinavian design, modesty, 20th c. Christian humanism, heathered fabric, hole-in-the-wall Mexican, courtesy, pocket knives, club sandwiches, New Criticism, foraging at used book stores, the Great Plains, coffee cake, Jesus' kindness, severity, and patience, curiosity cabinets, mid-90s Nickelodeon, dirty realism, magical realism, mumblecore realism, the original Sambas, Midwestern hip-hop, sparkling water, unself-conscious, jargon-laced strategies of self promotion (the kind you find on LinkedIn), moments of honesty and self-revelation in sterile, professional places, Mahler’s 5th and 3rd (in that order), when you’re waiting at a stoplight your turn signal and synchronizes with the song you're listening to, literary marginalia, the extras in Portlandia, folk wisdom, brunch dates, lists, bouldering, black matte finishes, shortbread cookies, normcore, the complicated characters of the Old Testament, hotel continental breakfasts, melancholy trap, accessible poetry, handwritten letters, Southern Gothic, non-holiday gift-giving, the idea of wonder, prairie women, essays, hand massages, cartography, ambiguity, people who listen wholeheartedly, midweight jackets, clever German compound words, October, coffee cake crumbles, manual hatchbacks, etc.</p>
-	</div>
-	
-</div>
+	<a href="/design/cybergrx">
+		<div class="case-study-preview cybergrx">
+			<div class="thumb"></div>
+			<p class="title">CyberGRX</p>
+			<p class="description">Visualizing cybersecurity risk for organizations at scale</p>
+			<p class="type">Product Design</p>
+		</div>
+	</a>
+
+	<a href="/design/national-student-clearinghouse">
+		<div class="case-study-preview nsc">
+			<div class="thumb"></div>
+			<p class="title">National Student Clearinghouse</p>
+			<p class="description">Improving the education verification process for employers</p>
+			<p class="type">Product Design</p>
+		</div>
+	</a>
+
+	<a href="/design/uva-darden">
+		<div class="case-study-preview darden">
+			<div class="thumb"></div>
+			<p class="title">UVA Darden School of Business</p>
+			<p class="description">Making a compelling case for the modern, values-based MBA</p>
+			<p class="type">Information Architecture</p>
+		</div>
+	</a>
+
+	<a href="/design/privia-health">
+		<div class="case-study-preview privia">
+			<div class="thumb"></div>
+			<p class="title">Privia Health</p>
+			<p class="description">Supporting care providers in their day-to-day patient interactions</p>
+			<p class="type">Product Design</p>
+		</div>
+	</a>
+
+	<a href="/design/rotary-international">
+		<div class="case-study-preview rotary">
+			<div class="thumb"></div>
+			<p class="title">Rotary International</p>
+			<p class="description">Identifying a path forward for an aging international member portal</p>
+			<p class="type">User Research · Web App</p>
+		</div>
+	</a>
+
+</div> <!-- .home-grid -->

@@ -1,0 +1,553 @@
+/* === Case Studies === */
+
+.case-study {
+
+	header {
+		border-bottom: 1px solid $black-05;
+		display: flex;
+		justify-content: space-between;
+
+		@media all and (max-width: $break-medium) { border-bottom: none; }
+		@media all and (max-width: $break-small) { display: block; }
+
+		.case-study-summary {
+			padding-top: 2rem;
+			width: 44%;
+
+			@media all and (max-width: $break-small) { 
+				margin: 0 auto;
+				max-width: 520px;
+				width: auto;
+			}
+
+			.label-small {
+				color: $black-02;
+				margin-bottom: -0.5rem;
+
+				@media all and (max-width: $break-small) {
+					margin-top: 2rem;
+					text-align: center;
+				}
+			}
+
+		  @keyframes headerAnimate {
+		    from { 
+		    	opacity: 0;
+		    	transform: translateY(1rem);
+		    }
+		    to   { 
+		    	opacity: 1;
+		    	transform: translateY(0);
+		    }
+		 	}
+
+			h1 {
+				@include body-serif-jumbo;
+				// animation: headerAnimate 1s;
+				margin-bottom: 0rem;
+
+				@media all and (max-width: $break-small) { text-align: center; }
+			}
+
+			.intro { @include body-sans-medium; }
+
+			.roles-and-responsibilities {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 2rem;
+				margin-top: 2rem;
+
+				ul {
+					width: 50%;
+
+					li {
+						@include body-sans-small;
+
+						list-style-type: none;
+
+						&:first-child {
+							@include label-small;
+							margin-bottom: -0.5rem;
+						}
+					}
+				}
+			} // .roles-and-responsibilities
+		} // .case-study-summary
+
+		@keyframes heroAnimate {
+		  0% {
+		    opacity: 0%;
+		    transform: translateY(2rem);
+		  }
+		  100% {
+		  	opacity: 100%;
+		    transform: translateY(0);
+		  }
+		}
+
+		.case-study-hero {
+			// animation: 0.5s ease-out 0s 1 heroAnimate;
+			padding-top: 1rem;
+			margin-top: auto;
+			text-align: center;
+			width: 50%;
+
+			@media all and (max-width: $break-medium) { margin-top: 3rem; }
+
+			@media all and (max-width: $break-small) { 
+				border-bottom: 1px solid $black-05;
+				margin: 2rem auto;
+				width: auto;
+			}
+
+			img {
+				max-width: 500px;
+				vertical-align: bottom;
+
+				@media all and (max-width: $break-medium) { 
+					border-bottom: 1px solid $black-05;
+					margin: 0 auto;
+					vertical-align: top;
+				}
+
+				@media all and (max-width: $break-small) { border-bottom: none; }
+			} // img
+		} // .case-study-hero
+	} // header
+
+	.case-study-content {
+		margin: 6rem 0 4rem 0;
+		
+		h2,
+		h3,
+		p,
+		ol { 
+			margin-left: auto;
+			margin-right: auto;
+			max-width: $body-content-width;
+		}
+
+		h2 { 
+			@include label-medium; 
+			margin: 6rem auto 2rem auto;
+		}
+
+		p { 
+			@include body-serif-medium; 
+			margin: 1rem auto; 
+		}
+
+		figure { 
+			margin-bottom: 5rem;
+			margin-top: 5rem;
+
+			&.no-mt { margin-top: -4rem; }
+
+			figcaption { @include body-sans-small; }
+		}
+
+		.project-team-container { 
+			border-top: 1px solid $black-04;
+			margin: 4rem auto 2rem auto;
+			width: $body-content-width;
+
+			h2 {
+				@include label-small;
+				color: $black-02;
+				margin-top: 4rem;
+			}
+		}
+
+		.project-team-table {
+			margin: 1rem 0;
+
+			td { 
+				@include body-sans-small;
+
+				padding: 0.5rem 2rem 0.5rem 0; 
+			}
+
+			.role { color: $black-02; }
+		}
+
+		.case-studies-list {
+			border-top: 1px solid $black-04;
+			margin: 4rem auto;
+			max-width: $body-content-width;
+			padding-top: 3rem;
+
+			.label-small { 
+				@include label-small;
+
+				color: $black-02;
+				margin-bottom: 2rem;
+			}
+
+			ul {
+				column-count: 2;
+				display: inline-block;
+
+				li {
+					@include label-medium;
+
+					a:link,
+					a:visited,
+					a:hover,
+					a:active { text-decoration: none; }
+
+					margin: 0 4rem 1.5rem 0;
+
+					&.current-page { color: $black-03; }
+				}
+			}
+
+			
+		}
+	} // .case-study-content
+
+	.what-i-learned {
+		background-color: $black-06;
+		// border-bottom: 1px solid $black-05;
+		// border-top: 1px solid $black-05;
+		margin: 6rem auto;
+		padding: 2rem 0;
+
+		@media all and (max-width: $break-medium) {
+			padding: 2rem;
+		}
+
+		h2 { 
+			color: $red-02;
+			margin-bottom: 2.4rem;
+			margin-top: 2rem; 
+		}
+
+		.learned-things {
+		  list-style: none;
+		  counter-reset: big-counter;
+
+			li {
+				counter-increment: big-counter;
+				margin: 2rem 0;
+
+				@media all and (max-width: $break-medium) { display: flex; }
+
+				p { 
+					@include body-serif-small;
+					margin: 0;
+				}
+
+				&::before {
+				  @include body-sans-big-counter;
+
+				  color: $red-02;
+				  content: counter(big-counter) ".";
+				  float: left;
+				  margin-left: -6rem;
+				  margin-top: 2px;
+
+				  @media all and (max-width: $break-medium) {
+				  	float: none;
+				  	margin-left: 0;
+				  	margin-right: 2rem;
+				  }
+				}
+			} // li
+		} // .learned-things
+	} // .what-i-learned
+
+} // .case-study
+
+
+/* === Photo Journals === */
+
+.photo-journal {
+
+	max-width: 100%;
+
+	header {
+		margin: 6rem auto;
+		max-width: 600px;
+		text-align: center;
+
+		.label-small { 
+			@include label-small;
+
+			color: $black-02; 
+		}
+
+		h1 { 
+			@include body-condensed-jumbo; 
+			// animation: headerAnimate 1s;
+			margin: 2rem 0 1rem 0;
+		}
+
+		.intro { 
+			@include body-sans-medium;
+
+			color: $black-02;
+			margin: 0 auto;
+			max-width: 480px;
+		}
+
+		/* &::after {
+			content: '';
+			display: block;
+			height: 1px;
+	    background: rgba(0, 0, 0, 0.16);
+	    border: none;
+	    margin: 3em auto;
+	    width: 7rem;
+		} */
+	} // header
+
+	.photo-journal-content {
+		margin: 0 auto;
+		max-width: $body-content-width;
+
+		p {
+			@include body-serif-medium;
+
+			margin: 0 auto 2rem auto;
+		}
+
+		& p:first-of-type:first-letter {
+		  border-right: 1px solid $black-04;
+		  float: left;
+		  // font-family: $sans;
+		  font-size: 56px;
+		  font-weight: 700;
+		  line-height: 56px;
+		  margin-right: 32px;
+		  padding-top: 2px;
+		  padding-right: 26px;
+		}
+
+		& ~ p:first-of-type { margin-top: 6rem; }
+	
+	} // .photo-journal-content
+
+	.photo-gallery { 
+
+		figure {
+			margin-bottom: 6rem;
+			margin-top: 6rem;
+
+			&.no-mt { margin-top: -6rem; }
+
+			a img:hover { 
+				cursor: zoom-in;
+				// opacity: 0.9;
+			}
+
+			figcaption { @include body-sans-small; }
+		} // figure
+
+		p {
+			@include body-serif-medium;
+
+			margin: 1rem auto;
+			max-width: $body-content-width;
+		}
+	} // .photo-gallery
+
+} // .photo-journal
+
+
+/* === Reading & Writing === */
+
+.essay,
+.presentation {
+	header {
+		margin: 0 auto;
+
+		.label-small { color: $black-02; }
+
+		h1 { 
+			@include body-serif-jumbo;
+			margin-bottom: 1rem;
+		}
+
+		.intro { @include body-sans-large; }
+
+		.date {
+			@include	body-sans-small;
+			color: $black-02;
+
+			span { font-weight: 500;}
+
+			a:link,
+			a:visited { color: $black-02; }
+
+			a:hover,
+			a:active { color: $black-01; }
+		}
+	} // header
+} // .essay, .presentation
+
+.essay {
+
+	header {
+		display: flex;
+		// flex-direction: row-reverse;
+		justify-content: space-between;
+		width: 100%;
+
+		@media all and (max-width: $break-small) { display: block; }
+
+		.meta {
+			padding-right: 4rem;
+			width: 52%;
+
+			@media all and (max-width: $break-small) {
+				margin: 3rem auto;
+				max-width: 600px;
+				text-align: center;
+				width: auto;
+			}
+
+			h1 { margin-top: 2rem; }
+		}
+
+		figure { 
+			margin-top: 0;
+			width: 48%; 
+
+			@media all and (max-width: $break-medium) { margin-top: 3rem; }
+
+			@media all and (max-width: $break-small) {
+				margin: 6rem auto;
+				max-width: 600px;
+				width: auto;
+			}
+
+			figcaption { 
+				@include body-sans-extra-small;
+				color: $black-02;
+				margin: 0.5rem 0;
+			}
+		}
+	} // header
+
+	.essay-content {
+		margin: 4rem auto 0 auto;
+
+		h2, h3 {
+			margin: 6rem auto 2rem auto;
+			max-width: $body-content-width;
+		}
+
+		h2 { @include label-large; }
+
+		p {
+			@include body-serif-medium;
+
+			margin: 1rem auto;
+			max-width: $body-content-width;
+
+			&:first-of-type:first-letter {
+			  float: left;
+			  font-family: $sans;
+			  font-size: 56px;
+			  font-weight: 700;
+			  line-height: 56px;
+			  padding-top: 2px;
+			  padding-right: 26px;
+			}
+		} // p
+
+		ol, ul {
+			@include body-serif-small;
+
+			margin: 2rem auto;
+			max-width: $body-content-width;
+			padding: 0 2rem;
+		}
+
+	} // .essay-content
+
+	.start-mark {
+		margin: 6rem auto -2rem auto;
+		width: $body-content-width;
+
+		&::before {
+			content: '';
+	    display: block;
+	    height: 3px;
+	    background: darken($highlight-purple, 10%);
+	    border: none;
+	    margin: 2rem 0;
+	    width: 5rem;
+	  }
+	} // .start-mark
+
+} // .essay
+
+
+.presentation {
+
+	header {
+		margin: 1rem auto 8rem auto;
+		max-width: 720px;
+		text-align: center;
+
+		.intro {
+			margin: 0 auto;
+			width: 90%;
+		}
+
+		&::after { margin: 3rem 0;}
+	}
+
+// Eventually just make thesed divs, not a ul
+
+	.slide {
+		display: flex;
+		margin-bottom: 2rem;
+
+		@media all and (max-width: 540px) { 
+			display: block;
+			margin-bottom: 4rem;
+			width: 100%;
+		}
+
+		figure { 
+			margin: 0 0 1rem 0; 
+			width: 80%;
+
+			@media all and (max-width: 540px) { width: 100%; }
+		}
+
+		figcaption { 
+			@include body-sans-extra-small;
+			margin-top: 0.5rem;
+		}
+
+		.slide-notes {
+			margin: 2rem 0 0 4rem;
+
+			@media all and (max-width: $break-small) { 
+				margin-left: 2rem;
+			}
+
+			@media all and (max-width: 540px) { 
+				margin-left: 0;
+				width: 100%;
+			}
+
+			p {
+				@include body-sans-medium;
+				max-width: 480px;
+			}
+
+			blockquote {
+				border-left: 1px solid $black-02;
+				font-size: 0.85rem;
+				margin-left: 1rem;
+				padding-left: 1rem;
+			}
+		}
+
+	} // .slide
+} // .presentation
+

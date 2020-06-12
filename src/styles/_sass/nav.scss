@@ -1,0 +1,100 @@
+/* === Primary Nav === */
+
+#nav {
+	margin: 0 auto 4rem auto;
+	max-width: 1080px;
+
+	a:link,
+	a:visited { 
+		border-bottom: none; 
+		text-decoration: none;
+	}
+
+	a:hover,
+	a:active { 
+		border-bottom: none;
+		color: $black-02;
+		text-decoration: none;
+	}
+}
+
+.home {
+	display: inline-block;
+	margin: 0 7rem 0 -1rem;
+	padding: 1rem;
+	vertical-align: top;
+
+	@media all and (max-width: $break-small) {
+		display: block;
+		margin-right: 6rem;
+	}
+
+	@media all and (max-width: $break-tiny) { margin-right: 0;}
+
+	h1 {
+		 @include label-medium;
+		 color: $black-02;
+		 margin: 0;
+	}
+}
+
+.nav-links {
+	display: inline-block;
+	vertical-align: top;
+
+	@media all and (max-width: $break-small) { 
+		display: block;
+		margin-left: -1rem; 
+	}
+
+	li {
+		@include label-medium;
+
+		display: inline-block;
+		list-style-type: none;
+		margin: 1rem 0 0 0;
+
+		@media all and (max-width: 540px) {
+			display: block;
+			margin: 0 0 1rem 0;
+		}
+
+		a {
+	    padding: 1rem;
+	    width: 100%;
+			
+			&.active {
+				color: $black-02;
+
+				&.design {background: url("/img/nav/squiggle-red.svg") no-repeat center;}
+				&.photography {background: url("/img/nav/squiggle-green.svg") no-repeat center;}
+				&.writing {background: url("/img/nav/squiggle-purple.svg") no-repeat center;}
+				&.about {background: url("/img/nav/squiggle-blue.svg") no-repeat center;}
+			}
+		} // a
+	} // li
+} // .nav-links
+
+
+/* === Footer === */
+
+footer {
+	border-top: 1px solid $black-05;
+	margin-top: 8rem;
+
+	p {
+		@include body-sans-small;
+		color: $black-02;
+		display: inline-block;
+
+		& ~ p {
+			float: right;
+			@media all and (max-width: $break-small) { float: left; }
+		}
+
+		@media all and (max-width: $break-small) {
+			display: block;
+			margin-bottom: 0;
+		}
+	}
+}
