@@ -74,7 +74,7 @@ description: Durham-based designer, Midwesterner at heart.
 			</div> <!-- .link -->
 			<div class="attribution">
 				{% if item.source_name %}<p class="source"> <a href="{{ item.source_link }}">{{ item.source_name }}</a> </p>{% endif %}
-				<p> {{ item.date | date: "%b %d"}} </p>	
+				<p> {{ item.date | date: "%b %Y"}} </p>	
 			</div>
 		</div>
 		{% endfor %}

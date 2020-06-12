@@ -4,6 +4,8 @@
 	margin: 0 auto 4rem auto;
 	max-width: 1080px;
 
+	@media all and (min-width: $break-large) { max-width: 1280px; }
+
 	a:link,
 	a:visited { 
 		border-bottom: none; 

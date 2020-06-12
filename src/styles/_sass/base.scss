@@ -3,13 +3,13 @@ html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
 
-  font-size: 96%;
+  font-size: 100%;
   text-rendering: optimizeLegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 
-  @media all and (min-width: $break-large) { font-size: 102%; }
-  @media all and (max-width: $break-medium) { font-size: 90%; }
+  @media all and (min-width: $break-large) { font-size: 106%; }
+  @media all and (max-width: $break-medium) { font-size: 94%; }
 }
 
 *, *:before, *:after { box-sizing: inherit; }
@@ -21,11 +21,11 @@ body {
   font-variant-ligatures: normal;
   line-height: 140%;
   margin: 2rem auto 8rem auto;
-  max-width: 1080px;
+  max-width: 1100px;
   overflow: scroll;
   padding: 0 2em;
-  width: 94%;
 
+  @media all and (min-width: $break-large) { max-width: 1280px; }
   @media all and (max-width: $break-small) { width: 100%; }
   @media all and (max-width: $break-tiny) { padding: 0 1rem; }
 
