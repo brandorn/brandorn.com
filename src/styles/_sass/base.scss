@@ -8,8 +8,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 
-  @media all and (min-width: $break-large) { font-size: 106%; }
-  @media all and (max-width: $break-medium) { font-size: 94%; }
+  @media all and (min-width: $break-large) { font-size: 110%; }
+  @media all and (max-width: $break-small) { font-size: 104%; }
 }
 
 *, *:before, *:after { box-sizing: inherit; }

@@ -299,13 +299,13 @@ header.page-intro {
 
 	.genre { 
 		display: inline-block;
-		margin: 0 3rem 1rem 0;
+		margin: 0 2rem 1rem 0;
 		max-width: 24rem;
 		vertical-align: top;
 
 		&:nth-child(3n) { margin-right: 0; }
 
-		@media all and (max-width: $break-medium) {
+		@media all and (max-width: $break-small) {
 			width: 50%;
 			margin-right: 0;
 		}
@@ -318,9 +318,13 @@ header.page-intro {
 				color: $black-02;
 			}
 
-			&:nth-child(n+2) { margin: 0.4rem 0; }
+			&:nth-child(n+2) { margin: 0.5rem 1rem 0.5rem 0; }
 
-			span { color: $black-02; }
+			span {
+				color: $black-02;
+
+				@media all and (max-width: $break-tiny) { display: block; }
+			}
 
 		} // li
 	} // ul
@@ -372,6 +376,16 @@ header.page-intro {
 			color: $black-02;
 			text-align: right;
 			width: 20%; 
+
+			a::after {
+				background: url("/img/icon-arrow-gray.svg") 50% no-repeat;
+        content: "";
+        float: right;
+        height: 11px;
+        width: 11px;
+        margin-left: 6px;
+        margin-top: 4px;
+      }
 
 			a:link,
 			a:visited { color: $black-02; }

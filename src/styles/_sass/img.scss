@@ -5,7 +5,7 @@ figure {
   @include body-sans-small;
 
   color: $black-02;
-  margin: 2em auto;
+  margin: 2rem auto;
   vertical-align: top;
 
   img {
@@ -70,7 +70,7 @@ figure {
   }
 
   &.content-width {
-    margin: 0 auto;
+    margin: 4rem auto;
     max-width: $body-content-width;
 
     &.tall { max-width: 30rem; }

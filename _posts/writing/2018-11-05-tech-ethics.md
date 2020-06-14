@@ -10,7 +10,7 @@ thumb: tech-ethics-thumb.jpg
 hero: tech-ethics-1.jpg
 hero_caption:
 
-location: NOVA UX in Falls Church, VA
+source_name: NOVA UX
 
 ---
 

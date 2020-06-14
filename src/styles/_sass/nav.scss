@@ -37,6 +37,8 @@
 		 @include label-medium;
 		 color: $black-02;
 		 margin: 0;
+
+		 // @media all and (max-width: 540px) { font-size: 1.1rem; }
 	}
 }
 
@@ -58,6 +60,7 @@
 
 		@media all and (max-width: 540px) {
 			display: block;
+			// font-size: 1.1rem;
 			margin: 0 0 1rem 0;
 		}
 
