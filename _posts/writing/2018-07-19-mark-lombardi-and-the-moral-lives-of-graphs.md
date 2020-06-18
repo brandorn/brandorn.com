@@ -3,7 +3,7 @@ category: writing
 layout:
 
 title: Mark Lombardi and the Moral Lives of Graphs
-description: An artist's attempt to map invisible networks of power.
+description: An artist's attempt to visualized hidden networks of power.
 
 img_folder: mark-lombardi
 thumb: mark-lombardi-thumb.png

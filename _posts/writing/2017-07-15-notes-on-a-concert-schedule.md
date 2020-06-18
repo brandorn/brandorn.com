@@ -20,7 +20,7 @@ This is the schedule that staff hand out after shows at [Cat’s Cradle](http://
 
 After picking up a couple of these, I began noticing how thoughtfully they were designed despite being throwaway strips of paper.
 
-<figure>
+<figure class="content-width">
 	<img src="/img/writing/cats-cradle/cats-cradle-scan.jpg" alt="">
 </figure>
 

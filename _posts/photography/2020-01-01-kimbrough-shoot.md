@@ -67,10 +67,10 @@ photo-count: 8
 </figure>
 
 
-<p>We spent the afternoon of the shoot walking the path that Josh walked Simon, where these songs came to him. Like Fahey's before him, Josh's songs meander with purpose, more journey than destination. But they take you somewhere. Check out one of his songs here:</p>
+<p>We spent the afternoon of the shoot walking the path that Josh walked Simon, where these songs came to him. Like Fahey's before him, Josh's songs meander with purpose, more journey than destination. But they take you somewhere. Check out the album here:</p>
 
 <figure class="content-width">
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/Bu15i9d6Zsk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=4084887820/size=large/bgcol=ffffff/linkcol=de270f/tracklist=false/transparent=true/" seamless><a href="http://tompkinssquare.bandcamp.com/album/slither-soar-disappear">Slither, Soar &amp; Disappear by Josh Kimbrough</a></iframe>
 </figure>
 
 

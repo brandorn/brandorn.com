@@ -431,6 +431,7 @@ header.page-intro {
 		width: 36%;
 
 		@media all and (max-width: $break-medium) { 
+			margin-bottom: 4rem;
 			width: 58%; 
 
 			img {
@@ -438,13 +439,14 @@ header.page-intro {
 				object-fit: cover;
 			}
 		}
+
 		@media all and (max-width: 600px) { 
 			width: 72%;
-			img { height: 320px; } 
+			img { height: 360px; } 
 		}
 
 		@media all and (max-width: $break-tiny) { 
-			margin-top: 0;
+			margin-top: -2rem;
 			width: 100%;
 		}
 	}
