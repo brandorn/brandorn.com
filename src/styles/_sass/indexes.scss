@@ -403,11 +403,9 @@ header.page-intro {
 				width: auto;
 
 				.source { 
-					margin-right: 0.3rem; 
+					margin-right: 1rem; 
 
-					&::after {
-						content: " — ";
-					}
+					/* &::after {content: " — ";} */
 				}
 			}
 		} // .attribution
