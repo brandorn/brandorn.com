@@ -27,6 +27,12 @@ $highlight-blue: #E4F9FF;
 $highlight-purple: #F0E4FF;
 
 
+/* Transitions
+   ================================ */
+
+@mixin transition-primary { transition: all 150ms; }
+
+
 /* Breakpoints
    ================================ */
 

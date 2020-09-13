@@ -76,15 +76,15 @@ header.page-intro {
 		}
 
 		.thumb {
+			@include transition-primary;
+
 			background-position: center;
 			background-repeat: no-repeat;
 			height: 30vw;
 			max-height: 300px;
 		 	width: 100%;
 
-		 	@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
-		 		background-size: contain;
-		 	}
+		 	@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) { background-size: contain; }
 		 	@media all and (max-width: $break-small) { height: 40vw; }
 		 	@media all and (max-width: 540px) { height: 300px; }
 
@@ -155,7 +155,6 @@ header.page-intro {
 				}
 			}
 		}
-
 
 		.title {
 			@include label-large;
@@ -246,6 +245,7 @@ header.page-intro {
 		&:hover img { opacity: 0.8; }
 
 		img {
+			@include transition-primary;
 			display: inline-block;
 			margin-right: 1rem;
 			max-width: 6rem;
@@ -299,10 +299,14 @@ header.page-intro {
 			}
 		}
 
-		& img:hover {
-			cursor: zoom-in;
-			opacity: 0.8;
-		}
+		img {
+			@include transition-primary;
+			
+			&:hover {
+				cursor: zoom-in;
+				opacity: 0.8;
+			}
+		}	
 
 		@media all and (max-width: $break-medium) {
 			display: block;
@@ -318,7 +322,7 @@ header.page-intro {
 } // .misc-photos-gallery
 
 
-/* === Words === */
+/* === Reading & Writing === */
 
 .fav-reads {
 
@@ -383,9 +387,12 @@ header.page-intro {
 				min-width: 120px;
 				width: 14%;
 
-				img {
+				img { 
 					margin: 0 auto;
+					@include transition-primary;
 				}
+
+				&:hover { img { opacity: 0.8;} }
 			} // figure
 
 			.meta {

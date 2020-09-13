@@ -5,8 +5,8 @@
     <h1>Brandon Dorn</h1>
   </a>
   <ul class="nav-links">
-  	<li><a href="../" {% unless current[1] == 'photos' or current[1] == 'writing' or current[1] == 'about' %} class='active design' {% endunless %}>Design</a></li>
-  	<li><a href="/photos" {% if current[1] == 'photos' %} class='active photography' {% endif %} >Photography</a></li>
+  	<li><a href="../" {% unless current[1] == 'photography' or current[1] == 'writing' or current[1] == 'about' %} class='active design' {% endunless %}>Design</a></li>
+  	<li><a href="/photography" {% if current[1] == 'photography' %} class='active photography' {% endif %} >Photography</a></li>
   	<li><a href="/writing" {% if current[1] == 'writing' %} class='active writing' {% endif %} >Reading & Writing</a></li>
   	<li><a href="/about" {% if current[1] == 'about' %} class='active about' {% endif %}>About</a></li>
   </ul>

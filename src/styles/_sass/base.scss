@@ -42,6 +42,7 @@ h3 { }
 p { }
 
 a {
+  @include transition-primary;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   text-decoration: none;
   
@@ -61,11 +62,11 @@ a {
 } // a
 
 button:not(.pswp__button) {
+  @include transition-primary;
   background: #fff;
   border: 1px solid $red-02;
   margin: 1rem 0;
   padding: 0.6rem 1rem;
-  transition: all 200ms;
 
   &:hover { background-color: $highlight-red; }
 
@@ -85,7 +86,9 @@ button:not(.pswp__button) {
     }
   } // .secondary
 
-  a { @include label-small; }
+  a {
+    @include label-small;
+  }
 
   a:link,
   a:visited { 
