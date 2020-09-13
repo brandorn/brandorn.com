@@ -5,8 +5,8 @@ html {
 
   font-size: 100%;
   text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+  //-moz-osx-font-smoothing: grayscale;
+  //-webkit-font-smoothing: antialiased;
 
   @media all and (min-width: $break-large) { font-size: 110%; }
   @media all and (max-width: $break-small) { font-size: 104%; }
@@ -60,7 +60,7 @@ a {
   }
 } // a
 
-button {
+button:not(.pswp__button) {
   background: #fff;
   border: 1px solid $red-02;
   margin: 1rem 0;
