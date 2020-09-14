@@ -192,9 +192,9 @@ header.page-intro {
 
 		.drop-cap {
 			float: left;
-			height: 120px;
-			margin: 0 0.5rem 0.3rem 0;
-			width: 120px;
+			height: 148px;
+			margin: -2px 10px 0 0;
+			width: 148px;
 		}
 
 		span {
@@ -204,7 +204,6 @@ header.page-intro {
 	}
 	.source { 
 		@include body-sans-small;
-		color: $black-03;
 		margin-top: 2rem;
 	}
 }
