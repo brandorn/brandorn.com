@@ -29,7 +29,7 @@ description: Durham-based designer, Midwesterner at heart.
 
 		<ul class="genre">
 			<li class="label-small">Fiction</li>
-			<li>Jayber Crow <span>by Wendell berry</span></li>
+			<li>Jayber Crow <span>by Wendell Berry</span></li>
 			<li>Dandelion Wine <span>by Ray Bradbury</span></li>
 			<li>Stories of Your Life and Others <span>by Ted Chiang</span></li>
 			<li>The Lord of the Flies <span>by William Golding</span></li>
@@ -62,22 +62,22 @@ description: Durham-based designer, Midwesterner at heart.
 	<p class="label-small">Writing & Speaking</p>
 
 		{% for item in writing_list %}
-		<div class="writing-item">
-			<div class="link">
-				<figure>
-					<a href="{% if item.source_link %} {{ item.source_link }} {% else %} {{ item.url }} {% endif%}"><img src="/img/writing/{{ item.img_folder }}/{{ item.thumb }}" alt=""></a>
-				</figure>
-				<div class="meta">
-					<a href="{% if item.source_link %} {{ item.source_link }} {% else %} {{ item.url }} {% endif%}">
+		<a href="{% if item.source_link %} {{ item.source_link }} {% else %} {{ item.url }} {% endif%}">
+			<div class="writing-item">
+				<div class="preview-content">
+					<figure>
+						<img src="/img/writing/{{ item.img_folder }}/{{ item.thumb }}" alt="">
+					</figure>
+					<div class="meta">
 						<p class="title"> {{ item.title }} </p>
 						<p class="intro"> {{ item.description }} </p>
-					</a>
-				</div> 
-			</div> <!-- .link -->
-			<div class="attribution">
-				{% if item.source_name %}<p class="source"> {% if item.source_link %}<a href="{{ item.source_link }}">{% endif %} {{ item.source_name }} {% if item.source_link %}</a>{% endif %} </p>{% endif %}
-				<p> {{ item.date | date: "%b %Y"}} </p>	
+					</div> 
+				</div> <!-- .preview-content -->
+				<div class="attribution">
+					{% if item.source_name %}<p class="source {% if item.source_link %} external-link {% endif %}">{{ item.source_name }}</p>{% endif %}
+					<p> {{ item.date | date: "%b %Y"}} </p>	
+				</div>
 			</div>
-		</div>
+		</a>
 		{% endfor %}
 </div>

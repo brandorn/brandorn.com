@@ -45,6 +45,21 @@ figure {
 
       a { max-width: 30rem; }
     } // .tall
+
+    &.narrow {
+      margin: 0 auto;
+      width: 64%;
+
+      img { width: 50%; }
+
+      figcaption { width: 36%; }
+
+      @media all and (max-width: $break-small) {
+        width: 100%;
+
+        img { width: 100%; }
+      }
+    } // .narrow
   } // .image-left, .image-right
 
   &.image-right {
@@ -81,12 +96,10 @@ figure {
   }
 } // figure
 
-// put two figures in a div for side-by-side
+// Put two figures in a div for side-by-side
 .two-up-container {
   display: flex;
   justify-content: space-between;
-  margin-left: -5%;
-  width: 110%;
 
   figure { width: 48%; }
 

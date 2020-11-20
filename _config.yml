@@ -9,4 +9,4 @@ markdown: kramdown
 # Other
 permalink: /:categories/:title
 sass:
-  sass_dir: src/styles/_sass
+  sass_dir: src/styles/_sass 

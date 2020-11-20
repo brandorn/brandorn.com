@@ -31,20 +31,9 @@
 				}
 			}
 
-		  @keyframes headerAnimate {
-		    from { 
-		    	opacity: 0;
-		    	transform: translateY(1rem);
-		    }
-		    to   { 
-		    	opacity: 1;
-		    	transform: translateY(0);
-		    }
-		 	}
-
 			h1 {
 				@include body-serif-jumbo;
-				animation: headerAnimate 0.75s;
+				@include fade-up-in;
 				margin-bottom: 0rem;
 
 				@media all and (max-width: $break-small) { text-align: center; }
@@ -78,6 +67,8 @@
 		} // .case-study-summary
 
 		.case-study-hero {
+			@include fade-in;
+			animation-delay: 0.5s;
 			padding-top: 1rem;
 			margin-top: auto;
 			text-align: center;
@@ -271,7 +262,7 @@
 
 		h1 { 
 			@include body-condensed-jumbo; 
-			animation: headerAnimate 0.75s;
+			@include fade-up-in;
 			margin: 2rem 0 1rem 0;
 		}
 
@@ -311,9 +302,9 @@
 		  font-size: 56px;
 		  font-weight: 700;
 		  line-height: 56px;
-		  margin-right: 32px;
+		  margin-right: 20px;
 		  padding-top: 2px;
-		  padding-right: 26px;
+		  padding-right: 20px;
 		}
 
 		& ~ p:first-of-type { margin-top: 6rem; }
@@ -333,7 +324,10 @@
 				// opacity: 0.9;
 			}
 
-			figcaption { @include body-sans-small; }
+			figcaption {
+				@include body-sans-small;
+				font-family: monospace;
+			}
 		} // figure
 
 		p {
@@ -358,7 +352,7 @@
 
 		h1 { 
 			@include body-serif-jumbo;
-			animation: headerAnimate 0.75s;
+			@include fade-up-in;
 			margin-bottom: 1rem;
 		}
 
@@ -367,9 +361,7 @@
 		.date {
 			@include	body-sans-small;
 			color: $black-02;
-
-			span { font-weight: 500;}
-
+			
 			a:link,
 			a:visited { color: $black-02; }
 
@@ -404,6 +396,8 @@
 		}
 
 		figure { 
+			@include fade-in;
+			animation-delay: 0.5s;
 			margin-top: 0;
 			width: 48%; 
 
@@ -446,7 +440,7 @@
 			  font-weight: 700;
 			  line-height: 56px;
 			  padding-top: 2px;
-			  padding-right: 26px;
+			  padding-right: 20px;
 			}
 		} // p
 
@@ -501,6 +495,8 @@
 // Eventually just make thesed divs, not a ul
 
 	.slide {
+		@include fade-in;
+		animation-delay: 0.5s;
 		display: flex;
 		margin-left: 2rem;
 		margin-right: 2rem;

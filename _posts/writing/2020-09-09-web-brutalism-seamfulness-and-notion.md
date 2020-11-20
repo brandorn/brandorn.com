@@ -2,7 +2,7 @@
 category: writing
 layout:
 
-title: Web Brutalism, seamfulness, and Notion
+title: Web Brutalism, Seamfulness, and Notion
 description: How a tool for sensemaking reconciles two distinct software design ideologies.
 
 img_folder: web-brutalism

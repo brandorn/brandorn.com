@@ -14,9 +14,7 @@ header.page-intro {
 .select-clients {
 	margin: 6rem 0 4rem 0;
 
-	.label {
-		@include label-small;
-	}
+	.label { @include label-small; }
 
 	.client-list {
 		display: flex;
@@ -56,9 +54,7 @@ header.page-intro {
 			margin: 0 4% 3rem 0;
 		}
 
-		@media all and (max-width: 540px) { 
-			flex: 0 100%; 
-		}
+		@media all and (max-width: 540px) { flex: 0 100%; }
 
 		&:link,
 		&:visited,
@@ -66,28 +62,40 @@ header.page-intro {
 		&:hover { 
 			color: $black-01;
 			text-decoration: none; 
-		};
+		}
 	} // a
 
 	.case-study-preview {
+		@include fade-up-in;
+		animation-delay: calc(0.3s * var(--index));
 
-		&:hover { 
-			.thumb { opacity: 0.8; }
+		&:hover {
+			.thumb { 
+				@include transition-primary;
+				transition: 300ms all;
+				background-position: center calc(50% - 4px);
+				opacity: 0.8;
+			}
+
+			.title { color: $black-02; }
 		}
 
 		.thumb {
 			@include transition-primary;
-
-			background-position: center;
+			background-position: center calc(50% + 4px);
 			background-repeat: no-repeat;
+			background-size: 90%;
 			height: 30vw;
 			max-height: 300px;
 		 	width: 100%;
 
 		 	@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) { background-size: contain; }
-		 	@media all and (max-width: $break-small) { height: 40vw; }
-		 	@media all and (max-width: 540px) { height: 300px; }
-
+		 	@media all and (max-width: $break-medium) {
+		 		height: 40vw;
+		 	}
+		 	@media all and (max-width: 540px) { 
+		 		height: 70vw;	
+		 	}
 		}
 
 		&.arcadia { 
@@ -177,11 +185,11 @@ header.page-intro {
 
 } //.home-grid
 
-.st-pauls {
+.desiderata {
 	border-color: $black-01;
 	border-style: double;
 	border-width: 4px;
-	max-width: 600px;
+	max-width: 580px;
 	margin: 8rem auto;
 	padding: 2rem 3rem;
 
@@ -192,9 +200,9 @@ header.page-intro {
 
 		.drop-cap {
 			float: left;
-			height: 126px;
-			margin: -4px 10px 0 -4px;
-			width: 126px;
+			height: 120px;
+			margin: 0 10px 0 -4px;
+			width: 120px;
 		}
 
 		span {
@@ -218,20 +226,28 @@ header.page-intro {
 		margin-bottom: -0.5rem;
 	}
 
-	@keyframes photoAnimate {
-    from { 
-    	opacity: 0;
-    	transform: translateY(1rem);
-    }
-    to   { 
-    	opacity: 1;
-    	transform: translateY(0);
-    }
- 	}
+	.photo-journals { 
+		display: flex;
+		flex-wrap: wrap;
+
+		@media all and (max-width: $break-medium) { justify-content: space-between; }
+	}
 
 	.photo-journal-preview {
-		display: inline-block;
-		margin: 2rem 3rem 0 0;
+		@include fade-up-in;
+		animation-delay: calc(0.3s * var(--index));
+		flex-basis: 33.333333%;
+		margin-top: 2rem;
+		vertical-align: top;
+
+		.content { margin-right: 2rem; }
+
+		&:nth-child(3n) .content { margin-right: 0; }
+
+		@media all and (max-width: $break-medium) { 
+			flex-basis: 50%;
+			&:nth-child(odd) .content { margin-right: 2rem; }
+		}
 
 		&:link,
 		&:visited,
@@ -243,29 +259,40 @@ header.page-intro {
 
 		&:hover img { opacity: 0.8; }
 
-		img {
-			@include transition-primary;
-			display: inline-block;
-			margin-right: 1rem;
-			max-width: 6rem;
-			vertical-align: middle;
-		}
+		&:hover .title { color: $black-02; }
 
-		.name {
-			display: inline-block;
-			vertical-align: middle;
+		.content {
+			display: flex;
+
+			@media all and (max-width: $break-small) {  display: block; }
+
+			img {
+				@include transition-primary;
+				display: inline-block;
+				height: 84px;
+				margin-right: 1rem;
+				object-fit: cover;
+				width: 34%;
+
+				@media all and (max-width: $break-small) { 
+					height: 120px;
+					margin-right: 0;
+					width: 100%;
+				}
+				
+			}
 
 			.title {
 				@include label-medium;
-				margin: 0.3rem 0 0.1rem 0;
+				margin: 0.5rem 0 0.3rem 0;
 			}
 
-			.photo-count {
+			.description {
 				@include body-sans-small;
 				color: $black-02;
 				margin: 0;
 			}
-		}
+		} // .content
 	}	// .photo-journal-preview
 } // .photo-journal-list
 
@@ -277,14 +304,16 @@ header.page-intro {
 	@media all and (max-width: $break-small) { columns: 1; }
 
 	figure {
+		@include fade-in;
+		animation-delay: 1s;
 		display: inline-block;
 		height: auto;
 		margin: 1rem 0 2rem 0;
 		padding: 1rem;
 		width: 100%;
 
-		&:nth-child(n+0) { margin-top: 2rem };
-		&:nth-child(n+2) { margin-top: -1rem };
+		&:nth-child(n+0) { margin-top: 2rem; }
+		&:nth-child(n+2) { margin-top: 0; }
 
 		&.narrower { padding: 1rem 4rem; }
 
@@ -333,6 +362,7 @@ header.page-intro {
 	}
 
 	.genre { 
+		@include fade-in;
 		display: inline-block;
 		margin: 0 2rem 1rem 0;
 		max-width: 24rem;
@@ -368,17 +398,23 @@ header.page-intro {
 .writing-list {
 	margin-top: 4rem;
 
-	.writing-item {
+	a {
 		border-bottom: 1px solid $black-05;
+		display: block;
+		text-decoration: none;
+
+		&:nth-last-child(1){ border-bottom: none; }
+		&:hover { .preview-content img { opacity: 0.8;} }
+	}
+
+	.writing-item {
 		display: flex;
 		justify-content: space-between;
 		padding: 2rem 0;
 
-		&:nth-last-child(1){ border-bottom: none; }
-
 		@media all and (max-width: $break-small) { display: block; }
 
-		.link {
+		.preview-content {
 			display: flex;
 
 			figure { 
@@ -390,11 +426,11 @@ header.page-intro {
 					margin: 0 auto;
 					@include transition-primary;
 				}
-
-				&:hover { img { opacity: 0.8;} }
 			} // figure
 
 			.meta {
+				margin-top: 0.5rem;
+				
 				a:link,
 				a:visited { text-decoration: none; }
 
@@ -408,14 +444,15 @@ header.page-intro {
 			}
 		} //.link
 
-		.attribution { 
+		.attribution {
 			@include body-sans-extra-small;
 
 			color: $black-02;
+			margin-top: 0.5rem;
 			text-align: right;
 			width: 20%; 
 
-			a::after {
+			.external-link::after {
 				background: url("/img/icon-arrow-gray.svg") 50% no-repeat;
 				background-size: contain;
         content: "";
@@ -426,12 +463,6 @@ header.page-intro {
         margin-top: 4px;
       }
 
-			a:link,
-			a:visited { color: $black-02; }
-
-			a:active,
-			a:hover { color: $black-01; }
-
 			p:nth-child(1) { margin-bottom: -0.5rem; }
 
 			@media	all and (max-width: $break-small) {
@@ -441,11 +472,7 @@ header.page-intro {
 				text-align: left;
 				width: auto;
 
-				.source { 
-					margin-right: 1rem; 
-
-					/* &::after {content: " — ";} */
-				}
+				.source { margin-right: 1rem;}
 			}
 		} // .attribution
 
@@ -463,6 +490,7 @@ header.page-intro {
 	@media all and (max-width: $break-small) { display: block; }
 
 	figure { 
+		@include fade-in;
 		margin: 0;
 		margin-top: 2.4rem; 
 		width: 36%;

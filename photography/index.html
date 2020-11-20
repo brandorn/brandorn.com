@@ -12,15 +12,19 @@ description: Photo journals index description...
 <div class='photo-journal-list'>
 	{% assign photo_journal_list = site.categories.photography %}
 	<p class="label">Photo Journals</p>
+	<div class="photo-journals">
 	{% for item in photo_journal_list %}
-		<a href='{{ item.url }}' class="photo-journal-preview">
-			<img src="/img/photography/{{ item.thumb }}" alt="">
-			<div class="name">
-				<p class="title">{{ item.title }}</p>
-				<p class="photo-count">{{ item.photo-count }} photos</p>
+		<a href='{{ item.url }}' class="photo-journal-preview" style="--index: {{ forloop.index }}">
+			<div class="content">
+				<img src="/img/photography/{{ item.thumb }}" alt="">
+				<div class="name">
+					<p class="title">{{ item.title }}</p>
+					<p class="description">{{ item.description }}</p>
+				</div>
 			</div>
 		</a>
 	{% endfor %}
+	</div>
 </div> <!-- .photo-journal-list -->
 
 <div class="photo-gallery misc">
@@ -92,8 +96,7 @@ description: Photo journals index description...
 	</figure>
 	<figure>
 		<a href="/img/photography/misc/2008-tree.jpg" itemprop="contentUrl" data-size="1800x1350">
-			<img src="/img/photography/misc/2008-tree.jpg" itemprop="thumbnail"
-			>
+			<img src="/img/photography/misc/2008-tree.jpg" itemprop="thumbnail">
 		</a>
 		<figcaption itemprop="caption description">Highland Park, IL — Fuji X30</figcaption>
 	</figure>
