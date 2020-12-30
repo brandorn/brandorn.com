@@ -17,7 +17,8 @@ figure {
   &.image-right {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    margin: 0 auto;
+    max-width: 40rem;
 
     @media all and (max-width: $break-small) { display: block; }
 
@@ -31,11 +32,13 @@ figure {
 
     figcaption { 
       margin-top: 6vw;
+      text-align: left;
       width: 22%; 
 
       @media all and (max-width: $break-small) { 
         margin: 1rem auto;
         max-width: 28rem;
+        text-align: center;
         width: auto;
       }
     } // figcaption
@@ -100,6 +103,8 @@ figure {
 .two-up-container {
   display: flex;
   justify-content: space-between;
+  margin-bottom: -6rem;
+  margin-top: -6rem;
 
   figure { width: 48%; }
 
@@ -117,7 +122,8 @@ figcaption {
   @include body-sans-extra-small;
   color: $black-02;
   margin: 1rem auto;
-  max-width: 28rem;
+  max-width: 40rem;
+  text-align: center;
   width: auto;
 
   a:link,

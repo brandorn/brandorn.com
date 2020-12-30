@@ -223,6 +223,8 @@ header.page-intro {
 
 	.label {
 		@include label-small;
+
+		color: $black-02;
 		margin-bottom: -0.5rem;
 	}
 
@@ -284,7 +286,7 @@ header.page-intro {
 
 			.title {
 				@include label-medium;
-				margin: 0.5rem 0 0.3rem 0;
+				margin: 0.5rem 0 0 0;
 			}
 
 			.description {
