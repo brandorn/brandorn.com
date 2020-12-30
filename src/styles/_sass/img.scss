@@ -18,14 +18,14 @@ figure {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: 40rem;
+    max-width: 48rem;
 
     @media all and (max-width: $break-small) { display: block; }
 
     a { width: 68%; }
 
     img {
-      width: 64%;
+      width: 56%;
 
       @media all and (max-width: $break-small) { width: 100%; }
     }
