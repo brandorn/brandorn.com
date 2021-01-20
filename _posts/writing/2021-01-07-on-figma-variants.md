@@ -2,7 +2,7 @@
 category: writing
 
 title: Using Figma variants for better error handling design
-description: Using Figma for a fundamental yet often-overlooked aspect of product design.
+description: Documenting a fundamental yet often-overlooked aspect of product design.
 
 img_folder: figma-variants
 thumb: figma-variants-thumb.png
