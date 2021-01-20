@@ -87,7 +87,6 @@ intro: <p>This past year, I saw images of people far more than I saw people in p
 	<figcaption><i>Ani</i>. Hasselblad 500C/M, 80mm / ƒ2.8 Zeiss Planar, Kodak TMax 100</figcaption>
 </figure>
 
-
 <figure class="content-width">
 	<img src="/img/photography/pandemic-portraits/pandemic-portraits-6.jpg">
 	<figcaption><i>Mich</i>. Fuji X100F</figcaption>

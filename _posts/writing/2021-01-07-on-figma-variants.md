@@ -2,7 +2,7 @@
 category: writing
 
 title: Using Figma variants for better error handling design
-description: Modern design tools like Figma make it easier for design and development teams to collaboratively document error states — a fundamental yet often-overlooked aspect of product design.
+description: Using Figma for a fundamental yet often-overlooked aspect of product design.
 
 img_folder: figma-variants
 thumb: figma-variants-thumb.png
