@@ -75,7 +75,7 @@ project_team:
 	<figcaption><a href="https://whimsical.com/">Whimsical</a> has proven to be the fastest, most straightforward yet feature-rich tool for low-fidelity prototyping.</figcaption>
 </figure>
 
-<p>Our art director created a new design system for the website, drawing on Darden's editorial design language and photography. As a higher ed institution, Darden was particularly interested in achieving high levels of WCAG accessibility. Our art director's work reminded me that accessibility and excellent visual design aren't a tradeoff, but that, in fact, <a href="https://uxdesign.cc/accessibility-drives-aesthetics-5aef77b5d2aa">accessibility can drive aesthetics</a>.</p>
+<p>Our art director created a new design system for the website, drawing on Darden's editorial design language and photography. As a higher ed institution, Darden was particularly interested in achieving high levels of WCAG accessibility. Their work reminded me that accessibility and excellent visual design aren't a tradeoff, but that, in fact, <a href="https://uxdesign.cc/accessibility-drives-aesthetics-5aef77b5d2aa">accessibility can drive aesthetics</a>.</p>
 
 <figure>
 	<img src="/img/design/darden/darden-design-system.png" alt=""> 
