@@ -38,26 +38,23 @@ project_team:
 
 <p>Part of the discovery phase of the project involved auditing the existing verification web app. I assembled a Whimsical board that included annotations of screens and states, which served as a helpful reference over the course of the project.</p>
 
-<figure class="image-left">
+<figure class="">
 	<img src="/img/design/nsc/nsc-ui-audit.png" alt="">
-	<figcaption>The audit included screenshots of the web app as well as notes and sketches from conversations with the client team.</figcaption>
 </figure>
 
 <p>I then worked with the team to diagram the flow of information through the current system. Variability across different types of verifications and users made parts of the flow unavoidably complex. However, we began to identify ways that this complexity could be better handled through interface improvements.</p>
 
 <figure>
-	<img src="/img/design/nsc/nsc-verification-flow.png" alt="">
-	<figcaption>Concept model of the Clearinghouse verification process.</figcaption>
+	<img src="/img/design/nsc/nsc-verification-flow.png" alt="Concept model of the Clearinghouse verification process.">
 </figure>
 
 <p>One goal of the redesign was to clarify the status of verification requests for people who use the application intermittently. These infrequent users found themselves having to re-learn the existing interface each time they used it, so I sought to introduce design patterns that clearly display key information while avoiding visual busyness and heavy-handedness.</p>
 
-<figure class="image-left">
-	<img src="/img/design/nsc/nsc-index.png" alt="">
-	<figcaption>An index of verification requests, which acts as an overview of employers' activity and at-a-glance reference of verification statues.</figcaption>
+<figure class="almost-body-width">
+	<img src="/img/design/nsc/nsc-index.png" alt="An index of verification requests, which acts as an overview of employers' activity and at-a-glance reference of verification states.">
 </figure>
 
-<p>Whereas the previous overview pages were short on information and long on explanatory copy, I designed patterns for the verification timelines that are quickly scannable and give immediate guidance. Usability tests helped us hone the language across variations of these pages.</p>
+<p>Whereas the previous overview pages were short on information and long on explanatory copy, I designed patterns for the verification timelines that are quickly scannable and give immediate guidance. Since guidance shown to users in the timeline varies according to their account, verification type, and other factors, I documented permutations of the verification statuses for the Clearinghouse development team. Usability tests helped us hone the language across variations of these pages.</p>
 
 <div class="two-up-container">
 	<figure class="">
@@ -70,26 +67,26 @@ project_team:
 
 <figure class="no-mt">
 	<img src="/img/design/nsc/nsc-permutations.png" alt="">
-	<figcaption>Since guidance shown to users in the timeline varies according to their account, verification type, and other factors, I documented permutations of the verification statuses for the Clearinghouse development team.</figcaption>
+	<figcaption></figcaption>
 </figure>
 
 <p>In addition to documenting design patterns based on the Clearinghouse's rebranding work, I defined a fuller color palette for them to use across their interfaces. The system shows which text and background combinations pass accessibility standards, and the intent for certain colors in the UI.</p>
 
 <figure>
-	<img src="/img/design/nsc/nsc-system.png" alt="">
-	<figcaption>Part of the Clearinghouse's new design system</figcaption>
+	<img src="/img/design/nsc/nsc-system.png" alt="Part of the Clearinghouse's new design system">
+	<figcaption></figcaption>
 </figure>
 
 <figure class="full-width">
-	<img src="/img/design/nsc/nsc-color.png" alt="">
-	<figcaption>The expanded Clearinghouse color system</figcaption>
+	<img src="/img/design/nsc/nsc-color.png" alt="The expanded Clearinghouse color system">
+	<figcaption></figcaption>
 </figure>
 
-<p>Since the Clearinghouse development team wasn't directly involved in the research and design of the new interface, I consolidated implementation notes before handing off designs, addressing questions and ambiguities that arose in reviews with developers.</p>
+<p>Since the Clearinghouse development team wasn't directly involved in the research and design of the new interface, I consolidated implementation notes before handing off designs, addressing questions and ambiguities that arose in reviews with developers. Instead of annotating files directly, I find it more helpful to consolidate notes about logic, states, and other considerations in Airtable and link to Figma files.</p>
 
-<figure class="image-left">
-	<img src="/img/design/nsc/nsc-airtable.png" alt="">
-	<figcaption>The Airtable base containing implementation notes for the Clearinghouse development team. Instead of annotating files directly, I find it more helpful to consolidate notes about logic, states, and other considerations in Airtable and link to Figma files.</figcaption>
+<figure class="almost-body-width">
+	<img src="/img/design/nsc/nsc-airtable.png" alt="The Airtable base containing implementation notes for the Clearinghouse development team.">
+	<figcaption></figcaption>
 </figure>
 
 <h2>Wrapping Up</h2>

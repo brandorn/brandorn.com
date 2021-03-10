@@ -70,9 +70,9 @@ project_team:
 	<img src="/img/design/darden/darden-wires-overview.png" alt="">
 </figure>
 
-<figure class="image-left">
+<figure class="almost-body-width">
 	<img src="/img/design/darden/darden-wire-1.png" alt="">
-	<figcaption><a href="https://whimsical.com/">Whimsical</a> has proven to be the fastest, most straightforward yet feature-rich tool for low-fidelity prototyping.</figcaption>
+	<figcaption></figcaption>
 </figure>
 
 <p>Our art director created a new design system for the website, drawing on Darden's editorial design language and photography. As a higher ed institution, Darden was particularly interested in achieving high levels of WCAG accessibility. Their work reminded me that accessibility and excellent visual design aren't a tradeoff, but that, in fact, <a href="https://uxdesign.cc/accessibility-drives-aesthetics-5aef77b5d2aa">accessibility can drive aesthetics</a>.</p>

@@ -28,12 +28,14 @@ responsibilities: Interaction design, product strategy, usability testing, desig
 </div>
 
 <h2>The Work</h2>
-<p>Below are some of the projects I've worked on with Privia, from private practice marketing websites to a recording UI used by providers to document and transcribe patient visits.</p>
+<p>Shown here are some of the projects I've worked on with Privia, from private practice marketing websites to a recording UI used by providers to document and transcribe patient visits.</p>
 
-<figure class="image-left">
+<figure class="almost-body-width">
 	<img src="/img/design/privia/privia-provider.png" alt="">
-	<figcaption>An interface used by providers for viewing patient-related tasks and documenting visits. One goal of the interface was to clearly present patients' care plans, a document meant to keep providers and patients on the same page (literally) about steps to take to manage ongoing health conditions.</figcaption>
+	<figcaption></figcaption>
 </figure>
+
+<p>Above is an interface used by providers for viewing patient-related tasks and documenting visits. One goal of the interface was to clearly present patients' care plans, a document meant to keep providers and patients on the same page (literally) about steps to take to manage ongoing health conditions.</p>
 
 <div class="two-up-container">
 	<figure>
@@ -52,12 +54,12 @@ responsibilities: Interaction design, product strategy, usability testing, desig
 
 <p>Privia was an early entrant into online telehealth, giving providers and patients the option to meet virtually for consultations that didn't require in-person visits. I helped them design marketing websites for their care centers as well as the onboarding flow and chat interface for their telehealth platform.</p>
 
-<figure class="image-right">
+<figure class="almost-body-width">
 	<img src="/img/design/privia/privia-care-center.png" alt="">
-	<figcaption>The homepage for Privia's nationally-distributed care centers.</figcaption>
+	<figcaption>A homepage for one of Privia's nationally-distributed care centers.</figcaption>
 </figure>
 
-<figure class="image-left">
+<figure class="content-width">
 	<img src="/img/design/privia/privia-telehealth.jpg" alt="">
 	<figcaption>The chat view of Privia's telehealth interface.</figcaption>
 </figure>

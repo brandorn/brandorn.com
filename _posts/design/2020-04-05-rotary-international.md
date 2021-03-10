@@ -56,16 +56,16 @@ project_team:
 
 <p>Many of our conversations focused on the challenges of learning the ropes as a new Rotarian or recently-appointed club leader. We paid particular attention to the variety of onboarding processes and the tools people were using outside of MyRotary. People shared about ways to relieve the burden of administrative tasks so that they could focus on the real work of serving others.</p>
 
-<figure class="image-left">
+<figure class="content-width">
 	<img src="/img/design/rotary/rotary-session.jpg" alt="">
 	<figcaption>Rotarians are a perennially cheery, dedicated bunch, willing to share about the meaning of the organization in their lives. One member even sang to us!</figcaption>
 </figure>
 
-<p>To complement the moderated usability tests, we conducted two navigation tests using <a href="https://www.optimalworkshop.com/treejack/" title="">Treejack</a>: one to establish a baseline, and another to test a revised information architecture. Because MyRotary is provided in seven different languages, we created seven different tests and compared the results for each task. This allowed us to test an internationalized navigation system that was globally consistent while accounting for language-specific nuances.</p>
+<p>To complement the moderated usability tests, we conducted two navigation tests using <a href="https://www.optimalworkshop.com/treejack/" title="">Treejack</a>: one to establish a baseline, and another to test a revised information architecture. Because MyRotary is provided in seven different languages, we created seven different tests and compared the results for each task. This allowed us to test an internationalized navigation system that was globally consistent while accounting for language-specific nuances. Below is an example of one of our task anaylsis, in which we compared navigation paths for users in each language. I wrote a <a href="https://www.viget.com/articles/seeing-the-forest-using-treejack-for-multi-language-navigation-testing/">blog post</a> about our approach to learning from these tests.</p>
 
 <figure class="full-width">
 	<img src="/img/design/rotary/rotary-pietrees.png" alt="">
-	<figcaption>An example of one of our task anaylsis, in which we compared navigation paths for users in each language.</figcaption>
+	<figcaption></figcaption>
 </figure>
 
 <p>Our final analysis included a revised vision statement for the platform based on themes identified across each research methodology. Based on that statement, we provided a series of macro strategic recommendations for evolving the platform as well as specific design considerations for adapting it to real-life member usage.</p>
