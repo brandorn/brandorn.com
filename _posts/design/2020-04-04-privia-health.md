@@ -19,7 +19,7 @@ responsibilities: Interaction design, product strategy, usability testing, desig
 <p>Over the last few years I have worked with Privia's product team on products for their various audiences: primary care providers, nurse staff, and patients. We've held workshops, done in-person ethnographic research, and built prototypes to test before scaling solutions across their networks.</p>
 
 <div class="what-i-learned">
-	<h2>What I've Learned</h2>
+	<h2>What I Learned</h2>
 	<ol class="learned-things">
 		<li><p><b>Anticipate worst-case mental states.</b> More so than other types of digital products, those used by healthcare professionals and their patients need to be designed for the stresses and anxieties and distractions of <a href="https://abookapart.com/products/design-for-real-life">real life</a>. This should influence decisions from information architecture all the way down to microcopy.</p></li>
 		<li><p><b>Design for situational awareness.</b> When care providers are assessing patient's medical records, they are scanning sometimes hundreds of data points for anomalies, not unlike aircraft pilots glancing over their dashboards. It was important to learn <i>from them</i> how to prioritize data and make it appropriately scannable, providing just enough information without introducing undue cognitive burden.</p></li>
