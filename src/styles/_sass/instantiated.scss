@@ -251,7 +251,7 @@
 
 	header {
 		margin: 6rem auto;
-		max-width: 600px;
+		max-width: 720px;
 		text-align: center;
 
 		.label-small { 
@@ -336,6 +336,29 @@
 
 			margin: 1rem auto;
 			max-width: $body-content-width;
+		}
+
+		.poem {
+
+			margin: 3rem auto;
+
+		  .title {
+		    @include body-serif-small;
+		    font-weight: 500;
+		    margin: 0.5rem auto;
+		    padding-left: 3rem;
+		  }
+
+		  .author {
+		    @include body-serif-small;
+		    margin: 0.5rem auto 2rem auto;
+		    padding-left: 3rem;
+		  }
+
+		  .stanza {
+		  	@include body-serif-small;
+		  	padding-left: 3rem;
+		  }
 		}
 	} // .photo-gallery
 

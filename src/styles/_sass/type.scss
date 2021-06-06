@@ -184,6 +184,14 @@ $serif-title: 'Arno Pro', Georgia, serif;
   line-height: 150%;
 }
 
+@mixin body-serif-extra-small {
+  font-family: $serif-body;
+  font-size: .98rem;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 150%;
+}
+
 /* === Labels === */
 
 @mixin label-large {
