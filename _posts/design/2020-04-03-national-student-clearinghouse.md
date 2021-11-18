@@ -26,7 +26,7 @@ project_team:
 <p>We worked with the Clearinghouse to redesign the interface used by people in HR to perform these validations. It hadn't been touched for nearly ten years, and needed to evolve to support new Clearinghouse initiatives. In addition to refresh their design language, I helped them rethink the structure of the verification process to clarify and expedite the process for employers. Rounds of moderated research revealed key improvements that will have a ripple effect across the hundreds of thousands of verifications performed every year.</p>
 
 <div class="what-i-learned">
-	<h2>What I Learned</h2>
+	<h2>Takeaways</h2>
 	<ol class="learned-things">
 		<li><p><b>Invite subject matter experts into the design process.</b> The Clearinghouse team was familiar with the complexities of the application and the improvements they were after. Close collaboration with them helped me avoid pitfalls they encountered when working through the problems previously.</p></li>
 		<li><p><b>Work broadly to 75%, then refine.</b> Instead of laboring over small sections of the design to perfection, establish an overall structure and bring core features to moderate-high fidelity before taking a final pass. Edge cases and unforeseen complexities reveal themselves as you work across the whole terrain of the app, allowing time to prioritize refinements before launch.</p></li>

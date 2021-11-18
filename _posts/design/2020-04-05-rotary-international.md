@@ -31,7 +31,7 @@ project_team:
 
 
 <div class="what-i-learned">
-	<h2>What I Learned</h2>
+	<h2>Takeaways</h2>
 	<ol class="learned-things">
 		<li><p><b>Think analog first, then digital.</b> Our usability tests revealed that the most helpful resources provided to new Rotarians were often physical printouts given to them by other members. We began to document instances where physical materials took precedence over digital ones, which informed content strategy for MyRotary</p></li>
 		<li><p><b>Watch for workarounds.</b> People are naturally resourceful, often finding ways to solve problems <i>despite</i> the tools we build for them. Unintended uses of the platform and instances of people turning to other tools revealed important insights for how to change it.</p></li>

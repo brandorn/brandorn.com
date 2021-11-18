@@ -209,6 +209,9 @@
 		.learned-things {
 		  list-style: none;
 		  counter-reset: big-counter;
+		  padding-left: 3rem;
+
+		  @media all and (max-width: $break-medium) { padding-left: 0; }
 
 			li {
 				counter-increment: big-counter;
@@ -224,10 +227,10 @@
 				&::before {
 				  @include body-sans-big-counter;
 
-				  color: $red-02;
+				  color: $black-01;
 				  content: counter(big-counter) ".";
 				  float: left;
-				  margin-left: -6rem;
+				  margin-left: -3rem;
 				  margin-top: 2px;
 
 				  @media all and (max-width: $break-medium) {
