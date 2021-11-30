@@ -413,7 +413,11 @@ header.page-intro {
 		text-decoration: none;
 
 		&:nth-last-child(1){ border-bottom: none; }
-		&:hover { .preview-content img { opacity: 0.8;} }
+		&:hover { 
+			color: $black-02;
+
+			// .preview-content img { opacity: 0.8;} 
+		}
 	}
 
 	.writing-item {

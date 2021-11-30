@@ -62,7 +62,7 @@ intro: <p>Each year my church publishes an Advent devotional with entries writte
 	<figcaption><i>No Record of Wrongs.</i> Durham, 2020</figcaption>
 </figure>
 
-<figure>
+<figure class="almost-body-width">
 	<img src="/img/photography/advent-calendar/week-5.jpg">
 	<figcaption><i>Abundant Flame.</i> Durham, 2020</figcaption>
 </figure>

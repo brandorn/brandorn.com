@@ -24,12 +24,12 @@ intro: <p>This past year, I saw images of people far more than I saw people in p
 
 <figure class="content-width">
 	<img src="/img/photography/pandemic-portraits/pandemic-portraits-2.jpg">
-	<figcaption><i>Olive</i>. Hasselblad 500C/M, 80mm / ƒ2.8 Zeiss Planar, Kodak Tri-X 400</figcaption>
+	<figcaption><i>Olive</i>. Hasselblad 500C/M, 80mm / ƒ2.8 Zeiss Planar, Kodak Portra 400</figcaption>
 </figure>
 
 <figure class="content-width">
 	<img src="/img/photography/pandemic-portraits/pandemic-portraits-4.jpg">
-	<figcaption><i>Eloise</i>. Hasselblad 500C/M, 80mm / ƒ2.8 Zeiss Planar, Kodak Tri-X 400</figcaption>
+	<figcaption><i>Eloise</i>. Hasselblad 500C/M, 80mm / ƒ2.8 Zeiss Planar, Kodak Portra 400</figcaption>
 </figure>
 
 <figure class="image-right">

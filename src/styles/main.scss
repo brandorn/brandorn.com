@@ -42,7 +42,7 @@ $highlight-purple: #F0E4FF;
 
 // Transitions
 
-@mixin transition-primary { transition: ease-in 120ms; }
+@mixin transition-primary { transition: ease-in 0ms; }
 
 @keyframes fade-up-in {
   from { transform: translateY(1rem); }
