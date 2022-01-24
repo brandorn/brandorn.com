@@ -4,7 +4,7 @@ layout: photo-journal
 
 title: Pandemic Portraits
 thumb: pandemic-portraits/pandemic-portraits-thumb.jpg
-description: Some of the faces I was lucky to see in 2020.
+description: Some of the faces I was grateful to see in 2020.
 intro: <p>This past year, I saw images of people far more than I saw people in person. This may be true even in non-pandemic times (I’m a homebody, and spend more time on screens than I care to admit), yet it became a universal experience for those of us who did our best to stay put and weather this long storm. Our connection and comfort came mediated, at a remove. We found ourselves accidental wallflowers.</p>
 ---
 
@@ -14,80 +14,75 @@ intro: <p>This past year, I saw images of people far more than I saw people in p
 
 <figure class="content-width">
 	<img src="/img/photography/pandemic-portraits/pandemic-portraits-10.jpg">
-	<figcaption><i>Kelly</i>. Hasselblad 500C/M, 80mm / ƒ2.8 Zeiss Planar, Kodak TMax 100</figcaption>
+	<figcaption>Kelly</figcaption>
 </figure>
 
 <figure class="image-left">
 	<img src="/img/photography/pandemic-portraits/pandemic-portraits-9.jpg">
-	<figcaption><i>Kelly</i>. Fuji X100F</figcaption>
+	<figcaption>Kelly</figcaption>
 </figure>
 
 <figure class="content-width">
 	<img src="/img/photography/pandemic-portraits/pandemic-portraits-2.jpg">
-	<figcaption><i>Olive</i>. Hasselblad 500C/M, 80mm / ƒ2.8 Zeiss Planar, Kodak Portra 400</figcaption>
+	<figcaption>Olive</figcaption>
 </figure>
 
 <figure class="content-width">
 	<img src="/img/photography/pandemic-portraits/pandemic-portraits-4.jpg">
-	<figcaption><i>Eloise</i>. Hasselblad 500C/M, 80mm / ƒ2.8 Zeiss Planar, Kodak Portra 400</figcaption>
+	<figcaption>Eloise</figcaption>
 </figure>
 
 <figure class="image-right">
 	<img src="/img/photography/pandemic-portraits/pandemic-portraits-12.jpg">
-	<figcaption><i>Carlos</i>. Fuji X100F</figcaption>
+	<figcaption>Carlos</figcaption>
 </figure>
-
-<figure class="image-left">
-		<img src="/img/photography/pandemic-portraits/pandemic-portraits-1.jpg">
-		<figcaption><i>Carlos</i>. Fuji X100F</figcaption>
-	</figure>
 
 <figure class="content-width">
 	<img src="/img/photography/pandemic-portraits/pandemic-portraits-14.jpg">
-	<figcaption><i>Curt</i>. Hasselblad 500C/M, 80mm / ƒ2.8 Zeiss Planar, Kodak TMax 100</figcaption>
+	<figcaption>Curt</figcaption>
 </figure>
 
 <figure class="content-width">
 	<img src="/img/photography/pandemic-portraits/pandemic-portraits-11.jpg">
-	<figcaption><i>Bryce</i>. Canon FTb, 50mm / ƒ2.8 Canon FD, Expired Fuji Superia</figcaption>
+	<figcaption>Bryce</figcaption>
 </figure>
 
 <figure class="content-width">
 	<img src="/img/photography/pandemic-portraits/pandemic-portraits-3.jpg">
-	<figcaption><i>Chris</i>. Hasselblad 500C/M, 80mm / ƒ2.8 Zeiss Planar, Kodak Tri-X 400</figcaption>
+	<figcaption>Chris</figcaption>
 </figure>
 
 <figure class="content-width">
 	<img src="/img/photography/pandemic-portraits/pandemic-portraits-13.jpg">
-	<figcaption><i>Chris</i>. Hasselblad 500C/M, 80mm / ƒ2.8 Zeiss Planar, Kodak Tri-X 400</figcaption>
+	<figcaption>Chris</figcaption>
 </figure>
 
 <figure class="content-width">
 	<img src="/img/photography/pandemic-portraits/pandemic-portraits-7.jpg">
-	<figcaption><i>Toogie</i>. Hasselblad 500C/M, 80mm / ƒ2.8 Zeiss Planar, Kodak Tri-X 400</figcaption>
+	<figcaption>Toogie</figcaption>
 </figure>
 
 <figure class="content-width">
 	<img src="/img/photography/pandemic-portraits/pandemic-portraits-8.jpg">
-	<figcaption><i>Tyler</i>. Hasselblad 500C/M, 80mm / ƒ2.8 Zeiss Planar, Kodak Tri-X 400</figcaption>
+	<figcaption>Tyler</figcaption>
 </figure>
 
 <figure class="image-left">
 	<img src="/img/photography/pandemic-portraits/pandemic-portraits-16.jpg">
-	<figcaption><i>BethAnne</i>. Canon FTb, Kodak Gold 200</figcaption>
+	<figcaption>BethAnne</figcaption>
 </figure>
 
 <figure class="content-width">
 	<img src="/img/photography/pandemic-portraits/pandemic-portraits-5.jpg">
-	<figcaption><i>David and Claire</i>. Hasselblad 500C/M, 80mm / ƒ2.8 Zeiss Planar, Kodak Tri-X 400</figcaption>
+	<figcaption>David and Claire</figcaption>
 </figure>
 
 <figure class="content-width">
 	<img src="/img/photography/pandemic-portraits/pandemic-portraits-15.jpg">
-	<figcaption><i>Ani</i>. Hasselblad 500C/M, 80mm / ƒ2.8 Zeiss Planar, Kodak TMax 100</figcaption>
+	<figcaption>Ani</figcaption>
 </figure>
 
 <figure class="content-width">
 	<img src="/img/photography/pandemic-portraits/pandemic-portraits-6.jpg">
-	<figcaption><i>Mich</i>. Fuji X100F</figcaption>
+	<figcaption>Mich</figcaption>
 </figure>

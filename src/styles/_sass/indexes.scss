@@ -238,7 +238,7 @@ header.page-intro {
 
 	.photo-journal-preview {
 		@include fade-up-in;
-		animation-delay: calc(0.3s * var(--index));
+		animation-delay: calc(0.2s * var(--index));
 		flex-basis: 33.333333%;
 		margin-top: 2rem;
 		vertical-align: top;
@@ -379,26 +379,20 @@ header.page-intro {
 
 		&:nth-child(3n) { margin-right: 0; }
 
-		@media all and (max-width: $break-small) {
-			width: 50%;
-			margin-right: 0;
-		}
-
 		li { 
 			@include body-sans-small; 
 
-			&.label-small { 
-				@include label-small; 
-				color: $black-02;
+			&.genre-label { 
+				text-transform: uppercase;
+		    font-size: 0.74rem;
+		    font-weight: 500;
+		    letter-spacing: 1px;
+		    margin-top: 2rem;
 			}
 
 			&:nth-child(n+2) { margin: 0.5rem 1rem 0.5rem 0; }
 
-			span {
-				color: $black-02;
-
-				@media all and (max-width: $break-tiny) { display: block; }
-			}
+			span { color: $black-02; }
 
 		} // li
 	} // ul

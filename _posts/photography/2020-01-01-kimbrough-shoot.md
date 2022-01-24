@@ -4,7 +4,7 @@ layout: photo-journal
 
 title: In the Leaves
 thumb: kimbrough/kimbrough-thumb.png
-description: A woodsy portrait shoot for an NC-based musician friend.
+description: A woodsy portrait shoot for a talented guitarist and friend.
 intro: <p>My buddy Josh plays <a href="https://en.wikipedia.org/wiki/American_primitive_guitar">American Primitive</a> fingerpicking guitar, a style pioneered by <a href="https://www.youtube.com/watch?v=ReW9uUYm-DA">John Fahey</a> in the 1950s. It's seen as a blend of minimalist avant-garde classical with traditional country blues sensibilities. At first listen you'd be forgiven for mistaking it as run-of-the-mill bluegrass instrumental music. But listen closer and you start to notice pattern and nuance, like the fractals of fern leaves. The music is intricate yet earthy, heady yet heartfelt. </p>
 ---
 
@@ -12,17 +12,14 @@ intro: <p>My buddy Josh plays <a href="https://en.wikipedia.org/wiki/American_pr
 
 <figure>
 	<img src="/img/photography/kimbrough/kimbrough-2020-01_79.jpg">
-	<figcaption>Kodak Retina IIIC, 50mm / ƒ2.0 Schneider-Kreuznach, Kodak Tri-X 400</figcaption>
 </figure>
 
 <figure class="content-width">
 	<img src="/img/photography/kimbrough/kimbrough-2020-01_80.jpg">
-	<figcaption>Kodak Retina IIIC, 50mm / ƒ2.0 Schneider-Kreuznach, Kodak Tri-X 400</figcaption>
 </figure>
 
 <figure>
 	<img src="/img/photography/kimbrough/kimbrough-2020-01_78.jpg">
-	<figcaption>Kodak Retina IIIC, 50mm / ƒ2.0 Schneider-Kreuznach, Kodak Tri-X 400</figcaption>
 </figure>
 
 <p>I picked up the Retina IIIC a few months ago and have been enamored with this little guy. It's fully mechanical (even the light meter, which uses a Selenium cell) and has some thoughtful German-engineered touches. The whole lens mount collapses in on the body when closing the lid, protecting the lens and making it nearly small enough to fit in a jean pocket. It uses a simple, single-element 50mm lens, which you can screw right off the body and hold in your palm. At full aperture it gets this lovely swirl bokeh, which you can see in the shot above.</p>
@@ -34,29 +31,24 @@ intro: <p>My buddy Josh plays <a href="https://en.wikipedia.org/wiki/American_pr
 
 <figure>
 	<img src="/img/photography/kimbrough/kimbrough-2020-01_69.jpg">
-	<figcaption>Kodak Retina IIIC, 50mm / ƒ2.0 Schneider-Kreuznach, Kodak Tri-X 400</figcaption>
 </figure>
 
 <p>Josh was planning to risograph print J-cards for a cassette release, a printing process similar to screenprinting often used for printmaking. Since risograph ink blends images into the paper fiber, I also shot with a Fuji X100F to get crispy lines for the cassettes. </p>
 
 <figure class="almost-body-width">
 	<img src="/img/photography/kimbrough/kimbrough-2020-01_34.jpg">
-	<figcaption>Fuji X100F</figcaption>
 </figure>
 
 <figure class="almost-body-width">
 	<img src="/img/photography/kimbrough/kimbrough-2020-01_44.jpg">
-	<figcaption>Fuji X100F</figcaption>
 </figure>
 
 <div class="two-up-container">
 	<figure>
 		<img src="/img/photography/kimbrough/kimbrough-2020-01_14.jpg">
-		<figcaption>Fuji X100F</figcaption>
 	</figure>
 	<figure>
 		<img src="/img/photography/kimbrough/kimbrough-2020-01_12.jpg">
-		<figcaption>Fuji X100F</figcaption>
 	</figure>
 </div>
 

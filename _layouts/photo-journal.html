@@ -5,17 +5,20 @@
 	{% include nav.html %}
 
 		<header>
-			<p class=label-small>Photo Journal</p>
+			<p class=label-small> {% if page.photo_book %} Photo Book {% else %} Photo Journal {% endif %} </p>
 			<h1> {{ page.title }}</h1>
 			<p class="intro"> {{ page.description }}</p>
 		</header><!-- /header -->
 
 		<div class="photo-journal-content">
-			{{ page.intro }}
+			<div class="intro">
+				{{ page.intro }}
+			</div>
+			{{ content }}
 		</div>
 
-		<div class="photo-gallery">
-			{{ content }}
+		<div> <!-- Removed "photo-gallery" class because it  -->
+			
 		</div>
 
 	{% include photoswipe-elements.html %}

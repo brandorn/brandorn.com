@@ -7,17 +7,9 @@
 	@media all and (min-width: $break-large) { max-width: 1280px; }
 
 	a:link,
-	a:visited { 
-		border-bottom: none; 
-		text-decoration: none;
-	}
-
+	a:visited,
 	a:hover,
-	a:active { 
-		border-bottom: none;
-		color: $black-02;
-		text-decoration: none;
-	}
+	a:active { text-decoration: none; }
 }
 
 .home {
@@ -25,6 +17,8 @@
 	margin: 0 7rem 0 -1rem;
 	padding: 1rem;
 	vertical-align: top;
+
+	&:link, &:active { border-bottom: none; }
 
 	@media all and (max-width: $break-small) {
 		display: block;
@@ -37,8 +31,6 @@
 		 @include label-medium;
 		 color: $black-02;
 		 margin: 0;
-
-		 // @media all and (max-width: 540px) { font-size: 1.1rem; }
 	}
 }
 
@@ -65,16 +57,39 @@
 		}
 
 		a {
+			&:link, &:active { border-bottom: none; }
+
+			&:hover { color: $black-02; }
+
 	    padding: 1rem;
 	    width: 100%;
+
+	    /*&.design { &:hover { color: $red-02;} }
+	    &.photography{ &:hover { color: #7d60a1;} }
+	    &.writing{ &:hover { color: #489765;} }
+	    &.about { &:hover { color: #368197;} }*/
 			
 			&.active {
-				color: $black-02;
 
-				&.design {background: url("/img/nav/squiggle-red.svg") no-repeat center;}
-				&.photography {background: url("/img/nav/squiggle-green.svg") no-repeat center;}
-				&.writing {background: url("/img/nav/squiggle-purple.svg") no-repeat center;}
-				&.about {background: url("/img/nav/squiggle-blue.svg") no-repeat center;}
+				&.design {
+					background: url("/img/nav/squiggle-red.svg") no-repeat center;
+					color: $red-02;
+				}
+
+				&.photography {
+					background: url("/img/nav/squiggle-purple.svg") no-repeat center;
+					color: #7d60a1;
+				}
+
+				&.writing {
+					background: url("/img/nav/squiggle-green.svg") no-repeat center;
+					color: #489765;
+				}
+
+				&.about {
+					background: url("/img/nav/squiggle-blue.svg") no-repeat center;
+					color: #368197;
+				}
 			}
 		} // a
 	} // li
@@ -103,3 +118,70 @@ footer {
 		}
 	}
 }
+
+/* === FT Callout === */
+
+.ft-callout {
+	align-items: center;
+	border: 1px solid $black-01;
+	border-radius: 100%;
+	display: flex;
+	height: 132px;
+	justify-content: space-around;
+	position: absolute;
+	right: 64px;
+	text-align: center;
+	top: 32px;
+	transform: rotate(8deg);
+	width: 132px;
+
+	@media all and (max-width: 880px) { 
+		right: 40px;
+		top: 130px;
+	}
+
+	@media all and (max-width: $break-small) { top: 32px; }
+
+	@media all and (max-width: 660px) { display: none; }
+
+	@media all and (max-width: 540px) { 
+		display: flex;
+		right: 24px;
+		top: 32px;
+	}
+
+	&:hover {
+		background-image: url('/img/photography/ft/ft-hover.jpg');
+		background-size: 100%;
+		//border: none;
+		display: block;
+		p { display: none }
+	}
+
+	div { vertical-align: middle; }
+
+	p {
+		border-bottom: none;
+		line-height: 100%;
+		margin: 0.5rem auto;
+
+
+		&.new {
+			color: $red-02;
+			font-size: 0.64rem;
+			font-weight: 700;
+			letter-spacing: 1px;
+			margin: 0.4rem 0 0.8rem 0;
+			text-transform: uppercase;
+		}
+
+		&.title { font-size: 1.14rem; }
+
+		&.subtitle { font-size: 0.86rem; }
+
+		&.subsubtitle { font-size: 0.72rem}
+	}
+
+}
+
+

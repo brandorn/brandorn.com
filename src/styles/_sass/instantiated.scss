@@ -290,32 +290,29 @@
 
 	.photo-journal-content {
 		margin: 0 auto;
-		max-width: $body-content-width;
-
+		
 		p {
 			@include body-serif-medium;
 
-			margin: 0 auto 2rem auto;
+			margin: 1rem auto;
+			max-width: $body-content-width;
 		}
 
-		& p:first-of-type:first-letter {
-		  border-right: 1px solid $black-04;
-		  float: left;
-		  // font-family: $sans;
-		  font-size: 56px;
-		  font-weight: 700;
-		  line-height: 56px;
-		  margin-right: 20px;
-		  padding-top: 2px;
-		  padding-right: 20px;
-		}
+		.intro {
+			& p:first-of-type:first-letter {
+			  border-right: 1px solid $black-04;
+			  float: left;
+			  font-size: 56px;
+			  font-weight: 700;
+			  line-height: 56px;
+			  margin-right: 20px;
+			  padding-top: 2px;
+			  padding-right: 20px;
+			}
 
-		& ~ p:first-of-type { margin-top: 6rem; }
-	
-	} // .photo-journal-content
+			// & ~ p:first-of-type { margin-top: 6rem; }
 
-	.photo-gallery { 
-		margin-top: -1rem;
+		} // .intro
 
 		figure {
 			margin-bottom: 6rem;
@@ -329,17 +326,10 @@
 			}
 
 			figcaption {
-				@include body-sans-small;
+				@include body-sans-extra-small;
 				font-family: monospace;
 			}
 		} // figure
-
-		p {
-			@include body-serif-medium;
-
-			margin: 1rem auto;
-			max-width: $body-content-width;
-		}
 
 		.poem {
 
@@ -363,7 +353,7 @@
 		  	padding-left: 3rem;
 		  }
 		}
-	} // .photo-gallery
+	} // .photo-journal-content
 
 } // .photo-journal
 

@@ -4,7 +4,7 @@ layout: photo-journal
 
 title: 2020 Advent Devotional
 thumb: advent-calendar/advent-calendar-thumb.png
-description: Designing and photographing my church's online devotional.
+description: Designing and photographing a digital Advent devotional.
 intro: <p>Each year my church publishes an Advent devotional with entries written by congregants. Normally we print copies and share them at the beginning of Advent, five weeks before Christmas. But since we weren't meeting in person in 2020 we decided to go digital and make a website. Check it out <a href="https://gcadvent.com/">here</a>.</p>
 ---
 
