@@ -7,6 +7,7 @@ intro: I redesigned the Clearinghouse's verification platform, reworking a convo
 img_folder: nsc
 thumb: nsc-thumb.png 
 hero: nsc-hero.png
+og_image: /img/design/nsc/nsc-og.jpg
 case_study_type: Product Design
 case_study_link:
 website_link:

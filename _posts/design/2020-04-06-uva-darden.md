@@ -6,6 +6,7 @@ intro: I helped the University of Virginia's Darden School of Business create a 
 
 img_folder: darden
 hero: darden-hero.png
+og_image: /img/design/darden/darden-og.jpg
 case_study_type: Information Architecture
 case_study_link:
 website_link:

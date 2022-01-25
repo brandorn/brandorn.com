@@ -6,6 +6,7 @@ intro: I helped Rotary International understand how its members use (and don't u
 
 img_folder: rotary
 hero: rotary-hero.png
+og_image: /img/design/rotary/rotary-og.jpg
 case_study_type: User Research
 case_study_link: https://www.viget.com/work/my-rotary/
 website_link:

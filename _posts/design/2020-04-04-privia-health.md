@@ -6,6 +6,7 @@ intro: I've worked with Privia Health on a number of products that support medic
 
 img_folder: privia
 hero: privia-hero.png
+og_image: /img/design/privia/privia-og.jpg
 case_study_type: Product design
 case_study_link:
 website_link:
