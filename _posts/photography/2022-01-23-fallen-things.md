@@ -12,7 +12,7 @@ intro: <p>A collection of black and white images taken in the southeast and midw
 
 <p>The project began on morning walks around Durham with my dog, as we'd notice odds and ends on the ground. Not quite litter, I came to see discarded objects as kinds of temporary, accidental sculptures. So I began taking photos of them. A keyboard nestled in a bed frame, a basketball hoop woven into a pile of birch branches, a doll head placed precariously on the end of a leafless branch. We shape our world with the things we leave behind, for better or worse, but indelibly nonetheless.</p>
 
-<p>The book includes a short essay and is 82 pages, printed locally in Durham on 100lb Mohawk photo paper. A majority of the images were taken on black and white medium format film, which I processed, scanned, and edited. Each copy of the book comes with a little set of birch leaves hand-stamped on the title page, shipped in an eco-friendly compostable mailer.</p>
+<p>The book is 82 pages, printed locally in Durham on 100lb Mohawk photo paper. A majority of the images were taken on black and white medium format film, which I processed, scanned, and edited. Each copy of the book comes with a little set of birch leaves hand-stamped on the title page, shipped in an eco-friendly compostable mailer.</p>
 
 <div class="button-set centered">
 	<button class="arrow"><a href="https://www.etsy.com/listing/1165927841/fallen-things-photo-book">Buy a copy</a></button>
