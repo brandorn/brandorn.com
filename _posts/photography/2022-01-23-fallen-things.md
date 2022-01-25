@@ -15,7 +15,7 @@ intro: <p>A collection of black and white images taken in the southeast and midw
 <p>The book includes a short essay and is 82 pages, printed locally in Durham on 100lb Mohawk photo paper. A majority of the images were taken on black and white medium format film, which I processed, scanned, and edited. Each copy of the book comes with a little set of birch leaves hand-stamped on the title page, shipped in an eco-friendly compostable mailer.</p>
 
 <div class="button-set centered">
-	<button class="arrow"><a href="https://www.etsy.com/listing/1165927841/fallen-things-photo-book">Buy a Copy</a></button>
+	<button class="arrow"><a href="https://www.etsy.com/listing/1165927841/fallen-things-photo-book">Buy a copy</a></button>
 </div>
 
 <div class="embed-container ft">
