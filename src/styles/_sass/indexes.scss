@@ -18,16 +18,39 @@ header.page-intro {
 
 	.client-list {
 		display: flex;
-		flex-wrap: wrap;
+		flex-direction: row;
+		max-height: 440px;
 
-		@media all and (max-width: 620px) { display: block; }
+		@media all and (max-width: $break-small) { 
+			// align-content: space-between;
+			flex-flow: column wrap;
+		}
+
+		@media all and (max-width: $break-tiny) {
+			display: block;
+			max-height: fit-content;
+		}
 
 		.column {
-			margin-right: 4rem;
+			margin-right: 6vw;
 
-			@media all and (max-width: $break-small) { margin-right: 2rem; }
+			&:nth-last-child(1) { 
+				margin-right: 0;
+				width: 40%;
+			}
 
-			&:nth-last-child(1) { margin-right: 0; }
+			@media all and (max-width: $break-small) { 
+				&:nth-last-child(1) { width: 40%; }
+
+				margin-right: 6vw;
+			}
+
+			@media all and (max-width: $break-tiny) {
+				&:nth-last-child(1) { width: auto; }
+
+				margin-right: 0;
+				width: 100%
+			}
 
 			p { 
 				@include body-sans-small;
@@ -365,23 +388,37 @@ header.page-intro {
 .fav-reads {
 
 	.genre-lists {
-		@media all and (max-width: $break-medium) {
-			display: flex;
-			flex-wrap: wrap;
+		display: flex;
+		flex-wrap: wrap;
+
+		@media all and (max-width: $break-small) {
+			flex-flow: column wrap;
+			align-content: space-between;
+			max-height: 1200px;
+		}
+
+		@media all and (max-width: 510px) {
+			display: block;
 		}
 	}
 
 	.genre { 
 		@include fade-in;
-		display: inline-block;
-		margin: 0 2rem 1rem 0;
+		margin: 0 5% 1rem 0;
 		max-width: 24rem;
+		width: 30%;
 		vertical-align: top;
 
 		&:nth-child(3n) { margin-right: 0; }
 
+		@media all and (max-width: $break-small) { width: 48%; }
+
+		@media all and (max-width: 510px) { width: auto; }
+
 		li { 
 			@include body-sans-small; 
+
+			margin: 0.5rem 0;
 
 			&.genre-label { 
 				text-transform: uppercase;
@@ -390,8 +427,6 @@ header.page-intro {
 		    letter-spacing: 1px;
 		    margin-top: 2rem;
 			}
-
-			&:nth-child(n+2) { margin: 0.5rem 1rem 0.5rem 0; }
 
 			span { color: $black-02; }
 
