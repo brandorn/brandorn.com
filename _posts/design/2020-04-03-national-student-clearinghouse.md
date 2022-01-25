@@ -2,7 +2,7 @@
 category: design
 layout: case-study
 title: National Student Clearinghouse
-intro: I redesigned the Clearinghouse's verification platform, reworking a convoluted request flow to make it easier for employers to perform background validations.
+description: I redesigned the Clearinghouse's verification platform, reworking a convoluted request flow to make it easier for employers to perform background validations.
 
 img_folder: nsc
 thumb: nsc-thumb.png 

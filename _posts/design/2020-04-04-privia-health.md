@@ -2,7 +2,7 @@
 category: design
 layout: case-study
 title: Privia Health
-intro: I've worked with Privia Health on a number of products that support medical providers' workflows and patients' access to care. 
+description: I've worked with Privia Health on a number of products that support medical providers' workflows and patients' access to care. 
 
 img_folder: privia
 hero: privia-hero.png

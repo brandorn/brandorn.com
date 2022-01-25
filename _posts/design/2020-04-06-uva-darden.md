@@ -2,7 +2,7 @@
 category: design
 layout: case-study
 title: UVA Darden School of Business
-intro: I helped the University of Virginia's Darden School of Business create a worthy representation of its unique, value-based MBA programs.
+description: I helped the University of Virginia's Darden School of Business showcase its unique, value-based MBA programs.
 
 img_folder: darden
 hero: darden-hero.png

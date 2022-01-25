@@ -2,7 +2,7 @@
 category: design
 layout: case-study
 title: Rotary International
-intro: I helped Rotary International understand how its members use (and don't use) an aging member portal, providing a roadmap for a strategic overhaul.
+description: I helped Rotary International understand how its members use (and don't use) an aging member portal, providing a roadmap for a strategic overhaul.
 
 img_folder: rotary
 hero: rotary-hero.png
