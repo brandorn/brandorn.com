@@ -7,6 +7,7 @@ description: Thoughts on the information design of an unassuming flyer.
 
 img_folder: cats-cradle
 thumb: cats-cradle-thumb.jpg
+og_image: /img/writing/cats-cradle/cats-cradle-og.jpg
 hero: cats-cradle-hero.jpg
 hero_caption:
 

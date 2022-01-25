@@ -249,6 +249,7 @@ header.page-intro {
 
 		@media all and (max-width: $break-medium) { 
 			flex-basis: 50%;
+			.content { margin-right: 0; }
 			&:nth-child(odd) .content { margin-right: 2rem; }
 		}
 

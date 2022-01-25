@@ -7,6 +7,7 @@ description: Reflections on what it means to design for good this late in the ga
 
 img_folder: usable-beautiful-good
 thumb: usable-beautiful-good-thumb.jpg
+og_image: /img/writing/usable-beautiful-good/usable-beautiful-good-og.jpg
 hero:
 hero_caption:
 

@@ -7,6 +7,7 @@ description: Overcoming the crisis of ethical debt in the design industry.
 
 img_folder: tech-ethics
 thumb: tech-ethics-thumb.jpg
+og_image: /img/writing/tech-ethics/tech-ethics-og.jpg
 hero: tech-ethics-1.jpg
 hero_caption:
 

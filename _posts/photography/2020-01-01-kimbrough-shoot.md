@@ -4,6 +4,7 @@ layout: photo-journal
 
 title: In the Leaves
 thumb: kimbrough/kimbrough-thumb.png
+og_image: /img/photography/kimbrough/kimbrough-og.jpg
 description: A woodsy portrait shoot for a talented guitarist and friend.
 intro: <p>My buddy Josh plays <a href="https://en.wikipedia.org/wiki/American_primitive_guitar">American Primitive</a> fingerpicking guitar, a style pioneered by <a href="https://www.youtube.com/watch?v=ReW9uUYm-DA">John Fahey</a> in the 1950s. It's seen as a blend of minimalist avant-garde classical with traditional country blues sensibilities. At first listen you'd be forgiven for mistaking it as run-of-the-mill bluegrass instrumental music. But listen closer and you start to notice pattern and nuance, like the fractals of fern leaves. The music is intricate yet earthy, heady yet heartfelt. </p>
 ---

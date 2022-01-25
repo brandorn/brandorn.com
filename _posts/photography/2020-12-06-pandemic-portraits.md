@@ -4,6 +4,7 @@ layout: photo-journal
 
 title: Pandemic Portraits
 thumb: pandemic-portraits/pandemic-portraits-thumb.jpg
+og_image: /img/photography/pandemic-portraits/pandemic-portraits-og.jpg
 description: Some of the faces I was grateful to see in 2020.
 intro: <p>This past year, I saw images of people far more than I saw people in person. This may be true even in non-pandemic times (I’m a homebody, and spend more time on screens than I care to admit), yet it became a universal experience for those of us who did our best to stay put and weather this long storm. Our connection and comfort came mediated, at a remove. We found ourselves accidental wallflowers.</p>
 ---
