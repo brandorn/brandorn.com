@@ -9,7 +9,7 @@ title: Reading & Writing
 
 <div class="fav-reads">
 
-	<p class="label-small">Favorites</p>
+	<p class="label-medium">Favorites</p>
 
 	<div class="genre-lists">
 		<ul class="genre">
@@ -62,7 +62,7 @@ title: Reading & Writing
 <div class='writing-list'>
 	{% assign writing_list = site.categories.writing %}
 
-	<p class="label-small">Writing & Speaking</p>
+	<p class="label-medium">Writing & Speaking</p>
 
 		{% for item in writing_list %}
 		<a href="{% if item.source_link %} {{ item.source_link }} {% else %} {{ item.url }} {% endif%}">

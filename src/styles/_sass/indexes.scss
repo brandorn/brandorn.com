@@ -254,6 +254,7 @@ header.page-intro {
 	.photo-journals { 
 		display: flex;
 		flex-wrap: wrap;
+		margin-top: -1rem;
 
 		@media all and (max-width: $break-medium) { justify-content: space-between; }
 		@media all and (max-width: $break-tiny) { display: block; }
@@ -317,7 +318,7 @@ header.page-intro {
 
 			.title {
 				@include label-medium;
-				margin: 0.5rem 0 0 0;
+				margin: 0.5rem 0 0.2rem 0;
 			}
 
 			.description {
@@ -404,7 +405,7 @@ header.page-intro {
 
 	.genre { 
 		@include fade-in;
-		margin: 0 5% 1rem 0;
+		margin: -1rem 5% 1rem 0;
 		max-width: 24rem;
 		width: 30%;
 		vertical-align: top;
@@ -425,7 +426,7 @@ header.page-intro {
 		    font-size: 0.74rem;
 		    font-weight: 500;
 		    letter-spacing: 1px;
-		    margin-top: 2rem;
+		    margin: 2rem 0 1rem 0;
 			}
 
 			span { color: $black-02; }

@@ -9,7 +9,7 @@ title: Photo Journals
 
 <div class='photo-journal-list'>
 	{% assign photo_journal_list = site.categories.photography %}
-	<p class="label">Photo Journals</p>
+	<p class="label-medium">Photo Journals</p>
 	<div class="photo-journals">
 	{% for item in photo_journal_list %}
 		<a href='{{ item.url }}' class="photo-journal-preview" style="--index: {{ forloop.index }}">
