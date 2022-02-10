@@ -485,6 +485,8 @@ header.page-intro {
 				.title { 
 					@include label-medium; 
 					margin-bottom: -0.75rem;
+
+					@media	all and (max-width: $break-small) { margin-top: 0; }
 				}
 			}
 		} //.link
