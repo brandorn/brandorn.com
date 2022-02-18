@@ -257,7 +257,10 @@ header.page-intro {
 		margin-top: -1rem;
 
 		@media all and (max-width: $break-medium) { justify-content: space-between; }
-		@media all and (max-width: $break-tiny) { display: block; }
+		@media all and (max-width: $break-tiny) {
+			display: block;
+			margin-top: 0;
+		}
 	}
 
 	.photo-journal-preview {
@@ -309,7 +312,7 @@ header.page-intro {
 				width: 34%;
 
 				@media all and (max-width: $break-small) { 
-					height: 120px;
+					height: 160px;
 					margin-right: 0;
 					width: 100%;
 				}
