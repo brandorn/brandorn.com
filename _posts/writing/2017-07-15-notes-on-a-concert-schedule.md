@@ -25,7 +25,7 @@ After picking up a couple of these, I began noticing how thoughtfully they were 
 	<img src="/img/writing/cats-cradle/cats-cradle-scan.jpg" alt="">
 </figure>
 
-Marketing is rarely informative or considerate of readers. And marketing that aspires to be useful usually just ends up as gimmicky corporate knicknacks (refrigerator magnets, letter openers, paperweights). Yet this unassuming schedule markets and informs in equal measure, which is to say it markets Cats Cradle in a way that respects the intelligence of its audience.
+Marketing is rarely informative or considerate of readers. And marketing that aspires to be useful usually just ends up as gimmicky corporate knicknacks (refrigerator magnets, letter openers, paperweights). Yet this unassuming schedule markets and informs in equal measure, which is to say it markets Cat’s Cradle in a way that respects the intelligence of its audience.
 
 The flyer is timely (it will be a useful reference for 3+ months), makes credible assumptions about its readers (people receiving the flyer don’t need Cat's Cradle explained to them), cuts to the chase (no preamble, just schedule), is easy to produce (any word processing software could be used, making it easy to update, print, and cut the day of a show), is economical (3 flyers can be printed on a 8.5” × 11” page), and, significantly, is *generous*, promoting shows at other venues in the area to support the local music culture.
 
