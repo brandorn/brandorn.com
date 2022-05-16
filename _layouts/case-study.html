@@ -6,7 +6,7 @@
 
 		<header>
 			<div class="case-study-summary">
-				<p class="label-small">{{ page.case_study_type }}</p>
+				<p class="label-small">{{ page.case_study_type }} </p>
 				<h1>{{ page.title }}</h1>
 				<p class="intro">{{ page.description }}</p>
 
@@ -65,7 +65,7 @@
 			<div class="case-studies-list">
 				<p class="label-small">Case Studies</p>
 				<ul>
-					{{% assign page.title = current_page %}}
+					{% assign page.title = current_page %}
 					{% for post in site.categories.design reversed %}
 						<li {% if post.title == page.title %} class="current-page" {% endif %}> {% unless post.title == page.title %}<a href="{{ post.url }}">{% endunless%} {{ post.title }} {% unless post.title == page.title %}</a>{% endunless%}</li>
 					{% endfor %}
