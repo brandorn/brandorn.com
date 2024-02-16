@@ -631,12 +631,25 @@ header.page-intro {
 
 	nav {
 
-		margin-bottom: 2rem;
+		margin: 4rem 0 2rem 0;
+		position: relative;
 
 		p {
 			@include label-medium;
 			color: $black-02;
 			margin: 0;
+
+			&:before {
+				background-image: url('/img/icon-arrow-left.svg');
+				background-size: 100%;
+				content: ' ';
+				display: block;
+				height: 16px;
+				left: -24px;
+				position: absolute;
+				top: 2px;
+				width: 16px;
+			}
 
 			a:link,
 			a:visited { color: $black-02; }
@@ -751,6 +764,12 @@ header.page-intro {
 			font-size: 1rem;
 			margin-left: 1rem;
 			margin-top: 6rem;
+
+			li {
+				padding-left: 12px;
+				margin-bottom: 8px;
+				&::marker { color: $black-02; }
+			}
 
 			p {
 				@include body-sans-medium;
