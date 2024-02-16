@@ -1,0 +1,174 @@
+/* === Dear Linear === */
+
+.cover-letter {
+
+	max-width: 800px;
+
+	nav {
+
+		margin: 4rem 0 2rem 0;
+		position: relative;
+
+    @media all and (max-width: $break-small) { margin-left: 24px; }
+
+		p {
+			@include label-medium;
+			color: $black-02;
+			margin: 0;
+
+			&:before {
+				background-image: url('/img/icon-arrow-left.svg');
+				background-size: 100%;
+				content: ' ';
+				display: block;
+				height: 16px;
+				left: -24px;
+				position: absolute;
+				top: 2px;
+				width: 16px;
+			}
+
+			a:link,
+			a:visited { color: $black-02; }
+
+			a:link,
+			a:visited,
+			a:hover,
+			a:active { text-decoration: none; }
+		} // p
+	} // nav
+
+	.letter-content {
+		p {
+
+			font-size: 1.6rem;
+			line-height: 140%;
+	
+			&.salutation {
+				font-family: $serif-body;
+				font-size: 2.4rem;
+				font-style: italic;
+				margin: 4rem 0 -0.5rem 0;
+			}
+	
+			.gif-hover {
+				position: relative;
+				text-decoration: dashed;
+				text-decoration-line: underline;
+				text-decoration-color: rgba(0, 0, 0, 0.4);
+
+				img {
+					display: none;
+					position: absolute;
+					left: 0;
+					width: 200px;
+				}
+
+				&:after {
+					content: ' ';
+					background-size: 100%;
+					display: none;
+					position: absolute;
+					left: 8px;
+					width: 220px;
+				}
+
+				&:hover {
+					color: $black-02;
+
+					&:after { 
+						display: block;
+						z-index: 1;
+					}
+				}
+
+				&.ooh {
+
+					&:after {
+						background-image: url('/img/dear-linear/kate.gif');
+						height: 120px;
+					}
+
+					&:hover { cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>👋</text></svg>") 16 0,auto;}
+				}// .ooh
+
+				&.asana {
+
+					&:after {
+						background-image: url('/img/dear-linear/katamari.gif');
+						height: 130px;
+					}
+
+					&:hover { cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>😬</text></svg>") 16 0,auto; }
+				} // .asana
+
+				&.github {
+
+					&:after {
+						background-image: url('/img/dear-linear/jim.gif');
+						height: 190px;
+					}
+					
+					&:hover { cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>😱</text></svg>") 16 0,auto; }
+				} //.github
+
+				&.jira {
+
+					&:after {
+						background-image: url('/img/dear-linear/michael.gif');
+						height: 160px;
+					}
+
+					&:hover { cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>😐</text></svg>") 16 0,auto; }
+				} // .jira
+
+				&.notion {
+
+					&:after {
+						background-image: url('/img/dear-linear/math-woman.gif');
+						height: 140px;
+					}
+
+					&:hover { cursor:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'  width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>😵‍💫</text></svg>") 16 0,auto; }
+				} // .notion
+
+			} // .gif-hover
+
+			sup a { text-decoration: none;}
+		} // p
+	
+		.footnotes {
+			font-size: 1rem;
+			margin-left: 1rem;
+			margin-top: 6rem;
+
+			li {
+				padding-left: 12px;
+				margin-bottom: 8px;
+				&::marker { color: $black-02; }
+			}
+
+			p {
+				@include body-sans-medium;
+				color: $black-02;
+
+				a { color: $black-02; }
+
+				a.return {
+					color: $black-03;
+
+					&:link,
+					&:hover { text-decoration: none;}
+
+					&:hover,
+					&:active {
+						color: $red-02;
+						text-decoration: none;
+					}
+				}
+			}
+
+		} // .footnotes
+	}
+	
+}
