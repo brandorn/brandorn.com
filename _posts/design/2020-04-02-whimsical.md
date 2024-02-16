@@ -24,9 +24,9 @@ project_team:
 
 Whimsical began in 2017 as a tool for making flowcharts yet has evolved into a multi-use platform that helps teams shape product ideas. However, as we built additional features to support this shaping work—things like <a href="https://whimsical.com/wireframes">wireframes</a>, <a href="https://whimsical.com/docs">docs</a>, and task-specific features like <a href="https://help.whimsical.com/article/732-sequence-diagrams">sequence diagrams</a>—we realized that our customers' use of the app wasn't following our evolving feature set. We were designing Whimsical to be used (and using it ourselves) in a much fuller way than our customers were.
 
-Templates emerged as a key means for showing people—especially new signups—how Whimsical can be used and how to get the most out of the app. While we had a passable template feature at the time, it went unnoticed and unused by the majority of our users. So we set out to improve the discoverability of our templates and the quality of our template library. Our hope was to introduce people to a new way of working in Whimsical that went beyond one-off, intermittent flowchart creation.
+Templates emerged as a key means for showing people—especially new signups—how Whimsical can be used and how to get the most out of the app. While we had a passable feature at the time, it went unnoticed and unused by the majority of our users. So we set out to improve the the discoverability of our template library while also improving its overall quality. Our hope was to introduce people to new ways of working in Whimsical that went beyond the creation of one-off, intermittent flowcharts.
 
-Given a directive to improve templates in Whimsical, I worked with an engineer, Doug, to shape requirements, iterate a prototype, establish editorial guidelines, and create a better browsing experience inside the app and on Whimsical.com.
+I partnered with an engineer to shape requirements, iterate a prototype, establish editorial guidelines, and create a better browsing experience inside the app and on Whimsical.com.
 
 
 <div class="what-i-learned">
@@ -59,7 +59,7 @@ As I shaped the pitch, I drew ideas for the work from our product solution tree,
 	<figcaption>Designing Whimsical...in Whimsical.</figcaption>
 </figure>
 
-We landed on a layout for the template browser that felt of-a-piece with the Whimsical UI, extending the design of our file cards to allow users to preview files when clicking them. I worked with Doug to define the data model and related search and ordering logic for the templates. To make it feel of a piece with the experience of editing elsewhere in Whimsical, the template browser builds upon core elements of the design system, extending it in a few targeted ways. 
+We landed on a layout for the template browser that felt of-a-piece with the Whimsical UI, extending the design of our file cards to allow users to preview files when clicking them. I worked with the engineer to define the data model and related search and ordering logic for the templates. To make it feel of a piece with the experience of editing elsewhere in Whimsical, the template browser builds upon core elements of the design system, extending it in a few targeted ways. 
 
 <figure class="almost-body-width shadowed">
 	<img src="/img/design/whims/whims-template-browser.gif">
@@ -84,7 +84,7 @@ I also redesigned the "Create new file" modal to feature suggested templates mor
 
 As we began planning the expansion of our template library I wrote a guide that showed how to create and publish templates, setting a standard for new and revised templates. My goal was for us to not only to create templates that felt consistent, but ones that meaningfully guided product teams through specific tasks, whether running workshops, creating roadmaps, or designing wireflows. And, naturally, I made a template for others to use when creating templates.
 
-Doug and I also designed and built a way to add "tips" to templates: objects that guide users within the context of the template itself, which can be easily deleted at one go. This came from input from users and our own experience of having to repeatedly delete placeholder objects from templates.
+The engineer and I also designed and built a way to add "tips" to templates: objects that guide users within the context of the template itself, which can be easily deleted at one go. This came from input from users and our own experience of having to repeatedly delete placeholder objects from templates.
 
 <figure>
 	<img src="/img/design/whims/whims-template-examples.webp">
@@ -93,5 +93,3 @@ Doug and I also designed and built a way to add "tips" to templates: objects tha
 <h2>Wrapping Up</h2>
 
 Templates are a kind of meta-feature in the way that they can change how people use and perceive a product, revealing valuable features and jump-starting projects. As such, they've become a key means for introducing new features (like [sequence diagrams](https://whimsical.com/templates/how-to-make-a-sequence-diagram)), reintroducing older ones (like [mind maps](https://whimsical.com/templates/how-to-make-a-mind-map-template)), and perhaps more importantly, demonstrating how multiple features *work together*. The [wireflow template](https://whimsical.com/templates/lo-fi-app-wireflow-template) is a good example of this, showing how wireframes and flowchart elements become even more expressive when used in tandem.
-
-Our initial hypothesis for this work was that, by promoting relevant templates to new and existing users, we would see a corresponding increase in deeper and more regular use of Whimsical. And while template use jumped significantly and has continued to grow since releasing the template browser, we haven't yet seen changes in the activation metrics that we were hoping for. We suspect that they've proven more valuable for *existing, habitual* users of the app rather than recent signups, which will guide further explorations for how to better reach new users.
