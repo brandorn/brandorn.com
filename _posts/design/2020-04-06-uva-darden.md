@@ -2,12 +2,12 @@
 category: design
 layout: case-study
 title: UVA Darden School of Business
-description: I helped the University of Virginia's Darden School of Business showcase its unique, value-based MBA programs.
+description: I helped the University of Virginia's Darden School of Business showcase its unique, value-based MBA programs
 
 img_folder: darden
 hero: darden-hero.png
 og_image: /img/design/darden/darden-og.jpg
-case_study_type: Information Architecture
+case_study_type: Information architecture
 case_study_link:
 website_link:
 role: IA and content strategy lead

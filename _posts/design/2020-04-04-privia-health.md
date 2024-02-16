@@ -2,7 +2,7 @@
 category: design
 layout: case-study
 title: Privia Health
-description: I've worked with Privia Health on a number of products that support medical providers' workflows and patients' access to care. 
+description: I've worked with Privia Health on a number of products that support medical providers' workflows and patients' access to care
 
 img_folder: privia
 hero: privia-hero.png
@@ -10,7 +10,7 @@ og_image: /img/design/privia/privia-og.jpg
 case_study_type: Product design
 case_study_link:
 website_link:
-role: Product Design Lead
+role: Product design lead
 responsibilities: Interaction design, product strategy, usability testing, design system extension
 
 ---

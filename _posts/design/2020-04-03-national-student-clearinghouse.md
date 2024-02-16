@@ -2,16 +2,14 @@
 category: design
 layout: case-study
 title: National Student Clearinghouse
-description: I redesigned the Clearinghouse's verification platform, reworking a convoluted request flow to make it easier for employers to perform background validations.
+description: I redesigned the Clearinghouse's verification platform, reworking a convoluted request flow to make it easier for employers to perform background validations
 
 img_folder: nsc
 thumb: nsc-thumb.png 
 hero: nsc-hero.png
 og_image: /img/design/nsc/nsc-og.jpg
-case_study_type: Product Design
-case_study_link:
-website_link:
-role: Product Design Lead
+case_study_type: Product design
+role: Product design lead
 responsibilities: Interaction design, information design, product strategy, usability testing, design system development
 project_team:
 - name: Claire Atwell

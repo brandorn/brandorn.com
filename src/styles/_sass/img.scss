@@ -97,6 +97,10 @@ figure {
 
     &.tall { max-width: 30rem; }
   }
+
+  &.shadowed {
+    img { box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 0.12); }
+  }
 } // figure
 
 // Put two figures in a div for side-by-side

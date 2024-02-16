@@ -134,7 +134,7 @@ header.page-intro {
 
 		&.cybergrx { 
 			.thumb { 
-				background-color: $highlight-blue;
+				background-color: $highlight-red;
 				background-image: url('/img/design/cybergrx/cybergrx-thumb@1x.png');
 
 				@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) { 
@@ -143,9 +143,20 @@ header.page-intro {
 			}
 		}
 
+		&.dwell { 
+			.thumb { 
+				background-color: $highlight-blue;
+				background-image: url('/img/design/dwell/dwell-thumb@1x.webp');
+
+				@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) { 
+					background-image: url('/img/design/dwell/dwell-thumb@2x.webp');
+				}
+			}
+		}
+
 		&.nsc { 
 			.thumb { 
-				background-color: $highlight-purple;
+				background-color: $highlight-orange;
 				background-image: url('/img/design/nsc/nsc-thumb@1x.png');
 
 				@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) { 
@@ -183,6 +194,17 @@ header.page-intro {
 
 				@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) { 
 					background-image: url('/img/design/rotary/rotary-thumb@2x.png');
+				}
+			}
+		}
+
+		&.whimsical { 
+			.thumb { 
+				background-color: $highlight-purple;
+				background-image: url('/img/design/whims/whims-thumb@1x.webp');
+
+				@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) { 
+					background-image: url('/img/design/whims/whims-thumb@2x.webp');
 				}
 			}
 		}
