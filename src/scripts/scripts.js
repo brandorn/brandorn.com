@@ -209,4 +209,75 @@ function init() {
   initPhotoSwipeFromDOM('.photo-gallery');
 } // function init()
 
+
+// Interleaved annotations
+// Adds sequential data ids to annotations and containers
+$.each($('.annotation-link'), function (index, item) {
+    $(item).attr('data-id', (index+1));
+  });
+  
+  $.each($('.annotation'), function (index, item) {
+    $(item).attr('data-id', (index+1));
+  });
+  
+  
+  // Clicking an annotation link expands/collapses the annotation.
+  
+  $('.annotation-link').click(function() {
+  
+    var annotationLinkId = $(this).data('id');
+    var annotationContainer = $('.annotation[data-id=' + annotationLinkId + ']');
+  
+    if ($(this).hasClass('annotation-link-selected')) {
+  
+      $(this).removeClass('annotation-link-selected');
+  
+      annotationContainer.toggleClass('annotation-expanded');
+  
+      setTimeout(function(){
+        annotationContainer.toggleClass('annotation-displayed');
+      }, 300);
+  
+    } else {
+  
+      $(this).addClass('annotation-link-selected');
+      
+      annotationContainer.toggleClass('annotation-displayed');
+  
+      setTimeout(function(){
+        annotationContainer.toggleClass('annotation-expanded');
+      }, 100);
+  
+    }
+    
+  });
+  
+  // Clicking the content of an annotation collapses it, too.
+  $('.annotation > span').click(function() {
+    
+    var annotationContainer = $(this).parent()
+    var annotationId = annotationContainer.data('id')
+    var annotationLink = $('.annotation-link[data-id=' + annotationId + ']')
+  
+    // https://developer.mozilla.org/en-US/docs/Web/API/Window/getSelection
+    var textSelected = window.getSelection().type === "Range"
+    
+    if (!textSelected && $(this).parent().hasClass('annotation-displayed')) {
+      
+      annotationLink.removeClass('annotation-link-selected');
+      
+      annotationContainer.toggleClass('annotation-expanded');
+      
+      setTimeout(function(){
+        annotationContainer.toggleClass('annotation-displayed');
+      }, 300);
+    };
+  });
+  
+  // Prevent annotation from hiding if link in annotation is clicked
+  $('.annotation > span a').click(function(event) { 
+    event.stopPropagation();
+  });
+
+
 document.addEventListener("DOMContentLoaded", init, false);

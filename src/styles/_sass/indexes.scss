@@ -623,3 +623,63 @@ header.page-intro {
 	} // .copy
 }
 
+/* === Dear Linear === */
+
+.cover-letter {
+
+	max-width: 800px;
+
+	nav {
+
+		margin-bottom: 2rem;
+
+		p {
+			@include label-medium;
+			color: $black-02;
+			margin: 0;
+
+			a:link,
+			a:visited { color: $black-02; }
+
+			a:link,
+			a:visited,
+			a:hover,
+			a:active { text-decoration: none; }
+		} // p
+	} // nav
+
+	.letter-content {
+		p {
+
+			font-size: 1.6rem;
+			line-height: 140%;
+	
+			&.salutation {
+				font-family: $serif-body;
+				font-size: 2rem;
+				font-style: italic;
+				margin: 4rem 0 -0.5rem 0;
+			}
+			&.signoff {}
+	
+			span.gif-hover {
+				text-decoration: dashed;
+				text-decoration-line: underline;
+				text-decoration-color: $black-04;
+
+				&:hover {
+					text-decoration-color: $black-03;
+					cursor: pointer;
+				}
+			}
+
+			sup a { text-decoration: none;}
+		} // p
+	
+		.footnotes {
+			font-size: 1rem;
+			margin-top: 3rem;
+		}
+	}
+	
+}
