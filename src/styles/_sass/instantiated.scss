@@ -220,7 +220,9 @@
 				@media all and (max-width: $break-medium) { display: flex; }
 
 				p { 
-					@include body-serif-small;
+					@include body-sans-medium;
+					font-size: 1rem;
+					line-height: 150%;
 					margin: 0;
 				}
 
@@ -231,7 +233,7 @@
 				  content: counter(big-counter) ".";
 				  float: left;
 				  margin-left: -3rem;
-				  margin-top: 2px;
+				  margin-top: 3px;
 
 				  @media all and (max-width: $break-medium) {
 				  	float: none;
