@@ -17,13 +17,13 @@ title:
 
 <p>I’ve been a product designer for the last eleven years in agency and in-house environments, where I’ve worked on a range of products, platforms, and teams. My ideal setup is small product teams, where I get to work closely with engineers to shape, prototype, and polish features, have direct contact with users, and build something I believe in. Please see my <a href="/img/dorn-resume.pdf">resume</a> and <a href="/">case studies</a> for more information about me.</p>
 
-<p>Thanks for reading. I’d love the opportunity to join Linear.</p>
+<p><span class="gif-hover thanks">Thanks</span> for reading. I’d love the opportunity to interview with Linear.</p>
 <p>Sincerely,<br>Brandon</p>
 
 <ol class="footnotes">
   <li id="fn1"><p>Things like workshops, whiteboarding, note-taking, sketching, pitching, breadboarding, prioritizing, rearranging, and generally noodling on ideas. <a class="return" href="#sup1">↩</a> </p></li>
-  <li id="fn2"><p>My work focused in particular on templates, activation, collaborative features, and exploratory prototypes that extend Whimsical’s use cases.<a class="return" href="#sup2">↩</a></p></li>
-  <li id="fn3"><p>In his book <a href="https://www.amazon.com/dp/0692059954/"><i>Planning for Everything</i></a>, Peter Morville enumerates the many forms that planning can take, seeing it very much as a creative act in and of itself, replete with the ambiguities and uncertainties that accompany creativity—especially in a collaborative setting.<a class="return" href="#sup3">↩</a></p></li>
-  <li id="fn4"><p>Projects like those I did for <a href="https://brandorn.com/design/whimsical">Whimsical</a>, <a href="https://brandorn.com/design/arcadia">Arcadia</a>, <a href="https://brandorn.com/design/dwell">Dwell</a>, and <a href="https://brandorn.com/design/privia-health">Privia Health</a> have elements of purpose-built-ness to them that I seek.<a class="return" href="#sup4">↩</a></p></li>
+  <li id="fn2"><p>My work focused in particular on templates, activation, collaborative features, and exploratory prototypes that extend Whimsical’s use cases. <a class="return" href="#sup2">↩</a></p></li>
+  <li id="fn3"><p>In his book <a href="https://www.amazon.com/dp/0692059954/"><i>Planning for Everything</i></a>, Peter Morville enumerates the many forms that planning can take, seeing it very much as a creative act in and of itself, replete with the ambiguities and uncertainties that accompany creativity—especially in a collaborative setting. <a class="return" href="#sup3">↩</a></p></li>
+  <li id="fn4"><p>Projects like those I did for <a href="https://brandorn.com/design/whimsical">Whimsical</a>, <a href="https://brandorn.com/design/arcadia">Arcadia</a>, <a href="https://brandorn.com/design/dwell">Dwell</a>, and <a href="https://brandorn.com/design/privia-health">Privia Health</a> have elements of purpose-built-ness that I'm after. <a class="return" href="#sup4">↩</a></p></li>
 </ol>
 
