@@ -15,7 +15,7 @@ title:
 
 <p>I don’t know where you want to take Linear. But having noticed some of the recent work you’ve been doing with docs and text editing in the app, I sense that you’re moving in the direction of supporting this kind of open-ended planning work. And the app’s potential in this space is exciting to me, given my interest and background in designing purpose-built digital tools<sup><a id="sup4" href="#fn4">4</a></sup> that help others to work better.</p>
 
-<p>I’ve been a product designer for the last eleven years in agency and in-house environments, where I’ve worked on a range of products, platforms, and teams. My ideal setup is small product teams, where I get to work closely with engineers to shape, prototype, and polish features, have direct contact with users, and build something I believe in. Please see my <a href="/img/dorn-resume.pdf">resume</a> and <a href="/">case studies</a> for more information about me.</p>
+<p>I’ve been a product designer for the last eleven years in agency and in-house environments, where I’ve worked on a range of products, platforms, and teams. My ideal setting is one with small, cross-functional product teams, where I get to work closely with engineers to shape, prototype, and polish features, have direct contact with users, and build something I believe in. Please see my <a href="/img/dorn-resume.pdf">resume</a> and <a href="/">case studies</a> for more information about me.</p>
 
 <p><span class="gif-hover thanks">Thanks</span> for reading. I’d love the opportunity to interview with y’all.</p>
 <p>Sincerely,<br>Brandon</p>
