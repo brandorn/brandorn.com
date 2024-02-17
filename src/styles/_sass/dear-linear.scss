@@ -72,6 +72,8 @@
 					position: absolute;
 					left: 8px;
 					width: 220px;
+
+					@media all and (max-width: $break-tiny) { left: auto; }
 				}
 
 				&:hover {
