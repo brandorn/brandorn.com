@@ -134,7 +134,7 @@ header.page-intro {
 
 		&.cybergrx { 
 			.thumb { 
-				background-color: $highlight-red;
+				background-color: $highlight-yellow;
 				background-image: url('/img/design/cybergrx/cybergrx-thumb@1x.png');
 
 				@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) { 
@@ -178,7 +178,7 @@ header.page-intro {
 
 		&.privia { 
 			.thumb { 
-				background-color: $highlight-yellow;
+				background-color: $highlight-red;
 				background-image: url('/img/design/privia/privia-thumb@1x.png');
 
 				@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) { 
