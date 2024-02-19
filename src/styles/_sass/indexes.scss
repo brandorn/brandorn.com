@@ -2,7 +2,7 @@
 
 header.page-intro {
 	margin-bottom: 6rem;
-	max-width: 600px;
+	max-width: 36rem;
 
 	p { @include body-sans-large }
 }
@@ -413,6 +413,8 @@ header.page-intro {
 
 .fav-reads {
 
+	margin-top: 6rem;
+
 	.genre-lists {
 		display: flex;
 		flex-wrap: wrap;
@@ -462,6 +464,8 @@ header.page-intro {
 
 .writing-list {
 	margin-top: 4rem;
+
+	.label-medium { margin-bottom: 0; }
 
 	a {
 		border-bottom: 1px solid $black-05;

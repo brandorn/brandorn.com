@@ -68,6 +68,11 @@ button:not(.pswp__button) {
   margin: 1rem 0;
   padding: 0.6rem 1rem;
 
+  a {
+    display: flex;
+    justify-content: center;
+  }
+
   &:hover { background-color: $highlight-red; }
 
   &.secondary { 
@@ -80,8 +85,8 @@ button:not(.pswp__button) {
         float: right;
         height: 12px;
         width: 12px;
-        margin-left: 6px;
-        margin-top: 4px;
+        margin: auto;
+        margin-right: 6px;
       }
     }
   } // .secondary
@@ -109,8 +114,8 @@ button:not(.pswp__button) {
       float: left;
       height: 12px;
       width: 14px;
+      margin: auto;
       margin-right: 6px;
-      margin-top: 5px;
     }
   } // .arrow
 
@@ -121,8 +126,8 @@ button:not(.pswp__button) {
       float: right;
       height: 12px;
       width: 12px;
-      margin-left: 6px;
-      margin-top: 6px;
+      margin: auto;
+      margin-right: 6px;
     }
   } // .arrow
 }

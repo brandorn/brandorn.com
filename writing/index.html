@@ -7,6 +7,32 @@ title: Reading & Writing
 	<p>Sometimes I write, every now and then I give talks, but mostly I read.</p>
 </header>
 
+<div class='writing-list'>
+	{% assign writing_list = site.categories.writing %}
+
+	<p class="label-medium">Writing & Speaking</p>
+
+		{% for item in writing_list %}
+		<a href="{% if item.source_link %} {{ item.source_link }} {% else %} {{ item.url }} {% endif%}">
+			<div class="writing-item">
+				<div class="preview-content">
+					<figure>
+						<img src="/img/writing/{{ item.img_folder }}/{{ item.thumb }}" alt="">
+					</figure>
+					<div class="meta">
+						<p class="title"> {{ item.title }} </p>
+						<p class="intro"> {{ item.description }} </p>
+					</div> 
+				</div> <!-- .preview-content -->
+				<div class="attribution">
+					{% if item.source_name %}<p class="source {% if item.source_link %} external-link {% endif %}">{{ item.source_name }}</p>{% endif %}
+					<p> {{ item.date | date: "%b %Y"}} </p>	
+				</div>
+			</div>
+		</a>
+		{% endfor %}
+</div>
+
 <div class="fav-reads">
 
 	<p class="label-medium">Favorites</p>
@@ -54,30 +80,3 @@ title: Reading & Writing
 		</ul>
 	</div> <!-- .genre-lists-->
 </div> <!-- .fav-reads-->
-
-
-<div class='writing-list'>
-	{% assign writing_list = site.categories.writing %}
-
-	<p class="label-medium">Writing & Speaking</p>
-
-		{% for item in writing_list %}
-		<a href="{% if item.source_link %} {{ item.source_link }} {% else %} {{ item.url }} {% endif%}">
-			<div class="writing-item">
-				<div class="preview-content">
-					<figure>
-						<img src="/img/writing/{{ item.img_folder }}/{{ item.thumb }}" alt="">
-					</figure>
-					<div class="meta">
-						<p class="title"> {{ item.title }} </p>
-						<p class="intro"> {{ item.description }} </p>
-					</div> 
-				</div> <!-- .preview-content -->
-				<div class="attribution">
-					{% if item.source_name %}<p class="source {% if item.source_link %} external-link {% endif %}">{{ item.source_name }}</p>{% endif %}
-					<p> {{ item.date | date: "%b %Y"}} </p>	
-				</div>
-			</div>
-		</a>
-		{% endfor %}
-</div>
