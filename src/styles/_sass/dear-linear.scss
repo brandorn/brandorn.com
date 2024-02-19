@@ -6,26 +6,31 @@
 
 	nav {
 
-		margin: 4rem 0;
+		margin: 4rem 0 4rem -24px;
 		position: relative;
 
-    @media all and (max-width: $break-small) { margin-left: 24px; }
+    @media all and (max-width: $break-small) { margin-left: 0; }
 
 		p {
 			@include label-medium;
 			color: $black-02;
-			margin: 0;
-
-			&:before {
-				background-image: url('/img/icon-arrow-left.svg');
-				background-size: 100%;
-				content: ' ';
-				display: block;
-				height: 16px;
-				left: -24px;
-				position: absolute;
-				top: 2px;
-				width: 16px;
+			display: block;
+			width: fit-content;
+			
+			a {
+				display: flex;
+				justify-content: center;
+				
+				&:before {
+					background-image: url('/img/icon-arrow-left.svg');
+					background-size: 100%;
+					content: ' ';
+					display: block;
+					height: 16px;
+					margin: auto;
+					margin-right: 8px;
+					width: 16px;
+				}
 			}
 
 			a:link,
