@@ -5,7 +5,7 @@ title:
 
 <p class="salutation"> Dear Linear, </p>
 
-<p>When we switched to Linear at <a href="https://whimsical.com">Whimsical</a>, it quickly became clear that the hype was justified. You’ve done with project management what we’ve sought to do with visual collaboration: bring a high level of simplicity, sophistication, and integration to a staid product category. And so, like every other designer in tech, I found myself on your <span class="gif-hover ooh">careers page</span>.</p>
+<p>When we switched to Linear at <a href="https://whimsical.com">Whimsical</a>, it quickly became clear that the hype was justified. You’ve done with project management what we’ve sought to do with visual collaboration: bring a high level of simplicity, sophistication, and integration to a staid product category. And so, like every other designer in tech, I found myself <span class="gif-hover ooh">on your careers page</span>.</p>
 
 <p>Yet I’m drawn to Linear not only for your level of design craft and strategic focus, but for the potential your tool has to meaningfully shape modern work. While Linear may be the current standard for project management, I believe it can be the future of <i>product shaping</i>—supporting the freeform, ambiguous things that teams do when they’re figuring out what to do.<sup><a id="sup1" href="#fn1">1</a></sup></p>
 
