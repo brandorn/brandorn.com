@@ -19,15 +19,6 @@ responsibilities: Interaction design, product strategy, usability testing, desig
 
 <p>Over the last few years I have worked with Privia's product team on products for their various audiences: primary care providers, nurse staff, and patients. We've held workshops, done in-person ethnographic research, and built prototypes to test before scaling solutions across their networks.</p>
 
-<div class="what-i-learned">
-	<h2>Takeaways</h2>
-	<ol class="learned-things">
-		<li><p><b>Anticipate worst-case mental states.</b> More so than other types of digital products, those used by healthcare professionals and their patients need to be designed for the stresses and anxieties and distractions of <a href="https://abookapart.com/products/design-for-real-life">real life</a>. This should influence decisions from information architecture all the way down to microcopy.</p></li>
-		<li><p><b>Design for situational awareness.</b> When care providers are assessing patient's medical records, they are scanning sometimes hundreds of data points for anomalies, not unlike aircraft pilots glancing over their dashboards. It was important to learn <i>from them</i> how to prioritize data and make it appropriately scannable, providing just enough information without introducing undue cognitive burden.</p></li>
-		<li><p><b>Learn to love constraints.</b> Given the level of regulation in the medical industry, many requirements were predetermined and out of our control. However, this forced us to be even more focused on accessibility and clarity in the designs.</p></li>
-	</ol>
-</div>
-
 <h2>The Work</h2>
 <p>Shown here are some of the projects I've worked on with Privia, from private practice marketing websites to a recording UI used by providers to document and transcribe patient visits.</p>
 
@@ -73,3 +64,12 @@ responsibilities: Interaction design, product strategy, usability testing, desig
 
 <h2>Wrapping Up</h2>
 <p>Although Privia is a healthcare organization, they see themselves as a technological innovation company seeking to improve how healthcare is done. But they aren't interested in "disruption" or gimmicks. Rather, they have taken a long look at how healthcare needs to change in the United States and are helping customers make that change. While none of the products above will individually bring that about, each connect to Privia's broader mission of transforming healthcare — one I was happy to be a part of.</p>
+
+<div class="what-i-learned">
+	<h2>Takeaways</h2>
+	<ol class="learned-things">
+		<li><p><b>Anticipate worst-case mental states.</b> More so than other types of digital products, those used by healthcare professionals and their patients need to be designed for the stresses and anxieties and distractions of <a href="https://abookapart.com/products/design-for-real-life">real life</a>. This should influence decisions from information architecture all the way down to microcopy.</p></li>
+		<li><p><b>Design for situational awareness.</b> When care providers are assessing patient's medical records, they are scanning sometimes hundreds of data points for anomalies, not unlike aircraft pilots glancing over their dashboards. It was important to learn <i>from them</i> how to prioritize data and make it appropriately scannable, providing just enough information without introducing undue cognitive burden.</p></li>
+		<li><p><b>Learn to love constraints.</b> Given the level of regulation in the medical industry, many requirements were predetermined and out of our control. However, this forced us to be even more focused on accessibility and clarity in the designs.</p></li>
+	</ol>
+</div>

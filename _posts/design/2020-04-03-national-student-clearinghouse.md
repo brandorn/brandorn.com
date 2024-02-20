@@ -24,15 +24,6 @@ project_team:
 <p>The National Student Clearinghouse maintains the graduation data for all high schools, colleges, and credentialing organizations in the United States. It's how Spotify knows if you're actually a student or still mooching off your university email address. But more importantly, employers across the country use it to verify job applicants' education background. So it's also how you can be sure that your doctor actually got that MD and did their residency.</p>
 <p>We worked with the Clearinghouse to redesign the interface used by people in HR to perform these validations. It hadn't been touched for nearly ten years, and needed to evolve to support new Clearinghouse initiatives. In addition to refresh their design language, I helped them rethink the structure of the verification process to clarify and expedite the process for employers. Rounds of moderated research revealed key improvements that will have a ripple effect across the hundreds of thousands of verifications performed every year.</p>
 
-<div class="what-i-learned">
-	<h2>Takeaways</h2>
-	<ol class="learned-things">
-		<li><p><b>Invite subject matter experts into the design process.</b> The Clearinghouse team was familiar with the complexities of the application and the improvements they were after. Close collaboration with them helped me avoid pitfalls they encountered when working through the problems previously.</p></li>
-		<li><p><b>Work broadly to 75%, then refine.</b> Instead of laboring over small sections of the design to perfection, establish an overall structure and bring core features to moderate-high fidelity before taking a final pass. Edge cases and unforeseen complexities reveal themselves as you work across the whole terrain of the app, allowing time to prioritize refinements before launch.</p></li>
-		<li><p><b>Go onsite.</b> Multi-day onsite visits with the client team gave us focused time to work through thorny interactions together on a whiteboard. While remote work is becoming increasingly the norm, in-person sessions like these led to ideas that we may not have come across otherwise.</p></li>
-	</ol>
-</div>
-
 <h2>The Work</h2>
 
 <p>Part of the discovery phase of the project involved auditing the existing verification web app. I assembled a Whimsical board that included annotations of screens and states, which served as a helpful reference over the course of the project.</p>
@@ -96,3 +87,12 @@ project_team:
 	<p>With every single flow, when we explained it to Brandon, he created something so beautiful and simple. It was amazing to watch. And, even better, if we ever requested changes or reflected concern about how something might be confusing to a customer, Brandon took our feedback with such a positive attitude and would design something that perfectly met what we were looking for.</p>
 	<cite>Key Clearinghouse stakeholder</cite>
 </blockquote>
+
+<div class="what-i-learned">
+	<h2>Takeaways</h2>
+	<ol class="learned-things">
+		<li><p><b>Invite subject matter experts into the design process.</b> The Clearinghouse team was familiar with the complexities of the application and the improvements they were after. Close collaboration with them helped me avoid pitfalls they encountered when working through the problems previously.</p></li>
+		<li><p><b>Work broadly to 75%, then refine.</b> Instead of laboring over small sections of the design to perfection, establish an overall structure and bring core features to moderate-high fidelity before taking a final pass. Edge cases and unforeseen complexities reveal themselves as you work across the whole terrain of the app, allowing time to prioritize refinements before launch.</p></li>
+		<li><p><b>Go onsite.</b> Multi-day onsite visits with the client team gave us focused time to work through thorny interactions together on a whiteboard. While remote work is becoming increasingly the norm, in-person sessions like these led to ideas that we may not have come across otherwise.</p></li>
+	</ol>
+</div>

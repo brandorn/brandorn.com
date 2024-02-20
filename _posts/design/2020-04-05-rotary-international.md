@@ -30,16 +30,6 @@ project_team:
 
 <p>Working with a small team of researchers, I helped develop a research plan that involved remote moderated usability tests, an international survey, and a set of unmoderated navigation tests to guide the redesign of the member portal. Responses from and conversations with over 3,300 Rotarians showed us how to make MyRotary an essential aid to their work.</p>
 
-
-<div class="what-i-learned">
-	<h2>Takeaways</h2>
-	<ol class="learned-things">
-		<li><p><b>Think analog first, then digital.</b> Our usability tests revealed that the most helpful resources provided to new Rotarians were often physical printouts given to them by other members. We began to document instances where physical materials took precedence over digital ones, which informed content strategy for MyRotary</p></li>
-		<li><p><b>Watch for workarounds.</b> People are naturally resourceful, often finding ways to solve problems <i>despite</i> the tools we build for them. Unintended uses of the platform and instances of people turning to other tools revealed important insights for how to change it.</p></li>
-		<li><p><b>Treat vision statements as hypotheses.</b> Lofty and vague, vision statements for what a product should be often don't match what users <i>need</i> it to be. We broke down Rotary's initial vision statement for MyRotary into a set of testable hypotheses that informed the structure of our research plan, and showed in our final analysis how to modify it to match members' needs.</p></li>
-	</ol>
-</div>
-
 <h2>The Work</h2>
 
 <p>We began with an in-depth audit of the MyRotary platform, identifying issues ranging from usability to content discepancies to convoluted navigation systems. The Rotary International team was able to begin working on many of these while we began the research process in full.</p>
@@ -83,3 +73,12 @@ project_team:
 <h2>Wrapping Up</h2>
 
 <p>Many of the improvements that needed to be made to the platform were clear from the start: improving performance, shoring up accessibility, bringing the interface in line with Rotary's updated brand standards. Yet our research gave direction to deeper, more ambiguous questions about information architecture and internationalization that enabled us to give substantive recommendations. With these, the Rotary International team was able to put together a roadmap for evolving the platform for the next generation of Rotarians, ensuring that the platform serves them, not the other way around.</p>
+
+<div class="what-i-learned">
+	<h2>Takeaways</h2>
+	<ol class="learned-things">
+		<li><p><b>Think analog first, then digital.</b> Our usability tests revealed that the most helpful resources provided to new Rotarians were often physical printouts given to them by other members. We began to document instances where physical materials took precedence over digital ones, which informed content strategy for MyRotary</p></li>
+		<li><p><b>Watch for workarounds.</b> People are naturally resourceful, often finding ways to solve problems <i>despite</i> the tools we build for them. Unintended uses of the platform and instances of people turning to other tools revealed important insights for how to change it.</p></li>
+		<li><p><b>Treat vision statements as hypotheses.</b> Lofty and vague, vision statements for what a product should be often don't match what users <i>need</i> it to be. We broke down Rotary's initial vision statement for MyRotary into a set of testable hypotheses that informed the structure of our research plan, and showed in our final analysis how to modify it to match members' needs.</p></li>
+	</ol>
+</div>

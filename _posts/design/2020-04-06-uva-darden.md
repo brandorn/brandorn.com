@@ -30,15 +30,6 @@ project_team:
 
 <p>I worked with a small team to redesign Darden's website, leading workshops with stakeholder groups across the university, developing a new information architecture and messaging strategy, designing page layouts, and testing prototypes with key audiences. By the end of the end of the engagement, Darden's marketing team had a web platform worthy of the quality of their programs.</p>
 
-<div class="what-i-learned">
-	<h2>Takeaways</h2>
-	<ol class="learned-things">
-		<li><p><b>Balance institutional structure with audience expectations.</b> As we worked with various stakeholder groups to restructure their content on the website, we helped them avoid building an information architecture that simply reflected Darden's internal departments. Prototyping with student audiences kept our IA from becoming too Darden-centric.</p></li>
-		<li><p><b>Consider content from the start.</b> We knew from the beginning of the project that most, if not all, of the content across the website would need to be rewritten by Darden's small but might marketing team. So we worked with them to develop a content governance plan and provided page-level editorial guidance to show where to draw content from.</p></li>
-		<li><p><b>Prototype with editorial design in mind.</b> Knowing that our art director would be defining a visual design direction based on my low-fidelity wireframes and Darden's editorial style guide, I worked with him to define flexible patterns for the types of content that would exist in the new system. A well-documented content model showed him the content variations he would need to account for when designing page components at high fidelity.</p></li>
-	</ol>
-</div>
-
 <h2>The Work</h2>
 
 <p>We began the project by facilitating workshops with the Darden team to identify challenges they faced, goals and KPIs for the redesign, and editorial websites that they admired.</p>
@@ -90,3 +81,12 @@ project_team:
 <p>One of Darden's professors, <a href="https://www.darden.virginia.edu/faculty-research/directory/r-edward-freeman">Edward Freeman</a>, established an approach to business management called Stakeholder Theory, which encourages people to think broadly about business value. Value isn't just reflected in shareholder earnings, but in the effect on any person involved in a product or service, whether internal to a company or not. This mentality sets Darden apart in the world of business schools, their belief that "values create value."</p>
 
 <p>Darden's way of thinking inspired us throughout the project as we sought to put it to practice, even if in small ways, inviting students and people across the school into the process of creating a better platform for their message.</p> 
+
+<div class="what-i-learned">
+	<h2>Takeaways</h2>
+	<ol class="learned-things">
+		<li><p><b>Balance institutional structure with audience expectations.</b> As we worked with various stakeholder groups to restructure their content on the website, we helped them avoid building an information architecture that simply reflected Darden's internal departments. Prototyping with student audiences kept our IA from becoming too Darden-centric.</p></li>
+		<li><p><b>Consider content from the start.</b> We knew from the beginning of the project that most, if not all, of the content across the website would need to be rewritten by Darden's small but might marketing team. So we worked with them to develop a content governance plan and provided page-level editorial guidance to show where to draw content from.</p></li>
+		<li><p><b>Prototype with editorial design in mind.</b> Knowing that our art director would be defining a visual design direction based on my low-fidelity wireframes and Darden's editorial style guide, I worked with him to define flexible patterns for the types of content that would exist in the new system. A well-documented content model showed him the content variations he would need to account for when designing page components at high fidelity.</p></li>
+	</ol>
+</div>

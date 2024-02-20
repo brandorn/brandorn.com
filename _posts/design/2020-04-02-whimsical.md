@@ -28,17 +28,6 @@ Templates emerged as a key means for showing people—especially new signups—h
 
 I partnered with an engineer to shape requirements, iterate a prototype, establish editorial guidelines, and create a better browsing experience inside the app and on Whimsical.com.
 
-
-<div class="what-i-learned">
-	<h2>Takeaways</h2>
-	<ol class="learned-things">
-		<li><p><b>Use the app to teach the app.</b> The best, most durable kind of learning comes from in-context, direct manipulation of the material itself. Whether or not people use templates to create their final files, we found that users valued seeing how <i>we</i> use Whimsical for certain use cases. </p></li>
-		<li><p><b>First impressions of features matter.</b> Where and how we introduced templates affected how likely people were to continue using templates—and Whimsical. We sought to introduce templates when in contexts and moments where they would be most meaningful.</p></li>
-		<li><p><b>Systems set standards.</b> By designing a mini design system for templates themselves, we were able to create a replicable, predictable way for creating and interacting with templates.</p></li>
-		
-	</ol>
-</div>
-
 <h2>The Work</h2>
 
 Our overall hypothesis for this work was that Whimsical users would use more of the app's feature set, and do so regularly, if they were shown relevant templates in key contexts of the app.
@@ -93,3 +82,17 @@ The engineer and I also designed and built a way to add "tips" to templates: obj
 <h2>Wrapping Up</h2>
 
 Templates are a kind of meta-feature in the way that they can change how people use and perceive a product, revealing valuable features and jump-starting projects. As such, they've become a key means for introducing new features (like [sequence diagrams](https://whimsical.com/templates/how-to-make-a-sequence-diagram)), reintroducing older ones (like [mind maps](https://whimsical.com/templates/how-to-make-a-mind-map-template)), and perhaps more importantly, demonstrating how multiple features *work together*. The [wireflow template](https://whimsical.com/templates/lo-fi-app-wireflow-template) is a good example of this, showing how wireframes and flowchart elements become even more expressive when used in tandem.
+
+<blockquote>
+	<p>Brandon's work is consistently high quality – he has particular attention to detail in pitches, UX and visual design work and it show that he strives to create aesthetically pleasing and highly usable designs.</p>
+	<cite>Principal designer, Whimsical</cite>
+</blockquote>
+
+<div class="what-i-learned">
+	<h2>Takeaways</h2>
+	<ol class="learned-things">
+		<li><p><b>Use the app to teach the app.</b> The best, most durable kind of learning comes from in-context, direct manipulation of the material itself. Whether or not people use templates to create their final files, we found that users valued seeing how <i>we</i> use Whimsical for certain use cases. </p></li>
+		<li><p><b>First impressions of features matter.</b> Where and how we introduced templates affected how likely people were to continue using templates—and Whimsical. We sought to introduce templates when in contexts and moments where they would be most meaningful.</p></li>
+		<li><p><b>Systems set standards.</b> By designing a mini design system for templates themselves, we were able to create a replicable, predictable way for creating and interacting with templates.</p></li>
+	</ol>
+</div>
