@@ -48,7 +48,7 @@ As I shaped the pitch, I drew ideas for the work from our product solution tree,
 	<figcaption>Designing Whimsical...in Whimsical.</figcaption>
 </figure>
 
-We landed on a layout for the template browser that felt of-a-piece with the Whimsical UI, extending the design of our file cards to allow users to preview files when clicking them. I worked with the engineer to define the data model and related search and ordering logic for the templates. To make it feel of a piece with the experience of editing elsewhere in Whimsical, the template browser builds upon core elements of the design system, extending it in a few targeted ways. 
+We landed on a layout for the template browser that felt at home within the Whimsical UI, extending the design of our file cards to allow users to preview files when clicking them. I worked with the engineer to define the data model and related search and ordering logic for the templates. To make the template browser feel consistent with file browsing elsewhere in Whimsical, it builds upon core elements of the design system, extending it in a few targeted ways. 
 
 <figure class="almost-body-width shadowed">
 	<img src="/img/design/whims/whims-template-browser.gif">
@@ -73,7 +73,7 @@ I also redesigned the "Create new file" modal to feature suggested templates mor
 
 As we began planning the expansion of our template library I wrote a guide that showed how to create and publish templates, setting a standard for new and revised templates. My goal was for us to not only to create templates that felt consistent, but ones that meaningfully guided product teams through specific tasks, whether running workshops, creating roadmaps, or designing wireflows. And, naturally, I made a template for others to use when creating templates.
 
-The engineer and I also designed and built a way to add "tips" to templates: objects that guide users within the context of the template itself, which can be easily deleted at one go. This came from input from users and our own experience of having to repeatedly delete placeholder objects from templates.
+The engineer and I also designed and built a way to add "tips" to templates: objects that guide users within the context of the template itself, which can be easily deleted at one go. This feature came from input from users and our own experience of having to repeatedly delete placeholder objects from templates.
 
 <figure>
 	<img src="/img/design/whims/whims-template-examples.webp">
