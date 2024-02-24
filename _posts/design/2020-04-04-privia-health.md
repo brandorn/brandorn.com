@@ -15,6 +15,8 @@ responsibilities: Interaction design, product strategy, usability testing, desig
 project_team:
 - name: Brandon Dorn
   role: Product design, product strategy
+- name: Josh Korr
+  role: Product management
 - name: Mindy Wagner
   role: Visual design, brand strategy
 
