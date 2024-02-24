@@ -22,15 +22,13 @@ project_team:
 
 ---
 
-<h2>The Project</h2>
-
 <p>One of the world's longstanding service organizations, <a href="https://www.rotary.org/en">Rotary International's</a> network is made up of 1.2 million members and 35,000 clubs around the world, each given autonomy in how they serve their communities. To aid members in their efforts, Rotary International created MyRotary, a website that provides guidance, news, administrative support, and ways for members to connect with one another. Yet years after launch, user behavior had changed and the website wasn't meeting members' needs.</p>
 
 <p>Before embarking on a design and development overahul, Rotary International wanted to better understand how MyRotary needed to evolve. And in true Rotary fashion, they wanted to act with input from the community they were serving — in this case their own international member base.</p>
 
 <p>Working with a small team of researchers, I helped develop a research plan that involved remote moderated usability tests, an international survey, and a set of unmoderated navigation tests to guide the redesign of the member portal. Responses from and conversations with over 3,300 Rotarians showed us how to make MyRotary an essential aid to their work.</p>
 
-<h2>The Work</h2>
+<h2>The Project</h2>
 
 <p>We began with an in-depth audit of the MyRotary platform, identifying issues ranging from usability to content discepancies to convoluted navigation systems. The Rotary International team was able to begin working on many of these while we began the research process in full.</p>
 

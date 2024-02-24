@@ -8,10 +8,15 @@ img_folder: privia
 hero: privia-hero.png
 og_image: /img/design/privia/privia-og.jpg
 case_study_type: Product design
-case_study_link:
+case_study_link: https://www.viget.com/work/privia/
 website_link:
 role: Product design lead
 responsibilities: Interaction design, product strategy, usability testing, design system extension
+project_team:
+- name: Brandon Dorn
+  role: Product design, product strategy
+- name: Mindy Wagner
+  role: Visual design, brand strategy
 
 ---
 
@@ -47,13 +52,13 @@ responsibilities: Interaction design, product strategy, usability testing, desig
 <p>Privia was an early entrant into online telehealth, giving providers and patients the option to meet virtually for consultations that didn't require in-person visits. I helped them design marketing websites for their care centers as well as the onboarding flow and chat interface for their telehealth platform.</p>
 
 <figure class="almost-body-width">
-	<img src="/img/design/privia/privia-care-center.png" alt="">
-	<figcaption>A homepage for one of Privia's nationally-distributed care centers.</figcaption>
+	<img src="/img/design/privia/privia-biz-model.jpg" alt="">
+	<figcaption>A snapshot of the product strategy used for the care team interface</figcaption>
 </figure>
 
-<figure class="content-width">
-	<img src="/img/design/privia/privia-telehealth.jpg" alt="">
-	<figcaption>The chat view of Privia's telehealth interface.</figcaption>
+<figure class="almost-body-width">
+	<img src="/img/design/privia/privia-care-center.png" alt="">
+	<figcaption>A homepage for one of Privia's nationally-distributed care centers.</figcaption>
 </figure>
 
 <p>To reduce the amount of patient documentation providers are required to write on a daily basis, we designed a recording utility that syncs with providers' calendars and frees them to focus on patients during visits. Recordings are then sent to a third party for transcription, and providers receive notes from their visits at the end of the day.</p>

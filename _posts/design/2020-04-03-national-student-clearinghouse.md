@@ -19,12 +19,11 @@ project_team:
 
 ---
 
-<h2>The Project</h2>
-
 <p>The National Student Clearinghouse maintains the graduation data for all high schools, colleges, and credentialing organizations in the United States. It's how Spotify knows if you're actually a student or still mooching off your university email address. But more importantly, employers across the country use it to verify job applicants' education background. So it's also how you can be sure that your doctor actually got that MD and did their residency.</p>
+
 <p>We worked with the Clearinghouse to redesign the interface used by people in HR to perform these validations. It hadn't been touched for nearly ten years, and needed to evolve to support new Clearinghouse initiatives. In addition to refresh their design language, I helped them rethink the structure of the verification process to clarify and expedite the process for employers. Rounds of moderated research revealed key improvements that will have a ripple effect across the hundreds of thousands of verifications performed every year.</p>
 
-<h2>The Work</h2>
+<h2>The Project</h2>
 
 <p>Part of the discovery phase of the project involved auditing the existing verification web app. I assembled a Whimsical board that included annotations of screens and states, which served as a helpful reference over the course of the project.</p>
 

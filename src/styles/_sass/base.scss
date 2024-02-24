@@ -68,50 +68,32 @@ button:not(.pswp__button) {
   margin: 1rem 0;
   padding: 0.6rem 1rem;
 
-  a {
-    display: flex;
-    justify-content: center;
-  }
-
   &:hover { background-color: $highlight-red; }
 
-  &.secondary { 
-    border: none;
-
-    &.arrow {
-      a::after {
-        background: url("/img/icon-arrow.svg") 50% no-repeat;
-        content: "";
-        float: right;
-        height: 12px;
-        width: 12px;
-        margin: auto;
-        margin-right: 6px;
-      }
-    }
-  } // .secondary
-
+  &.secondary { border: none; } 
+  
   a {
     @include label-small;
-  }
+    display: flex;
+    justify-content: center;
 
-  a:link,
-  a:visited { 
-    color: $red-02;
-    text-decoration: none;
-  }
-
-  a:hover,
-  a:active { 
-    color: $red-02;
-    text-decoration: none;
-  }
+    &:link,
+    &:visited { 
+      color: $red-02;
+      text-decoration: none;
+    }
+    
+    &:hover,
+    &:active { 
+      color: $red-02;
+      text-decoration: none;
+    }
+  } // a  
 
   &.email {
     a::before {
       background: url("/img/icon-email.svg") 50% no-repeat;
       content: "";
-      float: left;
       height: 12px;
       width: 14px;
       margin: auto;
@@ -123,11 +105,10 @@ button:not(.pswp__button) {
     a::after {
       background: url("/img/icon-arrow.svg") 50% no-repeat;
       content: "";
-      float: right;
       height: 12px;
       width: 12px;
       margin: auto;
-      margin-right: 6px;
+      margin-left: 6px;
     }
   } // .arrow
 }

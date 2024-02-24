@@ -24,13 +24,11 @@ project_team:
 
 ---
 
-<h2>The Project</h2>
-
 <p>The University of Virginia's Darden School of Business regularly ranks among top-tier MBA programs, especially when it comes to student experience and faculty teaching. Yet you wouldn't know it from their website, which was difficult to navigate, lacked a clear messaging hierarchy, and, visually, lagged far behind the school's sharp editorial design. Darden wanted the website to feel as crisp and focused as the print collateral they gave to prospective students.</p>
 
 <p>I worked with a small team to redesign Darden's website, leading workshops with stakeholder groups across the university, developing a new information architecture and messaging strategy, designing page layouts, and testing prototypes with key audiences. By the end of the end of the engagement, Darden's marketing team had a web platform worthy of the quality of their programs.</p>
 
-<h2>The Work</h2>
+<h2>The Project</h2>
 
 <p>We began the project by facilitating workshops with the Darden team to identify challenges they faced, goals and KPIs for the redesign, and editorial websites that they admired.</p>
 

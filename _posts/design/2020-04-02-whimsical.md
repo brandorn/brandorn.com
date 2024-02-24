@@ -20,15 +20,13 @@ project_team:
 
 ---
 
-<h2>The Project</h2>
-
 Whimsical began in 2017 as a tool for making flowcharts yet has evolved into a multi-use platform that helps teams shape product ideas. However, as we built additional features to support this shaping work—things like <a href="https://whimsical.com/wireframes">wireframes</a>, <a href="https://whimsical.com/docs">docs</a>, and task-specific features like <a href="https://help.whimsical.com/article/732-sequence-diagrams">sequence diagrams</a>—we realized that our customers' use of the app wasn't following our evolving feature set. We were designing Whimsical to be used (and using it ourselves) in a much fuller way than our customers were.
 
 Templates emerged as a key means for showing people—especially new signups—how Whimsical can be used and how to get the most out of the app. While we had a passable feature at the time, it went unnoticed and unused by the majority of our users. So we set out to improve the the discoverability of our template library while also improving its overall quality. Our hope was to introduce people to new ways of working in Whimsical that went beyond the creation of one-off, intermittent flowcharts.
 
 I partnered with an engineer to shape requirements, iterate a prototype, establish editorial guidelines, and create a better browsing experience inside the app and on Whimsical.com.
 
-<h2>The Work</h2>
+<h2>The Project</h2>
 
 Our overall hypothesis for this work was that Whimsical users would use more of the app's feature set, and do so regularly, if they were shown relevant templates in key contexts of the app.
 
