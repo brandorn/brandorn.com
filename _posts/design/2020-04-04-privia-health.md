@@ -17,7 +17,7 @@ responsibilities: Interaction design, product strategy, usability testing, desig
 
 <p><a href="https://www.priviahealth.com/">Privia Health</a> is a national healthcare organization that helps hospitals and privately-owned practices improve access to care with technology. The company has a population health focus, meaning that they work with their customers to develop strategies that incentivize <i>keeping patients healthy</i> rather than profiting when they need medical care, a shift in perspective that the U.S. is slowly learning from other countries, like Japan.</p>
 
-<p>Over the last few years I have worked with Privia's product team on products for their various audiences: primary care providers, nurse staff, and patients. We've held workshops, done in-person ethnographic research, and built prototypes to test before scaling solutions across their networks.</p>
+<p>While at Viget, I worked with Privia's product team on software for their various audiences: primary care providers, nurse staff, and patients. We've held workshops, done in-person ethnographic research, and built prototypes to test before scaling solutions across their networks.</p>
 
 <h2>The Work</h2>
 <p>Shown here are some of the projects I've worked on with Privia, from private practice marketing websites to a recording UI used by providers to document and transcribe patient visits.</p>
