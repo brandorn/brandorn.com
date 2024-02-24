@@ -70,7 +70,7 @@ button:not(.pswp__button) {
 
   &:hover { background-color: $highlight-red; }
 
-  &.secondary { border: none; } 
+  &.secondary { border: 1px solid transparent; } 
   
   a {
     @include label-small;
@@ -96,7 +96,7 @@ button:not(.pswp__button) {
       content: "";
       height: 12px;
       width: 14px;
-      margin: auto;
+      margin-top: 3px;
       margin-right: 6px;
     }
   } // .arrow
@@ -107,7 +107,7 @@ button:not(.pswp__button) {
       content: "";
       height: 12px;
       width: 12px;
-      margin: auto;
+      margin-top: 4px;
       margin-left: 6px;
     }
   } // .arrow
@@ -115,6 +115,7 @@ button:not(.pswp__button) {
 
 .button-set {
   button:nth-child(n+2) { margin-left: 1rem; }
+  display: flex;
 
   &.centered {
     margin-top: 2rem;
