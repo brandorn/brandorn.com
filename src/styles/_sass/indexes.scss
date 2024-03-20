@@ -626,3 +626,13 @@ header.page-intro {
 		
 	} // .copy
 }
+
+/* === Google Meet === */
+
+.google-meet-embed {
+	border: 0;
+	height: 800px;
+	width: 100%;
+	
+	@media all and (max-width: $break-small) { height: 1600px; }
+}
