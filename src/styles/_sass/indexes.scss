@@ -134,7 +134,7 @@ header.page-intro {
 
 		&.cybergrx { 
 			.thumb { 
-				background-color: $highlight-yellow;
+				background-color: $highlight-orange;
 				background-image: url('/img/design/cybergrx/cybergrx-thumb@1x.png');
 
 				@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) { 
@@ -156,7 +156,7 @@ header.page-intro {
 
 		&.nsc { 
 			.thumb { 
-				background-color: $highlight-orange;
+				background-color: $highlight-red;
 				background-image: url('/img/design/nsc/nsc-thumb@1x.png');
 
 				@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) { 
@@ -189,7 +189,7 @@ header.page-intro {
 
 		&.rotary { 
 			.thumb { 
-				background-color: $highlight-red;
+				background-color: $highlight-yellow;
 				background-image: url('/img/design/rotary/rotary-thumb@1x.png');
 
 				@media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) { 
