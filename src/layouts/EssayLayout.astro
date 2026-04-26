@@ -1,0 +1,113 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import PostNav from '../components/PostNav.astro';
+import PostHeader from '../components/PostHeader.astro';
+import PostBody from '../components/PostBody.astro';
+import IntroQuote from '../components/IntroQuote.astro';
+
+interface Props {
+  title: string;
+  lede?: string;
+  hasPhoto?: boolean;
+  heroImage?: string;
+  heroAlt?: string;
+  heroCaption?: string;
+  heroCaptionItalic?: string;
+  introQuote?: string;
+  introQuoteAttribution?: string;
+  publishDate?: Date;
+  acknowledgements?: string;
+}
+
+const {
+  title,
+  lede,
+  heroImage,
+  heroAlt,
+  heroCaption,
+  heroCaptionItalic,
+  introQuote,
+  introQuoteAttribution,
+  publishDate,
+  acknowledgements,
+} = Astro.props;
+
+const publishedLabel = publishDate
+  ? publishDate.toLocaleDateString('en-US', {
+      month: 'long',
+      year: 'numeric',
+    })
+  : undefined;
+---
+
+<BaseLayout
+  title={`${title} — brandorn.com`}
+  description={lede}
+  bodyClass="post essay"
+>
+  <main class="page-essay">
+    <div class="page-essay__inner">
+      <PostNav />
+      <article class="page-essay__content">
+        <PostHeader
+          title={title}
+          lede={lede}
+          heroImage={heroImage}
+          heroAlt={heroAlt}
+          heroCaption={heroCaption}
+          heroCaptionItalic={heroCaptionItalic}
+        />
+
+        <PostBody
+          publishedLabel={publishedLabel}
+          acknowledgements={acknowledgements}
+        >
+          {
+            introQuote && (
+              <IntroQuote attribution={introQuoteAttribution}>
+                <p set:html={introQuote.replace(/\n/g, '<br />')} />
+              </IntroQuote>
+            )
+          }
+          <slot />
+        </PostBody>
+      </article>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .page-essay {
+    padding-inline: calc(var(--spacing) * 4);
+    padding-block: calc(var(--spacing) * 5);
+  }
+
+  .page-essay__inner {
+    max-width: 960px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 10);
+  }
+
+  .page-essay__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--spacing) * 12);
+  }
+
+  @media (width >= 48rem) {
+    .page-essay {
+      padding-block: calc(var(--spacing) * 5);
+    }
+
+    .page-essay__inner {
+      gap: calc(var(--spacing) * 16);
+    }
+
+    .page-essay__content {
+      gap: calc(var(--spacing) * 16);
+    }
+  }
+</style>

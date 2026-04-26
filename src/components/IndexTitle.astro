@@ -1,0 +1,15 @@
+---
+interface Props {
+  eyebrow?: string;
+  class?: string;
+}
+
+const { eyebrow, class: className = '' } = Astro.props;
+---
+
+<header class:list={['index-title flex flex-col gap-1', className]}>
+  <h2 class="text-lg font-medium text-primary m-0">
+    <slot />
+  </h2>
+  {eyebrow && <p class="text-sm text-tertiary m-0">{eyebrow}</p>}
+</header>

@@ -1,10 +1,195 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HomeHeader from '../components/HomeHeader.astro';
+import IndexContainer from '../components/IndexContainer.astro';
+import IndexTitle from '../components/IndexTitle.astro';
+import FeaturedPost from '../components/FeaturedPost.astro';
+import PostListItem from '../components/PostListItem.astro';
+import FeaturedProject from '../components/FeaturedProject.astro';
+import CV from '../components/CV.astro';
+import Clients from '../components/Clients.astro';
+
+const essays = (await getCollection('essay'))
+  .filter((e) => !e.data.draft)
+  .sort(
+    (a, b) =>
+      b.data.publishDate.getTime() - a.data.publishDate.getTime(),
+  );
+
+const featured = essays.slice(0, 3);
+const rest = essays.slice(3);
 ---
 
-<BaseLayout title="brandorn.com">
-  <main>
-    <h1>brandorn.com</h1>
-    <p>Coming soon.</p>
+<BaseLayout title="Brandon Dorn — brandorn.com">
+  <main class="page-home">
+    <div class="page-home__inner">
+      <HomeHeader />
+
+      <IndexContainer>
+        <IndexTitle slot="title">Featured projects</IndexTitle>
+        <div slot="list" class="featured-projects">
+          {/* TODO: swap to getCollection('project') once the collection exists */}
+          <FeaturedProject
+            title="TravelJoy — Workflow system"
+            role="Staff designer"
+            year="2024—"
+          />
+          <FeaturedProject
+            title="Whimsical — Boards and tables"
+            role="Lead designer"
+            year="2022–2024"
+          />
+        </div>
+      </IndexContainer>
+
+      <IndexContainer>
+        <IndexTitle slot="title">Writing</IndexTitle>
+        <div slot="list" class="writing-index">
+          {
+            featured.length > 0 && (
+              <div class="writing-index__featured">
+                {featured.map((essay) => (
+                  <FeaturedPost
+                    title={essay.data.title}
+                    year={essay.data.year}
+                    lede={essay.data.lede}
+                    href={`/essay/${essay.id}`}
+                  />
+                ))}
+              </div>
+            )
+          }
+          {
+            rest.length > 0 && (
+              <ul class="writing-index__list">
+                {rest.map((essay) => (
+                  <li>
+                    <PostListItem
+                      title={essay.data.title}
+                      year={essay.data.year}
+                      href={`/essay/${essay.id}`}
+                    />
+                  </li>
+                ))}
+              </ul>
+            )
+          }
+        </div>
+      </IndexContainer>
+
+      <IndexContainer as="aside">
+        <IndexTitle slot="title">About</IndexTitle>
+        <div slot="list" class="about-index" id="about">
+          <div class="about-index__bio">
+            <p>
+              I'm Brandon, a product designer from Chicago. I work across the
+              full project spectrum, from early-stage discovery with users to
+              deep frontend collaboration with engineers. I currently lead
+              design at TravelJoy, a workflow tool used by travel agencies to
+              run their businesses.
+            </p>
+            <p>
+              I've been a product designer for twelve years, split between
+              agency and in-house settings. For the first half I was a senior
+              product designer at Viget, helping build their product practice.
+              Since then I've worked in startups on growth initiatives, core
+              features, and net-new feature development. The through-line
+              across my work has been an interest in building tools that help
+              people manage complexity.
+            </p>
+            <p>
+              Like <a
+                href="https://www.youtube.com/watch?v=KlI1MR-qNt8"
+                target="_blank"
+                rel="noopener noreferrer">many folks in tech</a>, I have a
+              liberal arts background. I learned design from excellent mentors
+              who taught me that design is a way of creating value with
+              humanist values. My tool stack is evolving: I now spend as much
+              time in Claude as Figma to deliver value efficiently. Even so, I
+              like to work at the threshold where there's <em>just enough
+              friction</em> in the process to generate the heat that kindles
+              good ideas.
+            </p>
+          </div>
+
+          <CV />
+
+          <Clients />
+        </div>
+      </IndexContainer>
+    </div>
   </main>
 </BaseLayout>
+
+<style>
+  .page-home {
+    padding-inline: calc(var(--spacing) * 4);
+    padding-block: calc(var(--spacing) * 10);
+  }
+
+  .page-home__inner {
+    max-width: 960px;
+    margin-inline: auto;
+  }
+
+  @media (width >= 48rem) {
+    .page-home {
+      padding-inline: calc(var(--spacing) * 10);
+      padding-block: calc(var(--spacing) * 20);
+    }
+  }
+
+  .featured-projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: calc(var(--spacing) * 6);
+  }
+
+  .writing-index {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 10);
+  }
+
+  .writing-index__featured {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 4);
+  }
+
+  .writing-index__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 1);
+  }
+
+  .writing-index__list > li {
+    margin: 0;
+  }
+
+  .about-index {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 10);
+  }
+
+  .about-index__bio :global(p) {
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .about-index__bio :global(p + p) {
+    margin-top: calc(var(--spacing) * 3);
+  }
+
+  .about-index__bio :global(a) {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+</style>

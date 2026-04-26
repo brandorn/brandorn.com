@@ -1,0 +1,69 @@
+---
+interface Props {
+  clients?: string[];
+}
+
+const defaultClients = [
+  'Arcadia Energy',
+  'Circ',
+  'CyberGRX',
+  'The Gates Foundation',
+  'National Public Media',
+  'Nest Realty',
+  'Pivotal',
+  'Privia Health',
+  'Rotary International',
+  'Standard AI',
+  'The Nature Conservancy',
+  'The University of Chicago',
+  'The University of Virginia',
+  'Volunteers of America',
+  'Wildlife Conservation Society',
+];
+
+const { clients = defaultClients } = Astro.props;
+---
+
+<section class="clients">
+  <h3 class="clients__heading">Select clients</h3>
+  <ul class="clients__list">
+    {clients.map((name) => <li>{name}</li>)}
+  </ul>
+</section>
+
+<style>
+  .clients {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 4);
+    width: 100%;
+  }
+
+  .clients__heading {
+    margin: 0;
+    font-size: var(--text-md);
+    line-height: var(--text-md--line-height);
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+
+  .clients__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: calc(var(--spacing) * 1) calc(var(--spacing) * 6);
+    color: var(--color-text-tertiary);
+  }
+
+  .clients__list li {
+    margin: 0;
+  }
+
+  @media (width >= 48rem) {
+    .clients__list {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+</style>

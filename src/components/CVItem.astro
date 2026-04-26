@@ -1,0 +1,50 @@
+---
+interface Props {
+  employer: string;
+  role: string;
+  dates: string;
+}
+
+const { employer, role, dates } = Astro.props;
+---
+
+<div class="cv-item">
+  <div class="cv-item__position">
+    <p class="cv-item__employer">{employer}</p>
+    <p class="cv-item__role">{role}</p>
+  </div>
+  <p class="cv-item__dates">{dates}</p>
+</div>
+
+<style>
+  .cv-item {
+    display: flex;
+    gap: calc(var(--spacing) * 3);
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .cv-item__position {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cv-item__employer {
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .cv-item__role {
+    color: var(--color-text-quaternary);
+    margin: 0;
+  }
+
+  .cv-item__dates {
+    color: var(--color-text-quaternary);
+    text-align: right;
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    margin: 0;
+  }
+</style>

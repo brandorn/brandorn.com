@@ -1,0 +1,42 @@
+---
+interface Props {
+  as?: 'section' | 'aside' | 'div';
+  class?: string;
+}
+
+const { as: Tag = 'section', class: className = '' } = Astro.props;
+---
+
+<Tag class:list={['index-container', className]}>
+  <div class="index-container__title">
+    <slot name="title" />
+  </div>
+  <div class="index-container__list">
+    <slot name="list" />
+  </div>
+</Tag>
+
+<style>
+  .index-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: calc(var(--spacing) * 2);
+    padding-block: calc(var(--spacing) * 10);
+  }
+
+  .index-container + .index-container {
+    border-top: 1px solid var(--color-border-secondary);
+  }
+
+  @media (width >= 48rem) {
+    .index-container {
+      grid-template-columns: 400px 560px;
+      column-gap: calc(var(--spacing) * 0);
+      padding-block: calc(var(--spacing) * 12);
+    }
+
+    .index-container__title {
+      padding-right: calc(var(--spacing) * 10);
+    }
+  }
+</style>

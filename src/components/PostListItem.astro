@@ -1,0 +1,72 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  title: string;
+  year: number | string;
+  href: string;
+  photoEssay?: boolean;
+  class?: string;
+}
+
+const {
+  title,
+  year,
+  href,
+  photoEssay = false,
+  class: className = '',
+} = Astro.props;
+---
+
+<article class:list={['post', className]}>
+  <a href={href} class="post__link">
+    <span class="post__title">
+      {photoEssay && <Icon name="camera-lens" class="post__icon" />}
+      <span>{title}</span>
+    </span>
+    <time class="post__year">{year}</time>
+  </a>
+</article>
+
+<style>
+  .post {
+    width: 100%;
+  }
+
+  .post__link {
+    display: flex;
+    align-items: baseline;
+    gap: calc(var(--spacing) * 3);
+    padding: calc(var(--spacing) * 1) calc(var(--spacing) * 2);
+    margin-inline: calc(var(--spacing) * -2);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: background-color 120ms ease;
+  }
+
+  .post__link:hover {
+    background: var(--color-bg-secondary);
+  }
+
+  .post__title {
+    flex: 1;
+    display: inline-flex;
+    align-items: baseline;
+    gap: calc(var(--spacing) * 1.5);
+    min-width: 0;
+  }
+
+  .post__icon {
+    flex-shrink: 0;
+    align-self: center;
+    color: var(--color-fg-quaternary);
+  }
+
+  .post__year {
+    color: var(--color-text-quaternary);
+    text-align: right;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+</style>

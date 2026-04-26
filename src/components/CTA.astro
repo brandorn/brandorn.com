@@ -1,0 +1,35 @@
+---
+interface Props {
+  href: string;
+  class?: string;
+}
+
+const { href, class: className = '' } = Astro.props;
+
+const isExternal = /^https?:/i.test(href);
+const rel = isExternal ? 'noopener noreferrer' : undefined;
+const target = isExternal ? '_blank' : undefined;
+---
+
+<a
+  href={href}
+  rel={rel}
+  target={target}
+  class:list={[
+    'cta font-medium text-brand-primary underline underline-offset-[3px]',
+    className,
+  ]}
+>
+  <slot />
+</a>
+
+<style>
+  .cta {
+    color: var(--color-fg-brand-primary);
+    text-decoration-color: currentColor;
+  }
+
+  .cta:hover {
+    color: var(--color-fg-brand-secondary_hover);
+  }
+</style>
