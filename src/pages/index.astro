@@ -17,8 +17,8 @@ const essays = (await getCollection('essay'))
       b.data.publishDate.getTime() - a.data.publishDate.getTime(),
   );
 
-const featured = essays.slice(0, 3);
-const rest = essays.slice(3);
+const featured = essays.filter((e) => e.data.featured);
+const rest = essays.filter((e) => !e.data.featured);
 ---
 
 <BaseLayout title="Brandon Dorn — brandorn.com">
@@ -27,7 +27,12 @@ const rest = essays.slice(3);
       <HomeHeader />
 
       <IndexContainer>
-        <IndexTitle slot="title">Featured projects</IndexTitle>
+        <IndexTitle
+          slot="title"
+          description="Projects I've worked on / am working on"
+        >
+          Featured projects
+        </IndexTitle>
         <div slot="list" class="featured-projects">
           {/* TODO: swap to getCollection('project') once the collection exists */}
           <FeaturedProject
@@ -44,17 +49,23 @@ const rest = essays.slice(3);
       </IndexContainer>
 
       <IndexContainer>
-        <IndexTitle slot="title">Writing</IndexTitle>
-        <div slot="list" class="writing-index">
+        <IndexTitle
+          slot="title"
+          description="Occasional essays and visual miscellanea"
+        >
+          Posts
+        </IndexTitle>
+        <div slot="list" class="essay-index">
           {
             featured.length > 0 && (
-              <div class="writing-index__featured">
+              <div class="essay-index__featured">
                 {featured.map((essay) => (
                   <FeaturedPost
                     title={essay.data.title}
                     year={essay.data.year}
                     lede={essay.data.lede}
                     href={`/essay/${essay.id}`}
+                    photoEssay={essay.data.photoEssay}
                   />
                 ))}
               </div>
@@ -62,13 +73,14 @@ const rest = essays.slice(3);
           }
           {
             rest.length > 0 && (
-              <ul class="writing-index__list">
+              <ul class="essay-index__list">
                 {rest.map((essay) => (
                   <li>
                     <PostListItem
                       title={essay.data.title}
                       year={essay.data.year}
                       href={`/essay/${essay.id}`}
+                      photoEssay={essay.data.photoEssay}
                     />
                   </li>
                 ))}
@@ -79,7 +91,9 @@ const rest = essays.slice(3);
       </IndexContainer>
 
       <IndexContainer as="aside">
-        <IndexTitle slot="title">About</IndexTitle>
+        <IndexTitle slot="title" description="The ol' razzle dazzle">
+          About
+        </IndexTitle>
         <div slot="list" class="about-index" id="about">
           <div class="about-index__bio">
             <p>
@@ -146,19 +160,19 @@ const rest = essays.slice(3);
     gap: calc(var(--spacing) * 6);
   }
 
-  .writing-index {
+  .essay-index {
     display: flex;
     flex-direction: column;
     gap: calc(var(--spacing) * 10);
   }
 
-  .writing-index__featured {
+  .essay-index__featured {
     display: flex;
     flex-direction: column;
     gap: calc(var(--spacing) * 4);
   }
 
-  .writing-index__list {
+  .essay-index__list {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -167,7 +181,7 @@ const rest = essays.slice(3);
     gap: calc(var(--spacing) * 1);
   }
 
-  .writing-index__list > li {
+  .essay-index__list > li {
     margin: 0;
   }
 

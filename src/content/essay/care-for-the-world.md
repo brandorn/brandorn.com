@@ -3,7 +3,8 @@ title: "Care for the World, Make New Good Things"
 lede: "A short piece on the two halves of what I think design work is for."
 year: 2023
 publishDate: 2023-11-20
-hasPhoto: true
+featured: true
+photoEssay: true
 tags: ["design", "values"]
 ---
 

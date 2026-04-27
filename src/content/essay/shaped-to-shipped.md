@@ -3,7 +3,7 @@ title: "From Shaped to Shipped"
 lede: "Notes on the unglamorous middle distance between a good idea and something a real person can use."
 year: 2024
 publishDate: 2024-02-03
-hasPhoto: false
+featured: true
 tags: ["design", "process"]
 ---
 

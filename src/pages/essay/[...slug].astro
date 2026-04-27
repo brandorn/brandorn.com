@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import EssayLayout from '../../layouts/EssayLayout.astro';
+import PhotoEssayLayout from '../../layouts/PhotoEssayLayout.astro';
 
 export async function getStaticPaths() {
   const essays = (await getCollection('essay')).filter((e) => !e.data.draft);
@@ -12,14 +13,15 @@ export async function getStaticPaths() {
 
 const { essay } = Astro.props;
 const { Content } = await render(essay);
+
+const Layout = essay.data.photoEssay ? PhotoEssayLayout : EssayLayout;
 ---
 
-<EssayLayout
+<Layout
   title={essay.data.title}
   lede={essay.data.lede}
-  hasPhoto={essay.data.hasPhoto}
   introQuote={essay.data.introQuote}
   publishDate={essay.data.publishDate}
 >
   <Content />
-</EssayLayout>
+</Layout>

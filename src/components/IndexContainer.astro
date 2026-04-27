@@ -20,7 +20,7 @@ const { as: Tag = 'section', class: className = '' } = Astro.props;
   .index-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: calc(var(--spacing) * 2);
+    gap: calc(var(--spacing) * 8);
     padding-block: calc(var(--spacing) * 10);
   }
 
@@ -30,7 +30,7 @@ const { as: Tag = 'section', class: className = '' } = Astro.props;
 
   @media (width >= 48rem) {
     .index-container {
-      grid-template-columns: 400px 560px;
+      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
       column-gap: calc(var(--spacing) * 0);
       padding-block: calc(var(--spacing) * 12);
     }

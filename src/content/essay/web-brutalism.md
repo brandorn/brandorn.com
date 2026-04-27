@@ -3,7 +3,7 @@ title: "Web Brutalism, Seamfulness, and Notion"
 lede: "Exposed seams, raw mechanics, and the software that quietly taught a generation how craft should feel."
 year: 2024
 publishDate: 2024-05-12
-hasPhoto: true
+featured: true
 introQuote: "The software you love most is probably the software that lets you see its edges."
 tags: ["design", "software"]
 ---

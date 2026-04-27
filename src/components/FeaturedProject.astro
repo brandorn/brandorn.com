@@ -17,19 +17,7 @@ const {
 ---
 
 <a href={href} class:list={['featured-project', className]}>
-  {
-    title ? (
-      <div class="featured-project__body">
-        <p class="featured-project__title">{title}</p>
-        <div class="featured-project__meta">
-          {role && <span>{role}</span>}
-          {year && <time>{year}</time>}
-        </div>
-      </div>
-    ) : (
-      <span class="sr-only">Featured project</span>
-    )
-  }
+  <span class="sr-only">{title ?? 'Featured project'}</span>
 </a>
 
 <style>

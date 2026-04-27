@@ -1,15 +1,38 @@
 ---
 interface Props {
-  eyebrow?: string;
+  description?: string;
   class?: string;
 }
 
-const { eyebrow, class: className = '' } = Astro.props;
+const { description, class: className = '' } = Astro.props;
 ---
 
-<header class:list={['index-title flex flex-col gap-1', className]}>
-  <h2 class="text-lg font-medium text-primary m-0">
+<header class:list={['index-title', className]}>
+  <h2 class="index-title__h2">
     <slot />
   </h2>
-  {eyebrow && <p class="text-sm text-tertiary m-0">{eyebrow}</p>}
+  {description && <p class="index-title__description">{description}</p>}
 </header>
+
+<style>
+  .index-title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xxs);
+  }
+
+  .index-title__h2 {
+    font-size: var(--text-lg);
+    line-height: var(--text-lg--line-height);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .index-title__description {
+    font-size: var(--text-md);
+    line-height: var(--text-md--line-height);
+    color: var(--color-text-tertiary);
+    margin: 0;
+  }
+</style>
