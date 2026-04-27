@@ -22,11 +22,14 @@ const defaultClients = [
 ];
 
 const { clients = defaultClients } = Astro.props;
+
+const desktopCols = 3;
+const desktopRows = Math.ceil(clients.length / desktopCols);
 ---
 
 <section class="clients">
   <h3 class="clients__heading">Select clients</h3>
-  <ul class="clients__list">
+  <ul class="clients__list" style={`--clients-rows: ${desktopRows};`}>
     {clients.map((name) => <li>{name}</li>)}
   </ul>
 </section>
@@ -37,6 +40,7 @@ const { clients = defaultClients } = Astro.props;
     flex-direction: column;
     gap: calc(var(--spacing) * 4);
     width: 100%;
+    container-type: inline-size;
   }
 
   .clients__heading {
@@ -53,7 +57,8 @@ const { clients = defaultClients } = Astro.props;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: calc(var(--spacing) * 1) calc(var(--spacing) * 6);
+    column-gap: calc(var(--spacing) * 6);
+    row-gap: calc(var(--spacing) * 1);
     color: var(--color-text-tertiary);
   }
 
@@ -61,9 +66,18 @@ const { clients = defaultClients } = Astro.props;
     margin: 0;
   }
 
-  @media (width >= 48rem) {
+  /* When the container has enough room for 3 content-sized columns,
+     switch to column-first ordering so each column hugs its widest item.
+     Threshold is set just under the container's max width on this page
+     (~35rem when page-home__inner hits its 960px cap); below it we keep
+     the 2-col 1fr fallback above to avoid overflow. */
+  @container (min-width: 34rem) {
     .clients__list {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: none;
+      grid-template-rows: repeat(var(--clients-rows), auto);
+      grid-auto-flow: column;
+      grid-auto-columns: max-content;
+      column-gap: calc(var(--spacing) * 6);
     }
   }
 </style>

@@ -2,8 +2,8 @@
 import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import CTA from './CTA.astro';
-import AlignLeftIcon from '../assets/icon/icon-align-left.svg';
-import FaceIdSquareIcon from '../assets/icon/icon-face-id-square.svg';
+import ChevronLeftIcon from '../assets/icon/icon-chevron-left.svg';
+import ChevronRightIcon from '../assets/icon/icon-chevron-right.svg';
 import mugshotDefault from '../assets/img/mugshot-winter-light.webp';
 
 interface Props {
@@ -20,14 +20,33 @@ const {
 <header class="home-header" data-carousel data-active="text">
   <div class="home-header__main">
     <div class="home-header__text-col">
-      <h1 class="home-header__title">Brandon Dorn</h1>
+      <div class="home-header__title-row">
+        <h1 class="home-header__title">Brandon Dorn</h1>
+        <div class="home-header__nav" aria-label="Toggle header view">
+          <button
+            type="button"
+            data-direction="prev"
+            class="home-header__nav-button"
+            disabled
+          >
+            <ChevronLeftIcon aria-hidden="true" />
+            <span class="sr-only">Previous view</span>
+          </button>
+          <button
+            type="button"
+            data-direction="next"
+            class="home-header__nav-button"
+          >
+            <ChevronRightIcon aria-hidden="true" />
+            <span class="sr-only">Next view</span>
+          </button>
+        </div>
+      </div>
 
       <section
         class="home-header__pane"
         data-pane="text"
-        role="tabpanel"
-        id="pane-text"
-        aria-labelledby="tab-text"
+        aria-label="Intro"
       >
         <div class="home-header__intro">
           <div class="home-header__intro-prose">
@@ -55,9 +74,7 @@ const {
     <section
       class="home-header__pane"
       data-pane="portrait"
-      role="tabpanel"
-      id="pane-portrait"
-      aria-labelledby="tab-portrait"
+      aria-label="Portrait"
       aria-hidden="true"
     >
       <figure class="home-header__mugshot">
@@ -77,48 +94,22 @@ const {
       </figure>
     </section>
   </div>
-
-  <div class="home-header__nav" role="tablist" aria-label="Header view">
-    <button
-      type="button"
-      role="tab"
-      id="tab-text"
-      aria-controls="pane-text"
-      aria-selected="true"
-      data-target="text"
-      class="home-header__nav-button"
-    >
-      <AlignLeftIcon aria-hidden="true" />
-      <span class="sr-only">Text view</span>
-    </button>
-    <button
-      type="button"
-      role="tab"
-      id="tab-portrait"
-      aria-controls="pane-portrait"
-      aria-selected="false"
-      data-target="portrait"
-      class="home-header__nav-button"
-    >
-      <FaceIdSquareIcon aria-hidden="true" />
-      <span class="sr-only">Portrait view</span>
-    </button>
-  </div>
 </header>
 
 <style>
-  .home-header {
-    display: flex;
-    flex-direction: column;
-    gap: calc(var(--spacing) * 6);
-  }
-
   .home-header__title {
     font-size: var(--text-lg);
     line-height: var(--text-lg--line-height);
     font-weight: 500;
     color: var(--color-text-primary);
     margin: 0;
+  }
+
+  .home-header__title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: calc(var(--spacing) * 2);
   }
 
   .home-header__pane {
@@ -129,6 +120,7 @@ const {
     display: flex;
     flex-direction: column;
     gap: calc(var(--spacing) * 6);
+    max-width: 32rem;
   }
 
   .home-header__intro-prose {
@@ -192,85 +184,18 @@ const {
     margin: 0;
   }
 
-  /* Mobile: title on top, panes stacked & carousel-toggled in a single grid cell */
-  @media (width < 48rem) {
-    .home-header__main {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        'title'
-        'pane';
-      row-gap: calc(var(--spacing) * 6);
-    }
-
-    /* Flatten text-col so its h1 + pane participate in the outer grid */
-    .home-header__text-col {
-      display: contents;
-    }
-
-    .home-header__title {
-      grid-area: title;
-    }
-
-    .home-header__pane {
-      grid-area: pane;
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .home-header[data-active='text'] [data-pane='text'],
-    .home-header[data-active='portrait'] [data-pane='portrait'] {
-      opacity: 1;
-      pointer-events: auto;
-    }
-  }
-
   .home-header__nav {
     display: flex;
-    gap: calc(var(--spacing) * 1.5);
-    justify-content: center;
-    padding: calc(var(--spacing) * 1) 0;
-  }
-
-  /* Desktop: text-col and mugshot-pane sit side by side, vertically centered */
-  @media (width >= 48rem) {
-    .home-header__main {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: calc(var(--spacing) * 32);
-      margin-bottom: calc(var(--spacing) * 8);
-    }
-
-    .home-header__text-col {
-      display: flex;
-      flex-direction: column;
-      gap: calc(var(--spacing) * 6);
-      flex: 1 1 auto;
-      min-width: 0;
-    }
-
-    .home-header__pane[data-pane='portrait'] {
-      flex: 0 0 320px;
-      width: 320px;
-    }
-
-    .home-header__mugshot-frame {
-      max-width: none;
-    }
-
-    .home-header__nav {
-      display: none;
-    }
+    gap: calc(var(--spacing) * 1);
   }
 
   .home-header__nav-button {
     appearance: none;
-    background: var(--color-bg-tertiary);
+    background: transparent;
     border: 0;
     border-radius: var(--radius-sm);
-    padding: var(--spacing-sm);
-    color: var(--color-fg-quaternary);
+    padding: calc(var(--spacing) * 1);
+    color: var(--color-fg-secondary);
     cursor: pointer;
     display: inline-flex;
     align-items: center;
@@ -278,9 +203,14 @@ const {
     transition: background-color 150ms ease, color 150ms ease;
   }
 
-  .home-header__nav-button[aria-selected='true'] {
-    background: var(--color-bg-primary-solid);
-    color: var(--color-text-primary_on-brand);
+  .home-header__nav-button:hover {
+    background: var(--color-bg-secondary);
+  }
+
+  .home-header__nav-button:disabled {
+    color: var(--color-fg-quaternary);
+    cursor: default;
+    background: transparent;
   }
 
   .home-header__nav-button:focus-visible {
@@ -300,6 +230,70 @@ const {
     border: 0;
   }
 
+  /* Mobile: title row + panes share a single grid column,
+     so the active pane occupies the same cell regardless of which one is showing. */
+  @media (width < 48rem) {
+    .home-header__main {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        'title'
+        'pane';
+      row-gap: calc(var(--spacing) * 6);
+    }
+
+    /* Flatten text-col so its title-row + pane participate in the outer grid */
+    .home-header__text-col {
+      display: contents;
+    }
+
+    .home-header__title-row {
+      grid-area: title;
+    }
+
+    .home-header__pane {
+      grid-area: pane;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .home-header[data-active='text'] [data-pane='text'],
+    .home-header[data-active='portrait'] [data-pane='portrait'] {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  /* Desktop: text-col and portrait pane sit side by side; toggle is hidden. */
+  @media (width >= 48rem) {
+    .home-header__main {
+      display: flex;
+      align-items: center;
+      gap: calc(var(--spacing) * 16);
+    }
+
+    .home-header__text-col {
+      display: flex;
+      flex-direction: column;
+      gap: calc(var(--spacing) * 6);
+      flex: 0 1 auto;
+      min-width: 0;
+    }
+
+    .home-header__pane[data-pane='portrait'] {
+      flex: 0 0 320px;
+      width: 320px;
+    }
+
+    .home-header__mugshot-frame {
+      max-width: none;
+    }
+
+    .home-header__nav {
+      display: none;
+    }
+  }
+
   @media (prefers-reduced-motion: reduce) {
     .home-header__pane {
       transition: none;
@@ -309,26 +303,33 @@ const {
 
 <script>
   function initHomeHeader(root: HTMLElement) {
-    const tabs = Array.from(
-      root.querySelectorAll<HTMLButtonElement>('[role="tab"]'),
+    const buttons = Array.from(
+      root.querySelectorAll<HTMLButtonElement>('[data-direction]'),
     );
     const panes = Array.from(
       root.querySelectorAll<HTMLElement>('[data-pane]'),
     );
+    const order = panes.map((p) => p.dataset.pane!).filter(Boolean);
 
     const mql = window.matchMedia('(min-width: 48rem)');
 
     function setActive(target: string) {
       root.dataset.active = target;
-      for (const tab of tabs) {
-        const selected = tab.dataset.target === target;
-        tab.setAttribute('aria-selected', String(selected));
-      }
       syncPanes();
+      syncButtons();
+    }
+
+    function step(direction: 'prev' | 'next') {
+      const current = root.dataset.active ?? order[0];
+      const idx = order.indexOf(current);
+      const delta = direction === 'next' ? 1 : -1;
+      const nextIdx = idx + delta;
+      if (nextIdx < 0 || nextIdx >= order.length) return;
+      setActive(order[nextIdx]);
     }
 
     function syncPanes() {
-      const target = root.dataset.active ?? 'text';
+      const target = root.dataset.active ?? order[0];
       for (const pane of panes) {
         if (mql.matches) {
           pane.removeAttribute('aria-hidden');
@@ -339,25 +340,27 @@ const {
       }
     }
 
-    for (const tab of tabs) {
-      tab.addEventListener('click', () => {
-        const target = tab.dataset.target;
-        if (target) setActive(target);
-      });
-      tab.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-          e.preventDefault();
-          const idx = tabs.indexOf(tab);
-          const next = tabs[(idx + 1) % tabs.length];
-          next.focus();
-          const target = next.dataset.target;
-          if (target) setActive(target);
-        }
+    function syncButtons() {
+      const idx = order.indexOf(root.dataset.active ?? order[0]);
+      for (const button of buttons) {
+        const dir = button.dataset.direction;
+        const atEdge =
+          (dir === 'prev' && idx <= 0) ||
+          (dir === 'next' && idx >= order.length - 1);
+        button.disabled = atEdge;
+      }
+    }
+
+    for (const button of buttons) {
+      button.addEventListener('click', () => {
+        const dir = button.dataset.direction as 'prev' | 'next' | undefined;
+        if (dir) step(dir);
       });
     }
 
     mql.addEventListener('change', syncPanes);
     syncPanes();
+    syncButtons();
   }
 
   document
