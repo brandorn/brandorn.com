@@ -1,5 +1,5 @@
 ---
-import Icon from './Icon.astro';
+import CameraLensIcon from '../assets/icon/icon-camera-lens.svg';
 
 interface Props {
   title: string;
@@ -24,40 +24,40 @@ const {
 } = Astro.props;
 ---
 
-<article class:list={['featured-post', className]}>
-  <a href={href} class="featured-post__link">
-    <div class="featured-post__thumbnail">
-      {
-        thumbnail ? (
-          <img src={thumbnail} alt={thumbnailAlt} />
-        ) : (
-          <div class="featured-post__placeholder" aria-hidden="true" />
-        )
-      }
+<a href={href} class:list={['featured-post', className]}>
+  <div class="featured-post__thumbnail">
+    {
+      thumbnail ? (
+        <img src={thumbnail} alt={thumbnailAlt} />
+      ) : (
+        <div class="featured-post__placeholder" aria-hidden="true" />
+      )
+    }
+  </div>
+  <div class="featured-post__body">
+    <div class="featured-post__title-row">
+      <h3 class="featured-post__title">
+        {
+          photoEssay && (
+            <span class="featured-post__icon" aria-hidden="true">
+              <CameraLensIcon />
+            </span>
+          )
+        }{title}
+      </h3>
+      <time class="featured-post__year">{year}</time>
     </div>
-    <div class="featured-post__body">
-      <div class="featured-post__title-row">
-        <h3 class="featured-post__title">
-          {photoEssay && <Icon name="camera-lens" class="featured-post__icon" />}
-          <span>{title}</span>
-        </h3>
-        <time class="featured-post__year">{year}</time>
-      </div>
-      {lede && <p class="featured-post__lede">{lede}</p>}
-    </div>
-  </a>
-</article>
+    {lede && <p class="featured-post__lede">{lede}</p>}
+  </div>
+</a>
 
 <style>
   .featured-post {
     width: 100%;
-  }
-
-  .featured-post__link {
     display: grid;
     grid-template-columns: 88px 1fr;
     gap: calc(var(--spacing) * 5);
-    align-items: center;
+    align-items: normal;
     padding: calc(var(--spacing) * 1) calc(var(--spacing) * 2);
     margin-inline: calc(var(--spacing) * -2);
     border-radius: var(--radius-xl);
@@ -66,8 +66,14 @@ const {
     transition: background-color 120ms ease;
   }
 
-  .featured-post__link:hover {
+  .featured-post:hover {
     background: var(--color-bg-secondary);
+  }
+
+  @media (width >= 48rem) {
+    .featured-post {
+      align-items: center;
+    }
   }
 
   .featured-post__thumbnail {
@@ -118,16 +124,17 @@ const {
     line-height: var(--text-md--line-height);
     font-weight: 500;
     color: var(--color-text-primary);
-    display: inline-flex;
-    align-items: baseline;
-    gap: calc(var(--spacing) * 1.5);
     min-width: 0;
   }
 
   .featured-post__icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: calc(var(--spacing) * 1.5);
+    vertical-align: middle;
     color: var(--color-fg-quaternary);
-    align-self: center;
-    flex-shrink: 0;
+    transform: translateY(-1px);
   }
 
   .featured-post__year {

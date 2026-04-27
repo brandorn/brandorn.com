@@ -1,0 +1,22 @@
+---
+import EssayLayout from './EssayLayout.astro';
+
+interface Props {
+  title: string;
+  lede?: string;
+  heroImage?: string;
+  heroAlt?: string;
+  heroCaption?: string;
+  heroCaptionItalic?: string;
+  introQuote?: string;
+  introQuoteAttribution?: string;
+  publishDate?: Date;
+  acknowledgements?: string;
+}
+
+const props = Astro.props;
+---
+
+<EssayLayout {...props}>
+  <slot />
+</EssayLayout>

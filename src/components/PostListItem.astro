@@ -1,5 +1,5 @@
 ---
-import Icon from './Icon.astro';
+import CameraLensIcon from '../assets/icon/icon-camera-lens.svg';
 
 interface Props {
   title: string;
@@ -18,23 +18,23 @@ const {
 } = Astro.props;
 ---
 
-<article class:list={['post', className]}>
-  <a href={href} class="post__link">
-    <span class="post__title">
-      {photoEssay && <Icon name="camera-lens" class="post__icon" />}
-      <span>{title}</span>
-    </span>
-    <time class="post__year">{year}</time>
-  </a>
-</article>
+<a href={href} class:list={['post', className]}>
+  <span class="post__title">
+    {
+      photoEssay && (
+        <span class="post__icon" aria-hidden="true">
+          <CameraLensIcon />
+        </span>
+      )
+    }{title}
+  </span>
+  <time class="post__year">{year}</time>
+</a>
 
 <style>
   .post {
-    width: 100%;
-  }
-
-  .post__link {
     display: flex;
+    width: 100%;
     align-items: baseline;
     gap: calc(var(--spacing) * 3);
     padding: calc(var(--spacing) * 1) calc(var(--spacing) * 2);
@@ -45,22 +45,23 @@ const {
     transition: background-color 120ms ease;
   }
 
-  .post__link:hover {
+  .post:hover {
     background: var(--color-bg-secondary);
   }
 
   .post__title {
     flex: 1;
-    display: inline-flex;
-    align-items: baseline;
-    gap: calc(var(--spacing) * 1.5);
     min-width: 0;
   }
 
   .post__icon {
-    flex-shrink: 0;
-    align-self: center;
-    color: var(--color-fg-quaternary);
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: calc(var(--spacing) * 1.5);
+    vertical-align: middle;
+    color: var(--color-fg-disabled);
+    transform: translateY(-1px);
   }
 
   .post__year {
