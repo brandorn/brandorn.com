@@ -1,11 +1,11 @@
 ---
-title: "Care for the World, Make New Good Things"
-lede: "A short piece on the two halves of what I think design work is for."
+title: "Fallen Things"
+lede: "Documenting the strange drama of detritus"
 year: 2023
 publishDate: 2023-11-20
 featured: true
-photoEssay: true
-tags: ["design", "values"]
+thumbnail: ../../assets/img/thumbnails/fallen-things-thumb.jpg
+thumbnailAlt: ""
 ---
 
 There's a phrase I come back to: *care for the world, and make new good things*. It's two halves, and I think the second half gets most of the attention in our industry while the first half does most of the work.

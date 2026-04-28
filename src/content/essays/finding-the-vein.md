@@ -1,9 +1,8 @@
 ---
 title: "Finding the Vein"
-lede: "On the slow, unglamorous work of figuring out what a product is actually for."
+lede: "Unocvering what matters to you"
 year: 2026
 publishDate: 2026-03-08
-tags: ["design", "process"]
 ---
 
 Every project has a vein of real, useful work buried somewhere inside it. Your job, early on, is to find it.

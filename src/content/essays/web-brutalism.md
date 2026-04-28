@@ -1,11 +1,12 @@
 ---
 title: "Web Brutalism, Seamfulness, and Notion"
-lede: "Exposed seams, raw mechanics, and the software that quietly taught a generation how craft should feel."
+lede: "How infrastructure legibility supports sensemaking in products"
 year: 2024
 publishDate: 2024-05-12
 featured: true
 introQuote: "The software you love most is probably the software that lets you see its edges."
-tags: ["design", "software"]
+thumbnail: ../../assets/img/thumbnails/seamfulness-thumb.jpg
+thumbnailAlt: ""
 ---
 
 There's a thread running from mid-2010s web brutalism to the interfaces I find myself returning to day after day. It's not the aesthetic itself — the monospace fonts, the unstyled hyperlinks, the gray backgrounds — but the posture behind it. A willingness to let the machine show through.

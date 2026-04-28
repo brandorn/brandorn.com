@@ -4,7 +4,7 @@ import type { ImageMetadata } from 'astro';
 import CTA from './CTA.astro';
 import ChevronLeftIcon from '../assets/icon/icon-chevron-left.svg';
 import ChevronRightIcon from '../assets/icon/icon-chevron-right.svg';
-import mugshotDefault from '../assets/img/mugshot-winter-light.webp';
+import mugshotDefault from '../assets/img/mugshots/mugshot-winter-light.webp';
 
 interface Props {
   mugshotSrc?: ImageMetadata;
@@ -97,6 +97,10 @@ const {
 </header>
 
 <style>
+  .home-header__main {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
+
   .home-header__title {
     font-size: var(--text-lg);
     line-height: var(--text-lg--line-height);
@@ -283,6 +287,7 @@ const {
     .home-header__pane[data-pane='portrait'] {
       flex: 0 0 320px;
       width: 320px;
+      margin-left: auto;
     }
 
     .home-header__mugshot-frame {

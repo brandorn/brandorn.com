@@ -10,15 +10,20 @@ import FeaturedProject from '../components/FeaturedProject.astro';
 import CV from '../components/CV.astro';
 import Clients from '../components/Clients.astro';
 
-const essays = (await getCollection('essay'))
+const essayEntries = (await getCollection('essay'))
   .filter((e) => !e.data.draft)
-  .sort(
-    (a, b) =>
-      b.data.publishDate.getTime() - a.data.publishDate.getTime(),
-  );
+  .map((entry) => ({ entry, photoEssay: false }));
+const photoEssayEntries = (await getCollection('photoEssay'))
+  .filter((e) => !e.data.draft)
+  .map((entry) => ({ entry, photoEssay: true }));
 
-const featured = essays.filter((e) => e.data.featured);
-const rest = essays.filter((e) => !e.data.featured);
+const posts = [...essayEntries, ...photoEssayEntries].sort(
+  (a, b) =>
+    b.entry.data.publishDate.getTime() - a.entry.data.publishDate.getTime(),
+);
+
+const featured = posts.filter(({ entry }) => entry.data.featured);
+const rest = posts.filter(({ entry }) => !entry.data.featured);
 ---
 
 <BaseLayout title="Brandon Dorn — brandorn.com">
@@ -59,13 +64,15 @@ const rest = essays.filter((e) => !e.data.featured);
           {
             featured.length > 0 && (
               <div class="essay-index__featured">
-                {featured.map((essay) => (
+                {featured.map(({ entry, photoEssay }) => (
                   <FeaturedPost
-                    title={essay.data.title}
-                    year={essay.data.year}
-                    lede={essay.data.lede}
-                    href={`/essay/${essay.id}`}
-                    photoEssay={essay.data.photoEssay}
+                    title={entry.data.title}
+                    year={entry.data.year}
+                    lede={entry.data.lede}
+                    href={`/${entry.id}`}
+                    thumbnail={entry.data.thumbnail}
+                    thumbnailAlt={entry.data.thumbnailAlt}
+                    photoEssay={photoEssay}
                   />
                 ))}
               </div>
@@ -74,13 +81,13 @@ const rest = essays.filter((e) => !e.data.featured);
           {
             rest.length > 0 && (
               <ul class="essay-index__list">
-                {rest.map((essay) => (
+                {rest.map(({ entry, photoEssay }) => (
                   <li>
                     <PostListItem
-                      title={essay.data.title}
-                      year={essay.data.year}
-                      href={`/essay/${essay.id}`}
-                      photoEssay={essay.data.photoEssay}
+                      title={entry.data.title}
+                      year={entry.data.year}
+                      href={`/${entry.id}`}
+                      photoEssay={photoEssay}
                     />
                   </li>
                 ))}
@@ -162,13 +169,13 @@ const rest = essays.filter((e) => !e.data.featured);
   .essay-index {
     display: flex;
     flex-direction: column;
-    gap: calc(var(--spacing) * 10);
+    gap: calc(var(--spacing) * 8);
   }
 
   .essay-index__featured {
     display: flex;
     flex-direction: column;
-    gap: calc(var(--spacing) * 4);
+    gap: calc(var(--spacing) * 1);
   }
 
   .essay-index__list {

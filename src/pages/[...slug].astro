@@ -1,0 +1,37 @@
+---
+import { getCollection, render } from 'astro:content';
+import EssayLayout from '../layouts/EssayLayout.astro';
+import PhotoEssayLayout from '../layouts/PhotoEssayLayout.astro';
+
+export async function getStaticPaths() {
+  const essays = (await getCollection('essay')).filter((e) => !e.data.draft);
+  const photoEssays = (await getCollection('photoEssay')).filter(
+    (e) => !e.data.draft,
+  );
+
+  return [
+    ...essays.map((entry) => ({
+      params: { slug: entry.id },
+      props: { entry, isPhotoEssay: false },
+    })),
+    ...photoEssays.map((entry) => ({
+      params: { slug: entry.id },
+      props: { entry, isPhotoEssay: true },
+    })),
+  ];
+}
+
+const { entry, isPhotoEssay } = Astro.props;
+const { Content } = await render(entry);
+
+const Layout = isPhotoEssay ? PhotoEssayLayout : EssayLayout;
+---
+
+<Layout
+  title={entry.data.title}
+  lede={entry.data.lede}
+  introQuote={entry.data.introQuote}
+  publishDate={entry.data.publishDate}
+>
+  <Content />
+</Layout>

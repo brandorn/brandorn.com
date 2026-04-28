@@ -1,9 +1,8 @@
 ---
 title: "Unofficial Mentors"
-lede: "The people who shaped how I work, mostly without knowing it."
+lede: "This is the lede"
 year: 2024
 publishDate: 2024-08-22
-tags: ["design", "career"]
 ---
 
 Most of my mentors have never met me. They're writers and designers whose work I've read carefully enough, and for long enough, that their habits have started to rub off.

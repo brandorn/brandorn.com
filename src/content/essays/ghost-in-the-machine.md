@@ -1,10 +1,11 @@
 ---
-title: "From Shaped to Shipped"
-lede: "Notes on the unglamorous middle distance between a good idea and something a real person can use."
+title: "Ghost in the Machine"
+lede: "On bureaucratic space and photography in Jacques Ellul’s technological society"
 year: 2024
 publishDate: 2024-02-03
 featured: true
-tags: ["design", "process"]
+thumbnail: ../../assets/img/thumbnails/ghost-in-the-machine-thumb.jpg
+thumbnailAlt: ""
 ---
 
 There is a lot of writing about how to come up with good product ideas. There is also a lot of writing about how to ship software that works. There is comparatively little about what happens between those two things.

@@ -1,9 +1,8 @@
 ---
 title: "Good Friction"
-lede: "Not all friction is bad. Some of it is the point."
+lede: "This is the lede"
 year: 2026
 publishDate: 2026-02-14
-tags: ["design", "craft"]
 ---
 
 The dominant story in product design for the last fifteen years has been "remove friction." And most of the time, that's right.
