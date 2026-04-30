@@ -27,9 +27,13 @@ const photoEssay = defineCollection({
 
 const affinity = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/affinities' }),
-  schema: z.object({
-    title: z.string(),
-  }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      url: z.string(),
+      image: image(),
+      order: z.number().optional(),
+    }),
 });
 
 export const collections = { essay, photoEssay, affinity };

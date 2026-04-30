@@ -1,9 +1,12 @@
 ---
+import Footer from '../components/Footer.astro';
+
 interface Props {
   title: string;
   description?: string;
   theme?: string;
   bodyClass?: string;
+  showFooterPosts?: boolean;
 }
 
 const {
@@ -11,6 +14,7 @@ const {
   description = '',
   theme = '',
   bodyClass = '',
+  showFooterPosts = true,
 } = Astro.props;
 const themeClass = theme || undefined;
 ---
@@ -57,6 +61,7 @@ const themeClass = theme || undefined;
   </head>
   <body class:list={['bg-primary text-primary', bodyClass]}>
     <slot />
+    <Footer showPosts={showFooterPosts} />
   </body>
 </html>
 
