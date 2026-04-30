@@ -6,10 +6,13 @@ import IndexContainer from '../components/IndexContainer.astro';
 import FeaturedPost from '../components/FeaturedPost.astro';
 import PostListItem from '../components/PostListItem.astro';
 import FeaturedProject from '../components/FeaturedProject.astro';
-import ChevronLeftIcon from '../assets/icon/icon-chevron-left.svg';
-import ChevronRightIcon from '../assets/icon/icon-chevron-right.svg';
+import SegmentedToggle from '../components/SegmentedToggle.astro';
+import SegmentedToggleButton from '../components/SegmentedToggleButton.astro';
+import AlignLeftIcon from '../assets/icon/icon-align-left.svg';
+import FaceIdSquareIcon from '../assets/icon/icon-face-id-square.svg';
 import mugshotImage from '../assets/img/mugshots/mugshot-winter-light.webp';
 import { getAllPosts } from '../lib/posts';
+import { CONTACT_EMAIL_HREF } from '../lib/site';
 
 const mugshotCaption =
   "It's 32° here, noticeably colder than where you are…";
@@ -63,24 +66,17 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
           <div class="home-header__text-col">
             <div class="home-header__title-row">
               <h1 class="home-header__title">Brandon Dorn</h1>
-              <div class="home-header__nav" aria-label="Toggle header view">
-                <button
-                  type="button"
-                  data-direction="prev"
-                  class="home-header__nav-button"
-                  disabled
-                >
-                  <ChevronLeftIcon aria-hidden="true" />
-                  <span class="sr-only">Previous view</span>
-                </button>
-                <button
-                  type="button"
-                  data-direction="next"
-                  class="home-header__nav-button"
-                >
-                  <ChevronRightIcon aria-hidden="true" />
-                  <span class="sr-only">Next view</span>
-                </button>
+              <div class="home-header__nav">
+                <SegmentedToggle ariaLabel="Toggle header view">
+                  <SegmentedToggleButton data-pane-target="text" pressed>
+                    <AlignLeftIcon aria-hidden="true" />
+                    <span class="sr-only">Intro</span>
+                  </SegmentedToggleButton>
+                  <SegmentedToggleButton data-pane-target="portrait">
+                    <FaceIdSquareIcon aria-hidden="true" />
+                    <span class="sr-only">Portrait</span>
+                  </SegmentedToggleButton>
+                </SegmentedToggle>
               </div>
             </div>
 
@@ -107,7 +103,7 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
                   <p>Portfolio and references available upon request.</p>
                 </div>
                 <div class="home-header__intro-ctas">
-                  <CTA href="mailto:hello@brandorn.com">Email me</CTA>
+                  <CTA href={CONTACT_EMAIL_HREF}>Email me</CTA>
                   <CTA href="#about">More info</CTA>
                 </div>
               </div>
@@ -362,40 +358,6 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
     color: var(--color-text-quaternary);
     text-align: center;
     margin: 0;
-  }
-
-  .home-header__nav {
-    display: flex;
-    gap: calc(var(--spacing) * 1);
-  }
-
-  .home-header__nav-button {
-    appearance: none;
-    background: transparent;
-    border: 0;
-    border-radius: var(--radius-sm);
-    padding: calc(var(--spacing) * 1);
-    color: var(--color-fg-secondary);
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 150ms ease, color 150ms ease;
-  }
-
-  .home-header__nav-button:hover {
-    background: var(--color-bg-secondary);
-  }
-
-  .home-header__nav-button:disabled {
-    color: var(--color-fg-quaternary);
-    cursor: default;
-    background: transparent;
-  }
-
-  .home-header__nav-button:focus-visible {
-    outline: 2px solid var(--color-focus-ring);
-    outline-offset: 2px;
   }
 
   /* Mobile: title row + panes share a single grid column,
@@ -660,12 +622,12 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
 <script>
   function initHomeHeader(root: HTMLElement) {
     const buttons = Array.from(
-      root.querySelectorAll<HTMLButtonElement>('[data-direction]'),
+      root.querySelectorAll<HTMLButtonElement>('[data-pane-target]'),
     );
     const panes = Array.from(
       root.querySelectorAll<HTMLElement>('[data-pane]'),
     );
-    const order = panes.map((p) => p.dataset.pane!).filter(Boolean);
+    const fallback = panes[0]?.dataset.pane;
 
     const mql = window.matchMedia('(min-width: 48rem)');
 
@@ -675,17 +637,8 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
       syncButtons();
     }
 
-    function step(direction: 'prev' | 'next') {
-      const current = root.dataset.active ?? order[0];
-      const idx = order.indexOf(current);
-      const delta = direction === 'next' ? 1 : -1;
-      const nextIdx = idx + delta;
-      if (nextIdx < 0 || nextIdx >= order.length) return;
-      setActive(order[nextIdx]);
-    }
-
     function syncPanes() {
-      const target = root.dataset.active ?? order[0];
+      const target = root.dataset.active ?? fallback;
       for (const pane of panes) {
         if (mql.matches) {
           pane.removeAttribute('aria-hidden');
@@ -697,20 +650,17 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
     }
 
     function syncButtons() {
-      const idx = order.indexOf(root.dataset.active ?? order[0]);
+      const target = root.dataset.active ?? fallback;
       for (const button of buttons) {
-        const dir = button.dataset.direction;
-        const atEdge =
-          (dir === 'prev' && idx <= 0) ||
-          (dir === 'next' && idx >= order.length - 1);
-        button.disabled = atEdge;
+        const isActive = button.dataset.paneTarget === target;
+        button.setAttribute('aria-pressed', String(isActive));
       }
     }
 
     for (const button of buttons) {
       button.addEventListener('click', () => {
-        const dir = button.dataset.direction as 'prev' | 'next' | undefined;
-        if (dir) step(dir);
+        const target = button.dataset.paneTarget;
+        if (target) setActive(target);
       });
     }
 

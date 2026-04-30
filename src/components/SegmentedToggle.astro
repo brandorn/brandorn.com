@@ -1,0 +1,29 @@
+---
+/**
+ * Presentational segmented toggle wrapper. Pair with `<SegmentedToggleButton>`
+ * children. Behavior (click handling, syncing `aria-pressed`, etc.) lives with
+ * the consumer — this component only handles styling and group semantics.
+ */
+interface Props {
+  ariaLabel: string;
+  class?: string;
+}
+
+const { ariaLabel, class: className } = Astro.props;
+---
+
+<div
+  class:list={['segmented-toggle', className]}
+  role="group"
+  aria-label={ariaLabel}
+>
+  <slot />
+</div>
+
+<style>
+  .segmented-toggle {
+    display: inline-flex;
+    padding: 2px;
+    gap: 2px;
+  }
+</style>

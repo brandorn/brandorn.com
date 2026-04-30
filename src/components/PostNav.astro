@@ -1,4 +1,6 @@
 ---
+import { CONTACT_EMAIL_HREF } from '../lib/site';
+
 interface Props {
   class?: string;
 }
@@ -10,7 +12,7 @@ const { class: className = '' } = Astro.props;
   <a href="/" class="post-nav__brand">Brandon Dorn</a>
   <ul class="post-nav__links">
     <li>
-      <a href="mailto:hello@brandorn.com">Email</a>
+      <a href={CONTACT_EMAIL_HREF}>Email</a>
     </li>
     <li>
       <a href="/#about">Info</a>

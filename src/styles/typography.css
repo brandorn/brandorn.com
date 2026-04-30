@@ -223,19 +223,14 @@ body.post {
 
   /* Responsive: scale up prose at md breakpoint for reading comfort */
   @media (width >= 48rem) {
-    & {
-      font-size: var(--text-lg);
-      line-height: var(--text-lg--line-height);
-    }
-
     p {
       margin-top: calc(var(--spacing) * 4.5);
       margin-bottom: calc(var(--spacing) * 4.5);
     }
 
     [class~="lead"] {
-      font-size: var(--text-xl);
-      line-height: var(--text-xl--line-height);
+      font-size: var(--text-lg);
+      line-height: var(--text-lg--line-height);
       margin-top: 1.09em;
       margin-bottom: 1.09em;
     }

@@ -2,6 +2,8 @@
 import { Image, getImage } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import { emphasize, stripEmphasis } from '../lib/inline-markdown';
+import SegmentedToggle from './SegmentedToggle.astro';
+import SegmentedToggleButton from './SegmentedToggleButton.astro';
 
 interface Props {
   affinities: CollectionEntry<'affinity'>[];
@@ -23,24 +25,14 @@ const popoverImages = await Promise.all(
       <h2 class="affinities__heading">Affinities</h2>
       <p class="affinities__description">Starter pack for being me</p>
     </div>
-    <div class="affinities__toggle" role="group" aria-label="Affinity view">
-      <button
-        type="button"
-        class="affinities__toggle-button"
-        data-view-target="list"
-        aria-pressed="true"
-      >
+    <SegmentedToggle ariaLabel="Affinity view">
+      <SegmentedToggleButton data-view-target="list" pressed>
         List
-      </button>
-      <button
-        type="button"
-        class="affinities__toggle-button"
-        data-view-target="grid"
-        aria-pressed="false"
-      >
+      </SegmentedToggleButton>
+      <SegmentedToggleButton data-view-target="grid">
         Grid
-      </button>
-    </div>
+      </SegmentedToggleButton>
+    </SegmentedToggle>
   </header>
 
   <div class="affinities__body" data-view="list" data-expanded="false">
@@ -134,37 +126,6 @@ const popoverImages = await Promise.all(
     margin: 0;
   }
 
-  /* Segmented toggle */
-  .affinities__toggle {
-    display: inline-flex;
-    padding: 2px;
-  }
-
-  .affinities__toggle-button {
-    appearance: none;
-    background: transparent;
-    border: none;
-    border-radius: var(--radius-sm);
-    padding: calc(var(--spacing) * 1) calc(var(--spacing) * 2);
-    font: inherit;
-    font-size: var(--text-sm);
-    font-weight: 500;
-    line-height: var(--text-sm--line-height);
-    color: var(--color-text-tertiary);
-    cursor: pointer;
-    transition:
-      background-color 120ms ease,
-      color 120ms ease;
-  }
-
-  .affinities__toggle-button:hover {
-    color: var(--color-text-primary);
-  }
-
-  .affinities__toggle-button[aria-pressed='true'] {
-    background: var(--color-bg-tertiary);
-  }
-
   /* Body — viewport + scrim + reveal */
   .affinities__body {
     position: relative;
@@ -175,10 +136,6 @@ const popoverImages = await Promise.all(
     overflow: hidden;
     max-height: 9rem;
     transition: max-height 240ms ease;
-  }
-
-  .affinities__body[data-expanded='true'] .affinities__viewport {
-    max-height: none;
   }
 
   /* The scrim — gradient + the "More affinities" button overlay */
@@ -201,9 +158,8 @@ const popoverImages = await Promise.all(
   }
 
   .affinities__more {
-    position: absolute;
-    inset: auto 0 0 0;
-    margin: 0 auto;
+    display: block;
+    margin: calc(var(--spacing) * -1) auto 0;
     width: max-content;
     appearance: none;
     background: transparent;
@@ -241,6 +197,12 @@ const popoverImages = await Promise.all(
     max-height: 14rem;
   }
 
+  /* Expanded — must come after the per-view caps above so it wins regardless
+     of which view is active. */
+  .affinities__body[data-expanded='true'] .affinities__viewport {
+    max-height: none;
+  }
+
   /* List view — rendered as flowing inline text so titles can wrap mid-link
      instead of dropping whole "bricks" to the next line. */
   .affinity-list {
@@ -266,7 +228,7 @@ const popoverImages = await Promise.all(
     height: 4px;
     border-radius: 50%;
     background: var(--color-fg-disabled_subtle);
-    margin-inline: calc(var(--spacing) * 2);
+    margin-inline: calc(var(--spacing));
     vertical-align: 0.25em;
   }
 
@@ -422,7 +384,7 @@ const popoverImages = await Promise.all(
 
       // List/Grid toggle
       const toggleButtons = root.querySelectorAll<HTMLButtonElement>(
-        '.affinities__toggle-button',
+        '[data-view-target]',
       );
       toggleButtons.forEach((button) => {
         button.addEventListener('click', () => {
