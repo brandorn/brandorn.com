@@ -1,43 +1,146 @@
 ---
-import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import HomeHeader from '../components/HomeHeader.astro';
+import CTA from '../components/CTA.astro';
 import IndexContainer from '../components/IndexContainer.astro';
-import IndexTitle from '../components/IndexTitle.astro';
 import FeaturedPost from '../components/FeaturedPost.astro';
 import PostListItem from '../components/PostListItem.astro';
 import FeaturedProject from '../components/FeaturedProject.astro';
-import CV from '../components/CV.astro';
-import Clients from '../components/Clients.astro';
+import ChevronLeftIcon from '../assets/icon/icon-chevron-left.svg';
+import ChevronRightIcon from '../assets/icon/icon-chevron-right.svg';
+import mugshotImage from '../assets/img/mugshots/mugshot-winter-light.webp';
+import { getAllPosts } from '../lib/posts';
 
-const essayEntries = (await getCollection('essay'))
-  .filter((e) => !e.data.draft)
-  .map((entry) => ({ entry, photoEssay: false }));
-const photoEssayEntries = (await getCollection('photoEssay'))
-  .filter((e) => !e.data.draft)
-  .map((entry) => ({ entry, photoEssay: true }));
+const mugshotCaption =
+  "It's 32° here, noticeably colder than where you are…";
 
-const posts = [...essayEntries, ...photoEssayEntries].sort(
-  (a, b) =>
-    b.entry.data.publishDate.getTime() - a.entry.data.publishDate.getTime(),
-);
+const clients = [
+  'Arcadia Energy',
+  'Circ',
+  'CyberGRX',
+  'The Gates Foundation',
+  'National Public Media',
+  'Nest Realty',
+  'Pivotal',
+  'Privia Health',
+  'Rotary International',
+  'Standard AI',
+  'The Nature Conservancy',
+  'The University of Chicago',
+  'The University of Virginia',
+  'Volunteers of America',
+  'Wildlife Conservation Society',
+];
 
+const clientsRows2Col = Math.ceil(clients.length / 2);
+const clientsRows3Col = Math.ceil(clients.length / 3);
+
+const cvItems = [
+  {
+    employer: 'TravelJoy',
+    role: 'Staff product designer',
+    dates: '2024 - present',
+  },
+  { employer: 'Whimsical', role: 'Lead product designer', dates: '2022 - 2024' },
+  { employer: 'Dwell', role: 'Lead product designer', dates: '2021 - 2022' },
+  { employer: 'Viget', role: 'Senior product designer', dates: '2015 - 2021' },
+  { employer: 'State Farm', role: 'Systems analyst', dates: '2013 - 2015' },
+  { employer: 'Leo Burnett', role: 'Account planner', dates: '2011 - 2013' },
+];
+
+const cvDownloadHref = '#';
+
+const posts = await getAllPosts();
 const featured = posts.filter(({ entry }) => entry.data.featured);
 const rest = posts.filter(({ entry }) => !entry.data.featured);
 ---
 
-<BaseLayout title="Brandon Dorn — brandorn.com">
+<BaseLayout title="Brandon Dorn — brandorn.com" showFooterPosts={false}>
   <main class="page-home">
     <div class="page-home__inner">
-      <HomeHeader />
+      <header class="home-header" data-carousel data-active="text">
+        <div class="home-header__main">
+          <div class="home-header__text-col">
+            <div class="home-header__title-row">
+              <h1 class="home-header__title">Brandon Dorn</h1>
+              <div class="home-header__nav" aria-label="Toggle header view">
+                <button
+                  type="button"
+                  data-direction="prev"
+                  class="home-header__nav-button"
+                  disabled
+                >
+                  <ChevronLeftIcon aria-hidden="true" />
+                  <span class="sr-only">Previous view</span>
+                </button>
+                <button
+                  type="button"
+                  data-direction="next"
+                  class="home-header__nav-button"
+                >
+                  <ChevronRightIcon aria-hidden="true" />
+                  <span class="sr-only">Next view</span>
+                </button>
+              </div>
+            </div>
 
-      <IndexContainer>
-        <IndexTitle
-          slot="title"
-          description="Projects I've worked on / am working on"
-        >
-          Featured projects
-        </IndexTitle>
+            <section
+              class="home-header__pane"
+              data-pane="text"
+              aria-label="Intro"
+            >
+              <div class="home-header__intro">
+                <div class="home-header__intro-prose">
+                  <p>
+                    Hey there. I'm Brandon, a product designer from Chicago. I
+                    specialize in taking purpose-built SaaS products from shaped
+                    to shipped. I think a lot about systems and craft.
+                  </p>
+                  <p>
+                    Currently staff designer at TravelJoy. Before that, I was a
+                    lead designer at Whimsical and Dwell, and helped build the
+                    product design practice at Viget. Doing what I can to <a
+                      href="https://www.paulgraham.com/do.html">care for the
+                      world and make new, good things</a>. Probably reading a
+                    book.
+                  </p>
+                  <p>Portfolio and references available upon request.</p>
+                </div>
+                <div class="home-header__intro-ctas">
+                  <CTA href="mailto:hello@brandorn.com">Email me</CTA>
+                  <CTA href="#about">More info</CTA>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <section
+            class="home-header__pane"
+            data-pane="portrait"
+            aria-label="Portrait"
+            aria-hidden="true"
+          >
+            <figure class="home-header__mugshot">
+              <div class="home-header__mugshot-frame">
+                <Image
+                  src={mugshotImage}
+                  alt="Brandon Dorn"
+                  widths={[320, 640]}
+                  sizes="(min-width: 48rem) 320px, 100vw"
+                />
+              </div>
+              <figcaption class="home-header__mugshot-caption">
+                {mugshotCaption}
+              </figcaption>
+            </figure>
+          </section>
+        </div>
+      </header>
+
+      <IndexContainer
+        title="Featured projects"
+        description="Projects I've worked on / am working on"
+      >
         <div slot="list" class="featured-projects">
           {/* TODO: swap to getCollection('project') once the collection exists */}
           <FeaturedProject
@@ -53,13 +156,10 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
         </div>
       </IndexContainer>
 
-      <IndexContainer>
-        <IndexTitle
-          slot="title"
-          description="Occasional essays and visual miscellanea"
-        >
-          Posts
-        </IndexTitle>
+      <IndexContainer
+        title="Posts"
+        description="Occasional essays and visual miscellanea"
+      >
         <div slot="list" class="essay-index">
           {
             featured.length > 0 && (
@@ -97,10 +197,11 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
         </div>
       </IndexContainer>
 
-      <IndexContainer as="aside">
-        <IndexTitle slot="title" description="The ol' razzle dazzle">
-          About
-        </IndexTitle>
+      <IndexContainer
+        as="aside"
+        title="About"
+        description="The ol' razzle dazzle"
+      >
         <div slot="list" class="about-index" id="about">
           <div class="about-index__bio">
             <p>
@@ -134,9 +235,37 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
             </p>
           </div>
 
-          <CV />
+          <section class="cv">
+            <header class="cv__header">
+              <h3 class="cv__heading">Experience</h3>
+              <CTA href={cvDownloadHref}>Download CV</CTA>
+            </header>
+            <ol class="cv__list">
+              {
+                cvItems.map(({ employer, role, dates }) => (
+                  <li>
+                    <div class="cv-item">
+                      <div class="cv-item__position">
+                        <p class="cv-item__employer">{employer}</p>
+                        <p class="cv-item__role">{role}</p>
+                      </div>
+                      <p class="cv-item__dates">{dates}</p>
+                    </div>
+                  </li>
+                ))
+              }
+            </ol>
+          </section>
 
-          <Clients />
+          <section class="clients">
+            <h3 class="clients__heading">Select clients</h3>
+            <ul
+              class="clients__list"
+              style={`--clients-rows-2col: ${clientsRows2Col}; --clients-rows-3col: ${clientsRows3Col};`}
+            >
+              {clients.map((name) => <li>{name}</li>)}
+            </ul>
+          </section>
         </div>
       </IndexContainer>
     </div>
@@ -144,6 +273,202 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
 </BaseLayout>
 
 <style>
+  .home-header__main {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
+
+  .home-header__title {
+    font-size: var(--text-lg);
+    line-height: var(--text-lg--line-height);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .home-header__title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: calc(var(--spacing) * 2);
+  }
+
+  .home-header__pane {
+    transition: opacity 200ms ease;
+  }
+
+  .home-header__intro {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 6);
+    max-width: 32rem;
+  }
+
+  .home-header__intro-prose {
+    color: var(--color-text-secondary);
+  }
+
+  .home-header__intro-prose :global(p) {
+    margin: 0;
+  }
+
+  .home-header__intro-prose :global(p + p) {
+    margin-top: 1em;
+  }
+
+  .home-header__intro-prose :global(p:last-child) {
+    color: var(--color-text-quaternary);
+  }
+
+  .home-header__intro-prose :global(a) {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .home-header__intro-ctas {
+    display: flex;
+    gap: calc(var(--spacing) * 4);
+    align-items: flex-start;
+  }
+
+  .home-header__mugshot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin: 0;
+  }
+
+  .home-header__mugshot-frame {
+    width: 100%;
+    max-width: 240px;
+    aspect-ratio: 320 / 400;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background: var(--color-bg-tertiary);
+  }
+
+  .home-header__mugshot-frame :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .home-header__mugshot-caption {
+    font-size: var(--text-xs);
+    line-height: var(--text-xs--line-height);
+    color: var(--color-text-quaternary);
+    text-align: center;
+    margin: 0;
+  }
+
+  .home-header__nav {
+    display: flex;
+    gap: calc(var(--spacing) * 1);
+  }
+
+  .home-header__nav-button {
+    appearance: none;
+    background: transparent;
+    border: 0;
+    border-radius: var(--radius-sm);
+    padding: calc(var(--spacing) * 1);
+    color: var(--color-fg-secondary);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 150ms ease, color 150ms ease;
+  }
+
+  .home-header__nav-button:hover {
+    background: var(--color-bg-secondary);
+  }
+
+  .home-header__nav-button:disabled {
+    color: var(--color-fg-quaternary);
+    cursor: default;
+    background: transparent;
+  }
+
+  .home-header__nav-button:focus-visible {
+    outline: 2px solid var(--color-focus-ring);
+    outline-offset: 2px;
+  }
+
+  /* Mobile: title row + panes share a single grid column,
+     so the active pane occupies the same cell regardless of which one is showing. */
+  @media (width < 48rem) {
+    .home-header__main {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        'title'
+        'pane';
+      row-gap: calc(var(--spacing) * 6);
+    }
+
+    /* Flatten text-col so its title-row + pane participate in the outer grid */
+    .home-header__text-col {
+      display: contents;
+    }
+
+    .home-header__title-row {
+      grid-area: title;
+    }
+
+    .home-header__pane {
+      grid-area: pane;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .home-header[data-active='text'] [data-pane='text'],
+    .home-header[data-active='portrait'] [data-pane='portrait'] {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  /* Desktop: text-col and portrait pane sit side by side; toggle is hidden. */
+  @media (width >= 48rem) {
+    .home-header__main {
+      display: flex;
+      align-items: center;
+      gap: calc(var(--spacing) * 16);
+    }
+
+    .home-header__text-col {
+      display: flex;
+      flex-direction: column;
+      gap: calc(var(--spacing) * 6);
+      flex: 0 1 auto;
+      min-width: 0;
+    }
+
+    .home-header__pane[data-pane='portrait'] {
+      flex: 0 0 320px;
+      width: 320px;
+      margin-left: auto;
+    }
+
+    .home-header__mugshot-frame {
+      max-width: none;
+    }
+
+    .home-header__nav {
+      display: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .home-header__pane {
+      transition: none;
+    }
+  }
+
   .page-home {
     padding-inline: calc(var(--spacing) * 4);
     padding-block: calc(var(--spacing) * 10);
@@ -212,4 +537,189 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
     text-underline-offset: 3px;
   }
 
+  .cv {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 3);
+    width: 100%;
+  }
+
+  .cv__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: calc(var(--spacing) * 3);
+  }
+
+  .cv__heading {
+    margin: 0;
+    font-size: var(--text-md);
+    line-height: var(--text-md--line-height);
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+
+  .cv__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 3);
+  }
+
+  .cv__list > li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .cv__list > li + li {
+    border-top: 1px solid var(--color-border-secondary);
+    padding-top: calc(var(--spacing) * 3);
+  }
+
+  .cv-item {
+    display: flex;
+    gap: calc(var(--spacing) * 3);
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .cv-item__position {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .cv-item__employer {
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .cv-item__role {
+    color: var(--color-text-quaternary);
+    margin: 0;
+  }
+
+  .cv-item__dates {
+    color: var(--color-text-quaternary);
+    text-align: right;
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    margin: 0;
+  }
+
+  .clients {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 4);
+    width: 100%;
+    container-type: inline-size;
+  }
+
+  .clients__heading {
+    margin: 0;
+    font-size: var(--text-md);
+    line-height: var(--text-md--line-height);
+    font-weight: 500;
+    color: var(--color-text-primary);
+  }
+
+  .clients__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(var(--clients-rows-2col), auto);
+    grid-auto-flow: column;
+    column-gap: calc(var(--spacing) * 6);
+    row-gap: calc(var(--spacing) * 1);
+    color: var(--color-text-tertiary);
+  }
+
+  .clients__list li {
+    margin: 0;
+  }
+
+  /* When the container has enough room for 3 content-sized columns,
+     switch to content-sized columns so each one hugs its widest item.
+     Threshold is set just under the container's max width on this page
+     (~35rem when page-home__inner hits its 960px cap); below it we keep
+     the 2-col 1fr fallback above to avoid overflow. */
+  @container (min-width: 34rem) {
+    .clients__list {
+      grid-template-columns: none;
+      grid-template-rows: repeat(var(--clients-rows-3col), auto);
+      grid-auto-columns: max-content;
+    }
+  }
+
 </style>
+
+<script>
+  function initHomeHeader(root: HTMLElement) {
+    const buttons = Array.from(
+      root.querySelectorAll<HTMLButtonElement>('[data-direction]'),
+    );
+    const panes = Array.from(
+      root.querySelectorAll<HTMLElement>('[data-pane]'),
+    );
+    const order = panes.map((p) => p.dataset.pane!).filter(Boolean);
+
+    const mql = window.matchMedia('(min-width: 48rem)');
+
+    function setActive(target: string) {
+      root.dataset.active = target;
+      syncPanes();
+      syncButtons();
+    }
+
+    function step(direction: 'prev' | 'next') {
+      const current = root.dataset.active ?? order[0];
+      const idx = order.indexOf(current);
+      const delta = direction === 'next' ? 1 : -1;
+      const nextIdx = idx + delta;
+      if (nextIdx < 0 || nextIdx >= order.length) return;
+      setActive(order[nextIdx]);
+    }
+
+    function syncPanes() {
+      const target = root.dataset.active ?? order[0];
+      for (const pane of panes) {
+        if (mql.matches) {
+          pane.removeAttribute('aria-hidden');
+        } else {
+          const isActive = pane.dataset.pane === target;
+          pane.setAttribute('aria-hidden', String(!isActive));
+        }
+      }
+    }
+
+    function syncButtons() {
+      const idx = order.indexOf(root.dataset.active ?? order[0]);
+      for (const button of buttons) {
+        const dir = button.dataset.direction;
+        const atEdge =
+          (dir === 'prev' && idx <= 0) ||
+          (dir === 'next' && idx >= order.length - 1);
+        button.disabled = atEdge;
+      }
+    }
+
+    for (const button of buttons) {
+      button.addEventListener('click', () => {
+        const dir = button.dataset.direction as 'prev' | 'next' | undefined;
+        if (dir) step(dir);
+      });
+    }
+
+    mql.addEventListener('change', syncPanes);
+    syncPanes();
+    syncButtons();
+  }
+
+  document
+    .querySelectorAll<HTMLElement>('[data-carousel]')
+    .forEach(initHomeHeader);
+</script>

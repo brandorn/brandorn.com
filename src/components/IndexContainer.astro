@@ -1,16 +1,28 @@
 ---
 interface Props {
+  title: string;
+  description?: string;
   as?: 'section' | 'aside' | 'div';
   class?: string;
 }
 
-const { as: Tag = 'section', class: className = '' } = Astro.props;
+const {
+  title,
+  description,
+  as: Tag = 'section',
+  class: className = '',
+} = Astro.props;
 ---
 
 <Tag class:list={['index-container', className]}>
-  <div class="index-container__title">
-    <slot name="title" />
-  </div>
+  <header class="index-container__title">
+    <h2 class="index-container__h2">{title}</h2>
+    {
+      description && (
+        <p class="index-container__description">{description}</p>
+      )
+    }
+  </header>
   <div class="index-container__list">
     <slot name="list" />
   </div>
@@ -26,6 +38,27 @@ const { as: Tag = 'section', class: className = '' } = Astro.props;
 
   .index-container + .index-container {
     border-top: 1px solid var(--color-border-secondary);
+  }
+
+  .index-container__title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xxs);
+  }
+
+  .index-container__h2 {
+    font-size: var(--text-lg);
+    line-height: var(--text-lg--line-height);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .index-container__description {
+    font-size: var(--text-md);
+    line-height: var(--text-md--line-height);
+    color: var(--color-text-tertiary);
+    margin: 0;
   }
 
   @media (width >= 48rem) {
