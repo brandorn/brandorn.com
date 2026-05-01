@@ -6,3 +6,15 @@
   
   The base Untitled UI theme remains in theme.css.
 */
+
+.cta {
+  font-weight: 500;
+  color: var(--color-fg-brand-primary);
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+  text-underline-offset: 3px;
+
+  &:hover {
+    color: var(--color-fg-brand-secondary_hover);
+  }
+}

@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import CTA from '../components/CTA.astro';
 import IndexContainer from '../components/IndexContainer.astro';
 import FeaturedPost from '../components/FeaturedPost.astro';
 import PostListItem from '../components/PostListItem.astro';
@@ -103,8 +102,8 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
                   <p>Portfolio and references available upon request.</p>
                 </div>
                 <div class="home-header__intro-ctas">
-                  <CTA href={CONTACT_EMAIL_HREF}>Email me</CTA>
-                  <CTA href="#about">More info</CTA>
+                  <a class="cta" href={CONTACT_EMAIL_HREF}>Email me</a>
+                  <a class="cta" href="#about">More info</a>
                 </div>
               </div>
             </section>
@@ -123,6 +122,7 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
                   alt="Brandon Dorn"
                   widths={[320, 640]}
                   sizes="(min-width: 48rem) 320px, 100vw"
+                  loading="eager"
                 />
               </div>
               <figcaption class="home-header__mugshot-caption">
@@ -235,7 +235,7 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
           <section class="cv">
             <header class="cv__header">
               <h3 class="cv__heading">Experience</h3>
-              <CTA href={cvDownloadHref}>Download CV</CTA>
+              <a class="cta" href={cvDownloadHref}>Download CV</a>
             </header>
             <ol class="cv__list">
               {

@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import type { ImageMetadata } from 'astro';
 import { marked } from 'marked';
 import BaseLayout from './BaseLayout.astro';
-import PostNav from '../components/PostNav.astro';
+import { CONTACT_EMAIL_HREF } from '../lib/site';
 
 interface Props {
   title: string;
@@ -58,7 +58,13 @@ const acknowledgementsLine = nameList
 >
   <main class="page-essay">
     <div class="page-essay__inner">
-      <PostNav />
+      <nav class="post-nav" aria-label="Site">
+        <a href="/" class="post-nav__brand">Brandon Dorn</a>
+        <ul class="post-nav__links">
+          <li><a href={CONTACT_EMAIL_HREF}>Email</a></li>
+          <li><a href="/#about">Info</a></li>
+        </ul>
+      </nav>
       <article class="page-essay__content">
         <header
           class:list={['post-header', hasPhoto && 'post-header--has-photo']}
@@ -71,7 +77,14 @@ const acknowledgementsLine = nameList
           {
             hasPhoto ? (
               <figure class="post-header__cover">
-                <Image src={cover} alt={coverAlt} />
+                <Image
+                  src={cover}
+                  alt={coverAlt}
+                  widths={[600, 1200]}
+                  sizes="(min-width: 40rem) 600px, 100vw"
+                  loading="eager"
+                  fetchpriority="high"
+                />
                 {captionHtml && <figcaption set:html={captionHtml} />}
               </figure>
             ) : (
@@ -137,6 +150,49 @@ const acknowledgementsLine = nameList
     flex-direction: column;
     align-items: center;
     gap: calc(var(--spacing) * 12);
+  }
+
+  /* Post nav */
+  .post-nav {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: calc(var(--spacing) * 4);
+    border-bottom: 1px solid var(--color-border-secondary);
+    width: 100%;
+  }
+
+  .post-nav__brand {
+    font-weight: 500;
+    color: var(--color-text-primary);
+    text-decoration: none;
+  }
+
+  .post-nav__brand:hover {
+    color: var(--color-text-secondary_hover);
+  }
+
+  .post-nav__links {
+    display: flex;
+    gap: calc(var(--spacing) * 4);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .post-nav__links li {
+    margin: 0;
+  }
+
+  .post-nav__links a {
+    font-weight: 500;
+    color: var(--color-text-tertiary);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .post-nav__links a:hover {
+    color: var(--color-text-secondary_hover);
   }
 
   /* Post header */
