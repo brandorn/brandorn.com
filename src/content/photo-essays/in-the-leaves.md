@@ -1,7 +1,6 @@
 ---
 title: "In the Leaves"
 lede: "Notes from a year of paying more attention to the ground."
-year: 2020
 publishDate: 2020-11-03
 ---
 

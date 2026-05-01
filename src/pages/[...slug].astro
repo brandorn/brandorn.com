@@ -30,8 +30,13 @@ const Layout = isPhotoEssay ? PhotoEssayLayout : EssayLayout;
 <Layout
   title={entry.data.title}
   lede={entry.data.lede}
+  cover={entry.data.cover}
+  coverAlt={entry.data.coverAlt}
+  coverCaption={entry.data.coverCaption}
   introQuote={entry.data.introQuote}
+  introQuoteAttribution={entry.data.introQuoteAttribution}
   publishDate={entry.data.publishDate}
+  acknowledgements={entry.data.acknowledgements}
 >
   <Content />
 </Layout>

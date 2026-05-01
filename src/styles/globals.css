@@ -34,6 +34,16 @@
     font-kerning: normal;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
   /* Hide the default expand arrow on Safari.  */
   details summary::-webkit-details-marker {
     display: none;

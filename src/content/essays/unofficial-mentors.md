@@ -1,7 +1,6 @@
 ---
 title: "Unofficial Mentors"
 lede: "This is the lede"
-year: 2024
 publishDate: 2024-08-22
 ---
 

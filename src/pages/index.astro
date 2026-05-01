@@ -163,7 +163,7 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
                 {featured.map(({ entry, photoEssay }) => (
                   <FeaturedPost
                     title={entry.data.title}
-                    year={entry.data.year}
+                    year={entry.data.publishDate.getFullYear()}
                     lede={entry.data.lede}
                     href={`/${entry.id}`}
                     thumbnail={entry.data.thumbnail}
@@ -181,7 +181,7 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
                   <li>
                     <PostListItem
                       title={entry.data.title}
-                      year={entry.data.year}
+                      year={entry.data.publishDate.getFullYear()}
                       href={`/${entry.id}`}
                       photoEssay={photoEssay}
                     />
@@ -195,10 +195,11 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
 
       <IndexContainer
         as="aside"
+        id="about"
         title="About"
         description="The ol' razzle dazzle"
       >
-        <div slot="list" class="about-index" id="about">
+        <div slot="list" class="about-index">
           <div class="about-index__bio">
             <p>
               I'm Brandon, a product designer from Chicago. I work across the
@@ -208,7 +209,7 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
               run their businesses.
             </p>
             <p>
-              I've been a product designer for twelve years, split between
+              I've been a product designer for twelve years, equally split between
               agency and in-house settings. For the first half I was a senior
               product designer at Viget, helping build their product practice.
               Since then I've worked in startups on growth initiatives, core

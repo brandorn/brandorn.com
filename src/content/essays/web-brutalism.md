@@ -1,7 +1,6 @@
 ---
 title: "Web Brutalism, Seamfulness, and Notion"
 lede: "How infrastructure legibility supports sensemaking in products"
-year: 2024
 publishDate: 2024-05-12
 featured: true
 introQuote: "The software you love most is probably the software that lets you see its edges."

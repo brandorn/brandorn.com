@@ -41,7 +41,7 @@ const year = new Date().getFullYear();
               <li>
                 <PostListItem
                   title={entry.data.title}
-                  year={entry.data.year}
+                  year={entry.data.publishDate.getFullYear()}
                   href={`/${entry.id}`}
                   photoEssay={photoEssay}
                 />

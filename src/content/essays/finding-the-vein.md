@@ -1,7 +1,6 @@
 ---
 title: "Finding the Vein"
 lede: "Unocvering what matters to you"
-year: 2026
 publishDate: 2026-03-08
 ---
 

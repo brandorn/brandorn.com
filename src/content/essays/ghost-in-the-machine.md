@@ -1,7 +1,6 @@
 ---
 title: "Ghost in the Machine"
 lede: "On bureaucratic space and photography in Jacques Ellul’s technological society"
-year: 2024
 publishDate: 2024-02-03
 featured: true
 thumbnail: ../../assets/img/thumbnails/ghost-in-the-machine-thumb.jpg

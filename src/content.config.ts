@@ -1,14 +1,18 @@
-import { defineCollection, z } from 'astro:content';
+import { defineCollection, z, type SchemaContext } from 'astro:content';
 import { glob } from 'astro/loaders';
 
-const postSchema = ({ image }: { image: () => z.ZodType }) =>
+const postSchema = ({ image }: SchemaContext) =>
   z.object({
     title: z.string(),
     lede: z.string().optional(),
-    year: z.number(),
     publishDate: z.coerce.date(),
     featured: z.boolean().default(false),
     introQuote: z.string().optional(),
+    introQuoteAttribution: z.string().optional(),
+    acknowledgements: z.array(z.string()).optional(),
+    cover: image().optional(),
+    coverAlt: z.string().optional(),
+    coverCaption: z.string().optional(),
     tags: z.array(z.string()).default([]),
     draft: z.boolean().default(false),
     thumbnail: image().optional(),

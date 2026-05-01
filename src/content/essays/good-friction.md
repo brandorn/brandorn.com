@@ -1,7 +1,6 @@
 ---
 title: "Good Friction"
 lede: "This is the lede"
-year: 2026
 publishDate: 2026-02-14
 ---
 

@@ -1,35 +1,38 @@
 ---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import { marked } from 'marked';
 import BaseLayout from './BaseLayout.astro';
 import PostNav from '../components/PostNav.astro';
-import PostHeader from '../components/PostHeader.astro';
-import PostBody from '../components/PostBody.astro';
-import IntroQuote from '../components/IntroQuote.astro';
 
 interface Props {
   title: string;
   lede?: string;
-  heroImage?: string;
-  heroAlt?: string;
-  heroCaption?: string;
-  heroCaptionItalic?: string;
+  cover?: ImageMetadata;
+  coverAlt?: string;
+  coverCaption?: string;
   introQuote?: string;
   introQuoteAttribution?: string;
   publishDate?: Date;
-  acknowledgements?: string;
+  acknowledgements?: string[];
+  bodyClass?: string;
 }
 
 const {
   title,
   lede,
-  heroImage,
-  heroAlt,
-  heroCaption,
-  heroCaptionItalic,
+  cover,
+  coverAlt = '',
+  coverCaption,
   introQuote,
   introQuoteAttribution,
   publishDate,
   acknowledgements,
+  bodyClass = '',
 } = Astro.props;
+
+const hasPhoto = !!cover;
+const captionHtml = coverCaption ? marked.parseInline(coverCaption) : null;
 
 const publishedLabel = publishDate
   ? publishDate.toLocaleDateString('en-US', {
@@ -37,39 +40,79 @@ const publishedLabel = publishDate
       year: 'numeric',
     })
   : undefined;
+
+const nameList = acknowledgements?.length
+  ? new Intl.ListFormat('en-US', { style: 'long', type: 'conjunction' }).format(
+      acknowledgements,
+    )
+  : undefined;
+const acknowledgementsLine = nameList
+  ? `Thanks to ${nameList} for reading drafts of this essay.`
+  : undefined;
 ---
 
 <BaseLayout
   title={`${title} — brandorn.com`}
   description={lede}
-  bodyClass="post essay"
+  bodyClass={`post essay ${bodyClass}`.trim()}
 >
   <main class="page-essay">
     <div class="page-essay__inner">
       <PostNav />
       <article class="page-essay__content">
-        <PostHeader
-          title={title}
-          lede={lede}
-          heroImage={heroImage}
-          heroAlt={heroAlt}
-          heroCaption={heroCaption}
-          heroCaptionItalic={heroCaptionItalic}
-        />
-
-        <PostBody
-          publishedLabel={publishedLabel}
-          acknowledgements={acknowledgements}
+        <header
+          class:list={['post-header', hasPhoto && 'post-header--has-photo']}
         >
+          <div class="post-header__title-container">
+            <h1 class="post-header__title">{title}</h1>
+            {lede && <p class="post-header__lede">{lede}</p>}
+          </div>
+
           {
-            introQuote && (
-              <IntroQuote attribution={introQuoteAttribution}>
-                <p set:html={introQuote.replace(/\n/g, '<br />')} />
-              </IntroQuote>
+            hasPhoto ? (
+              <figure class="post-header__cover">
+                <Image src={cover} alt={coverAlt} />
+                {captionHtml && <figcaption set:html={captionHtml} />}
+              </figure>
+            ) : (
+              <hr class="post-header__divider" aria-hidden="true" />
             )
           }
-          <slot />
-        </PostBody>
+        </header>
+
+        <div class="post-body">
+          <div class="post-body__prose">
+            {
+              introQuote && (
+                <aside class="intro-quote">
+                  <p
+                    class="intro-quote__body"
+                    set:html={introQuote.replace(/\n/g, '<br />')}
+                  />
+                  {introQuoteAttribution && (
+                    <p class="intro-quote__attribution">
+                      — {introQuoteAttribution}
+                    </p>
+                  )}
+                </aside>
+              )
+            }
+            <slot />
+          </div>
+
+          {
+            (publishedLabel || acknowledgementsLine) && (
+              <div class="post-body__acknowledgements">
+                {publishedLabel && (
+                  <p class="post-body__date">{publishedLabel}</p>
+                )}
+                {acknowledgementsLine && (
+                  <p class="post-body__thanks">{acknowledgementsLine}</p>
+                )}
+              </div>
+            )
+          }
+        </div>
       </article>
     </div>
   </main>
@@ -96,6 +139,149 @@ const publishedLabel = publishDate
     gap: calc(var(--spacing) * 12);
   }
 
+  /* Post header */
+  .post-header {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 8);
+    width: 100%;
+    max-width: 600px;
+    align-items: center;
+  }
+
+  .post-header--has-photo {
+    gap: calc(var(--spacing) * 12);
+  }
+
+  .post-header__title-container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2);
+    text-align: center;
+    color: var(--color-text-primary);
+    width: 100%;
+  }
+
+  .post-header__title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--text-display-sm);
+    line-height: var(--text-display-sm--line-height);
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  .post-header__lede {
+    font-size: var(--text-md);
+    line-height: var(--text-md--line-height);
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .post-header__cover {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--spacing) * 4);
+  }
+
+  .post-header__cover :global(img) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 594 / 392;
+    object-fit: cover;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .post-header__cover figcaption {
+    margin: 0;
+    color: var(--color-text-quaternary);
+    font-size: var(--text-sm);
+    line-height: var(--text-sm--line-height);
+    text-align: center;
+    display: block;
+  }
+
+  .post-header__cover figcaption :global(em) {
+    font-style: italic;
+  }
+
+  .post-header__cover figcaption :global(a) {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .post-header__divider {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid var(--color-border-secondary);
+    margin: 0;
+  }
+
+  /* Post body */
+  .post-body {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 8);
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .post-body__prose {
+    color: var(--color-text-primary);
+  }
+
+  .post-body__prose :global(> :first-child) {
+    margin-top: 0;
+  }
+
+  .post-body__prose :global(> :last-child) {
+    margin-bottom: 0;
+  }
+
+  .post-body__acknowledgements {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2);
+  }
+
+  .post-body__date {
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .post-body__thanks {
+    color: var(--color-text-quaternary);
+    margin: 0;
+  }
+
+  .intro-quote {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2);
+    padding-left: calc(var(--spacing) * 5);
+    padding-bottom: calc(var(--spacing) * 2);
+    color: var(--color-text-tertiary);
+    width: 100%;
+  }
+
+  .intro-quote__body {
+    font-size: var(--text-md);
+    line-height: var(--text-md--line-height);
+    margin: 0;
+  }
+
+  .intro-quote__attribution {
+    font-size: var(--text-sm);
+    line-height: var(--text-sm--line-height);
+    font-weight: 500;
+    margin: 0;
+  }
+
   @media (width >= 48rem) {
     .page-essay {
       padding-block: calc(var(--spacing) * 5);
@@ -107,6 +293,16 @@ const publishedLabel = publishDate
 
     .page-essay__content {
       gap: calc(var(--spacing) * 16);
+    }
+
+    .post-header__title {
+      font-size: var(--text-display-xl);
+      line-height: var(--text-display-xl--line-height);
+      letter-spacing: var(--text-display-xl--letter-spacing);
+    }
+
+    .intro-quote {
+      padding-left: calc(var(--spacing) * 10);
     }
   }
 </style>

@@ -1,22 +1,30 @@
 ---
+import type { ImageMetadata } from 'astro';
 import EssayLayout from './EssayLayout.astro';
 
 interface Props {
   title: string;
   lede?: string;
-  heroImage?: string;
-  heroAlt?: string;
-  heroCaption?: string;
-  heroCaptionItalic?: string;
+  cover?: ImageMetadata;
+  coverAlt?: string;
+  coverCaption?: string;
   introQuote?: string;
   introQuoteAttribution?: string;
   publishDate?: Date;
-  acknowledgements?: string;
+  acknowledgements?: string[];
 }
 
 const props = Astro.props;
 ---
 
-<EssayLayout {...props}>
+<EssayLayout {...props} bodyClass="photo-essay">
   <slot />
 </EssayLayout>
+
+<style is:global>
+  /*
+    Photo-essay-specific overrides. Scope rules to `body.photo-essay` so they
+    only apply on photo-essay pages. EssayLayout owns the base `.post-*` and
+    `.page-essay__*` markup; override its classes here as needed.
+  */
+</style>

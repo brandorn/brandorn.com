@@ -4,6 +4,7 @@ interface Props {
   description?: string;
   as?: 'section' | 'aside' | 'div';
   class?: string;
+  id?: string;
 }
 
 const {
@@ -11,10 +12,11 @@ const {
   description,
   as: Tag = 'section',
   class: className = '',
+  id,
 } = Astro.props;
 ---
 
-<Tag class:list={['index-container', className]}>
+<Tag class:list={['index-container', className]} id={id}>
   <header class="index-container__title">
     <h2 class="index-container__h2">{title}</h2>
     {
@@ -23,9 +25,7 @@ const {
       )
     }
   </header>
-  <div class="index-container__list">
-    <slot name="list" />
-  </div>
+  <slot name="list" />
 </Tag>
 
 <style>
@@ -34,6 +34,7 @@ const {
     grid-template-columns: 1fr;
     gap: calc(var(--spacing) * 8);
     padding-block: calc(var(--spacing) * 10);
+    scroll-margin-top: calc(var(--spacing) * 8);
   }
 
   .index-container + .index-container {

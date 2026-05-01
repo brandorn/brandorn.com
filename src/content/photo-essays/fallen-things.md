@@ -1,7 +1,6 @@
 ---
 title: "Fallen Things"
 lede: "Documenting the strange drama of detritus"
-year: 2023
 publishDate: 2023-11-20
 featured: true
 thumbnail: ../../assets/img/thumbnails/fallen-things-thumb.jpg
