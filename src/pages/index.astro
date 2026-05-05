@@ -320,6 +320,11 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
     color: inherit;
     text-decoration: underline;
     text-underline-offset: 3px;
+    text-decoration-color: var(--color-link-underline);
+  }
+
+  .home-header__intro-prose :global(a:hover) {
+    text-decoration-color: currentColor;
   }
 
   .home-header__intro-ctas {
@@ -498,6 +503,11 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
     color: inherit;
     text-decoration: underline;
     text-underline-offset: 3px;
+    text-decoration-color: var(--color-link-underline);
+  }
+
+  .about-index__bio :global(a:hover) {
+    text-decoration-color: currentColor;
   }
 
   .cv {

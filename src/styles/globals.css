@@ -34,6 +34,16 @@
     font-kerning: normal;
   }
 
+  /* Text selection — translucent brand tint so underlying text colors
+     (links, headings, captions) stay legible inside a selection. */
+  ::selection {
+    background-color: rgb(255 68 5 / 0.15); /* brand-500 */
+  }
+
+  .dark-mode ::selection {
+    background-color: rgb(250 197 21 / 0.22); /* yellow-400 */
+  }
+
   html {
     scroll-behavior: smooth;
   }
