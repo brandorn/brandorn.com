@@ -65,7 +65,7 @@ const {
     display: grid;
     grid-template-columns: 88px 1fr;
     gap: calc(var(--spacing) * 5);
-    align-items: normal;
+    align-items: center;
     padding: calc(var(--spacing) * 2);
     margin-inline: calc(var(--spacing) * -2);
     border-radius: var(--radius-xl);
@@ -75,13 +75,7 @@ const {
   }
 
   .featured-post:hover {
-    background: var(--color-bg-secondary);
-  }
-
-  @media (width >= 48rem) {
-    .featured-post {
-      align-items: center;
-    }
+    background: var(--color-bg-secondary_hover);
   }
 
   .featured-post__thumbnail {

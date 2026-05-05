@@ -301,7 +301,7 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
   }
 
   .home-header__intro-prose {
-    color: var(--color-text-secondary);
+    color: var(--color-text-primary);
   }
 
   .home-header__intro-prose :global(p) {
@@ -324,7 +324,7 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
   }
 
   .home-header__intro-prose :global(a:hover) {
-    text-decoration-color: currentColor;
+    text-decoration-color: var(--color-link-underline_hover);
   }
 
   .home-header__intro-ctas {
@@ -507,7 +507,7 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
   }
 
   .about-index__bio :global(a:hover) {
-    text-decoration-color: currentColor;
+    text-decoration-color: var(--color-link-underline_hover);
   }
 
   .cv {
@@ -569,12 +569,12 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
   }
 
   .cv-item__role {
-    color: var(--color-text-quaternary);
+    color: var(--color-text-tertiary);
     margin: 0;
   }
 
   .cv-item__dates {
-    color: var(--color-text-quaternary);
+    color: var(--color-text-tertiary);
     text-align: right;
     flex-shrink: 0;
     white-space: nowrap;
@@ -608,7 +608,7 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
     grid-auto-flow: column;
     column-gap: calc(var(--spacing) * 6);
     row-gap: calc(var(--spacing) * 1);
-    color: var(--color-text-tertiary);
+    color: var(--color-text-secondary);
   }
 
   .clients__list li {

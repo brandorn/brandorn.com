@@ -194,7 +194,7 @@ body.post {
   }
 
   a:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a):hover {
-    text-decoration-color: currentColor;
+    text-decoration-color: var(--color-link-underline_hover);
   }
 
   a:focus-visible {
