@@ -1,22 +1,14 @@
 ---
 import '../styles/globals.css';
-import Footer from '../components/Footer.astro';
 
 interface Props {
   title: string;
   description?: string;
   theme?: string;
   bodyClass?: string;
-  showFooterPosts?: boolean;
 }
 
-const {
-  title,
-  description = '',
-  theme = '',
-  bodyClass = '',
-  showFooterPosts = true,
-} = Astro.props;
+const { title, description = '', theme = '', bodyClass = '' } = Astro.props;
 const themeClass = theme || undefined;
 ---
 
@@ -44,14 +36,6 @@ const themeClass = theme || undefined;
       type="font/woff2"
       crossorigin
     />
-    <link
-      rel="preload"
-      href="/fonts/ArnoPro-Bold.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-
     <script is:inline>
       (function () {
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -62,6 +46,5 @@ const themeClass = theme || undefined;
   </head>
   <body class:list={['bg-primary text-primary', bodyClass]}>
     <slot />
-    <Footer showPosts={showFooterPosts} />
   </body>
 </html>

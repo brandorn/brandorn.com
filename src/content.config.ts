@@ -17,6 +17,7 @@ const postSchema = ({ image }: SchemaContext) =>
     draft: z.boolean().default(false),
     thumbnail: image().optional(),
     thumbnailAlt: z.string().optional(),
+    externalUrl: z.string().optional(),
   });
 
 const essay = defineCollection({
@@ -29,15 +30,4 @@ const photoEssay = defineCollection({
   schema: postSchema,
 });
 
-const affinity = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/affinities' }),
-  schema: ({ image }) =>
-    z.object({
-      title: z.string(),
-      url: z.string(),
-      image: image(),
-      order: z.number().optional(),
-    }),
-});
-
-export const collections = { essay, photoEssay, affinity };
+export const collections = { essay, photoEssay };

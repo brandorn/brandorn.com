@@ -4,10 +4,10 @@ import EssayLayout from '../layouts/EssayLayout.astro';
 import PhotoEssayLayout from '../layouts/PhotoEssayLayout.astro';
 
 export async function getStaticPaths() {
-  const essays = (await getCollection('essay')).filter((e) => !e.data.draft);
-  const photoEssays = (await getCollection('photoEssay')).filter(
-    (e) => !e.data.draft,
-  );
+  const hasLocalPage = (e: { data: { draft: boolean; externalUrl?: string } }) =>
+    !e.data.draft && !e.data.externalUrl;
+  const essays = (await getCollection('essay')).filter(hasLocalPage);
+  const photoEssays = (await getCollection('photoEssay')).filter(hasLocalPage);
 
   return [
     ...essays.map((entry) => ({

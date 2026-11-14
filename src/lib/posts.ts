@@ -14,10 +14,15 @@ export async function getAllPosts() {
     .filter((e) => !e.data.draft)
     .map((entry) => ({ entry, photoEssay: true }));
 
-  return [...essays, ...photoEssays].sort(
-    (a, b) =>
-      b.entry.data.publishDate.getTime() - a.entry.data.publishDate.getTime(),
-  );
+  return [...essays, ...photoEssays]
+    .map((post) => ({
+      ...post,
+      href: post.entry.data.externalUrl ?? `/${post.entry.id}`,
+    }))
+    .sort(
+      (a, b) =>
+        b.entry.data.publishDate.getTime() - a.entry.data.publishDate.getTime(),
+    );
 }
 
 export type PostEntry = Awaited<ReturnType<typeof getAllPosts>>[number];

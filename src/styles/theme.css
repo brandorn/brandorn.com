@@ -36,37 +36,58 @@
 }
 @font-face {
   font-family: "IBM Plex Sans";
+  src: url("/fonts/IBMPlexSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Sans";
   src: url("/fonts/IBMPlexSans-SemiBoldItalic.woff2") format("woff2");
   font-weight: 600;
   font-style: italic;
   font-display: swap;
 }
 
-/* Arno Pro */
+/* Calluna */
 @font-face {
-  font-family: "Arno Pro";
-  src: url("/fonts/ArnoPro-Regular.woff2") format("woff2");
+  font-family: "Calluna";
+  src: url("/fonts/Calluna-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Arno Pro";
-  src: url("/fonts/ArnoPro-Italic.woff2") format("woff2");
+  font-family: "Calluna";
+  src: url("/fonts/Calluna-Italic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
-  font-family: "Arno Pro";
-  src: url("/fonts/ArnoPro-Bold.woff2") format("woff2");
+  font-family: "Calluna";
+  src: url("/fonts/Calluna-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Calluna";
+  src: url("/fonts/Calluna-SemiboldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Calluna";
+  src: url("/fonts/Calluna-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Arno Pro";
-  src: url("/fonts/ArnoPro-BoldItalic.woff2") format("woff2");
+  font-family: "Calluna";
+  src: url("/fonts/Calluna-BoldItalic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -76,8 +97,8 @@
   /* FONT FAMILY */
   --font-body: "IBM Plex Sans", -apple-system, "Segoe UI", Roboto,
     Arial, sans-serif;
-  --font-display: "Arno Pro", Georgia, "Times New Roman", serif;
-  --font-serif: "Arno Pro", Georgia, "Times New Roman", serif;
+  --font-display: "Calluna", Georgia, "Times New Roman", serif;
+  --font-serif: "Calluna", Georgia, "Times New Roman", serif;
   --font-mono: ui-monospace, "Roboto Mono", SFMono-Regular, Menlo, Monaco,
     Consolas, "Liberation Mono", "Courier New", monospace;
 
@@ -108,15 +129,15 @@
   --text-display-md--letter-spacing: -0.72px;
 
   --text-display-lg: calc(var(--spacing) * 12);
-  --text-display-lg--line-height: calc(var(--spacing) * 15);
+  --text-display-lg--line-height: calc(var(--spacing) * 14);
   --text-display-lg--letter-spacing: -0.96px;
 
   --text-display-xl: calc(var(--spacing) * 15);
-  --text-display-xl--line-height: calc(var(--spacing) * 18);
+  --text-display-xl--line-height: calc(var(--spacing) * 16);
   --text-display-xl--letter-spacing: -1.2px;
 
   --text-display-2xl: calc(var(--spacing) * 18);
-  --text-display-2xl--line-height: calc(var(--spacing) * 22.5);
+  --text-display-2xl--line-height: calc(var(--spacing) * 20);
   --text-display-2xl--letter-spacing: -1.44px;
 
   /* MAX WIDTH */
@@ -553,6 +574,7 @@
   --color-bg-secondary: var(--color-gray-50);
   --color-bg-disabled_subtle: var(--color-gray-50);
   --color-bg-quaternary: var(--color-gray-200);
+  --color-bg-selection: var(--color-yellow-50);
   --color-bg-primary_alt: var(--color-white);
   --color-bg-brand-primary_alt: var(--color-brand-50);
   --color-bg-secondary_alt: var(--color-gray-50);
@@ -842,6 +864,7 @@
     --color-bg-secondary: var(--color-gray-900);
     --color-bg-disabled_subtle: var(--color-gray-900);
     --color-bg-quaternary: var(--color-gray-700);
+    --color-bg-selection: var(--color-gray-700);
     --color-bg-primary_alt: var(--color-bg-secondary);
     --color-bg-brand-primary_alt: var(--color-bg-secondary);
     --color-bg-secondary_alt: var(--color-bg-primary);

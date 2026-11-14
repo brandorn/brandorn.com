@@ -27,4 +27,15 @@ const props = Astro.props;
     only apply on photo-essay pages. EssayLayout owns the base `.post-*` and
     `.page-essay__*` markup; override its classes here as needed.
   */
+  body.photo-essay .post-body__prose iframe {
+    display: block;
+    max-width: 100%;
+    border: 0;
+  }
+
+  body.photo-essay .post-body__prose iframe[src*="youtube"] {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
 </style>

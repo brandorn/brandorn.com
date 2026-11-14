@@ -1,277 +1,82 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import IndexContainer from '../components/IndexContainer.astro';
-import FeaturedPost from '../components/FeaturedPost.astro';
-import PostListItem from '../components/PostListItem.astro';
-import FeaturedProject from '../components/FeaturedProject.astro';
-import SegmentedToggle from '../components/SegmentedToggle.astro';
-import SegmentedToggleButton from '../components/SegmentedToggleButton.astro';
-import AlignLeftIcon from '../assets/icon/icon-align-left.svg';
-import FaceIdSquareIcon from '../assets/icon/icon-face-id-square.svg';
-import mugshotImage from '../assets/img/mugshots/mugshot-winter-light.webp';
-import { getAllPosts } from '../lib/posts';
+import mugshotImage from '../assets/img/mugshots/mugshot-winter-light.jpg';
 import { CONTACT_EMAIL_HREF } from '../lib/site';
-
-const mugshotCaption =
-  "It's 32° here, noticeably colder than where you are…";
-
-const clients = [
-  'Arcadia Energy',
-  'Circ',
-  'CyberGRX',
-  'The Gates Foundation',
-  'National Public Media',
-  'Nest Realty',
-  'Pivotal',
-  'Privia Health',
-  'Rotary International',
-  'Standard AI',
-  'The Nature Conservancy',
-  'The University of Chicago',
-  'The University of Virginia',
-  'Volunteers of America',
-  'Wildlife Conservation Society',
-];
-
-const clientsRows2Col = Math.ceil(clients.length / 2);
-const clientsRows3Col = Math.ceil(clients.length / 3);
-
-const cvItems = [
-  {
-    employer: 'TravelJoy',
-    role: 'Staff product designer',
-    dates: '2024 - present',
-  },
-  { employer: 'Whimsical', role: 'Lead product designer', dates: '2022 - 2024' },
-  { employer: 'Dwell', role: 'Lead product designer', dates: '2021 - 2022' },
-  { employer: 'Viget', role: 'Senior product designer', dates: '2015 - 2021' },
-  { employer: 'State Farm', role: 'Systems analyst', dates: '2013 - 2015' },
-  { employer: 'Leo Burnett', role: 'Account planner', dates: '2011 - 2013' },
-];
-
-const cvDownloadHref = '#';
-
-const posts = await getAllPosts();
-const featured = posts.filter(({ entry }) => entry.data.featured);
-const rest = posts.filter(({ entry }) => !entry.data.featured);
 ---
 
-<BaseLayout title="Brandon Dorn — brandorn.com" showFooterPosts={false}>
+<BaseLayout title="Brandon Dorn — brandorn.com">
   <main class="page-home">
     <div class="page-home__inner">
-      <header class="home-header" data-carousel data-active="text">
-        <div class="home-header__main">
-          <div class="home-header__text-col">
-            <div class="home-header__title-row">
-              <h1 class="home-header__title">Brandon Dorn</h1>
-              <div class="home-header__nav">
-                <SegmentedToggle ariaLabel="Toggle header view">
-                  <SegmentedToggleButton data-pane-target="text" pressed>
-                    <AlignLeftIcon aria-hidden="true" />
-                    <span class="sr-only">Intro</span>
-                  </SegmentedToggleButton>
-                  <SegmentedToggleButton data-pane-target="portrait">
-                    <FaceIdSquareIcon aria-hidden="true" />
-                    <span class="sr-only">Portrait</span>
-                  </SegmentedToggleButton>
-                </SegmentedToggle>
-              </div>
-            </div>
+      <div class="home-header">
+        <div class="home-header__text-col">
+          <h1 class="home-header__title">Brandon Dorn</h1>
 
-            <section
-              class="home-header__pane"
-              data-pane="text"
-              aria-label="Intro"
-            >
-              <div class="home-header__intro">
-                <div class="home-header__intro-prose">
-                  <p>
-                    Hey there. I'm Brandon, a product designer from Chicago. I
-                    specialize in taking purpose-built SaaS products from shaped
-                    to shipped. I think a lot about systems and craft.
-                  </p>
-                  <p>
-                    Currently staff designer at TravelJoy. Before that, I was a
-                    lead designer at Whimsical and Dwell, and helped build the
-                    product design practice at Viget. Doing what I can to <a
-                      href="https://www.paulgraham.com/do.html">care for the
-                      world and make new, good things</a>. Probably reading a
-                    book.
-                  </p>
-                  <p>Portfolio and references available upon request.</p>
-                </div>
-                <div class="home-header__intro-ctas">
-                  <a class="cta" href={CONTACT_EMAIL_HREF}>Email me</a>
-                  <a class="cta" href="#about">More info</a>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <section
-            class="home-header__pane"
-            data-pane="portrait"
-            aria-label="Portrait"
-            aria-hidden="true"
-          >
-            <figure class="home-header__mugshot">
-              <div class="home-header__mugshot-frame">
-                <Image
-                  src={mugshotImage}
-                  alt="Brandon Dorn"
-                  widths={[320, 640]}
-                  sizes="(min-width: 48rem) 320px, 100vw"
-                  loading="eager"
-                />
-              </div>
-              <figcaption class="home-header__mugshot-caption">
-                {mugshotCaption}
-              </figcaption>
-            </figure>
-          </section>
-        </div>
-      </header>
-
-      <IndexContainer
-        title="Featured projects"
-        description="Projects I've worked on / am working on"
-      >
-        <div slot="list" class="featured-projects">
-          {/* TODO: swap to getCollection('project') once the collection exists */}
-          <FeaturedProject
-            title="TravelJoy — Workflow system"
-            role="Staff designer"
-            year="2024—"
-          />
-          <FeaturedProject
-            title="Whimsical — Boards and tables"
-            role="Lead designer"
-            year="2022–2024"
-          />
-        </div>
-      </IndexContainer>
-
-      <IndexContainer
-        title="Posts"
-        description="Occasional essays and visual miscellanea"
-      >
-        <div slot="list" class="essay-index">
-          {
-            featured.length > 0 && (
-              <div class="essay-index__featured">
-                {featured.map(({ entry, photoEssay }) => (
-                  <FeaturedPost
-                    title={entry.data.title}
-                    year={entry.data.publishDate.getFullYear()}
-                    lede={entry.data.lede}
-                    href={`/${entry.id}`}
-                    thumbnail={entry.data.thumbnail}
-                    thumbnailAlt={entry.data.thumbnailAlt}
-                    photoEssay={photoEssay}
-                  />
-                ))}
-              </div>
-            )
-          }
-          {
-            rest.length > 0 && (
-              <ul class="essay-index__list">
-                {rest.map(({ entry, photoEssay }) => (
-                  <li>
-                    <PostListItem
-                      title={entry.data.title}
-                      year={entry.data.publishDate.getFullYear()}
-                      href={`/${entry.id}`}
-                      photoEssay={photoEssay}
-                    />
-                  </li>
-                ))}
+          <div class="home-header__intro">
+            <div class="home-header__intro-prose">
+              <p>Hey there. I’m Brandon, a software design generalist from Chicago. I’ve been building digital products for the last thirteen years. I think a lot about systems and craft, and how to put <a href="https://ia.net/topics/putting-thought-into-things">thought into things</a> as machines increasingly do the thinking for us. I'm particularly interested in <a href="https://vimeo.com/906418692">tools for sensemaking</a>.</p>
+              <p>I'm currently a design engineer at an early-stage <a href="https://traveljoy.com">platform</a> for travel entrepreneurs. Before that, I was a lead designer at <a href="https://whimsical.com">Whimsical</a> and <a href="https://dwell.com">Dwell</a>, and helped start the product design practice at <a href="https://viget.com">Viget</a>. Trying to do my part to <a href="https://www.paulgraham.com/do.html">care for the world and make new, good things</a>. Probably reading a book or researching backpacks.</p>
+              <p>Some things I’ve written:</p>
+              <ul>
+                <li><a href="/files/ellul-forum-73.pdf#page=51">Ghost in the Machine </a> <time datetime="2024-06">Jun 2024</time></li>
+                <li><a href="https://www.etsy.com/listing/1165927841/fallen-things-photo-book">Fallen Things: Photographs</a> <time datetime="2022-01">Jan 2022</time></li>
+                <li><a href="https://uxdesign.cc/web-brutalism-seamfulness-and-notion-8004b89751a2">Web Brutalism, Seamfulness, and Notion</a> <time datetime="2020-08">Aug 2020</time></li>
+                <li><a href="https://vimeo.com/287094701">Mark Lombardi and the Moral Lives of Graphs</a> <time datetime="2018-09">Sep 2018</time></li>
+                <li><a href="https://www.viget.com/articles/of-note-better-text-annotations-for-the-web">Of Note: Better Text Annotations for the Web</a> <time datetime="2018-07">Jul 2018</time></li>
+                <li><a href="https://medium.com/@brandorn/one-designers-response-to-khoi-vinh-s-complaint-3f1325d439de">Against Khoi Vinh’s Complaint</a> <time datetime="2018-02">Feb 2018</time></li>
               </ul>
-            )
-          }
-        </div>
-      </IndexContainer>
-
-      <IndexContainer
-        as="aside"
-        id="about"
-        title="About"
-        description="The ol' razzle dazzle"
-      >
-        <div slot="list" class="about-index">
-          <div class="about-index__bio">
-            <p>
-              I'm Brandon, a product designer from Chicago. I work across the
-              full project spectrum, from early-stage discovery with users to
-              deep frontend collaboration with engineers. I currently lead
-              design at TravelJoy, a workflow tool used by travel agencies to
-              run their businesses.
-            </p>
-            <p>
-              I've been a product designer for twelve years, equally split between
-              agency and in-house settings. For the first half I was a senior
-              product designer at Viget, helping build their product practice.
-              Since then I've worked in startups on growth initiatives, core
-              features, and net-new feature development. The through-line
-              across my work has been an interest in building tools that help
-              people manage complexity.
-            </p>
-            <p>
-              Like <a
-                href="https://www.youtube.com/watch?v=KlI1MR-qNt8"
-                target="_blank"
-                rel="noopener noreferrer">many folks in tech</a>, I have a
-              liberal arts background. I learned design from excellent mentors
-              who taught me that design is a way of creating value with
-              humanist values. My tool stack is evolving: I now spend as much
-              time in Claude as Figma to deliver value efficiently. Even so, I
-              like to work at the threshold where there's <em>just enough
-              friction</em> in the process to generate the heat that kindles
-              good ideas.
-            </p>
+              <p>Portfolio, resume, and references available upon request.</p>
+            </div>
+            <div>
+              <a class="cta" href={CONTACT_EMAIL_HREF}>Get in touch</a>
+            </div>
           </div>
-
-          <section class="cv">
-            <header class="cv__header">
-              <h3 class="cv__heading">Experience</h3>
-              <a class="cta" href={cvDownloadHref}>Download CV</a>
-            </header>
-            <ol class="cv__list">
-              {
-                cvItems.map(({ employer, role, dates }) => (
-                  <li>
-                    <div class="cv-item">
-                      <div class="cv-item__position">
-                        <p class="cv-item__employer">{employer}</p>
-                        <p class="cv-item__role">{role}</p>
-                      </div>
-                      <p class="cv-item__dates">{dates}</p>
-                    </div>
-                  </li>
-                ))
-              }
-            </ol>
-          </section>
-
-          <section class="clients">
-            <h3 class="clients__heading">Select clients</h3>
-            <ul
-              class="clients__list"
-              style={`--clients-rows-2col: ${clientsRows2Col}; --clients-rows-3col: ${clientsRows3Col};`}
-            >
-              {clients.map((name) => <li>{name}</li>)}
-            </ul>
-          </section>
         </div>
-      </IndexContainer>
+
+        <div class="home-header__mugshot">
+          <Image
+            src={mugshotImage}
+            alt="Brandon Dorn"
+            width={380}
+            widths={[380, 760]}
+            sizes="(width >= 48rem) 380px, 320px"
+            quality={90}
+            loading="eager"
+          />
+        </div>
+      </div>
     </div>
   </main>
 </BaseLayout>
 
 <style>
-  .home-header__main {
-    margin-bottom: calc(var(--spacing) * 6);
+  .page-home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-inline: calc(var(--spacing) * 4);
+    padding-block: calc(var(--spacing) * 10);
+  }
+
+  .page-home__inner {
+    width: 100%;
+    max-width: 540px;
+    margin-inline: auto;
+  }
+
+  .home-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--spacing) * 16);
+  }
+
+  .home-header__text-col {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 6);
+    width: 100%;
+    min-width: 0;
   }
 
   .home-header__title {
@@ -282,405 +87,103 @@ const rest = posts.filter(({ entry }) => !entry.data.featured);
     margin: 0;
   }
 
-  .home-header__title-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: calc(var(--spacing) * 2);
-  }
-
-  .home-header__pane {
-    transition: opacity 200ms ease;
-  }
-
   .home-header__intro {
     display: flex;
     flex-direction: column;
     gap: calc(var(--spacing) * 6);
-    max-width: 32rem;
   }
 
   .home-header__intro-prose {
     color: var(--color-text-primary);
   }
 
-  .home-header__intro-prose :global(p) {
+  .home-header__intro-prose > * {
     margin: 0;
   }
 
-  .home-header__intro-prose :global(p + p) {
+  .home-header__intro-prose > * + * {
     margin-top: 1em;
   }
 
-  .home-header__intro-prose :global(p:last-child) {
+  .home-header__intro-prose p + ul {
+    margin-top: calc(var(--spacing) * 2);
+  }
+
+  .home-header__intro-prose ul {
+    list-style: disc;
+    padding-left: 1.25em;
+  }
+
+  .home-header__intro-prose li::marker {
+    font-size: 0.75em;
+  }
+
+  .home-header__intro-prose time {
+    color: var(--color-text-quaternary);
+    margin-left: calc(var(--spacing) * 1);
+  }
+
+  .home-header__intro-prose p:last-child {
     color: var(--color-text-quaternary);
   }
 
-  .home-header__intro-prose :global(a) {
+  .home-header__intro-prose a {
     color: inherit;
     text-decoration: underline;
     text-underline-offset: 3px;
     text-decoration-color: var(--color-link-underline);
   }
 
-  .home-header__intro-prose :global(a:hover) {
+  .home-header__intro-prose a:hover {
     text-decoration-color: var(--color-link-underline_hover);
   }
 
-  .home-header__intro-ctas {
-    display: flex;
-    gap: calc(var(--spacing) * 4);
-    align-items: flex-start;
-  }
-
   .home-header__mugshot {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-md);
-    margin: 0;
-  }
-
-  .home-header__mugshot-frame {
+    order: -1;
     width: 100%;
-    max-width: 240px;
-    aspect-ratio: 320 / 400;
-    border-radius: var(--radius-xl);
+    max-width: 320px;
+    border-radius: var(--radius-lg);
     overflow: hidden;
     background: var(--color-bg-tertiary);
   }
 
-  .home-header__mugshot-frame :global(img) {
+  .home-header__mugshot :global(img) {
+    display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     margin: 0;
     border-radius: 0;
   }
 
-  .home-header__mugshot-caption {
-    font-size: var(--text-xs);
-    line-height: var(--text-xs--line-height);
-    color: var(--color-text-quaternary);
-    text-align: center;
-    margin: 0;
-  }
-
-  /* Mobile: title row + panes share a single grid column,
-     so the active pane occupies the same cell regardless of which one is showing. */
-  @media (width < 48rem) {
-    .home-header__main {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        'title'
-        'pane';
-      row-gap: calc(var(--spacing) * 6);
-    }
-
-    /* Flatten text-col so its title-row + pane participate in the outer grid */
-    .home-header__text-col {
-      display: contents;
-    }
-
-    .home-header__title-row {
-      grid-area: title;
-    }
-
-    .home-header__pane {
-      grid-area: pane;
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .home-header[data-active='text'] [data-pane='text'],
-    .home-header[data-active='portrait'] [data-pane='portrait'] {
-      opacity: 1;
-      pointer-events: auto;
-    }
-  }
-
-  /* Desktop: text-col and portrait pane sit side by side; toggle is hidden. */
-  @media (width >= 48rem) {
-    .home-header__main {
-      display: flex;
-      align-items: center;
-      gap: calc(var(--spacing) * 16);
-    }
-
-    .home-header__text-col {
-      display: flex;
-      flex-direction: column;
-      gap: calc(var(--spacing) * 6);
-      flex: 0 1 auto;
-      min-width: 0;
-    }
-
-    .home-header__pane[data-pane='portrait'] {
-      flex: 0 0 320px;
-      width: 320px;
-      margin-left: auto;
-    }
-
-    .home-header__mugshot-frame {
-      max-width: none;
-    }
-
-    .home-header__nav {
-      display: none;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .home-header__pane {
-      transition: none;
-    }
-  }
-
-  .page-home {
-    padding-inline: calc(var(--spacing) * 4);
-    padding-block: calc(var(--spacing) * 10);
-  }
-
-  .page-home__inner {
-    max-width: 960px;
-    margin-inline: auto;
+  :global(.dark-mode) .home-header__mugshot :global(img) {
+    filter: grayscale(1);
   }
 
   @media (width >= 48rem) {
     .page-home {
       padding: calc(var(--spacing) * 10);
     }
-  }
 
-  .featured-projects {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: calc(var(--spacing) * 6);
-  }
+    .page-home__inner {
+      max-width: 960px;
+    }
 
-  .essay-index {
-    display: flex;
-    flex-direction: column;
-    gap: calc(var(--spacing) * 8);
-  }
+    .home-header {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
 
-  .essay-index__featured {
-    display: flex;
-    flex-direction: column;
-    gap: calc(var(--spacing) * 1);
-  }
+    .home-header__text-col {
+      max-width: 32rem;
+    }
 
-  .essay-index__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: calc(var(--spacing) * 1);
-  }
-
-  .essay-index__list > li {
-    margin: 0;
-  }
-
-  .about-index {
-    display: flex;
-    flex-direction: column;
-    gap: calc(var(--spacing) * 10);
-  }
-
-  .about-index__bio :global(p) {
-    color: var(--color-text-primary);
-    margin: 0;
-  }
-
-  .about-index__bio :global(p + p) {
-    margin-top: calc(var(--spacing) * 3);
-  }
-
-  .about-index__bio :global(a) {
-    color: inherit;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-color: var(--color-link-underline);
-  }
-
-  .about-index__bio :global(a:hover) {
-    text-decoration-color: var(--color-link-underline_hover);
-  }
-
-  .cv {
-    display: flex;
-    flex-direction: column;
-    gap: calc(var(--spacing) * 3);
-    width: 100%;
-  }
-
-  .cv__header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: calc(var(--spacing) * 3);
-  }
-
-  .cv__heading {
-    margin: 0;
-    font-size: var(--text-md);
-    line-height: var(--text-md--line-height);
-    font-weight: 500;
-    color: var(--color-text-primary);
-  }
-
-  .cv__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: calc(var(--spacing) * 3);
-  }
-
-  .cv__list > li {
-    margin: 0;
-    padding: 0;
-  }
-
-  .cv__list > li + li {
-    border-top: 1px solid var(--color-border-secondary);
-    padding-top: calc(var(--spacing) * 3);
-  }
-
-  .cv-item {
-    display: flex;
-    gap: calc(var(--spacing) * 3);
-    align-items: flex-start;
-    width: 100%;
-  }
-
-  .cv-item__position {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .cv-item__employer {
-    color: var(--color-text-primary);
-    margin: 0;
-  }
-
-  .cv-item__role {
-    color: var(--color-text-tertiary);
-    margin: 0;
-  }
-
-  .cv-item__dates {
-    color: var(--color-text-tertiary);
-    text-align: right;
-    flex-shrink: 0;
-    white-space: nowrap;
-    font-variant-numeric: tabular-nums;
-    margin: 0;
-  }
-
-  .clients {
-    display: flex;
-    flex-direction: column;
-    gap: calc(var(--spacing) * 4);
-    width: 100%;
-    container-type: inline-size;
-  }
-
-  .clients__heading {
-    margin: 0;
-    font-size: var(--text-md);
-    line-height: var(--text-md--line-height);
-    font-weight: 500;
-    color: var(--color-text-primary);
-  }
-
-  .clients__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: repeat(var(--clients-rows-2col), auto);
-    grid-auto-flow: column;
-    column-gap: calc(var(--spacing) * 6);
-    row-gap: calc(var(--spacing) * 1);
-    color: var(--color-text-secondary);
-  }
-
-  .clients__list li {
-    margin: 0;
-  }
-
-  /* When the container has enough room for 3 content-sized columns,
-     switch to content-sized columns so each one hugs its widest item.
-     Threshold is set just under the container's max width on this page
-     (~35rem when page-home__inner hits its 960px cap); below it we keep
-     the 2-col 1fr fallback above to avoid overflow. */
-  @container (min-width: 34rem) {
-    .clients__list {
-      grid-template-columns: none;
-      grid-template-rows: repeat(var(--clients-rows-3col), auto);
-      grid-auto-columns: max-content;
+    .home-header__mugshot {
+      order: 0;
+      flex: 0 0 clamp(280px, 40%, 380px);
+      max-width: none;
+      /* Title line height + text column gap, so the photo lines up with the intro. */
+      margin-top: calc(var(--text-lg--line-height) + var(--spacing) * 6);
     }
   }
-
 </style>
-
-<script>
-  function initHomeHeader(root: HTMLElement) {
-    const buttons = Array.from(
-      root.querySelectorAll<HTMLButtonElement>('[data-pane-target]'),
-    );
-    const panes = Array.from(
-      root.querySelectorAll<HTMLElement>('[data-pane]'),
-    );
-    const fallback = panes[0]?.dataset.pane;
-
-    const mql = window.matchMedia('(min-width: 48rem)');
-
-    function setActive(target: string) {
-      root.dataset.active = target;
-      syncPanes();
-      syncButtons();
-    }
-
-    function syncPanes() {
-      const target = root.dataset.active ?? fallback;
-      for (const pane of panes) {
-        if (mql.matches) {
-          pane.removeAttribute('aria-hidden');
-        } else {
-          const isActive = pane.dataset.pane === target;
-          pane.setAttribute('aria-hidden', String(!isActive));
-        }
-      }
-    }
-
-    function syncButtons() {
-      const target = root.dataset.active ?? fallback;
-      for (const button of buttons) {
-        const isActive = button.dataset.paneTarget === target;
-        button.setAttribute('aria-pressed', String(isActive));
-      }
-    }
-
-    for (const button of buttons) {
-      button.addEventListener('click', () => {
-        const target = button.dataset.paneTarget;
-        if (target) setActive(target);
-      });
-    }
-
-    mql.addEventListener('change', syncPanes);
-    syncPanes();
-    syncButtons();
-  }
-
-  document
-    .querySelectorAll<HTMLElement>('[data-carousel]')
-    .forEach(initHomeHeader);
-</script>

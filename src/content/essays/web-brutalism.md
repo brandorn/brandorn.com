@@ -1,11 +1,10 @@
 ---
 title: "Web Brutalism, Seamfulness, and Notion"
 lede: "How infrastructure legibility supports sensemaking in products"
-publishDate: 2024-05-12
+publishDate: 2020-08-31
 featured: true
+externalUrl: "https://uxdesign.cc/web-brutalism-seamfulness-and-notion-8004b89751a2"
 introQuote: "The software you love most is probably the software that lets you see its edges."
-thumbnail: ../../assets/img/thumbnails/seamfulness-thumb.jpg
-thumbnailAlt: ""
 ---
 
 There's a thread running from mid-2010s web brutalism to the interfaces I find myself returning to day after day. It's not the aesthetic itself — the monospace fonts, the unstyled hyperlinks, the gray backgrounds — but the posture behind it. A willingness to let the machine show through.

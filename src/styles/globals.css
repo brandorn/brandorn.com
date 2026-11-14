@@ -34,14 +34,12 @@
     font-kerning: normal;
   }
 
-  /* Text selection — translucent brand tint so underlying text colors
-     (links, headings, captions) stay legible inside a selection. */
   ::selection {
-    background-color: rgb(255 68 5 / 0.10); /* brand-500 */
+    background-color: var(--color-bg-selection);
   }
 
-  .dark-mode ::selection {
-    background-color: rgb(250 197 21 / 0.24); /* yellow-400 */
+  li:not(:last-child) {
+    margin-bottom: calc(var(--spacing) * 1);
   }
 
   html {

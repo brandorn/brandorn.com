@@ -95,9 +95,10 @@ body.post {
 
   h2 {
     color: var(--color-text-primary);
+    font-family: var(--font-body);
     font-weight: 600;
-    font-size: var(--text-display-xs);
-    line-height: var(--text-display-xs--line-height);
+    font-size: var(--text-xl);
+    line-height: var(--text-xl--line-height);
     margin-bottom: calc(var(--spacing) * 4);
     margin-top: calc(var(--spacing) * 8);
   }
@@ -133,7 +134,6 @@ body.post {
 
   /* Media */
   img {
-    border-radius: var(--radius-xl);
     width: 100%;
     object-fit: cover;
     margin-top: calc(var(--spacing) * 8);
@@ -174,11 +174,17 @@ body.post {
     gap: calc(var(--spacing) * 1.5);
   }
 
+  figure img {
+    margin: 0;
+  }
+
   figcaption {
-    color: var(--color-text-tertiary);
+    color: var(--color-text-quaternary);
+    font-family: var(--font-body);
     font-size: var(--text-sm);
     line-height: var(--text-sm--line-height);
-    margin-top: calc(var(--spacing) * 3);
+    text-align: center;
+    margin-top: calc(var(--spacing) * 4);
   }
 
   cite {
