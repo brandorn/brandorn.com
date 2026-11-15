@@ -192,15 +192,8 @@ body.post {
   }
 
   /* Inline elements */
-  a:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) {
+  a {
     font-weight: 400;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-color: var(--color-link-underline);
-  }
-
-  a:not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a):hover {
-    text-decoration-color: var(--color-link-underline_hover);
   }
 
   a:focus-visible {
@@ -209,10 +202,13 @@ body.post {
     outline-offset: 2px;
   }
 
-  :is(h1, h2, h3) a {
-    color: var(--color-text-primary);
+  :is(h1, h2, h3, h4, h5, h6) a {
     font-weight: inherit;
     text-decoration: none;
+  }
+
+  :is(h1, h2, h3) a {
+    color: var(--color-text-primary);
   }
 
   /* Inline code */

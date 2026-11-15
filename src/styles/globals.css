@@ -38,6 +38,16 @@
     background-color: var(--color-bg-selection);
   }
 
+  a {
+    text-decoration: underline;
+    text-decoration-color: var(--color-link-underline);
+    text-underline-offset: 2px;
+  }
+
+  a:hover {
+    text-decoration-color: var(--color-link-underline_hover);
+  }
+
   li:not(:last-child) {
     margin-bottom: calc(var(--spacing) * 1);
   }

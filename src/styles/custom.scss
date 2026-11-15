@@ -10,9 +10,7 @@
 .cta {
   font-weight: 500;
   color: var(--color-fg-brand-primary);
-  text-decoration: underline;
   text-decoration-color: currentColor;
-  text-underline-offset: 3px;
   padding: calc(var(--spacing) * 0.5) calc(var(--spacing) * 2) calc(var(--spacing) * 1.5);
   margin: calc(var(--spacing) * -0.5) calc(var(--spacing) * -2) calc(var(--spacing) * -1.5);
   border-radius: var(--radius-xs);

@@ -14,11 +14,11 @@ import { CONTACT_EMAIL_HREF } from '../lib/site';
 
           <div class="home-header__intro">
             <div class="home-header__intro-prose">
-              <p>Hey there. I’m Brandon, a software design generalist from Chicago. I’ve been building digital products for the last thirteen years. I think a lot about systems and craft, and how to put <a href="https://ia.net/topics/putting-thought-into-things">thought into things</a> as machines increasingly do the thinking for us. I'm particularly interested in <a href="https://vimeo.com/906418692">tools for sensemaking</a>.</p>
-              <p>I'm currently a design engineer at an early-stage <a href="https://traveljoy.com">platform</a> for travel entrepreneurs. Before that, I was a lead designer at <a href="https://whimsical.com">Whimsical</a> and <a href="https://dwell.com">Dwell</a>, and helped start the product design practice at <a href="https://viget.com">Viget</a>. Trying to do my part to <a href="https://www.paulgraham.com/do.html">care for the world and make new, good things</a>. Probably reading a book or researching backpacks.</p>
+              <p>Hey there. I’m Brandon, a software design generalist from Chicago. I’ve been building digital products for the last thirteen years. I think a lot about systems and craft, and how to put <a href="https://ia.net/topics/putting-thought-into-things">thought into things</a> as machines increasingly do the thinking for us. <i>How</i> we build always shapes <a href="https://vimeo.com/906418692">what we build</a>.</p>
+              <p>I'm currently a design engineer at an early-stage <a href="https://traveljoy.com">platform</a> for travel entrepreneurs. Before that, I was a lead designer at <a href="https://whimsical.com">Whimsical</a> and <a href="https://dwell.com">Dwell</a>, and helped start the product design practice at <a href="https://viget.com">Viget</a>. Trying to do my part to <a href="https://www.paulgraham.com/do.html">care for the world and make new, good things</a>. Probably <s>reading a book or riding a bike</s> holding our newborn.</p>
               <p>Some things I’ve written:</p>
               <ul>
-                <li><a href="/files/ellul-forum-73.pdf#page=51">Ghost in the Machine </a> <time datetime="2024-06">Jun 2024</time></li>
+                <li><a href="/files/ellul-forum-73.pdf#page=51">Ghost in the Machine (Ellul Forum)</a> <time datetime="2024-06">Jun 2024</time></li>
                 <li><a href="https://www.etsy.com/listing/1165927841/fallen-things-photo-book">Fallen Things: Photographs</a> <time datetime="2022-01">Jan 2022</time></li>
                 <li><a href="https://uxdesign.cc/web-brutalism-seamfulness-and-notion-8004b89751a2">Web Brutalism, Seamfulness, and Notion</a> <time datetime="2020-08">Aug 2020</time></li>
                 <li><a href="https://vimeo.com/287094701">Mark Lombardi and the Moral Lives of Graphs</a> <time datetime="2018-09">Sep 2018</time></li>
@@ -123,19 +123,14 @@ import { CONTACT_EMAIL_HREF } from '../lib/site';
     margin-left: calc(var(--spacing) * 1);
   }
 
+  .home-header__intro-prose s {
+    text-decoration-line: line-through;
+    text-decoration-color: var(--color-fg-error-primary);
+    text-decoration-thickness: 2px;
+  }
+
   .home-header__intro-prose p:last-child {
     color: var(--color-text-quaternary);
-  }
-
-  .home-header__intro-prose a {
-    color: inherit;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-color: var(--color-link-underline);
-  }
-
-  .home-header__intro-prose a:hover {
-    text-decoration-color: var(--color-link-underline_hover);
   }
 
   .home-header__mugshot {
