@@ -1,0 +1,43 @@
+---
+description: Styling and component conventions for brandorn.com (Astro + Tailwind v4 + Untitled UI)
+globs: src/**/*.astro, src/**/*.css, src/**/*.scss
+alwaysApply: false
+---
+
+# Styling Conventions
+
+## Design tokens
+
+- All design tokens are defined in `src/styles/theme.css` using Tailwind v4's `@theme` block.
+- Use semantic token names (`text-primary`, `bg-secondary`, `border-primary`) rather than raw color values or palette tokens (`gray-900`).
+- Token values can be edited directly in `theme.css` — it is not kept in sync with Untitled UI upstream.
+
+## Tailwind usage
+
+- Build mobile-first: start with base styles, layer on responsive breakpoints (`md:`, `lg:`).
+- Use Tailwind utilities for layout, spacing, and typography. Avoid writing custom CSS for things Tailwind handles well.
+- When a group of utilities repeats across pages, extract it into a reusable Astro component rather than duplicating the class string.
+- Avoid long one-off class strings that only make sense in one place. If a pattern is page-specific and complex, consider a scoped `<style>` block instead.
+
+## Component extraction
+
+- If a layout pattern (e.g., section wrapper, card, prose container) appears on more than one page, extract it into `src/components/`.
+- Components should accept props for content and variants, not hardcode text or styles.
+- Keep components small and focused — one concern per component.
+
+## Custom styles
+
+- Component-level custom styles go in `src/styles/custom.scss` (SCSS features available: nesting, variables, mixins).
+- If a component's styles grow large, extract them into a dedicated file and import it from `globals.css`.
+- For per-page color themes, define a CSS scope (e.g., `.theme-photo-essay`) in `custom.scss` that overrides the relevant tokens, and pass the theme class to `BaseLayout` via the `theme` prop.
+
+## Dark mode
+
+- Dark mode is handled via the `.dark-mode` class on `<html>`, defined in `theme.css`.
+- Do not use Tailwind's `dark:` variant — it conflicts with the class-based approach.
+- `BaseLayout.astro` applies `.dark-mode` automatically based on `prefers-color-scheme`.
+
+## Images
+
+- Photos and media that benefit from optimization go in `src/assets/` and use Astro's `<Image />` component.
+- Static assets that should ship as-is (favicons, SVG logos) go in `public/`.

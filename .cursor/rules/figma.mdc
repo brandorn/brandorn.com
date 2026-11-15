@@ -1,0 +1,42 @@
+---
+description: How to interpret Figma designs when implementing in Astro
+alwaysApply: true
+---
+
+# Figma usage
+
+## What Figma is authoritative for
+
+Figma is the source of truth for visual fidelity:
+
+- Layout, copy, color and spacing tokens
+- Typography (family, size, weight, line height)
+- Responsive intent inferred from frame structure and constraints
+- Component states (hover, focus, active, disabled, etc.)
+
+Honor the design pixel-faithfully where reasonable. When the design and the
+existing token system disagree on a value, prefer the existing token and flag
+the discrepancy.
+
+## What Figma is NOT authoritative for
+
+Figma's layer/frame/component tree is a designer-readability aid, not a code
+architecture spec. Do NOT mirror it 1:1 into Astro components.
+
+Decide component boundaries based on Astro conventions and existing patterns
+in this repo. Default to inlining; split a piece into its own component only
+when it has at least one of:
+
+- genuine reuse across pages,
+- non-trivial interactivity (client-side JS, state),
+- shared logic worth isolating, or
+- enough size that inlining hurts readability.
+
+If a Figma frame is one-off, hardcoded, and has no logic, inline it.
+
+When unsure whether to split, ask before creating the file.
+
+## Heuristic
+
+> Would I make this its own component if Figma didn't have it as a frame?
+> If no, don't.

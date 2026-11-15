@@ -1,0 +1,76 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  as?: 'section' | 'aside' | 'div';
+  class?: string;
+  id?: string;
+}
+
+const {
+  title,
+  description,
+  as: Tag = 'section',
+  class: className = '',
+  id,
+} = Astro.props;
+---
+
+<Tag class:list={['index-container', className]} id={id}>
+  <header class="index-container__title">
+    <h2 class="index-container__h2">{title}</h2>
+    {
+      description && (
+        <p class="index-container__description">{description}</p>
+      )
+    }
+  </header>
+  <slot name="list" />
+</Tag>
+
+<style>
+  .index-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: calc(var(--spacing) * 8);
+    padding-block: calc(var(--spacing) * 10);
+    scroll-margin-top: calc(var(--spacing) * 8);
+  }
+
+  .index-container + .index-container {
+    border-top: 1px solid var(--color-border-secondary);
+  }
+
+  .index-container__title {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xxs);
+  }
+
+  .index-container__h2 {
+    font-size: var(--text-lg);
+    line-height: var(--text-lg--line-height);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .index-container__description {
+    font-size: var(--text-md);
+    line-height: var(--text-md--line-height);
+    color: var(--color-text-tertiary);
+    margin: 0;
+  }
+
+  @media (width >= 48rem) {
+    .index-container {
+      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+      column-gap: calc(var(--spacing) * 0);
+      padding-block: calc(var(--spacing) * 12);
+    }
+
+    .index-container__title {
+      padding-right: calc(var(--spacing) * 10);
+    }
+  }
+</style>

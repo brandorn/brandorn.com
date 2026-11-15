@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@import "./theme.css";
+@import "./typography.css";
+@import "./custom.scss";
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    -webkit-appearance: none;
+  }
+
+  .transition-inherit-all {
+    transition-property: inherit;
+    transition-duration: inherit;
+    transition-timing-function: inherit;
+  }
+}
+
+@layer base {
+  html,
+  body {
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-variant-ligatures: contextual;
+    font-variant-ligatures: contextual;
+    -webkit-font-kerning: normal;
+    font-kerning: normal;
+  }
+
+  ::selection {
+    background-color: var(--color-bg-selection);
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-color: var(--color-link-underline);
+    text-underline-offset: 2px;
+  }
+
+  a:hover {
+    text-decoration-color: var(--color-link-underline_hover);
+  }
+
+  li:not(:last-child) {
+    margin-bottom: calc(var(--spacing) * 1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  /* Hide the default expand arrow on Safari.  */
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* Hide default arrows from number inputs. */
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+  }
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  /* Hide the default clear button (X) from search inputs. */
+  input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}

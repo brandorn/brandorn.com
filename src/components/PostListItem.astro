@@ -1,0 +1,73 @@
+---
+import CameraLensIcon from '../assets/icon/icon-camera-lens.svg';
+
+interface Props {
+  title: string;
+  year: number | string;
+  href: string;
+  photoEssay?: boolean;
+  class?: string;
+}
+
+const {
+  title,
+  year,
+  href,
+  photoEssay = false,
+  class: className = '',
+} = Astro.props;
+---
+
+<a href={href} class:list={['post', className]}>
+  <span class="post__title">
+    {
+      photoEssay && (
+        <span class="post__icon" aria-hidden="true">
+          <CameraLensIcon />
+        </span>
+      )
+    }{title}
+  </span>
+  <time class="post__year">{year}</time>
+</a>
+
+<style>
+  .post {
+    display: flex;
+    width: calc(100% + var(--spacing) * 4);
+    align-items: baseline;
+    gap: calc(var(--spacing) * 3);
+    padding: calc(var(--spacing) * 1) calc(var(--spacing) * 2);
+    margin-inline: calc(var(--spacing) * -2);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-primary);
+    text-decoration: none;
+    transition: background-color 120ms ease;
+  }
+
+  .post:hover {
+    background: var(--color-bg-secondary_hover);
+  }
+
+  .post__title {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .post__icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: calc(var(--spacing) * 1.5);
+    vertical-align: middle;
+    color: var(--color-fg-disabled);
+    transform: translateY(-1px);
+  }
+
+  .post__year {
+    color: var(--color-text-quaternary);
+    text-align: right;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+</style>

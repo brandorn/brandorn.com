@@ -1,0 +1,184 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import mugshotImage from '../assets/img/mugshots/mugshot-winter-light.jpg';
+import { CONTACT_EMAIL_HREF } from '../lib/site';
+---
+
+<BaseLayout title="Brandon Dorn — brandorn.com">
+  <main class="page-home">
+    <div class="page-home__inner">
+      <div class="home-header">
+        <div class="home-header__text-col">
+          <h1 class="home-header__title">Brandon Dorn</h1>
+
+          <div class="home-header__intro">
+            <div class="home-header__intro-prose">
+              <p>Hey there. I’m Brandon, a software design generalist from Chicago. I’ve been building digital products for the last thirteen years. I think a lot about systems and craft, and how to put <a href="https://ia.net/topics/putting-thought-into-things">thought into things</a> as machines increasingly do the thinking for us. <i>How</i> we build always shapes <a href="https://vimeo.com/906418692">what we build</a>.</p>
+              <p>I'm currently a design engineer at an early-stage <a href="https://traveljoy.com">platform</a> for travel entrepreneurs. Before that, I was a lead designer at <a href="https://whimsical.com">Whimsical</a> and <a href="https://dwell.com">Dwell</a>, and helped start the product design practice at <a href="https://viget.com">Viget</a>. Trying to do my part to <a href="https://www.paulgraham.com/do.html">care for the world and make new, good things</a>. Probably <s>reading a book or riding a bike</s> holding our newborn.</p>
+              <p>Some things I’ve written:</p>
+              <ul>
+                <li><a href="/files/ellul-forum-73.pdf#page=51">Ghost in the Machine (Ellul Forum)</a> <time datetime="2024-06">Jun 2024</time></li>
+                <li><a href="https://www.etsy.com/listing/1165927841/fallen-things-photo-book">Fallen Things: Photographs</a> <time datetime="2022-01">Jan 2022</time></li>
+                <li><a href="https://uxdesign.cc/web-brutalism-seamfulness-and-notion-8004b89751a2">Web Brutalism, Seamfulness, and Notion</a> <time datetime="2020-08">Aug 2020</time></li>
+                <li><a href="https://vimeo.com/287094701">Mark Lombardi and the Moral Lives of Graphs</a> <time datetime="2018-09">Sep 2018</time></li>
+                <li><a href="https://www.viget.com/articles/of-note-better-text-annotations-for-the-web">Of Note: Better Text Annotations for the Web</a> <time datetime="2018-07">Jul 2018</time></li>
+                <li><a href="https://medium.com/@brandorn/one-designers-response-to-khoi-vinh-s-complaint-3f1325d439de">Against Khoi Vinh’s Complaint</a> <time datetime="2018-02">Feb 2018</time></li>
+              </ul>
+              <p>Portfolio, resume, and references available upon request.</p>
+            </div>
+            <div>
+              <a class="cta" href={CONTACT_EMAIL_HREF}>Get in touch</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="home-header__mugshot">
+          <Image
+            src={mugshotImage}
+            alt="Brandon Dorn"
+            width={380}
+            widths={[380, 760]}
+            sizes="(width >= 48rem) 380px, 320px"
+            quality={90}
+            loading="eager"
+          />
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .page-home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-inline: calc(var(--spacing) * 4);
+    padding-block: calc(var(--spacing) * 10);
+  }
+
+  .page-home__inner {
+    width: 100%;
+    max-width: 540px;
+    margin-inline: auto;
+  }
+
+  .home-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--spacing) * 16);
+  }
+
+  .home-header__text-col {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 6);
+    width: 100%;
+    min-width: 0;
+  }
+
+  .home-header__title {
+    font-size: var(--text-lg);
+    line-height: var(--text-lg--line-height);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .home-header__intro {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 6);
+  }
+
+  .home-header__intro-prose {
+    color: var(--color-text-primary);
+  }
+
+  .home-header__intro-prose > * {
+    margin: 0;
+  }
+
+  .home-header__intro-prose > * + * {
+    margin-top: 1em;
+  }
+
+  .home-header__intro-prose p + ul {
+    margin-top: calc(var(--spacing) * 2);
+  }
+
+  .home-header__intro-prose ul {
+    list-style: disc;
+    padding-left: 1.25em;
+  }
+
+  .home-header__intro-prose li::marker {
+    font-size: 0.75em;
+  }
+
+  .home-header__intro-prose time {
+    color: var(--color-text-quaternary);
+    margin-left: calc(var(--spacing) * 1);
+  }
+
+  .home-header__intro-prose s {
+    text-decoration-line: line-through;
+    text-decoration-color: var(--color-fg-error-primary);
+    text-decoration-thickness: 2px;
+  }
+
+  .home-header__intro-prose p:last-child {
+    color: var(--color-text-quaternary);
+  }
+
+  .home-header__mugshot {
+    order: -1;
+    width: 100%;
+    max-width: 320px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--color-bg-tertiary);
+  }
+
+  .home-header__mugshot :global(img) {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  :global(.dark-mode) .home-header__mugshot :global(img) {
+    filter: grayscale(1);
+  }
+
+  @media (width >= 48rem) {
+    .page-home {
+      padding: calc(var(--spacing) * 10);
+    }
+
+    .page-home__inner {
+      max-width: 960px;
+    }
+
+    .home-header {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .home-header__text-col {
+      max-width: 32rem;
+    }
+
+    .home-header__mugshot {
+      order: 0;
+      flex: 0 0 clamp(280px, 40%, 380px);
+      max-width: none;
+      /* Title line height + text column gap, so the photo lines up with the intro. */
+      margin-top: calc(var(--text-lg--line-height) + var(--spacing) * 6);
+    }
+  }
+</style>

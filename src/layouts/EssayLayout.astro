@@ -1,0 +1,368 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import { marked } from 'marked';
+import BaseLayout from './BaseLayout.astro';
+import { CONTACT_EMAIL_HREF } from '../lib/site';
+
+interface Props {
+  title: string;
+  lede?: string;
+  cover?: ImageMetadata;
+  coverAlt?: string;
+  coverCaption?: string;
+  introQuote?: string;
+  introQuoteAttribution?: string;
+  publishDate?: Date;
+  acknowledgements?: string[];
+  bodyClass?: string;
+}
+
+const {
+  title,
+  lede,
+  cover,
+  coverAlt = '',
+  coverCaption,
+  introQuote,
+  introQuoteAttribution,
+  publishDate,
+  acknowledgements,
+  bodyClass = '',
+} = Astro.props;
+
+const hasPhoto = !!cover;
+const captionHtml = coverCaption ? marked.parseInline(coverCaption) : null;
+
+const publishedLabel = publishDate
+  ? publishDate.toLocaleDateString('en-US', {
+      month: 'long',
+      year: 'numeric',
+      timeZone: 'UTC',
+    })
+  : undefined;
+
+const nameList = acknowledgements?.length
+  ? new Intl.ListFormat('en-US', { style: 'long', type: 'conjunction' }).format(
+      acknowledgements,
+    )
+  : undefined;
+const acknowledgementsLine = nameList
+  ? `Thanks to ${nameList} for reading drafts of this essay.`
+  : undefined;
+---
+
+<BaseLayout
+  title={`${title} — brandorn.com`}
+  description={lede}
+  bodyClass={`post essay ${bodyClass}`.trim()}
+>
+  <main class="page-essay">
+    <div class="page-essay__inner">
+      <nav class="post-nav" aria-label="Site">
+        <a href="/" class="post-nav__brand">Brandon Dorn</a>
+        <ul class="post-nav__links">
+          <li><a href={CONTACT_EMAIL_HREF}>Email</a></li>
+          <li><a href="/#about">Info</a></li>
+        </ul>
+      </nav>
+      <article class="page-essay__content">
+        <header
+          class:list={['post-header', hasPhoto && 'post-header--has-photo']}
+        >
+          <div class="post-header__title-container">
+            <h1 class="post-header__title">{title}</h1>
+            {lede && <p class="post-header__lede">{lede}</p>}
+          </div>
+
+          {
+            hasPhoto ? (
+              <figure class="post-header__cover">
+                <Image
+                  src={cover}
+                  alt={coverAlt}
+                  widths={[640, 1280]}
+                  sizes="(min-width: 40rem) 640px, 100vw"
+                  loading="eager"
+                  fetchpriority="high"
+                />
+                {captionHtml && <figcaption set:html={captionHtml} />}
+              </figure>
+            ) : (
+              <hr class="post-header__divider" aria-hidden="true" />
+            )
+          }
+        </header>
+
+        <div class="post-body">
+          <div class="post-body__prose">
+            {
+              introQuote && (
+                <aside class="intro-quote">
+                  <p
+                    class="intro-quote__body"
+                    set:html={introQuote.replace(/\n/g, '<br />')}
+                  />
+                  {introQuoteAttribution && (
+                    <p class="intro-quote__attribution">
+                      — {introQuoteAttribution}
+                    </p>
+                  )}
+                </aside>
+              )
+            }
+            <slot />
+          </div>
+
+          {
+            (publishedLabel || acknowledgementsLine) && (
+              <div class="post-body__acknowledgements">
+                {publishedLabel && (
+                  <p class="post-body__date">{publishedLabel}</p>
+                )}
+                {acknowledgementsLine && (
+                  <p class="post-body__thanks">{acknowledgementsLine}</p>
+                )}
+              </div>
+            )
+          }
+        </div>
+      </article>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .page-essay {
+    padding-inline: calc(var(--spacing) * 4);
+    padding-block: calc(var(--spacing) * 5);
+  }
+
+  .page-essay__inner {
+    max-width: 960px;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 10);
+  }
+
+  .page-essay__content {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 12);
+    width: 100%;
+    max-width: 640px;
+    margin-inline: auto;
+  }
+
+  /* Post nav */
+  .post-nav {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding-bottom: calc(var(--spacing) * 4);
+    border-bottom: 1px solid var(--color-border-secondary);
+    width: 100%;
+  }
+
+  .post-nav__brand {
+    font-weight: 500;
+    color: var(--color-text-primary);
+    text-decoration: none;
+  }
+
+  .post-nav__brand:hover {
+    color: var(--color-text-primary_hover);
+  }
+
+  .post-nav__links {
+    display: flex;
+    gap: calc(var(--spacing) * 4);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .post-nav__links li {
+    margin: 0;
+  }
+
+  .post-nav__links a {
+    font-size: var(--text-sm);
+    line-height: var(--text-sm--line-height);
+    font-weight: 500;
+    color: var(--color-text-tertiary);
+    text-decoration-color: currentColor;
+  }
+
+  .post-nav__links a:hover {
+    color: var(--color-text-primary_hover);
+  }
+
+  /* Post header */
+  .post-header {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 8);
+    align-items: center;
+  }
+
+  .post-header--has-photo {
+    gap: calc(var(--spacing) * 12);
+  }
+
+  .post-header__title-container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2);
+    text-align: center;
+    color: var(--color-text-primary);
+    width: 100%;
+  }
+
+  .post-header__title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--text-display-lg);
+    line-height: var(--text-display-lg--line-height);
+    letter-spacing: var(--text-display-lg--letter-spacing);
+    /* Browsers drop ligatures on letter-spaced text unless the feature is set explicitly. */
+    font-feature-settings: "liga" 1, "dlig" 1;
+    margin: 0;
+  }
+
+  .post-header__lede {
+    font-size: var(--text-lg);
+    line-height: var(--text-lg--line-height);
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .post-header__cover {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: calc(var(--spacing) * 4);
+  }
+
+  .post-header__cover :global(img) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 594 / 392;
+    object-fit: cover;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  .post-header__cover figcaption {
+    margin: 0;
+    color: var(--color-text-quaternary);
+    font-size: var(--text-sm);
+    line-height: var(--text-sm--line-height);
+    text-align: center;
+    display: block;
+  }
+
+  .post-header__cover figcaption :global(em) {
+    font-style: italic;
+  }
+
+  .post-header__cover figcaption :global(a) {
+    text-decoration-color: currentColor;
+  }
+
+  .post-header__divider {
+    width: 100%;
+    border: 0;
+    border-top: 1px solid var(--color-fg-primary);
+    margin: 0;
+  }
+
+  /* Post body */
+  .post-body {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 8);
+  }
+
+  .post-body__prose {
+    color: var(--color-text-primary);
+    font-family: var(--font-serif);
+    font-size: var(--text-xl);
+    line-height: var(--text-xl--line-height);
+  }
+
+  .post-body__prose :global(> :first-child) {
+    margin-top: 0;
+  }
+
+  .post-body__prose :global(> :last-child) {
+    margin-bottom: 0;
+  }
+
+  .post-body__acknowledgements {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2);
+  }
+
+  .post-body__date {
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+
+  .post-body__thanks {
+    color: var(--color-text-quaternary);
+    margin: 0;
+  }
+
+  .intro-quote {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 2);
+    padding-left: calc(var(--spacing) * 8);
+    padding-bottom: calc(var(--spacing) * 8);
+    color: var(--color-text-tertiary);
+    font-family: var(--font-body);
+    width: 100%;
+  }
+
+  .intro-quote__body {
+    font-size: var(--text-md);
+    line-height: var(--text-md--line-height);
+    margin: 0;
+  }
+
+  .intro-quote__attribution {
+    font-size: var(--text-sm);
+    line-height: var(--text-sm--line-height);
+    font-weight: 500;
+    margin: 0;
+  }
+
+  @media (width >= 48rem) {
+    .page-essay {
+      padding-block: calc(var(--spacing) * 5);
+    }
+
+    .page-essay__inner {
+      gap: calc(var(--spacing) * 16);
+    }
+
+    .page-essay__content {
+      gap: calc(var(--spacing) * 16);
+    }
+
+    .post-header__title {
+      font-size: var(--text-display-xl);
+      line-height: var(--text-display-xl--line-height);
+      letter-spacing: var(--text-display-xl--letter-spacing);
+    }
+
+    .intro-quote {
+      padding-left: calc(var(--spacing) * 24);
+    }
+  }
+</style>

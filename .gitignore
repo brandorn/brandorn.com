@@ -1,5 +1,21 @@
-_drafts
-_site/
-.sass-cache/
-.DS_store
-*.swp
+# build output
+dist/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+
+# environment variables
+.env
+.env.production
+
+# macOS
+.DS_Store
+
+# astro
+.astro/
+
+# vercel
+.vercel/

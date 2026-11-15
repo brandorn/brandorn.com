@@ -1,0 +1,50 @@
+---
+import '../styles/globals.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  theme?: string;
+  bodyClass?: string;
+}
+
+const { title, description = '', theme = '', bodyClass = '' } = Astro.props;
+const themeClass = theme || undefined;
+---
+
+<html lang="en" class:list={[themeClass]}>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {description && <meta name="description" content={description} />}
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <link
+      rel="preload"
+      href="/fonts/IBMPlexSans-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/IBMPlexSans-SemiBold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <script is:inline>
+      (function () {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark-mode');
+        }
+      })();
+    </script>
+  </head>
+  <body class:list={['bg-primary text-primary', bodyClass]}>
+    <slot />
+  </body>
+</html>

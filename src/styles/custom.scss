@@ -1,0 +1,21 @@
+/* Custom Style Overrides for brandorn.com */
+
+/* 
+  This file contains project-specific style overrides.
+  It loads AFTER theme.css, so any CSS variables defined here will override the defaults.
+  
+  The base Untitled UI theme remains in theme.css.
+*/
+
+.cta {
+  font-weight: 500;
+  color: var(--color-fg-brand-primary);
+  text-decoration-color: currentColor;
+  padding: calc(var(--spacing) * 0.5) calc(var(--spacing) * 2) calc(var(--spacing) * 1.5);
+  margin: calc(var(--spacing) * -0.5) calc(var(--spacing) * -2) calc(var(--spacing) * -1.5);
+  border-radius: var(--radius-xs);
+
+  &:hover {
+    background-color: var(--color-bg-brand-primary_subtle);
+  }
+}
